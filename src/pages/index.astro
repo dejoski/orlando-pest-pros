@@ -6,7 +6,7 @@ import Reviews from "../components/Reviews.astro";
 import CtaBand from "../components/CtaBand.astro";
 import ServiceIcon from "../components/ServiceIcon.astro";
 import { SITE_URL, PHONE_DISPLAY, telLink, SERVICE_AREA } from "../config";
-import { faqSchema, localBusinessSchema, reviewSchema, jsonLd } from "../lib/schema";
+import { faqSchema, localBusinessSchema, jsonLd } from "../lib/schema";
 import homeData from "../data/home.json";
 import servicesData from "../data/services.json";
 import citiesData from "../data/cities.json";
@@ -17,10 +17,8 @@ const schemaHtml = jsonLd(
   localBusinessSchema({
     url: "/",
     areaServed: citiesData.cities.map((c) => c.name),
-    aggregateRating: homeData.aggregateRating,
   }),
-  faqSchema(homeData.globalFaqs),
-  ...reviewSchema(homeData.reviews.slice(0, 5))
+  faqSchema(homeData.globalFaqs)
 );
 const osceola = citiesData.cities.filter((c) => c.county === "Osceola County");
 const orange = citiesData.cities.filter((c) => c.county === "Orange County");

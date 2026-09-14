@@ -8,7 +8,6 @@ const abs = (path: string) => `${SITE_URL}${path}`;
 export function localBusinessSchema(opts: {
   url: string;
   areaServed: string[];
-  aggregateRating?: { value: string; count: string };
 }) {
   return {
     "@context": "https://schema.org",
@@ -29,15 +28,6 @@ export function localBusinessSchema(opts: {
     },
     openingHours: "Mo-Sa 07:00-19:00",
     priceRange: "$$",
-    ...(opts.aggregateRating
-      ? {
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: opts.aggregateRating.value,
-            reviewCount: opts.aggregateRating.count,
-          },
-        }
-      : {}),
   };
 }
 
@@ -76,18 +66,6 @@ export function breadcrumbSchema(crumbs: Crumb[]) {
       item: abs(c.url),
     })),
   };
-}
-
-export function reviewSchema(reviews: { name: string; rating: number; date: string; text: string }[]) {
-  return reviews.map((r) => ({
-    "@context": "https://schema.org",
-    "@type": "Review",
-    author: { "@type": "Person", name: r.name },
-    datePublished: r.date,
-    reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5" },
-    reviewBody: r.text,
-    itemReviewed: { "@id": abs("/#business") },
-  }));
 }
 
 /** Render one or more JSON-LD blocks. */
