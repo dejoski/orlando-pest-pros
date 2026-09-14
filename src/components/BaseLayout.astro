@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import {
   SITE_NAME,
   SITE_URL,
@@ -19,9 +20,10 @@ interface Props {
   ogImage?: string;
   schemaHtml?: string;
   noindex?: boolean;
+  preloadImage?: string;
 }
 
-const { title, description, canonical, ogImage, schemaHtml, noindex } = Astro.props;
+const { title, description, canonical, ogImage, schemaHtml, noindex, preloadImage } = Astro.props;
 const og = ogImage ?? `${SITE_URL}/og-image.png`;
 ---
 <!doctype html>
@@ -50,7 +52,14 @@ const og = ogImage ?? `${SITE_URL}/og-image.png`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={og} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#166324" />
+    <meta name="theme-color" content="#071f15" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
     {schemaHtml && <Fragment set:html={schemaHtml} />}
     {ANALYTICS_SNIPPET && <Fragment set:html={ANALYTICS_SNIPPET} />}
   </head>
@@ -84,6 +93,24 @@ const og = ogImage ?? `${SITE_URL}/og-image.png`;
         navBtn.setAttribute("aria-expanded", String(!expanded));
         navMenu?.classList.toggle("hidden");
       });
+      // Reveal on scroll
+      const revealEls = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window && revealEls.length) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add("revealed"));
+      }
     </script>
   </body>
 </html>

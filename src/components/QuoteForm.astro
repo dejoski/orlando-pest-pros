@@ -16,34 +16,52 @@ const {
   preselectCity = "",
 } = Astro.props;
 ---
-<section id="quote" class="scroll-mt-24 rounded-3xl bg-brand-800 p-6 sm:p-10 text-white shadow-xl" aria-labelledby="quote-heading">
-  <div class="grid gap-8 lg:grid-cols-2">
+<section id="quote" class="relative scroll-mt-24 overflow-hidden rounded-[2rem] bg-pine-900 p-6 text-white shadow-2xl sm:p-10 lg:p-12" aria-labelledby="quote-heading">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-[radial-gradient(640px_circle_at_15%_0%,rgba(238,194,92,0.22),transparent_60%)]"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute inset-x-6 top-0 h-1 rounded-full bg-gold-400/70 sm:inset-x-10"></div>
+  <div class="relative grid gap-10 lg:grid-cols-2 lg:gap-12">
     <div>
-      <h2 id="quote-heading" class="text-2xl sm:text-3xl font-extrabold">{heading}</h2>
-      <p class="mt-2 text-brand-100">{sub}</p>
-      <ul class="mt-6 space-y-3 text-sm">
-        <li class="flex gap-2"><span aria-hidden="true">✓</span> Free inspection with every quote</li>
-        <li class="flex gap-2"><span aria-hidden="true">✓</span> Up-front pricing — no surprises</li>
-        <li class="flex gap-2"><span aria-hidden="true">✓</span> Licensed &amp; insured local technicians</li>
+      <p class="eyebrow text-gold-400">Free inspection · Same-day response</p>
+      <h2 id="quote-heading" class="mt-3 font-display text-3xl font-bold text-balance sm:text-4xl">{heading}</h2>
+      <p class="mt-3 leading-relaxed text-pine-100">{sub}</p>
+      <ul class="mt-7 space-y-4 text-[15px] font-medium">
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Free inspection with every quote
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Up-front pricing — no surprises
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Licensed &amp; insured local technicians
+        </li>
       </ul>
-      <p class="mt-6 text-brand-100">Prefer to talk? <a href={telLink} class="font-bold text-white underline underline-offset-2">Call {PHONE_DISPLAY}</a></p>
+      <p class="mt-8 text-pine-100">Prefer to talk? <a href={telLink} class="font-bold text-white underline decoration-gold-400 decoration-2 underline-offset-4 hover:text-gold-300">Call {PHONE_DISPLAY}</a></p>
     </div>
-    <form id="quote-form" data-quote-form class="rounded-2xl bg-white p-5 sm:p-6 text-slate-800" novalidate>
+    <form id="quote-form" data-quote-form class="rounded-3xl bg-white p-6 text-slate-800 shadow-xl sm:p-7" novalidate>
       <div class="grid gap-4 sm:grid-cols-2">
         <div>
-          <label for="qf-name" class="mb-1 block text-sm font-semibold">Name *</label>
+          <label for="qf-name" class="mb-1.5 block text-sm font-semibold text-pine-950">Name *</label>
           <input id="qf-name" name="name" type="text" autocomplete="name" required
-            class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20" />
+            class="min-h-[48px] w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-pine-700 focus:outline-none focus:ring-2 focus:ring-gold-400/60" />
         </div>
         <div>
-          <label for="qf-phone" class="mb-1 block text-sm font-semibold">Phone *</label>
+          <label for="qf-phone" class="mb-1.5 block text-sm font-semibold text-pine-950">Phone *</label>
           <input id="qf-phone" name="phone" type="tel" autocomplete="tel" required
-            class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20" />
+            class="min-h-[48px] w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-pine-700 focus:outline-none focus:ring-2 focus:ring-gold-400/60" />
         </div>
         <div>
-          <label for="qf-service" class="mb-1 block text-sm font-semibold">Service *</label>
+          <label for="qf-service" class="mb-1.5 block text-sm font-semibold text-pine-950">Service *</label>
           <select id="qf-service" name="service" required
-            class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20">
+            class="min-h-[48px] w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 focus:border-pine-700 focus:outline-none focus:ring-2 focus:ring-gold-400/60">
             <option value="">Select a service…</option>
             {services.services.map((s) => (
               <option value={s.name} selected={s.slug === preselectService}>{s.name}</option>
@@ -51,9 +69,9 @@ const {
           </select>
         </div>
         <div>
-          <label for="qf-city" class="mb-1 block text-sm font-semibold">City *</label>
+          <label for="qf-city" class="mb-1.5 block text-sm font-semibold text-pine-950">City *</label>
           <select id="qf-city" name="city" required
-            class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20">
+            class="min-h-[48px] w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 focus:border-pine-700 focus:outline-none focus:ring-2 focus:ring-gold-400/60">
             <option value="">Select your city…</option>
             {cities.cities.map((c) => (
               <option value={c.name} selected={c.slug === preselectCity}>{c.name}</option>
@@ -63,18 +81,18 @@ const {
         </div>
       </div>
       <div class="mt-4">
-        <label for="qf-message" class="mb-1 block text-sm font-semibold">What are you seeing? <span class="font-normal text-slate-500">(optional)</span></label>
+        <label for="qf-message" class="mb-1.5 block text-sm font-semibold text-pine-950">What are you seeing? <span class="font-normal text-slate-500">(optional)</span></label>
         <textarea id="qf-message" name="message" rows="3"
-          class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20"
+          class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-pine-700 focus:outline-none focus:ring-2 focus:ring-gold-400/60"
           placeholder="e.g. Palmetto bugs in the kitchen at night…"></textarea>
       </div>
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
-      <p id="qf-error" class="mt-3 hidden text-sm font-medium text-red-600" role="alert"></p>
+      <p id="qf-error" class="mt-3 hidden rounded-xl border border-pine-200 bg-pine-50 px-4 py-2.5 text-sm font-medium text-pine-900" role="alert"></p>
       <button type="submit" id="qf-submit"
-        class="mt-4 w-full rounded-full bg-accent-500 px-6 py-3.5 font-extrabold text-slate-900 hover:bg-accent-600 transition disabled:opacity-60">
+        class="btn btn-gold mt-5 w-full">
         Get My Free Quote
       </button>
-      <p class="mt-2 text-center text-xs text-slate-500">No spam, no pressure. We respond the same business day.</p>
+      <p class="mt-3 text-center text-xs text-slate-500">No spam, no pressure. We respond the same business day.</p>
     </form>
   </div>
   <script>
