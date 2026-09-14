@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://osceola-pest-pros.vercel.app/sitemap-index.xml
+Sitemap: https://orlando-pest-pros.vercel.app/sitemap-index.xml

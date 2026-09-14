@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 
 const { c, s } = Astro.props;
 // Primary money keyword from research/market-research.md (via data/keywords.json).
-const kw = keywordsData[`${c.slug}/${s.slug}`] ?? { title: `${s.name} in ${c.name}, FL | Osceola Pest Pros`, h1: `${s.name} in ${c.name}, FL`, meta: s.metaDescription };
+const kw = keywordsData[`${c.slug}/${s.slug}`] ?? { title: `${s.name} in ${c.name}, FL | Orlando Pest Pros`, h1: `${s.name} in ${c.name}, FL`, meta: s.metaDescription };
 const title = kw.title;
 const metaDescription = kw.meta;
 const canonical = `${SITE_URL}/locations/${c.slug}/${s.slug}/`;

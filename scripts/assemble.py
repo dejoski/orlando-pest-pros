@@ -104,7 +104,7 @@ def main():
     # Campbell hub page: research says match the "Exterminator in Campbell FL" title.
     for c in cities:
         if c["slug"] == "campbell":
-            c["title"] = "Exterminator in Campbell, FL | Osceola Pest Pros"
+            c["title"] = "Exterminator in Campbell, FL | Orlando Pest Pros"
             c["h1"] = "Exterminator in Campbell, FL"
     (DATA / "cities.json").write_text(json.dumps({"cities": cities}, indent=2, ensure_ascii=False))
 
@@ -116,7 +116,7 @@ def main():
         for sslug in services_by_slug:
             kw = money_keyword(cslug, sslug)
             keywords[f"{cslug}/{sslug}"] = {
-                "title": f"{kw} | Osceola Pest Pros",
+                "title": f"{kw} | Orlando Pest Pros",
                 "h1": kw,
                 "meta": combo_meta(kw, c["name"]),
             }
@@ -126,7 +126,7 @@ def main():
     home = load("home.json")
     assert "home" in home and "globalFaqs" in home and "reviews" in home
     # Correction: brand covers Osceola AND Orange counties.
-    home["home"]["title"] = "Pest Control in Osceola & Orange Counties, FL | Osceola Pest Pros"
+    home["home"]["title"] = "Pest Control in Osceola & Orange Counties, FL | Orlando Pest Pros"
     home["home"]["metaDescription"] = ("Pest control in Osceola & Orange Counties, FL — roaches, ants, termites, "
         "rodents & more. Licensed & insured, free quotes, same-day service.")
     if "Osceola County" in home["home"].get("heroSub", "") and "Orange" not in home["home"]["heroSub"]:

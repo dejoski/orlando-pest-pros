@@ -1,4 +1,4 @@
-# Osceola Pest Pros
+# Orlando Pest Pros
 
 Rank-and-rent pest control site for **Osceola & Orange Counties, FL**. Astro + Tailwind, deployed on Vercel.
 

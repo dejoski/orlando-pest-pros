@@ -1,4 +1,4 @@
-/* Osceola Pest Pros — first-party analytics snippet.
+/* Orlando Pest Pros — first-party analytics snippet.
  *
  * Dependency-free vanilla JS. No cookies, no fingerprinting, no PII.
  * Tracks: pageview, tel: link taps, quote-form starts, quote-form submits.

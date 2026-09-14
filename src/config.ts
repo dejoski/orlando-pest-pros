@@ -1,5 +1,5 @@
 // ============================================================
-// OSCEOLA PEST PROS — SITE CONFIG
+// ORLANDO PEST PROS — SITE CONFIG
 // Single source of truth for phone, verification, and snippets.
 // ------------------------------------------------------------
 // DEJAN: swap PHONE_DISPLAY / PHONE_TEL with your call-tracking
@@ -7,8 +7,8 @@
 // two constants below — nothing else to change.
 // ============================================================
 
-export const SITE_NAME = "Osceola Pest Pros";
-export const SITE_TAGLINE = "Osceola County's local pest experts";
+export const SITE_NAME = "Orlando Pest Pros";
+export const SITE_TAGLINE = "Orlando's local pest experts";
 
 // DEJAN: swap with tracking number (display format, e.g. "(407) 123-4567")
 export const PHONE_DISPLAY = "(407) 555-0148";
@@ -16,7 +16,7 @@ export const PHONE_DISPLAY = "(407) 555-0148";
 export const PHONE_TEL = "+14075550148";
 
 // DEJAN: update after Vercel deploy (or once the real domain is bought).
-export const SITE_URL = "https://osceola-pest-pros.vercel.app";
+export const SITE_URL = "https://orlando-pest-pros.vercel.app";
 
 // --- Search Console / Bing verification ----------------------
 // Paste tokens here when available; the <meta> tags render only
