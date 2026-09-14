@@ -8,17 +8,17 @@ import { SITE_URL, PHONE_DISPLAY, telLink } from "../config";
   canonical={`${SITE_URL}/404/`}
   noindex={true}
 >
-  <div class="mx-auto max-w-3xl px-4 sm:px-6 py-20 text-center">
-    <p class="text-7xl font-extrabold text-brand-700">404</p>
-    <h1 class="mt-4 text-3xl font-extrabold text-slate-900">This page scurried away.</h1>
-    <p class="mt-3 text-slate-600">The page you're looking for doesn't exist — but pests don't stand a chance. Let's get you back on track:</p>
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 py-20 sm:py-28 text-center">
+    <p class="font-display text-7xl sm:text-8xl tracking-tight text-pine-700">404</p>
+    <h1 class="mt-4 font-display text-3xl sm:text-4xl tracking-tight text-ink-900">This page scurried away.</h1>
+    <p class="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-ink-600">The page you're looking for doesn't exist — but pests don't stand a chance. Let's get you back on track:</p>
     <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-      <a href="/" class="inline-flex justify-center rounded-full bg-brand-700 px-7 py-3.5 font-extrabold text-white hover:bg-brand-800">Back to Home</a>
-      <a href={telLink} class="inline-flex justify-center rounded-full bg-accent-500 px-7 py-3.5 font-extrabold text-slate-900 hover:bg-accent-600">Call {PHONE_DISPLAY}</a>
+      <a href="/" class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-pine-700 px-7 py-3.5 font-bold text-white transition hover:bg-pine-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 motion-reduce:transition-none">Back to Home</a>
+      <a href={telLink} class="inline-flex min-h-[52px] items-center justify-center rounded-full bg-gold-400 px-7 py-3.5 font-extrabold text-pine-950 transition hover:bg-gold-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 motion-reduce:transition-none">Call {PHONE_DISPLAY}</a>
     </div>
-    <nav class="mt-10 text-sm" aria-label="Popular pages">
-      <p class="font-bold text-slate-900 mb-3">Popular pages</p>
-      <ul class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-brand-700 font-medium">
+    <nav class="mt-12 text-sm" aria-label="Popular pages">
+      <p class="font-bold text-ink-900 mb-3">Popular pages</p>
+      <ul class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-pine-700 font-medium">
         <li><a href="/services/general-pest-control/" class="hover:underline">General Pest Control</a></li>
         <li><a href="/services/termite-control/" class="hover:underline">Termite Control</a></li>
         <li><a href="/locations/orlando/" class="hover:underline">Pest Control in Orlando</a></li>

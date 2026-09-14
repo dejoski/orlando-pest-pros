@@ -1,5 +1,6 @@
 ---
 import { SITE_NAME, PHONE_DISPLAY, telLink } from "../config";
+import LogoMark from "./LogoMark.astro";
 import services from "../data/services.json";
 import cities from "../data/cities.json";
 ---
@@ -17,10 +18,7 @@ import cities from "../data/cities.json";
     <div class="mx-auto max-w-7xl px-4 sm:px-6">
       <div class="flex h-[72px] items-center justify-between gap-4">
         <a href="/" class="flex shrink-0 items-center gap-3" aria-label={`${SITE_NAME} home`}>
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <path d="M20 2l14 6v10c0 9-6 16-14 20C12 34 6 27 6 18V8l14-6z" fill="#0c3324"/>
-            <path d="M14 20l4 4 8-9" stroke="#eec25c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <LogoMark size={40} />
           <span class="leading-tight">
             <span class="block font-display text-xl font-bold text-pine-950">Orlando Pest Pros</span>
             <span class="block text-[11px] font-bold uppercase tracking-[0.14em] text-ink-600">Orlando&apos;s local pest experts</span>

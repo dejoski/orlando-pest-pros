@@ -22,6 +22,7 @@ const crumbs = [
   { name: s.name, url: `/services/${s.slug}/` },
 ];
 const others = servicesData.services.filter((x) => x.slug !== s.slug);
+const sectionEyebrows = ["Orlando Pest Pros", "Good to know", "From the field", "Local insight"];
 const schemaHtml = jsonLd(
   serviceSchema({ name: s.name, description: s.metaDescription, url: `/services/${s.slug}/` }),
   localBusinessSchema({ url: `/services/${s.slug}/`, areaServed: citiesData.cities.map((c) => c.name) }),
@@ -31,20 +32,16 @@ const schemaHtml = jsonLd(
 ---
 <BaseLayout title={s.title} description={s.metaDescription} canonical={canonical} schemaHtml={schemaHtml} preloadImage={`/images/service-${s.slug}.jpg`}>
   <section class="relative overflow-hidden bg-cream-50">
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0">
-      <div class="absolute -top-28 -right-28 h-96 w-96 rounded-full bg-pine-100 blur-3xl"></div>
-      <div class="absolute top-48 -left-28 h-80 w-80 rounded-full bg-gold-300 opacity-30 blur-3xl"></div>
-    </div>
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-14 pt-8 lg:pb-20 lg:pt-12">
       <Breadcrumbs crumbs={crumbs} />
       <div class="mt-8 grid items-start gap-10 lg:grid-cols-[1.05fr_0.9fr] lg:gap-14">
         <div>
-          <div class="inline-flex items-center gap-2.5 rounded-full border border-pine-200 bg-white px-4 py-2 text-sm font-semibold text-pine-800 shadow-sm">
-            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-pine-50 text-pine-800" aria-hidden="true">
+          <p class="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em] text-pine-700">
+            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-pine-100 text-pine-800" aria-hidden="true">
               <ServiceIcon slug={s.slug} />
             </span>
             <span>{s.name} · {SERVICE_AREA}</span>
-          </div>
+          </p>
           <h1 class="mt-5 font-display text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl lg:text-6xl">{s.h1}</h1>
           <div class="mt-6 space-y-4">
             {s.intro.map((p) => <p class="text-lg leading-relaxed text-ink-600">{p}</p>)}
@@ -76,7 +73,7 @@ const schemaHtml = jsonLd(
         </div>
         <div class="space-y-6 lg:sticky lg:top-6">
           <figure class="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl">
-            <img src={`/images/service-${s.slug}.jpg`} alt={`${s.name} — Orlando Pest Pros`} width="1920" height="1280" fetchpriority="high" decoding="async" class="aspect-[4/3] w-full object-cover" />
+            <img src={`/images/service-${s.slug}.jpg`} alt={`Illustration of ${s.name.toLowerCase()} treatment`} width="1920" height="1280" fetchpriority="high" decoding="async" class="aspect-[4/3] w-full object-cover" />
             <figcaption class="flex items-center justify-between gap-4 border-t border-slate-200 bg-white px-6 py-4 text-sm">
               <span class="flex items-center gap-2 font-bold text-ink-900">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
@@ -108,10 +105,10 @@ const schemaHtml = jsonLd(
   </section>
 
   {s.sections.map((sec, idx) => (
-    <section class={idx % 2 === 0 ? "reveal bg-white py-20 lg:py-24" : "reveal border-y border-slate-200 bg-cream-50 py-20 lg:py-24"} aria-labelledby={`service-section-${idx}`}>
+    <section class={idx % 2 === 0 ? "bg-white py-20 lg:py-24" : "border-y border-slate-200 bg-cream-50 py-20 lg:py-24"} aria-labelledby={`service-section-${idx}`}>
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-[0.14em] text-pine-700">Orlando Pest Pros</p>
+          <p class="text-sm font-bold uppercase tracking-[0.14em] text-pine-700">{sectionEyebrows[idx % sectionEyebrows.length]}</p>
           <h2 id={`service-section-${idx}`} class="mt-3 font-display text-3xl tracking-tight text-ink-900 sm:text-4xl">{sec.heading}</h2>
           <div aria-hidden="true" class="mt-5 h-1 w-16 rounded-full bg-gold-400"></div>
         </div>
@@ -122,11 +119,31 @@ const schemaHtml = jsonLd(
     </section>
   ))}
 
-  <section aria-labelledby="process-heading" class="reveal relative overflow-hidden bg-pine-950 py-20 lg:py-24">
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0">
-      <div class="absolute -top-24 right-0 h-80 w-80 rounded-full bg-white/5 blur-3xl"></div>
-      <div class="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-gold-400 opacity-10 blur-3xl"></div>
-    </div>
+  {(s as any).spotlight && (
+    <section aria-labelledby="spotlight-heading" class="border-y border-pine-100 bg-cream-50 py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.14em] text-gold-700">{(s as any).spotlight.kicker}</p>
+            <h2 id="spotlight-heading" class="mt-3 font-display text-3xl tracking-tight text-ink-900 sm:text-4xl">{(s as any).spotlight.heading}</h2>
+            <div class="mt-6 space-y-4">
+              {((s as any).spotlight.body as string[]).map((p) => <p class="leading-relaxed text-ink-600">{p}</p>)}
+            </div>
+          </div>
+          <ul class="h-fit divide-y divide-pine-100 rounded-3xl border border-pine-100 bg-white shadow-sm">
+            {((s as any).spotlight.points as string[]).map((pt) => (
+              <li class="flex gap-4 px-6 py-5">
+                <span class="mt-2.5 h-1.5 w-6 shrink-0 rounded-full bg-gold-500" aria-hidden="true"></span>
+                <span class="text-[15px] leading-relaxed text-ink-700">{pt}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section aria-labelledby="process-heading" class="relative overflow-hidden bg-pine-950 py-20 lg:py-24">
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <p class="text-sm font-bold uppercase tracking-[0.14em] text-gold-300">Simple and transparent</p>
@@ -145,7 +162,7 @@ const schemaHtml = jsonLd(
     </div>
   </section>
 
-  <section aria-labelledby="areas-heading" class="reveal bg-white py-20 lg:py-24">
+  <section aria-labelledby="areas-heading" class="bg-white py-20 lg:py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div class="max-w-2xl">
@@ -168,7 +185,7 @@ const schemaHtml = jsonLd(
     </div>
   </section>
 
-  <section aria-labelledby="related-heading" class="reveal border-t border-slate-200 bg-cream-50 py-20 lg:py-24">
+  <section aria-labelledby="related-heading" class="border-t border-slate-200 bg-cream-50 py-20 lg:py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl">
         <p class="text-sm font-bold uppercase tracking-[0.14em] text-pine-700">Keep exploring</p>

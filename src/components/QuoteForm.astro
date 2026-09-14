@@ -17,32 +17,16 @@ const {
 } = Astro.props;
 ---
 <section id="quote" class="relative scroll-mt-24 overflow-hidden rounded-[2rem] bg-pine-900 p-6 text-white shadow-2xl sm:p-10 lg:p-12" aria-labelledby="quote-heading">
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-[radial-gradient(640px_circle_at_15%_0%,rgba(238,194,92,0.22),transparent_60%)]"></div>
   <div aria-hidden="true" class="pointer-events-none absolute inset-x-6 top-0 h-1 rounded-full bg-gold-400/70 sm:inset-x-10"></div>
   <div class="relative grid gap-10 lg:grid-cols-2 lg:gap-12">
     <div>
       <p class="eyebrow text-gold-400">Free inspection · Same-day response</p>
       <h2 id="quote-heading" class="mt-3 font-display text-3xl font-bold text-balance sm:text-4xl">{heading}</h2>
       <p class="mt-3 leading-relaxed text-pine-100">{sub}</p>
-      <ul class="mt-7 space-y-4 text-[15px] font-medium">
-        <li class="flex items-start gap-3">
-          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
-            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          Free inspection with every quote
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
-            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          Up-front pricing — no surprises
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
-            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          Licensed &amp; insured local technicians
-        </li>
+      <ul class="mt-7 space-y-0 border-t border-white/15 text-[15px] font-medium">
+        <li class="border-b border-white/15 py-3">Free inspection with every quote</li>
+        <li class="border-b border-white/15 py-3">Up-front pricing — no surprises</li>
+        <li class="border-b border-white/15 py-3">The same tech from inspection to re-treat</li>
       </ul>
       <p class="mt-8 text-pine-100">Prefer to talk? <a href={telLink} class="font-bold text-white underline decoration-gold-400 decoration-2 underline-offset-4 hover:text-gold-300">Call {PHONE_DISPLAY}</a></p>
     </div>
@@ -50,12 +34,12 @@ const {
       <div class="grid gap-4 sm:grid-cols-2">
         <div>
           <label for="qf-name" class="mb-1.5 block text-sm font-semibold text-pine-950">Name *</label>
-          <input id="qf-name" name="name" type="text" autocomplete="name" required
+          <input id="qf-name" name="name" type="text" autocomplete="name" required placeholder="Jane Rivera"
             class="min-h-[48px] w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-pine-700 focus:outline-none focus:ring-2 focus:ring-gold-400/60" />
         </div>
         <div>
           <label for="qf-phone" class="mb-1.5 block text-sm font-semibold text-pine-950">Phone *</label>
-          <input id="qf-phone" name="phone" type="tel" autocomplete="tel" required
+          <input id="qf-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(407) 555-0134"
             class="min-h-[48px] w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-pine-700 focus:outline-none focus:ring-2 focus:ring-gold-400/60" />
         </div>
         <div>
@@ -76,7 +60,7 @@ const {
             {cities.cities.map((c) => (
               <option value={c.name} selected={c.slug === preselectCity}>{c.name}</option>
             ))}
-            <option value="Other (Osceola County)">Other (Osceola County)</option>
+            <option value="Other (Orlando area)">Other (Orlando area)</option>
           </select>
         </div>
       </div>
@@ -108,11 +92,23 @@ const {
       const phone = String(data.get("phone") || "").trim();
       const service = String(data.get("service") || "");
       const city = String(data.get("city") || "");
-      const fail = (msg: string) => { err.textContent = msg; err.classList.remove("hidden"); };
-      if (name.length < 2) return fail("Please enter your name.");
-      if (!/^[+()\-.\s\d]{7,20}$/.test(phone)) return fail("Please enter a valid phone number.");
-      if (!service) return fail("Please choose a service.");
-      if (!city) return fail("Please choose your city.");
+      const fail = (msg: string, field?: HTMLElement | null) => {
+        err.textContent = msg;
+        err.classList.remove("hidden");
+        form.querySelectorAll("[aria-invalid]").forEach((el) => el.removeAttribute("aria-invalid"));
+        if (field) {
+          field.setAttribute("aria-invalid", "true");
+          (field as HTMLElement).focus({ preventScroll: false });
+        }
+      };
+      const nameEl = document.getElementById("qf-name");
+      const phoneEl = document.getElementById("qf-phone");
+      const serviceEl = document.getElementById("qf-service");
+      const cityEl = document.getElementById("qf-city");
+      if (name.length < 2) return fail("Please enter your name.", nameEl);
+      if (!/^[+()\-.\s\d]{7,20}$/.test(phone)) return fail("Please enter a valid phone number.", phoneEl);
+      if (!service) return fail("Please choose a service.", serviceEl);
+      if (!city) return fail("Please choose your city.", cityEl);
       submit.disabled = true;
       submit.textContent = "Sending…";
       try {

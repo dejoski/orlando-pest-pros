@@ -6,7 +6,7 @@ import vercel from '@astrojs/vercel';
 // DEJAN: after Vercel deploy, set `site` to the real vercel.app URL
 // (or the custom domain once purchased). Used for sitemap + canonicals.
 export default defineConfig({
-  site: 'https://orlando-pest-pros.vercel.app',
+  site: 'https://osceola-pest-pros.vercel.app',
   // NOTE: Astro 5.18+ removed output:"hybrid" — "static" (default) now
   // behaves the same: pages prerender, routes with `prerender = false`
   // (/api/*, dashboard) run as Vercel serverless functions via the adapter.

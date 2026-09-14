@@ -93,24 +93,6 @@ const og = ogImage ?? `${SITE_URL}/og-image.png`;
         navBtn.setAttribute("aria-expanded", String(!expanded));
         navMenu?.classList.toggle("hidden");
       });
-      // Reveal on scroll
-      const revealEls = document.querySelectorAll(".reveal");
-      if ("IntersectionObserver" in window && revealEls.length) {
-        const io = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("revealed");
-                io.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.12 }
-        );
-        revealEls.forEach((el) => io.observe(el));
-      } else {
-        revealEls.forEach((el) => el.classList.add("revealed"));
-      }
     </script>
   </body>
 </html>
