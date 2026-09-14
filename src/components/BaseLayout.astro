@@ -1,0 +1,89 @@
+---
+import {
+  SITE_NAME,
+  SITE_URL,
+  PHONE_DISPLAY,
+  telLink,
+  GOOGLE_SITE_VERIFICATION,
+  BING_SITE_VERIFICATION,
+  ANALYTICS_SNIPPET,
+} from "../config";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+import StickyCallBar from "./StickyCallBar.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage?: string;
+  schemaHtml?: string;
+  noindex?: boolean;
+}
+
+const { title, description, canonical, ogImage, schemaHtml, noindex } = Astro.props;
+const og = ogImage ?? `${SITE_URL}/og-image.png`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {GOOGLE_SITE_VERIFICATION && (
+      <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
+    )}
+    {BING_SITE_VERIFICATION && (
+      <meta name="msvalidate.01" content={BING_SITE_VERIFICATION} />
+    )}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={og} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={og} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#166324" />
+    {schemaHtml && <Fragment set:html={schemaHtml} />}
+    {ANALYTICS_SNIPPET && <Fragment set:html={ANALYTICS_SNIPPET} />}
+  </head>
+  <body>
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-2">
+      Skip to content
+    </a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <StickyCallBar />
+    <script src="/track.js" defer></script>
+    <script>
+      // FAQ accordions (progressive enhancement; content is in the HTML for SEO)
+      document.querySelectorAll<HTMLElement>(".faq-item").forEach((item) => {
+        const btn = item.querySelector("button");
+        btn?.addEventListener("click", () => {
+          const open = item.dataset.open === "true";
+          document.querySelectorAll<HTMLElement>(".faq-item").forEach((i) => (i.dataset.open = "false"));
+          item.dataset.open = open ? "false" : "true";
+          btn.setAttribute("aria-expanded", String(!open));
+        });
+      });
+      // Mobile nav
+      const navBtn = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      navBtn?.addEventListener("click", () => {
+        const expanded = navBtn.getAttribute("aria-expanded") === "true";
+        navBtn.setAttribute("aria-expanded", String(!expanded));
+        navMenu?.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

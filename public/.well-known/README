@@ -1,0 +1,10 @@
+# .well-known passthrough
+#
+# Drop provider verification files here (e.g. Brave, Mastodon, or any
+# service that asks you to serve a file under /.well-known/). Everything
+# in public/ is copied to the site root at build time, so a file placed
+# here is served at https://<domain>/.well-known/<filename>.
+#
+# Meta-tag verification (Google Search Console, Bing Webmaster) is
+# handled via GOOGLE_SITE_VERIFICATION / BING_SITE_VERIFICATION in
+# src/config.ts instead.

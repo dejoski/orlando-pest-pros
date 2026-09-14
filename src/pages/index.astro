@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../components/BaseLayout.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import QuoteForm from "../components/QuoteForm.astro";
+import Reviews from "../components/Reviews.astro";
+import CtaBand from "../components/CtaBand.astro";
+import ServiceIcon from "../components/ServiceIcon.astro";
+import { SITE_URL, PHONE_DISPLAY, telLink, SERVICE_AREA } from "../config";
+import { faqSchema, localBusinessSchema, reviewSchema, jsonLd } from "../lib/schema";
+import homeData from "../data/home.json";
+import servicesData from "../data/services.json";
+import citiesData from "../data/cities.json";
+
+const h = homeData.home;
+const canonical = `${SITE_URL}/`;
+const schemaHtml = jsonLd(
+  localBusinessSchema({
+    url: "/",
+    areaServed: citiesData.cities.map((c) => c.name),
+    aggregateRating: homeData.aggregateRating,
+  }),
+  faqSchema(homeData.globalFaqs),
+  ...reviewSchema(homeData.reviews.slice(0, 5))
+);
+const osceola = citiesData.cities.filter((c) => c.county === "Osceola County");
+const orange = citiesData.cities.filter((c) => c.county === "Orange County");
+---
+<BaseLayout title={h.title} description={h.metaDescription} canonical={canonical} schemaHtml={schemaHtml}>
+  <!-- HERO -->
+  <div class="bg-gradient-to-b from-brand-50 to-white border-b border-brand-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-14 lg:py-20 grid gap-10 lg:grid-cols-2 items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 rounded-full bg-white border border-brand-200 px-4 py-1.5 text-sm font-semibold text-brand-800">
+          <span class="h-2 w-2 rounded-full bg-brand-600" aria-hidden="true"></span>
+          {h.heroEyebrow}
+        </p>
+        <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">{h.heroHeadline}</h1>
+        <p class="mt-4 text-lg text-slate-600 leading-relaxed">{h.heroSub}</p>
+        <ul class="mt-5 space-y-2">
+          {h.heroBullets.map((b) => (
+            <li class="flex items-start gap-2 font-medium text-slate-800">
+              <span aria-hidden="true" class="mt-0.5 text-brand-600 font-bold">✓</span> {b}
+            </li>
+          ))}
+        </ul>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <a href={telLink} class="inline-flex justify-center items-center gap-2 rounded-full bg-brand-700 px-8 py-4 text-lg font-extrabold text-white hover:bg-brand-800 shadow-lg">
+            Call {PHONE_DISPLAY}
+          </a>
+          <a href="#quote" class="inline-flex justify-center items-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-lg font-extrabold text-slate-900 hover:bg-accent-600 shadow-lg">
+            Get a Free Quote
+          </a>
+        </div>
+        <p class="mt-3 text-sm text-slate-500">Serving {SERVICE_AREA} — from Kissimmee to Orlando.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        {h.trustBadges.map((b) => (
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="font-extrabold text-slate-900">{b.title}</p>
+            <p class="mt-1 text-sm text-slate-600">{b.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-14 space-y-20">
+    <!-- SERVICES -->
+    <section id="services" class="scroll-mt-24" aria-labelledby="services-heading">
+      <h2 id="services-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">Pest Control Services</h2>
+      <p class="mt-3 text-slate-600 text-center max-w-2xl mx-auto">{h.servicesBlurb}</p>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {servicesData.services.map((s) => (
+          <a href={`/services/${s.slug}/`} class="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-brand-600 hover:shadow-lg transition">
+            <ServiceIcon slug={s.slug} />
+            <p class="mt-3 text-lg font-extrabold text-slate-900 group-hover:text-brand-800">{s.name}</p>
+            <p class="mt-2 text-sm text-slate-600 line-clamp-3">{s.intro[0]}</p>
+            <span class="mt-3 inline-block text-sm font-bold text-brand-700">Learn more →</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section aria-labelledby="why-heading">
+      <h2 id="why-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">{h.whyUs.heading}</h2>
+      <p class="mt-3 text-slate-600 text-center max-w-2xl mx-auto">{h.whyUs.intro}</p>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2">
+        {h.whyUs.points.map((p) => (
+          <div class="rounded-2xl bg-brand-50 border border-brand-100 p-6">
+            <p class="font-extrabold text-brand-900">{p.title}</p>
+            <p class="mt-2 text-slate-700">{p.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section aria-labelledby="how-heading">
+      <h2 id="how-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">How It Works</h2>
+      <ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {h.howItWorks.map((st, i) => (
+          <li class="rounded-2xl border border-slate-200 bg-white p-5">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 font-extrabold text-white">{i + 1}</span>
+            <p class="mt-3 font-bold text-slate-900">{st.step}</p>
+            <p class="mt-1 text-sm text-slate-600">{st.detail}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <Reviews reviews={homeData.reviews} aggregate={homeData.aggregateRating} />
+
+    <!-- SERVICE AREAS -->
+    <section id="areas" class="scroll-mt-24" aria-labelledby="areas-heading">
+      <h2 id="areas-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">Service Areas</h2>
+      <p class="mt-3 text-slate-600 text-center max-w-2xl mx-auto">{h.areasBlurb}</p>
+      <div class="mt-8 grid gap-8 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-extrabold text-lg text-slate-900">Osceola County</h3>
+          <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {osceola.map((c) => (
+              <li><a href={`/locations/${c.slug}/`} class="block rounded-lg px-3 py-2 font-medium text-brand-800 hover:bg-brand-50">Pest Control in {c.name}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-extrabold text-lg text-slate-900">Orange County</h3>
+          <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {orange.map((c) => (
+              <li><a href={`/locations/${c.slug}/`} class="block rounded-lg px-3 py-2 font-medium text-brand-800 hover:bg-brand-50">Pest Control in {c.name}</a></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <FaqAccordion faqs={homeData.globalFaqs} heading="Pest Control FAQs" id="faq" />
+
+    <QuoteForm />
+
+    <CtaBand heading={h.ctaBand.heading} text={h.ctaBand.text} />
+  </div>
+</BaseLayout>

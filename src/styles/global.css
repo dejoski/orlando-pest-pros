@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef7ee;
+  --color-brand-100: #d8ecd9;
+  --color-brand-600: #1d7a2f;
+  --color-brand-700: #166324;
+  --color-brand-800: #124f1e;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-slate-800 antialiased; }
+
+/* FAQ accordion: animated via grid-template-rows, no JS libs */
+.faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
+.faq-item[data-open="true"] .faq-answer { grid-template-rows: 1fr; }
+.faq-answer > div { overflow: hidden; }
+.faq-item[data-open="true"] .faq-chevron { transform: rotate(180deg); }
+.faq-chevron { transition: transform .25s ease; }
+
+/* Sticky mobile call bar offset for footer overlap */
+@media (max-width: 767px) {
+  body { padding-bottom: 64px; }
+}

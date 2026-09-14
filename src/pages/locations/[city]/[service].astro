@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../../../components/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import FaqAccordion from "../../../components/FaqAccordion.astro";
+import QuoteForm from "../../../components/QuoteForm.astro";
+import CtaBand from "../../../components/CtaBand.astro";
+import ServiceIcon from "../../../components/ServiceIcon.astro";
+import { SITE_URL, PHONE_DISPLAY, telLink } from "../../../config";
+import { serviceSchema, faqSchema, breadcrumbSchema, localBusinessSchema, jsonLd } from "../../../lib/schema";
+import citiesData from "../../../data/cities.json";
+import servicesData from "../../../data/services.json";
+import keywordsData from "../../../data/keywords.json";
+
+// Data-driven programmatic SEO: every city × service combination is
+// generated from the two data files — no hand-written files needed.
+export async function getStaticPaths() {
+  const paths: { params: { city: string; service: string }; props: { c: any; s: any } }[] = [];
+  for (const c of citiesData.cities) {
+    for (const s of servicesData.services) {
+      paths.push({ params: { city: c.slug, service: s.slug }, props: { c, s } });
+    }
+  }
+  return paths;
+}
+
+const { c, s } = Astro.props;
+// Primary money keyword from research/market-research.md (via data/keywords.json).
+const kw = keywordsData[`${c.slug}/${s.slug}`] ?? { title: `${s.name} in ${c.name}, FL | Osceola Pest Pros`, h1: `${s.name} in ${c.name}, FL`, meta: s.metaDescription };
+const title = kw.title;
+const metaDescription = kw.meta;
+const canonical = `${SITE_URL}/locations/${c.slug}/${s.slug}/`;
+const crumbs = [
+  { name: "Home", url: "/" },
+  { name: c.name, url: `/locations/${c.slug}/` },
+  { name: s.name, url: `/locations/${c.slug}/${s.slug}/` },
+];
+const faqs = [...s.faqs.slice(0, 3), ...c.faqs.slice(0, 2)];
+const sameCounty = citiesData.cities.filter((x) => x.slug !== c.slug && x.county === c.county);
+const otherCounty = citiesData.cities.filter((x) => x.slug !== c.slug && x.county !== c.county);
+const nearbyCities = [...sameCounty, ...otherCounty].slice(0, 8);
+const otherServices = servicesData.services.filter((x) => x.slug !== s.slug);
+const schemaHtml = jsonLd(
+  serviceSchema({ name: `${s.name} in ${c.name}`, description: metaDescription, url: `/locations/${c.slug}/${s.slug}/` }),
+  localBusinessSchema({ url: `/locations/${c.slug}/${s.slug}/`, areaServed: [c.name] }),
+  faqSchema(faqs),
+  breadcrumbSchema(crumbs)
+);
+---
+<BaseLayout title={title} description={metaDescription} canonical={canonical} schemaHtml={schemaHtml}>
+  <div class="bg-brand-50/60 border-b border-brand-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-10">
+      <Breadcrumbs crumbs={crumbs} />
+      <div class="mt-6 max-w-3xl">
+        <div class="inline-flex items-center gap-2 rounded-full bg-white border border-brand-200 px-4 py-1.5 text-sm font-semibold text-brand-800">
+          <ServiceIcon slug={s.slug} />
+          {s.name} · {c.name}, FL
+        </div>
+        <h1 class="mt-4 text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">{kw.h1}</h1>
+        <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+          {c.name} homes face {c.localPests.slice(0, 3).map((p) => p.name.toLowerCase()).join(", ")}, and more —
+          {c.localPressure.body[0]}
+        </p>
+        <p class="mt-4 text-lg text-slate-600 leading-relaxed">{s.intro[0]}</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href={telLink} class="inline-flex justify-center items-center gap-2 rounded-full bg-brand-700 px-7 py-3.5 font-extrabold text-white hover:bg-brand-800">Call {PHONE_DISPLAY}</a>
+          <a href="#quote" class="inline-flex justify-center items-center gap-2 rounded-full bg-accent-500 px-7 py-3.5 font-extrabold text-slate-900 hover:bg-accent-600">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 space-y-14">
+    <section>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Why {c.name} needs professional {s.name.toLowerCase()}</h2>
+      <p class="mt-4 text-slate-600 leading-relaxed max-w-3xl">{s.sections[0]?.body[0] ?? s.intro[1]}</p>
+      <p class="mt-4 text-slate-600 leading-relaxed max-w-3xl">{c.localPressure.body[1] ?? c.intro[1]}</p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {s.pests.slice(0, 6).map((p) => (
+          <div class="rounded-2xl border border-slate-200 bg-white p-5">
+            <p class="font-bold text-slate-900">{p.name}</p>
+            <p class="mt-1 text-sm text-slate-600">{p.blurb}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section aria-labelledby="process-heading">
+      <h2 id="process-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900">Our {s.name.toLowerCase()} process in {c.name}</h2>
+      <ol class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {s.process.map((st, i) => (
+          <li class="rounded-2xl border border-slate-200 bg-white p-5">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 font-extrabold text-white">{i + 1}</span>
+            <p class="mt-3 font-bold text-slate-900">{st.step}</p>
+            <p class="mt-1 text-sm text-slate-600">{st.detail}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="nearby-heading">
+      <h2 id="nearby-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900">{s.name} in nearby cities</h2>
+      <ul class="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        {nearbyCities.map((x) => (
+          <li><a href={`/locations/${x.slug}/${s.slug}/`} class="block rounded-xl border border-slate-200 bg-white px-4 py-3 font-semibold text-brand-800 hover:border-brand-600 hover:shadow-sm">{s.name} in {x.name}</a></li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="other-services-heading">
+      <h2 id="other-services-heading" class="text-xl font-extrabold text-slate-900">Other services in {c.name}</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {otherServices.map((o) => (
+          <a href={`/locations/${c.slug}/${o.slug}/`} class="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 hover:border-brand-600 hover:shadow-sm">
+            <ServiceIcon slug={o.slug} />
+            <span class="font-semibold text-slate-900">{o.name} in {c.name}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <FaqAccordion faqs={faqs} heading={`${s.name} in ${c.name}: FAQs`} id="faq" />
+    <QuoteForm preselectService={s.slug} preselectCity={c.slug} heading={`Get a free ${s.name.toLowerCase()} quote in ${c.name}`} />
+    <CtaBand heading={`${s.name} in ${c.name} — done right the first time.`} text="Licensed local technicians, honest inspections, and a satisfaction guarantee on every visit." />
+  </div>
+</BaseLayout>

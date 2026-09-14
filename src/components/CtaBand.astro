@@ -1,0 +1,17 @@
+---
+import { PHONE_DISPLAY, telLink } from "../config";
+interface Props { heading: string; text: string }
+const { heading, text } = Astro.props;
+---
+<section class="rounded-3xl bg-gradient-to-br from-brand-700 to-brand-800 p-8 sm:p-12 text-center text-white shadow-xl" aria-label="Call to action">
+  <h2 class="text-2xl sm:text-3xl font-extrabold">{heading}</h2>
+  <p class="mx-auto mt-3 max-w-2xl text-brand-100">{text}</p>
+  <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+    <a href={telLink} class="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-extrabold text-brand-800 hover:bg-brand-50 transition">
+      Call {PHONE_DISPLAY}
+    </a>
+    <a href="#quote" class="inline-flex items-center gap-2 rounded-full bg-accent-500 px-7 py-3.5 font-extrabold text-slate-900 hover:bg-accent-600 transition">
+      Get a Free Quote
+    </a>
+  </div>
+</section>

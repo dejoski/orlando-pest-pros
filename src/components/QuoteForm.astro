@@ -1,0 +1,125 @@
+---
+import { PHONE_DISPLAY, telLink } from "../config";
+import services from "../data/services.json";
+import cities from "../data/cities.json";
+
+interface Props {
+  heading?: string;
+  sub?: string;
+  preselectService?: string;
+  preselectCity?: string;
+}
+const {
+  heading = "Get Your Free Quote",
+  sub = "Tell us what's bugging you — we'll respond the same business day.",
+  preselectService = "",
+  preselectCity = "",
+} = Astro.props;
+---
+<section id="quote" class="scroll-mt-24 rounded-3xl bg-brand-800 p-6 sm:p-10 text-white shadow-xl" aria-labelledby="quote-heading">
+  <div class="grid gap-8 lg:grid-cols-2">
+    <div>
+      <h2 id="quote-heading" class="text-2xl sm:text-3xl font-extrabold">{heading}</h2>
+      <p class="mt-2 text-brand-100">{sub}</p>
+      <ul class="mt-6 space-y-3 text-sm">
+        <li class="flex gap-2"><span aria-hidden="true">✓</span> Free inspection with every quote</li>
+        <li class="flex gap-2"><span aria-hidden="true">✓</span> Up-front pricing — no surprises</li>
+        <li class="flex gap-2"><span aria-hidden="true">✓</span> Licensed &amp; insured local technicians</li>
+      </ul>
+      <p class="mt-6 text-brand-100">Prefer to talk? <a href={telLink} class="font-bold text-white underline underline-offset-2">Call {PHONE_DISPLAY}</a></p>
+    </div>
+    <form id="quote-form" data-quote-form class="rounded-2xl bg-white p-5 sm:p-6 text-slate-800" novalidate>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label for="qf-name" class="mb-1 block text-sm font-semibold">Name *</label>
+          <input id="qf-name" name="name" type="text" autocomplete="name" required
+            class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20" />
+        </div>
+        <div>
+          <label for="qf-phone" class="mb-1 block text-sm font-semibold">Phone *</label>
+          <input id="qf-phone" name="phone" type="tel" autocomplete="tel" required
+            class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20" />
+        </div>
+        <div>
+          <label for="qf-service" class="mb-1 block text-sm font-semibold">Service *</label>
+          <select id="qf-service" name="service" required
+            class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20">
+            <option value="">Select a service…</option>
+            {services.services.map((s) => (
+              <option value={s.name} selected={s.slug === preselectService}>{s.name}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label for="qf-city" class="mb-1 block text-sm font-semibold">City *</label>
+          <select id="qf-city" name="city" required
+            class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20">
+            <option value="">Select your city…</option>
+            {cities.cities.map((c) => (
+              <option value={c.name} selected={c.slug === preselectCity}>{c.name}</option>
+            ))}
+            <option value="Other (Osceola County)">Other (Osceola County)</option>
+          </select>
+        </div>
+      </div>
+      <div class="mt-4">
+        <label for="qf-message" class="mb-1 block text-sm font-semibold">What are you seeing? <span class="font-normal text-slate-500">(optional)</span></label>
+        <textarea id="qf-message" name="message" rows="3"
+          class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20"
+          placeholder="e.g. Palmetto bugs in the kitchen at night…"></textarea>
+      </div>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+      <p id="qf-error" class="mt-3 hidden text-sm font-medium text-red-600" role="alert"></p>
+      <button type="submit" id="qf-submit"
+        class="mt-4 w-full rounded-full bg-accent-500 px-6 py-3.5 font-extrabold text-slate-900 hover:bg-accent-600 transition disabled:opacity-60">
+        Get My Free Quote
+      </button>
+      <p class="mt-2 text-center text-xs text-slate-500">No spam, no pressure. We respond the same business day.</p>
+    </form>
+  </div>
+  <script>
+    const form = document.getElementById("quote-form") as HTMLFormElement | null;
+    const err = document.getElementById("qf-error");
+    const submit = document.getElementById("qf-submit") as HTMLButtonElement | null;
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!form || !err || !submit) return;
+      err.classList.add("hidden");
+      const data = new FormData(form);
+      const name = String(data.get("name") || "").trim();
+      const phone = String(data.get("phone") || "").trim();
+      const service = String(data.get("service") || "");
+      const city = String(data.get("city") || "");
+      const fail = (msg: string) => { err.textContent = msg; err.classList.remove("hidden"); };
+      if (name.length < 2) return fail("Please enter your name.");
+      if (!/^[+()\-.\s\d]{7,20}$/.test(phone)) return fail("Please enter a valid phone number.");
+      if (!service) return fail("Please choose a service.");
+      if (!city) return fail("Please choose your city.");
+      submit.disabled = true;
+      submit.textContent = "Sending…";
+      try {
+        const res = await fetch("/api/quote", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name, phone, service, city,
+            message: String(data.get("message") || ""),
+            website: String(data.get("website") || ""),
+            source: window.location.pathname,
+          }),
+        });
+        const json = await res.json().catch(() => ({}));
+        if (res.ok && json.ok) {
+          window.location.href = "/thank-you/";
+        } else {
+          fail(json.error || "Something went wrong. Please call us instead.");
+        }
+      } catch {
+        fail("Couldn't reach our server. Please call us instead — we're happy to help.");
+      } finally {
+        submit.disabled = false;
+        submit.textContent = "Get My Free Quote";
+      }
+    });
+  </script>
+</section>

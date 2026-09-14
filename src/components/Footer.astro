@@ -1,0 +1,48 @@
+---
+import { SITE_NAME, PHONE_DISPLAY, telLink, HOURS, SERVICE_AREA } from "../config";
+import services from "../data/services.json";
+import cities from "../data/cities.json";
+const year = new Date().getFullYear();
+---
+<footer class="bg-slate-900 text-slate-300">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-4">
+    <div>
+      <p class="font-extrabold text-white text-lg">{SITE_NAME}</p>
+      <p class="mt-2 text-sm">Local, licensed &amp; insured pest control serving {SERVICE_AREA} — from Kissimmee to Orlando.</p>
+      <p class="mt-3 text-sm"><span class="text-slate-400">Hours:</span> {HOURS}</p>
+      <a href={telLink} class="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-700">
+        Call {PHONE_DISPLAY}
+      </a>
+    </div>
+    <nav aria-label="Services">
+      <p class="font-bold text-white mb-3">Services</p>
+      <ul class="space-y-2 text-sm">
+        {services.services.map((s) => (
+          <li><a href={`/services/${s.slug}/`} class="hover:text-white">{s.name}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <nav aria-label="Service areas">
+      <p class="font-bold text-white mb-3">Service Areas</p>
+      <ul class="space-y-2 text-sm">
+        {cities.cities.map((c) => (
+          <li><a href={`/locations/${c.slug}/`} class="hover:text-white">Pest Control in {c.name}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <nav aria-label="Company">
+      <p class="font-bold text-white mb-3">Company</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/#reviews" class="hover:text-white">Reviews</a></li>
+        <li><a href="/#faq" class="hover:text-white">FAQ</a></li>
+        <li><a href="/#quote" class="hover:text-white">Get a Free Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="border-t border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-xs text-slate-500">
+      <p>© {year} {SITE_NAME}. All rights reserved.</p>
+      <p>Serving {SERVICE_AREA} · Kissimmee · St. Cloud · Orlando · Winter Park · + 11 more cities</p>
+    </div>
+  </div>
+</footer>
