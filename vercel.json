@@ -1,17 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "osceola-pest-pros.vercel.app" }],
-      "destination": "https://orlandopestcontrol.top/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "orlando-pest-pros.vercel.app" }],
-      "destination": "https://orlandopestcontrol.top/:path*",
-      "permanent": true
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml"
     }
   ]
 }
