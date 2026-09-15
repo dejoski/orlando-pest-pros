@@ -16,7 +16,7 @@ export const PHONE_DISPLAY = "(407) 555-0148";
 export const PHONE_TEL = "+14075550148";
 
 // DEJAN: update after Vercel deploy (or once the real domain is bought).
-export const SITE_URL = "https://osceola-pest-pros.vercel.app";
+export const SITE_URL = "https://orlandopestcontrol.top";
 
 // --- Search Console / Bing verification ----------------------
 // Paste tokens here when available; the <meta> tags render only
