@@ -8,7 +8,9 @@ export const prerender = false;
 // see SETUP.md). Either pair works:
 //   KV_REST_API_URL / KV_REST_API_TOKEN                (Vercel KV)
 //   UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN  (Upstash via Marketplace)
-// If none are set the endpoint no-ops with 204 — the site keeps working.
+// If none are set the endpoint still returns 204 (the site keeps working)
+// but logs a loud console.error per event — dropped analytics must be
+// VISIBLE in the function logs, never a silent no-op.
 //
 // Storage schema (see TRACKING.md): one Redis hash per day,
 //   key:   opp:day:YYYY-MM-DD        (TTL 35 days, UTC)
@@ -83,7 +85,17 @@ export async function POST({ request }) {
     const day = 'opp:day:' + new Date().toISOString().slice(0, 10); // UTC, server-side
 
     const cfg = kvConfig();
-    if (cfg) {
+    if (!cfg) {
+      // Storage not configured: this event is being DROPPED. The client
+      // still gets its normal 204, but the data loss is logged loudly so
+      // a missing KV_REST_API_URL / KV_REST_API_TOKEN (or UPSTASH_* pair)
+      // in the Vercel project shows up in the function logs immediately.
+      console.error(
+        '[analytics/track] WARNING: KV storage not configured — dropping ' +
+          type + ' event for ' + page +
+          ' (set KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN)'
+      );
+    } else {
       // Server-side dedupe for conversion events: client sends a UUID per
       // interaction; if we've seen it in the last 5 min, count nothing.
       // (pageviews skip this to save 1 command — client-side dedupe covers them.)

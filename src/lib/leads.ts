@@ -1,10 +1,24 @@
-// Quote-lead storage abstraction.
+// Quote-lead storage.
 // ---------------------------------------------------------------
-// INTEGRATION POINT: the analytics module (analytics/INTEGRATION.md,
-// currently being built by a parallel workstream) defines the final
-// storage endpoint. Until it lands, validated leads are logged
-// server-side and acknowledged — no lead is silently dropped, and
-// swapping in the real store means editing ONE function below.
+// Leads are persisted to the same Vercel KV / Upstash store the
+// analytics collector uses (src/pages/api/track.js), in a Redis
+// list so the private dashboard can read them back:
+//
+//   key:  opp:leads            (LPUSH, newest first)
+//   item: JSON-serialized QuoteLead
+//   cap:  list is trimmed to the most recent 1,000 leads and has
+//         NO expiry (unlike the 35-day analytics hashes) — a lead
+//         is a business record, not a stat.
+//
+// Env vars (same pairs as the analytics module; auto-attached when
+// the KV database is connected to the Vercel project):
+//   KV_REST_API_URL / KV_REST_API_TOKEN                (Vercel KV)
+//   UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN  (Upstash)
+//
+// If neither pair is set, the lead cannot be persisted: it is
+// still written to the server log (fallback) and a loud
+// console.error flags the missing configuration — but until the
+// env vars exist in the Vercel project, NO durable copy is kept.
 
 export interface QuoteLead {
   name: string;
@@ -16,10 +30,50 @@ export interface QuoteLead {
   submittedAt: string; // ISO timestamp
 }
 
+export const LEADS_KEY = "opp:leads";
+const LEADS_CAP = 1000;
+
+function kvConfig(): { base: string; token: string } | null {
+  const url = import.meta.env.KV_REST_API_URL || import.meta.env.UPSTASH_REDIS_REST_URL || "";
+  const token = import.meta.env.KV_REST_API_TOKEN || import.meta.env.UPSTASH_REDIS_REST_TOKEN || "";
+  if (!url || !token) return null;
+  return { base: String(url).replace(/\/+$/, ""), token: String(token) };
+}
+
 export async function storeLead(lead: QuoteLead): Promise<{ ok: true }> {
-  // TODO(analytics): replace with the endpoint from analytics/INTEGRATION.md
-  // e.g. await fetch(ANALYTICS_LEAD_ENDPOINT, { method: "POST", body: JSON.stringify(lead) });
+  // Fallback record: the lead always lands in the server function
+  // log, even if durable storage below fails or isn't configured.
   console.log("[quote-lead]", JSON.stringify(lead));
+
+  const cfg = kvConfig();
+  if (!cfg) {
+    console.error(
+      "[quote-lead] WARNING: lead storage is NOT configured " +
+        "(KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN missing) — " +
+        "this lead exists ONLY in the function log and will be lost when logs rotate.",
+    );
+    return { ok: true };
+  }
+
+  try {
+    const res = await fetch(cfg.base + "/pipeline", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + cfg.token,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify([
+        ["LPUSH", LEADS_KEY, JSON.stringify(lead)],
+        ["LTRIM", LEADS_KEY, 0, LEADS_CAP - 1],
+      ]),
+    });
+    if (!res.ok) throw new Error("kv pipeline failed: " + res.status);
+  } catch (e) {
+    // Don't fail the visitor's submission over a storage outage —
+    // the lead is already in the function log (above); make the
+    // storage failure loud instead of silent.
+    console.error("[quote-lead] WARNING: failed to persist lead to KV store:", e);
+  }
   return { ok: true };
 }
 
