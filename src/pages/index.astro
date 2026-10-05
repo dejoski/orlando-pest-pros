@@ -56,6 +56,11 @@ const crew: { name: string; role: string; tenure: string; quote: string }[] = (h
         <h1 id="hero-heading" class="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-white text-balance">
           {h.heroHeadline}
         </h1>
+        {(h as any).heroTagline && (
+          <p class="mt-4 font-display text-2xl sm:text-3xl tracking-tight text-gold-300">
+            {(h as any).heroTagline}
+          </p>
+        )}
         <p class="mt-6 max-w-2xl text-xl leading-relaxed text-pine-100">
           {h.heroSub}
         </p>
