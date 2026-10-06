@@ -19,6 +19,8 @@ Astro.response.headers.set('Cache-Control', 'private, no-store');
 
 const TYPES = ['pv', 'tel', 'form_start', 'form_submit'];
 const DAYS = 30;
+const LEADS_KEY = 'opp:leads'; // Redis list written by src/lib/leads.ts (LPUSH, newest first)
+const LEADS_SHOWN = 50;
 
 function kvConfig() {
   const url = import.meta.env.KV_REST_API_URL || import.meta.env.UPSTASH_REDIS_REST_URL || '';
@@ -55,9 +57,11 @@ function hashToObj(arr) {
 }
 
 // One hash per day: opp:day:YYYY-MM-DD, fields "{page}|{type}".
-// Dashboard = 30 HGETALLs in ONE pipeline (30 commands), aggregated in memory.
+// Dashboard = 30 HGETALLs + LRANGE/LLEN on the leads list, in ONE pipeline.
 let rows = [];
 let totals = { pv: 0, tel: 0, form_start: 0, form_submit: 0 };
+let leads = [];
+let leadsTotal = 0;
 let kvError = '';
 
 try {
@@ -67,10 +71,12 @@ try {
   } else {
     const cmds = [];
     for (let d = 0; d < DAYS; d++) cmds.push(['HGETALL', 'opp:day:' + dayStamp(d)]);
+    cmds.push(['LRANGE', LEADS_KEY, 0, LEADS_SHOWN - 1]);
+    cmds.push(['LLEN', LEADS_KEY]);
     const results = await pipeline(cmds);
 
     const perPage = {};
-    for (const r of results || []) {
+    for (const r of (results || []).slice(0, DAYS)) {
       const h = hashToObj(r && r.result);
       for (const [field, n] of Object.entries(h)) {
         const i = field.lastIndexOf('|');
@@ -92,6 +98,19 @@ try {
       .sort((a, b) => b.pv - a.pv);
 
     for (const r of rows) for (const t of TYPES) totals[t] += r[t];
+
+    // Leads: pipeline results after the 30 HGETALLs are LRANGE then LLEN.
+    const lrange = results && results[DAYS] ? results[DAYS].result : null;
+    if (Array.isArray(lrange)) {
+      for (const item of lrange) {
+        try {
+          const l = JSON.parse(item);
+          if (l && l.name && l.phone) leads.push(l);
+        } catch { /* skip malformed entries */ }
+      }
+    }
+    const llen = results && results[DAYS + 1] ? results[DAYS + 1].result : null;
+    leadsTotal = typeof llen === 'number' ? llen : leads.length;
   }
 } catch (e) {
   kvError = 'Could not read analytics store: ' + (e && e.message ? e.message : e);
@@ -111,6 +130,7 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
     body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
     .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
     h1 { font-size: 20px; margin: 0 0 4px; }
+    h2 { font-size: 16px; margin: 32px 0 4px; }
     .sub { color: #94a3b8; font-size: 13px; margin-bottom: 20px; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 24px; }
     .card { background: #1e293b; border-radius: 10px; padding: 14px; }
@@ -122,6 +142,8 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
     th { color: #94a3b8; font-weight: 600; font-size: 12px; text-transform: uppercase; }
     tr:last-child td { border-bottom: none; }
     .mono { font-family: ui-monospace, monospace; font-size: 13px; word-break: break-all; }
+    table.leads th, table.leads td { text-align: left; vertical-align: top; }
+    table.leads td.when { white-space: nowrap; color: #94a3b8; }
     .err { background: #7f1d1d; border-radius: 10px; padding: 14px; margin-bottom: 20px; }
     .conv { color: #4ade80; font-weight: 600; }
   </style>
@@ -139,6 +161,7 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
       <div class="card"><div class="n">{totals.form_start.toLocaleString()}</div><div class="l">Quote-form starts</div></div>
       <div class="card"><div class="n">{totals.form_submit.toLocaleString()}</div><div class="l">Quote-form submits</div></div>
       <div class="card"><div class="n">{totalConv.toFixed(1)}%</div><div class="l">Overall conversion (submit / pv)</div></div>
+      <div class="card"><div class="n">{leadsTotal.toLocaleString()}</div><div class="l">Quote leads stored</div></div>
     </div>
 
     <table>
@@ -159,6 +182,32 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
             <td>{r.form_start.toLocaleString()}</td>
             <td>{r.form_submit.toLocaleString()}</td>
             <td class="conv">{r.conv.toFixed(1)}%</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2>Quote leads</h2>
+    <div class="sub">Most recent {LEADS_SHOWN} stored leads · newest first · persisted by the quote form to the {LEADS_KEY} list</div>
+    <table class="leads">
+      <thead>
+        <tr>
+          <th>Submitted (UTC)</th><th>Name</th><th>Phone</th><th>Service</th><th>City</th><th>Message</th><th>Page</th>
+        </tr>
+      </thead>
+      <tbody>
+        {leads.length === 0 && (
+          <tr><td colspan="7" style="text-align:center; color:#94a3b8;">No leads stored yet — submissions appear here once the KV store is connected and the form is used.</td></tr>
+        )}
+        {leads.map((l) => (
+          <tr>
+            <td class="when">{String(l.submittedAt || '').replace('T', ' ').slice(0, 16)}</td>
+            <td>{l.name}</td>
+            <td class="mono">{l.phone}</td>
+            <td>{l.service}</td>
+            <td>{l.city}</td>
+            <td>{l.message || ''}</td>
+            <td class="mono">{l.source || ''}</td>
           </tr>
         ))}
       </tbody>
