@@ -1,0 +1,1 @@
+{"description":"Orlando Pest Pros storage Worker — analytics counters + quote leads in Cloudflare KV (fixed keys, zero list ops).","devDependencies":{"wrangler":"^4.0.0"},"name":"opp-store","private":true,"scripts":{"deploy":"wrangler deploy","dev":"wrangler dev","test":"node test/local-test.mjs"},"type":"module","version":"1.0.0"}

@@ -3,14 +3,22 @@
 //
 // Copy to `src/pages/dash-v9x4qm2k.astro`. The random suffix makes the path
 // non-guessable; access additionally requires the token query param `?k=`
-// matching the DASHBOARD_TOKEN env var (see SETUP.md).
-// Full URL for Dejan: https://<site>/dash-v9x4qm2k?k=<DASHBOARD_TOKEN>
+// matching DASHBOARD_TOKEN (see SETUP.md) — or, when that env var is unset
+// (it can't be set from our automation: Vercel dashboard sign-in wall),
+// the Cloudflare store's shared secret from src/lib/cf-store.ts, which
+// already gates read access to the same data on the Worker.
+// Full URL for Dejan: https://<site>/dash-v9x4qm2k?k=<token>
 //
-// Zero npm dependencies; plain inline styles so it renders without Tailwind.
+// Data comes from the Cloudflare "opp-store" Worker (GET /read) first —
+// that's the store the site actually writes to — with the original
+// Vercel KV pipeline kept as a fallback. Zero npm dependencies; plain
+// inline styles so it renders without Tailwind.
 
 export const prerender = false;
 
-const TOKEN = import.meta.env.DASHBOARD_TOKEN;
+import { CF_STORE_SECRET, cfStoreConfigured, cfStoreRead } from '../lib/cf-store';
+
+const TOKEN = import.meta.env.DASHBOARD_TOKEN || CF_STORE_SECRET;
 if (!TOKEN || Astro.url.searchParams.get('k') !== TOKEN) {
   // 404 (not 403) so scanners can't tell the page exists.
   return new Response('Not found', { status: 404 });
@@ -56,28 +64,59 @@ function hashToObj(arr) {
   return o;
 }
 
-// One hash per day: opp:day:YYYY-MM-DD, fields "{page}|{type}".
-// Dashboard = 30 HGETALLs + LRANGE/LLEN on the leads list, in ONE pipeline.
+// Data sources, in order:
+//   1. Cloudflare "opp-store" Worker GET /read (primary — the store the
+//      site actually writes to; the KV below was never connected).
+//   2. Vercel KV pipeline: 30 HGETALLs + LRANGE/LLEN in ONE pipeline.
+// Both normalize to dayHashes = [{ "{page}|{type}": count }, ...] over
+// the last DAYS days, plus the stored leads (newest first).
 let rows = [];
 let totals = { pv: 0, tel: 0, form_start: 0, form_submit: 0 };
 let leads = [];
 let leadsTotal = 0;
-let kvError = '';
+let storeError = '';
 
 try {
-  const cfg = kvConfig();
-  if (!cfg) {
-    kvError = 'KV not connected: KV_REST_API_URL / KV_REST_API_TOKEN (or the UPSTASH_* pair) is missing. See SETUP.md.';
-  } else {
+  const dayHashes = [];
+
+  const cf = await cfStoreRead(DAYS);
+  if (cf) {
+    for (let d = 0; d < DAYS; d++) dayHashes.push(cf.days[dayStamp(d)] || {});
+    for (const l of cf.leads || []) {
+      if (l && l.name && l.phone) leads.push(l);
+    }
+    leads = leads.slice(0, LEADS_SHOWN);
+    leadsTotal = typeof cf.leadsTotal === 'number' ? cf.leadsTotal : leads.length;
+  } else if (kvConfig()) {
     const cmds = [];
     for (let d = 0; d < DAYS; d++) cmds.push(['HGETALL', 'opp:day:' + dayStamp(d)]);
     cmds.push(['LRANGE', LEADS_KEY, 0, LEADS_SHOWN - 1]);
     cmds.push(['LLEN', LEADS_KEY]);
     const results = await pipeline(cmds);
 
+    for (const r of (results || []).slice(0, DAYS)) dayHashes.push(hashToObj(r && r.result));
+
+    // Leads: pipeline results after the 30 HGETALLs are LRANGE then LLEN.
+    const lrange = results && results[DAYS] ? results[DAYS].result : null;
+    if (Array.isArray(lrange)) {
+      for (const item of lrange) {
+        try {
+          const l = JSON.parse(item);
+          if (l && l.name && l.phone) leads.push(l);
+        } catch { /* skip malformed entries */ }
+      }
+    }
+    const llen = results && results[DAYS + 1] ? results[DAYS + 1].result : null;
+    leadsTotal = typeof llen === 'number' ? llen : leads.length;
+  } else {
+    storeError = cfStoreConfigured()
+      ? 'Cloudflare store did not respond, and KV is not connected (KV_REST_API_URL / KV_REST_API_TOKEN or the UPSTASH_* pair is missing).'
+      : 'No store configured: the Cloudflare store URL is still a placeholder in src/lib/cf-store.ts, and KV is not connected (KV_REST_API_URL / KV_REST_API_TOKEN or the UPSTASH_* pair is missing).';
+  }
+
+  if (!storeError) {
     const perPage = {};
-    for (const r of (results || []).slice(0, DAYS)) {
-      const h = hashToObj(r && r.result);
+    for (const h of dayHashes) {
       for (const [field, n] of Object.entries(h)) {
         const i = field.lastIndexOf('|');
         if (i < 0) continue;
@@ -98,22 +137,9 @@ try {
       .sort((a, b) => b.pv - a.pv);
 
     for (const r of rows) for (const t of TYPES) totals[t] += r[t];
-
-    // Leads: pipeline results after the 30 HGETALLs are LRANGE then LLEN.
-    const lrange = results && results[DAYS] ? results[DAYS].result : null;
-    if (Array.isArray(lrange)) {
-      for (const item of lrange) {
-        try {
-          const l = JSON.parse(item);
-          if (l && l.name && l.phone) leads.push(l);
-        } catch { /* skip malformed entries */ }
-      }
-    }
-    const llen = results && results[DAYS + 1] ? results[DAYS + 1].result : null;
-    leadsTotal = typeof llen === 'number' ? llen : leads.length;
   }
 } catch (e) {
-  kvError = 'Could not read analytics store: ' + (e && e.message ? e.message : e);
+  storeError = 'Could not read analytics store: ' + (e && e.message ? e.message : e);
 }
 
 const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
@@ -153,7 +179,7 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
     <h1>Orlando Pest Pros — Analytics</h1>
     <div class="sub">Last {DAYS} days · UTC · private dashboard</div>
 
-    {kvError && <div class="err">{kvError}</div>}
+    {storeError && <div class="err">{storeError}</div>}
 
     <div class="cards">
       <div class="card"><div class="n">{totals.pv.toLocaleString()}</div><div class="l">Pageviews</div></div>
@@ -188,7 +214,7 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
     </table>
 
     <h2>Quote leads</h2>
-    <div class="sub">Most recent {LEADS_SHOWN} stored leads · newest first · persisted by the quote form to the {LEADS_KEY} list</div>
+    <div class="sub">Most recent {LEADS_SHOWN} stored leads · newest first · written by the quote form to the {LEADS_KEY} store</div>
     <table class="leads">
       <thead>
         <tr>
@@ -197,7 +223,7 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
       </thead>
       <tbody>
         {leads.length === 0 && (
-          <tr><td colspan="7" style="text-align:center; color:#94a3b8;">No leads stored yet — submissions appear here once the KV store is connected and the form is used.</td></tr>
+          <tr><td colspan="7" style="text-align:center; color:#94a3b8;">No leads stored yet — submissions appear here once the store is live and the form is used.</td></tr>
         )}
         {leads.map((l) => (
           <tr>

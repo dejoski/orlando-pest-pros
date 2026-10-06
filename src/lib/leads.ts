@@ -1,24 +1,31 @@
 // Quote-lead storage.
 // ---------------------------------------------------------------
-// Leads are persisted to the same Vercel KV / Upstash store the
-// analytics collector uses (src/pages/api/track.js), in a Redis
-// list so the private dashboard can read them back:
+// Primary store: the Cloudflare "opp-store" Worker (workers/opp-store/,
+// client in src/lib/cf-store.ts) — a KV list there holds the leads as a
+// JSON array under `opp:leads`, newest first, capped at 1,000, with NO
+// expiry (a lead is a business record, not a stat). The Worker is the
+// primary because the Vercel KV below was never connected: its env vars
+// can't be set from our automation (Vercel dashboard sign-in demands a
+// GitHub password re-entry), while the Worker's URL + secret are
+// committed in the repo and ship with the git deploy.
+//
+// Fallback store: the same Vercel KV / Upstash store the analytics
+// collector uses (src/pages/api/track.js), as a Redis list:
 //
 //   key:  opp:leads            (LPUSH, newest first)
 //   item: JSON-serialized QuoteLead
-//   cap:  list is trimmed to the most recent 1,000 leads and has
-//         NO expiry (unlike the 35-day analytics hashes) — a lead
-//         is a business record, not a stat.
+//   cap:  list is trimmed to the most recent 1,000 leads, NO expiry
 //
 // Env vars (same pairs as the analytics module; auto-attached when
 // the KV database is connected to the Vercel project):
 //   KV_REST_API_URL / KV_REST_API_TOKEN                (Vercel KV)
 //   UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN  (Upstash)
 //
-// If neither pair is set, the lead cannot be persisted: it is
-// still written to the server log (fallback) and a loud
-// console.error flags the missing configuration — but until the
-// env vars exist in the Vercel project, NO durable copy is kept.
+// If neither store is reachable/configured, the lead cannot be
+// persisted: it is still written to the server log (fallback) and a
+// loud console.error flags it — but NO durable copy is kept.
+
+import { cfStoreConfigured, cfStoreLead } from "./cf-store";
 
 export interface QuoteLead {
   name: string;
@@ -45,13 +52,31 @@ export async function storeLead(lead: QuoteLead): Promise<{ ok: true }> {
   // log, even if durable storage below fails or isn't configured.
   console.log("[quote-lead]", JSON.stringify(lead));
 
+  // Primary: Cloudflare Worker store (no Vercel env vars needed).
+  if (cfStoreConfigured()) {
+    if (await cfStoreLead(lead)) return { ok: true };
+    console.error(
+      "[quote-lead] WARNING: Cloudflare store write failed — falling back to KV store.",
+    );
+  }
+
   const cfg = kvConfig();
   if (!cfg) {
-    console.error(
-      "[quote-lead] WARNING: lead storage is NOT configured " +
-        "(KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN missing) — " +
-        "this lead exists ONLY in the function log and will be lost when logs rotate.",
-    );
+    // Neither store persisted this lead: say so loudly, once.
+    if (!cfStoreConfigured()) {
+      console.error(
+        "[quote-lead] WARNING: lead storage is NOT configured " +
+          "(Cloudflare store URL is still a placeholder and " +
+          "KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN missing) — " +
+          "this lead exists ONLY in the function log and will be lost when logs rotate.",
+      );
+    } else {
+      console.error(
+        "[quote-lead] WARNING: lead was NOT persisted anywhere " +
+          "(Cloudflare store failed and no KV store is configured) — " +
+          "it exists ONLY in the function log and will be lost when logs rotate.",
+      );
+    }
     return { ok: true };
   }
 

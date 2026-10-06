@@ -1,0 +1,27 @@
+# Orlando Pest Pros — storage Worker (opp-store)
+#
+# Deploy checklist lives in README.md next to this file.
+# The KV namespace id below is a PLACEHOLDER (all zeros, syntactically
+# valid so config parses). At go-live, run:
+#     npx wrangler kv namespace create OPP_KV
+# and paste the real id it prints over BOTH id values, then:
+#     npx wrangler deploy
+
+name = "opp-store"
+main = "src/index.js"
+compatibility_date = "2026-09-22"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "OPP_KV"
+id = "00000000000000000000000000000000"         # REPLACE at go-live: production namespace id
+preview_id = "00000000000000000000000000000000" # REPLACE at go-live (wrangler kv namespace create OPP_KV --preview)
+
+[vars]
+# Shared secret the site sends as header `x-opp-key` on every call.
+# The SAME value is committed site-side in src/lib/cf-store.ts — this is
+# a private repo, and the value only guards a low-volume lead/analytics
+# store. ROTATION: pick a new value, edit it in BOTH places,
+# `npx wrangler deploy` here, `git push` the site change. No dashboard
+# anywhere in that path. See README.md.
+OPP_SHARED_SECRET = "61cbeac1906948a4924744e363422dfe835202f1f1b00f50"

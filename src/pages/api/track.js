@@ -2,19 +2,27 @@ export const prerender = false;
 // src/pages/api/track.js — first-party analytics collector (Astro API route).
 //
 // Copy this file to `src/pages/api/track.js` in the site. Zero npm dependencies:
-// it talks to Upstash Redis (Vercel KV) over the plain REST API with fetch.
+// storage is plain fetch calls, no SDKs.
 //
-// Env vars (auto-attached when the KV database is connected to the project,
-// see SETUP.md). Either pair works:
-//   KV_REST_API_URL / KV_REST_API_TOKEN                (Vercel KV)
-//   UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN  (Upstash via Marketplace)
-// If none are set the endpoint still returns 204 (the site keeps working)
-// but logs a loud console.error per event — dropped analytics must be
-// VISIBLE in the function logs, never a silent no-op.
+// STORAGE ROUTING (2026-10-06): events go to the Cloudflare "opp-store"
+// Worker FIRST (src/lib/cf-store.ts) because the Vercel KV below was
+// never connected — its env vars can't be set from our automation (the
+// Vercel dashboard sign-in demands a GitHub password re-entry). The
+// Worker's URL + secret are committed in the repo, so the git deploy
+// is the only "setup" it needs. If the Worker is unconfigured or a
+// write fails, the code falls back to the original KV path below, and
+// if that isn't configured either, it logs a loud console.error per
+// event — dropped analytics must be VISIBLE in the function logs,
+// never a silent no-op. Bot filtering (below) happens BEFORE either
+// store is touched and is unchanged.
 //
-// Storage schema (see TRACKING.md): one Redis hash per day,
+// Storage schema (see TRACKING.md): one hash per day in KV / one JSON
+// object per day in the Worker, both shaped the same:
 //   key:   opp:day:YYYY-MM-DD        (TTL 35 days, UTC)
-//   field: {page}|{event}  -> count  (HINCRBY, atomic)
+//   field: {page}|{event}  -> count  (HINCRBY in KV, atomic there;
+//          read-modify-write in the Worker — fine at this volume)
+
+import { cfStoreConfigured, cfStoreTrack } from '../../lib/cf-store';
 
 const ALLOWED_TYPES = new Set(['pv', 'tel', 'form_start', 'form_submit']);
 
@@ -84,16 +92,34 @@ export async function POST({ request }) {
     const page = cleanPage(body.p);
     const day = 'opp:day:' + new Date().toISOString().slice(0, 10); // UTC, server-side
 
+    // Primary store: the Cloudflare Worker. It performs the same
+    // conversion-event dedupe server-side (did + 5-minute window) and
+    // increments the same day schema. Any failure falls through to
+    // the KV path below — the Worker being down must not lose events
+    // that KV could have taken, and must never break the beacon.
+    if (cfStoreConfigured()) {
+      const stored = await cfStoreTrack({
+        t: type,
+        p: page,
+        did: validDid(body.did) ? String(body.did) : undefined
+      });
+      if (stored) return new Response(null, { status: 204 });
+      console.error(
+        '[analytics/track] WARNING: Cloudflare store write failed for ' +
+          type + ' event on ' + page + ' — falling back to KV store'
+      );
+    }
+
     const cfg = kvConfig();
     if (!cfg) {
-      // Storage not configured: this event is being DROPPED. The client
-      // still gets its normal 204, but the data loss is logged loudly so
-      // a missing KV_REST_API_URL / KV_REST_API_TOKEN (or UPSTASH_* pair)
-      // in the Vercel project shows up in the function logs immediately.
+      // No store took this event: it is being DROPPED. The client
+      // still gets its normal 204, but the data loss is logged loudly
+      // so an unconfigured store shows up in the function logs
+      // immediately instead of silently eating analytics.
       console.error(
-        '[analytics/track] WARNING: KV storage not configured — dropping ' +
+        '[analytics/track] WARNING: no analytics store available — dropping ' +
           type + ' event for ' + page +
-          ' (set KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN)'
+          ' (Cloudflare store unconfigured/failed and KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_* pair unset)'
       );
     } else {
       // Server-side dedupe for conversion events: client sends a UUID per
