@@ -15,4 +15,4 @@ compatibility_flags = ["nodejs_compat"]
 # created and filled in at deploy time.
 [[kv_namespaces]]
 binding = "OPP_KV"
-id = "00000000000000000000000000000000"
+id = "3f4c78967ffe47fb9352ef413d3a0f17"
