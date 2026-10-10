@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel';
+import cloudflare from '@astrojs/cloudflare';
 
 // DEJAN: after Vercel deploy, set `site` to the real vercel.app URL
 // (or the custom domain once purchased). Used for sitemap + canonicals.
@@ -9,8 +9,9 @@ export default defineConfig({
   site: 'https://orlandopestcontrol.top',
   // NOTE: Astro 5.18+ removed output:"hybrid" — "static" (default) now
   // behaves the same: pages prerender, routes with `prerender = false`
-  // (/api/*, dashboard) run as Vercel serverless functions via the adapter.
-  adapter: vercel(),
+  // (/api/*, dashboard) run server-side via the adapter (Cloudflare Worker
+  // on Pages since the 2026-10 migration off Vercel).
+  adapter: cloudflare(),
   vite: { plugins: [tailwindcss()] },
   integrations: [
     // Private analytics dashboard must never appear in the sitemap.

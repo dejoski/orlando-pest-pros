@@ -1,6 +1,6 @@
 # Orlando Pest Pros
 
-Rank-and-rent pest control site for **Osceola & Orange Counties, FL**. Astro + Tailwind, deployed on Vercel.
+Rank-and-rent pest control site for **Osceola & Orange Counties, FL**. Astro + Tailwind, deployed on Cloudflare Pages.
 
 ## Pages
 
@@ -26,7 +26,7 @@ One source of truth: `src/config.ts` — `PHONE_DISPLAY` / `PHONE_TEL`.
 ## Analytics
 
 `public/track.js` → `POST /api/track` → Upstash KV. Dashboard at `/dash-v9x4qm2k?token=...`.
-Set in Vercel: `KV_REST_API_URL`, `KV_REST_API_TOKEN`, `DASHBOARD_TOKEN`.
+Set as Cloudflare Pages project variables/secrets: `KV_REST_API_URL`, `KV_REST_API_TOKEN`, `DASHBOARD_TOKEN`.
 Fails open (204) when KV is absent; dashboard 404s without the token.
 
 ## Quote form
@@ -36,4 +36,6 @@ Lead storage is currently a server log stub in `src/lib/leads.ts` — wire to KV
 
 ## Deploy
 
-Push to `main` → Vercel auto-deploys. Set `SITE_URL` in `src/config.ts` to the final domain.
+Cloudflare Pages (migrated off Vercel 2026-10): `npm run build` then
+`npx wrangler pages deploy dist --project-name=orlando-pest-pros` (see `wrangler.toml`).
+Set `SITE_URL` in `src/config.ts` to the final domain.

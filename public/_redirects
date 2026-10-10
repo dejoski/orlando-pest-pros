@@ -1,0 +1,2 @@
+# Replaces the old vercel.json rewrite: /sitemap.xml serves the sitemap index.
+/sitemap.xml /sitemap-index.xml 200

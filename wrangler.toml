@@ -1,0 +1,10 @@
+# Cloudflare Pages deployment for Orlando Pest Pros (migrated off Vercel 2026-10).
+# Build output (Astro + @astrojs/cloudflare) is deployed with:
+#   npm run build && npx wrangler pages deploy dist --project-name=orlando-pest-pros
+name = "orlando-pest-pros"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-09-15"
+# nodejs_compat makes runtime env vars (Pages project settings / secrets)
+# readable via process.env in the Worker — the API routes and dashboard
+# read KV_REST_API_URL / KV_REST_API_TOKEN / DASHBOARD_TOKEN that way.
+compatibility_flags = ["nodejs_compat"]

@@ -34,8 +34,12 @@ export const LEADS_KEY = "opp:leads";
 const LEADS_CAP = 1000;
 
 function kvConfig(): { base: string; token: string } | null {
-  const url = import.meta.env.KV_REST_API_URL || import.meta.env.UPSTASH_REDIS_REST_URL || "";
-  const token = import.meta.env.KV_REST_API_TOKEN || import.meta.env.UPSTASH_REDIS_REST_TOKEN || "";
+  // import.meta.env covers build-time/Vercel; process.env covers runtime
+  // env vars on Cloudflare Pages (nodejs_compat populates process.env
+  // from the Pages project's variables/secrets).
+  const penv = typeof process !== "undefined" && process.env ? process.env : {};
+  const url = penv.KV_REST_API_URL || penv.UPSTASH_REDIS_REST_URL || import.meta.env.KV_REST_API_URL || import.meta.env.UPSTASH_REDIS_REST_URL || "";
+  const token = penv.KV_REST_API_TOKEN || penv.UPSTASH_REDIS_REST_TOKEN || import.meta.env.KV_REST_API_TOKEN || import.meta.env.UPSTASH_REDIS_REST_TOKEN || "";
   if (!url || !token) return null;
   return { base: String(url).replace(/\/+$/, ""), token: String(token) };
 }

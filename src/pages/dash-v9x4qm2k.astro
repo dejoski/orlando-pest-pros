@@ -10,7 +10,9 @@
 
 export const prerender = false;
 
-const TOKEN = import.meta.env.DASHBOARD_TOKEN;
+const TOKEN =
+  (typeof process !== 'undefined' && process.env && process.env.DASHBOARD_TOKEN) ||
+  import.meta.env.DASHBOARD_TOKEN;
 if (!TOKEN || Astro.url.searchParams.get('k') !== TOKEN) {
   // 404 (not 403) so scanners can't tell the page exists.
   return new Response('Not found', { status: 404 });
@@ -23,8 +25,11 @@ const LEADS_KEY = 'opp:leads'; // Redis list written by src/lib/leads.ts (LPUSH,
 const LEADS_SHOWN = 50;
 
 function kvConfig() {
-  const url = import.meta.env.KV_REST_API_URL || import.meta.env.UPSTASH_REDIS_REST_URL || '';
-  const token = import.meta.env.KV_REST_API_TOKEN || import.meta.env.UPSTASH_REDIS_REST_TOKEN || '';
+  // import.meta.env covers build-time/Vercel; process.env covers runtime
+  // env vars on Cloudflare Pages (nodejs_compat).
+  const penv = typeof process !== 'undefined' && process.env ? process.env : {};
+  const url = penv.KV_REST_API_URL || penv.UPSTASH_REDIS_REST_URL || import.meta.env.KV_REST_API_URL || import.meta.env.UPSTASH_REDIS_REST_URL || '';
+  const token = penv.KV_REST_API_TOKEN || penv.UPSTASH_REDIS_REST_TOKEN || import.meta.env.KV_REST_API_TOKEN || import.meta.env.UPSTASH_REDIS_REST_TOKEN || '';
   if (!url || !token) return null;
   return { base: url.replace(/\/+$/, ''), token };
 }
