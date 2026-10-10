@@ -1,24 +1,23 @@
 // Quote-lead storage.
 // ---------------------------------------------------------------
-// Leads are persisted to the same Vercel KV / Upstash store the
-// analytics collector uses (src/pages/api/track.js), in a Redis
-// list so the private dashboard can read them back:
+// Leads are persisted to the Cloudflare KV namespace bound as
+// OPP_KV (see wrangler.toml) — the same store the analytics
+// collector uses (src/pages/api/track.js) — so the private
+// dashboard can read them back:
 //
-//   key:  opp:leads            (LPUSH, newest first)
-//   item: JSON-serialized QuoteLead
-//   cap:  list is trimmed to the most recent 1,000 leads and has
-//         NO expiry (unlike the 35-day analytics hashes) — a lead
-//         is a business record, not a stat.
+//   key:   opp:leads           (one JSON array, newest first)
+//   item:  QuoteLead objects inside the array
+//   cap:   array is trimmed to the most recent 1,000 leads and
+//          has NO expiry (unlike the 35-day analytics keys) — a
+//          lead is a business record, not a stat.
 //
-// Env vars (same pairs as the analytics module; auto-attached when
-// the KV database is connected to the Vercel project):
-//   KV_REST_API_URL / KV_REST_API_TOKEN                (Vercel KV)
-//   UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN  (Upstash)
+// The binding is per-request runtime state, so the API route
+// passes it in: storeLead(lead, locals.runtime.env.OPP_KV).
 //
-// If neither pair is set, the lead cannot be persisted: it is
+// If the binding is missing, the lead cannot be persisted: it is
 // still written to the server log (fallback) and a loud
 // console.error flags the missing configuration — but until the
-// env vars exist in the Vercel project, NO durable copy is kept.
+// OPP_KV binding exists, NO durable copy is kept.
 
 export interface QuoteLead {
   name: string;
@@ -30,48 +29,46 @@ export interface QuoteLead {
   submittedAt: string; // ISO timestamp
 }
 
+// Minimal structural view of the Cloudflare KV namespace binding
+// (the subset this module uses).
+export interface OppKv {
+  get(key: string): Promise<string | null>;
+  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
+}
+
 export const LEADS_KEY = "opp:leads";
 const LEADS_CAP = 1000;
 
-function kvConfig(): { base: string; token: string } | null {
-  // import.meta.env covers build-time/Vercel; process.env covers runtime
-  // env vars on Cloudflare Pages (nodejs_compat populates process.env
-  // from the Pages project's variables/secrets).
-  const penv = typeof process !== "undefined" && process.env ? process.env : {};
-  const url = penv.KV_REST_API_URL || penv.UPSTASH_REDIS_REST_URL || import.meta.env.KV_REST_API_URL || import.meta.env.UPSTASH_REDIS_REST_URL || "";
-  const token = penv.KV_REST_API_TOKEN || penv.UPSTASH_REDIS_REST_TOKEN || import.meta.env.KV_REST_API_TOKEN || import.meta.env.UPSTASH_REDIS_REST_TOKEN || "";
-  if (!url || !token) return null;
-  return { base: String(url).replace(/\/+$/, ""), token: String(token) };
-}
-
-export async function storeLead(lead: QuoteLead): Promise<{ ok: true }> {
+export async function storeLead(lead: QuoteLead, kv?: OppKv | null): Promise<{ ok: true }> {
   // Fallback record: the lead always lands in the server function
   // log, even if durable storage below fails or isn't configured.
   console.log("[quote-lead]", JSON.stringify(lead));
 
-  const cfg = kvConfig();
-  if (!cfg) {
+  if (!kv) {
     console.error(
       "[quote-lead] WARNING: lead storage is NOT configured " +
-        "(KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN missing) — " +
+        "(OPP_KV Cloudflare KV binding missing) — " +
         "this lead exists ONLY in the function log and will be lost when logs rotate.",
     );
     return { ok: true };
   }
 
   try {
-    const res = await fetch(cfg.base + "/pipeline", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + cfg.token,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify([
-        ["LPUSH", LEADS_KEY, JSON.stringify(lead)],
-        ["LTRIM", LEADS_KEY, 0, LEADS_CAP - 1],
-      ]),
-    });
-    if (!res.ok) throw new Error("kv pipeline failed: " + res.status);
+    // Read-modify-write: the array is newest-first, so prepend and
+    // cap. Races are acceptable at this site's lead volume.
+    const raw = await kv.get(LEADS_KEY);
+    let leads: QuoteLead[] = [];
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) leads = parsed;
+      } catch {
+        console.error("[quote-lead] WARNING: existing " + LEADS_KEY + " value is not valid JSON; starting a fresh array.");
+      }
+    }
+    leads.unshift(lead);
+    if (leads.length > LEADS_CAP) leads.length = LEADS_CAP;
+    await kv.put(LEADS_KEY, JSON.stringify(leads));
   } catch (e) {
     // Don't fail the visitor's submission over a storage outage —
     // the lead is already in the function log (above); make the

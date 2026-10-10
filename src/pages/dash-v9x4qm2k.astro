@@ -21,30 +21,12 @@ Astro.response.headers.set('Cache-Control', 'private, no-store');
 
 const TYPES = ['pv', 'tel', 'form_start', 'form_submit'];
 const DAYS = 30;
-const LEADS_KEY = 'opp:leads'; // Redis list written by src/lib/leads.ts (LPUSH, newest first)
+const LEADS_KEY = 'opp:leads'; // JSON array written by src/lib/leads.ts (newest first)
 const LEADS_SHOWN = 50;
 
-function kvConfig() {
-  // import.meta.env covers build-time/Vercel; process.env covers runtime
-  // env vars on Cloudflare Pages (nodejs_compat).
-  const penv = typeof process !== 'undefined' && process.env ? process.env : {};
-  const url = penv.KV_REST_API_URL || penv.UPSTASH_REDIS_REST_URL || import.meta.env.KV_REST_API_URL || import.meta.env.UPSTASH_REDIS_REST_URL || '';
-  const token = penv.KV_REST_API_TOKEN || penv.UPSTASH_REDIS_REST_TOKEN || import.meta.env.KV_REST_API_TOKEN || import.meta.env.UPSTASH_REDIS_REST_TOKEN || '';
-  if (!url || !token) return null;
-  return { base: url.replace(/\/+$/, ''), token };
-}
-
-async function pipeline(commands) {
-  const cfg = kvConfig();
-  if (!cfg) return null;
-  const res = await fetch(cfg.base + '/pipeline', {
-    method: 'POST',
-    headers: { Authorization: 'Bearer ' + cfg.token, 'Content-Type': 'application/json' },
-    body: JSON.stringify(commands),
-  });
-  if (!res.ok) throw new Error('kv pipeline failed: ' + res.status);
-  return res.json();
-}
+// Storage: the Cloudflare KV namespace bound as OPP_KV (wrangler.toml),
+// reached per-request via Astro.locals.runtime.env.
+const kv = Astro.locals.runtime && Astro.locals.runtime.env ? Astro.locals.runtime.env.OPP_KV : null;
 
 function dayStamp(offset) {
   const d = new Date();
@@ -52,17 +34,9 @@ function dayStamp(offset) {
   return d.toISOString().slice(0, 10); // YYYY-MM-DD (UTC)
 }
 
-// Upstash HGETALL returns [field, value, ...] or null for a missing key.
-function hashToObj(arr) {
-  const o = {};
-  if (Array.isArray(arr)) {
-    for (let i = 0; i + 1 < arr.length; i += 2) o[arr[i]] = parseInt(arr[i + 1], 10) || 0;
-  }
-  return o;
-}
-
-// One hash per day: opp:day:YYYY-MM-DD, fields "{page}|{type}".
-// Dashboard = 30 HGETALLs + LRANGE/LLEN on the leads list, in ONE pipeline.
+// One JSON object per day: opp:day:YYYY-MM-DD, fields "{page}|{type}" -> count.
+// Dashboard = the last 30 day keys (computed explicitly; no KV list())
+// + the opp:leads array.
 let rows = [];
 let totals = { pv: 0, tel: 0, form_start: 0, form_submit: 0 };
 let leads = [];
@@ -70,19 +44,26 @@ let leadsTotal = 0;
 let kvError = '';
 
 try {
-  const cfg = kvConfig();
-  if (!cfg) {
-    kvError = 'KV not connected: KV_REST_API_URL / KV_REST_API_TOKEN (or the UPSTASH_* pair) is missing. See SETUP.md.';
+  if (!kv) {
+    kvError = 'KV not connected: the OPP_KV Cloudflare KV binding is missing. See SETUP.md.';
   } else {
-    const cmds = [];
-    for (let d = 0; d < DAYS; d++) cmds.push(['HGETALL', 'opp:day:' + dayStamp(d)]);
-    cmds.push(['LRANGE', LEADS_KEY, 0, LEADS_SHOWN - 1]);
-    cmds.push(['LLEN', LEADS_KEY]);
-    const results = await pipeline(cmds);
+    const dayKeys = [];
+    for (let d = 0; d < DAYS; d++) dayKeys.push('opp:day:' + dayStamp(d));
+    const [dayValues, leadsRaw] = await Promise.all([
+      Promise.all(dayKeys.map((k) => kv.get(k))),
+      kv.get(LEADS_KEY),
+    ]);
 
     const perPage = {};
-    for (const r of (results || []).slice(0, DAYS)) {
-      const h = hashToObj(r && r.result);
+    for (const raw of dayValues) {
+      if (!raw) continue;
+      let h;
+      try {
+        h = JSON.parse(raw);
+      } catch {
+        continue; // skip malformed day values
+      }
+      if (!h || typeof h !== 'object') continue;
       for (const [field, n] of Object.entries(h)) {
         const i = field.lastIndexOf('|');
         if (i < 0) continue;
@@ -90,7 +71,7 @@ try {
         const type = field.slice(i + 1);
         if (!TYPES.includes(type)) continue;
         if (!perPage[page]) perPage[page] = { pv: 0, tel: 0, form_start: 0, form_submit: 0 };
-        perPage[page][type] += n;
+        perPage[page][type] += parseInt(n, 10) || 0;
       }
     }
 
@@ -104,18 +85,18 @@ try {
 
     for (const r of rows) for (const t of TYPES) totals[t] += r[t];
 
-    // Leads: pipeline results after the 30 HGETALLs are LRANGE then LLEN.
-    const lrange = results && results[DAYS] ? results[DAYS].result : null;
-    if (Array.isArray(lrange)) {
-      for (const item of lrange) {
-        try {
-          const l = JSON.parse(item);
-          if (l && l.name && l.phone) leads.push(l);
-        } catch { /* skip malformed entries */ }
-      }
+    // Leads: one JSON array, newest first; show the newest LEADS_SHOWN.
+    let allLeads = [];
+    if (leadsRaw) {
+      try {
+        const parsed = JSON.parse(leadsRaw);
+        if (Array.isArray(parsed)) allLeads = parsed;
+      } catch { /* malformed stored value: treat as no leads */ }
     }
-    const llen = results && results[DAYS + 1] ? results[DAYS + 1].result : null;
-    leadsTotal = typeof llen === 'number' ? llen : leads.length;
+    leadsTotal = allLeads.length;
+    for (const l of allLeads.slice(0, LEADS_SHOWN)) {
+      if (l && l.name && l.phone) leads.push(l);
+    }
   }
 } catch (e) {
   kvError = 'Could not read analytics store: ' + (e && e.message ? e.message : e);
@@ -193,7 +174,7 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
     </table>
 
     <h2>Quote leads</h2>
-    <div class="sub">Most recent {LEADS_SHOWN} stored leads · newest first · persisted by the quote form to the {LEADS_KEY} list</div>
+    <div class="sub">Most recent {LEADS_SHOWN} stored leads · newest first · persisted by the quote form in the {LEADS_KEY} array</div>
     <table class="leads">
       <thead>
         <tr>

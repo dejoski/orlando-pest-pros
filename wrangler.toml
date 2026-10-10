@@ -5,6 +5,14 @@ name = "orlando-pest-pros"
 pages_build_output_dir = "dist"
 compatibility_date = "2025-09-15"
 # nodejs_compat makes runtime env vars (Pages project settings / secrets)
-# readable via process.env in the Worker — the API routes and dashboard
-# read KV_REST_API_URL / KV_REST_API_TOKEN / DASHBOARD_TOKEN that way.
+# readable via process.env in the Worker — the dashboard reads
+# DASHBOARD_TOKEN that way. Lead/analytics storage uses the OPP_KV
+# KV namespace binding below (locals.runtime.env.OPP_KV).
 compatibility_flags = ["nodejs_compat"]
+
+# Lead + analytics storage (src/lib/leads.ts, src/pages/api/track.js,
+# dashboard). The id is a PLACEHOLDER until the real namespace is
+# created and filled in at deploy time.
+[[kv_namespaces]]
+binding = "OPP_KV"
+id = "00000000000000000000000000000000"

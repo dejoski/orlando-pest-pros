@@ -9,7 +9,7 @@ const json = (body: unknown, status = 200) =>
     headers: { "Content-Type": "application/json", "Cache-Control": "no-store" },
   });
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   let input: Record<string, unknown> = {};
   try {
     input = await request.json();
@@ -25,7 +25,7 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   try {
-    await storeLead(lead);
+    await storeLead(lead, locals?.runtime?.env?.OPP_KV ?? null);
   } catch (e) {
     console.error("[quote-lead] store failed", e);
     return json({ ok: false, error: "Couldn't save your request. Please call us instead." }, 500);

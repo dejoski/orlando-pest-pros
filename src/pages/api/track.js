@@ -1,20 +1,15 @@
 export const prerender = false;
 // src/pages/api/track.js — first-party analytics collector (Astro API route).
 //
-// Copy this file to `src/pages/api/track.js` in the site. Zero npm dependencies:
-// it talks to Upstash Redis (Vercel KV) over the plain REST API with fetch.
+// Storage: the Cloudflare KV namespace bound as OPP_KV (see wrangler.toml),
+// reached per-request via locals.runtime.env.OPP_KV. If the binding is
+// missing the endpoint still returns 204 (the site keeps working) but logs a
+// loud console.error per event — dropped analytics must be VISIBLE in the
+// function logs, never a silent no-op.
 //
-// Env vars (auto-attached when the KV database is connected to the project,
-// see SETUP.md). Either pair works:
-//   KV_REST_API_URL / KV_REST_API_TOKEN                (Vercel KV)
-//   UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN  (Upstash via Marketplace)
-// If none are set the endpoint still returns 204 (the site keeps working)
-// but logs a loud console.error per event — dropped analytics must be
-// VISIBLE in the function logs, never a silent no-op.
-//
-// Storage schema (see TRACKING.md): one Redis hash per day,
-//   key:   opp:day:YYYY-MM-DD        (TTL 35 days, UTC)
-//   field: {page}|{event}  -> count  (HINCRBY, atomic)
+// Storage schema (see TRACKING.md): one JSON object per day in KV,
+//   key:   opp:day:YYYY-MM-DD        (expirationTtl 35 days, UTC)
+//   value: { "{page}|{event}": count, ... }  (read-modify-write)
 
 const ALLOWED_TYPES = new Set(['pv', 'tel', 'form_start', 'form_submit']);
 
@@ -22,35 +17,14 @@ const ALLOWED_TYPES = new Set(['pv', 'tel', 'form_start', 'form_submit']);
 const BOT_RE =
   /bot|crawl|spider|slurp|mediapartners|baiduspider|yandex|duckduckbot|bingpreview|headless|phantomjs|puppeteer|selenium|playwright|facebookexternalhit|twitterbot|linkedinbot|embedly|quora|slackbot|telegrambot|whatsapp|discordbot|ahrefs|semrush|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|ccbot|uptimerobot|pingdom/i;
 
-// Keep 35 days of daily hashes (dashboard shows 30) so storage stays bounded.
+// Keep 35 days of daily keys (dashboard shows 30) so storage stays bounded.
 const TTL_SECONDS = 35 * 24 * 60 * 60;
 const DEDUP_TTL_SECONDS = 300;
 
-function kvConfig() {
-  const url =
-    process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || '';
-  const token =
-    process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || '';
-  if (!url || !token) return null;
-  return { base: url.replace(/\/+$/, ''), token };
-}
-
-// One HTTP round-trip for N Redis commands. Returns the Upstash result array
-// ([{result: ...}, ...]) or null when KV isn't configured.
-// NOTE: each command in a pipeline still counts toward the free-tier quota.
-async function pipeline(commands) {
-  const cfg = kvConfig();
-  if (!cfg) return null;
-  const res = await fetch(cfg.base + '/pipeline', {
-    method: 'POST',
-    headers: {
-      Authorization: 'Bearer ' + cfg.token,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(commands)
-  });
-  if (!res.ok) throw new Error('kv pipeline failed: ' + res.status);
-  return res.json();
+function getKv(locals) {
+  return locals && locals.runtime && locals.runtime.env
+    ? locals.runtime.env.OPP_KV || null
+    : null;
 }
 
 // Allowlist-style cleanup of the reported page path.
@@ -64,7 +38,7 @@ function validDid(d) {
   return /^[0-9a-f-]{8,36}$/i.test(String(d || ''));
 }
 
-export async function POST({ request }) {
+export async function POST({ request, locals }) {
   try {
     // Server-side bot filter (authoritative; client also skips bots).
     const ua = request.headers.get('user-agent') || '';
@@ -84,36 +58,43 @@ export async function POST({ request }) {
     const page = cleanPage(body.p);
     const day = 'opp:day:' + new Date().toISOString().slice(0, 10); // UTC, server-side
 
-    const cfg = kvConfig();
-    if (!cfg) {
+    const kv = getKv(locals);
+    if (!kv) {
       // Storage not configured: this event is being DROPPED. The client
       // still gets its normal 204, but the data loss is logged loudly so
-      // a missing KV_REST_API_URL / KV_REST_API_TOKEN (or UPSTASH_* pair)
-      // in the Vercel project shows up in the function logs immediately.
+      // a missing OPP_KV binding shows up in the function logs immediately.
       console.error(
         '[analytics/track] WARNING: KV storage not configured — dropping ' +
           type + ' event for ' + page +
-          ' (set KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN)'
+          ' (OPP_KV Cloudflare KV binding missing)'
       );
     } else {
       // Server-side dedupe for conversion events: client sends a UUID per
       // interaction; if we've seen it in the last 5 min, count nothing.
-      // (pageviews skip this to save 1 command — client-side dedupe covers them.)
+      // (pageviews skip this — client-side dedupe covers them.)
       if ((type === 'tel' || type === 'form_submit') && validDid(body.did)) {
-        const r = await pipeline([
-          ['SET', 'opp:dedup:' + body.did, '1', 'NX', 'EX', DEDUP_TTL_SECONDS]
-        ]);
-        // Upstash returns result: null when the key already existed.
-        if (r && r[0] && r[0].result === null) {
+        const dedupKey = 'opp:dedup:' + body.did;
+        if ((await kv.get(dedupKey)) !== null) {
           return new Response(null, { status: 204 });
         }
+        await kv.put(dedupKey, '1', { expirationTtl: DEDUP_TTL_SECONDS });
       }
 
-      // 2 commands per event, 1 HTTP round-trip. HINCRBY is atomic.
-      await pipeline([
-        ['HINCRBY', day, page + '|' + type, 1],
-        ['EXPIRE', day, TTL_SECONDS]
-      ]);
+      // Read-modify-write the day's JSON counter object. Races are
+      // acceptable at this site's event volume (a handful per day).
+      let counts = {};
+      const raw = await kv.get(day);
+      if (raw) {
+        try {
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === 'object') counts = parsed;
+        } catch {
+          console.error('[analytics/track] WARNING: existing ' + day + ' value is not valid JSON; starting fresh.');
+        }
+      }
+      const field = page + '|' + type;
+      counts[field] = (counts[field] || 0) + 1;
+      await kv.put(day, JSON.stringify(counts), { expirationTtl: TTL_SECONDS });
     }
 
     return new Response(null, { status: 204 });
