@@ -16,8 +16,9 @@ if (!TOKEN || Astro.url.searchParams.get('k') !== TOKEN) {
   return new Response('Not found', { status: 404 });
 }
 Astro.response.headers.set('Cache-Control', 'private, no-store');
+Astro.response.headers.set('Referrer-Policy', 'no-referrer');
 
-const TYPES = ['pv', 'tel', 'form_start', 'form_submit'];
+const TYPES = ['pv', 'tel', 'form_start', 'form_success'];
 const DAYS = 30;
 const LEADS_KEY = 'opp:leads'; // Redis list written by src/lib/leads.ts (LPUSH, newest first)
 const LEADS_SHOWN = 50;
@@ -38,7 +39,9 @@ async function pipeline(commands) {
     body: JSON.stringify(commands),
   });
   if (!res.ok) throw new Error('kv pipeline failed: ' + res.status);
-  return res.json();
+  const results = await res.json();
+  if (!Array.isArray(results) || results.length !== commands.length || results.some(r => !r || r.error)) throw new Error('KV command failed');
+  return results;
 }
 
 function dayStamp(offset) {
@@ -59,7 +62,8 @@ function hashToObj(arr) {
 // One hash per day: opp:day:YYYY-MM-DD, fields "{page}|{type}".
 // Dashboard = 30 HGETALLs + LRANGE/LLEN on the leads list, in ONE pipeline.
 let rows = [];
-let totals = { pv: 0, tel: 0, form_start: 0, form_submit: 0 };
+let channels = [];
+let totals = { pv: 0, tel: 0, form_start: 0, form_success: 0 };
 let leads = [];
 let leadsTotal = 0;
 let kvError = '';
@@ -84,16 +88,17 @@ try {
         const page = field.slice(0, i);
         const type = field.slice(i + 1);
         if (!TYPES.includes(type)) continue;
-        if (!perPage[page]) perPage[page] = { pv: 0, tel: 0, form_start: 0, form_submit: 0 };
+        if (!perPage[page]) perPage[page] = { pv: 0, tel: 0, form_start: 0, form_success: 0 };
         perPage[page][type] += n;
       }
     }
 
-    rows = Object.entries(perPage)
+    channels = Object.entries(perPage).filter(([page]) => page.startsWith('@')).map(([page, c]) => ({ channel: page.slice(1), ...c }));
+    rows = Object.entries(perPage).filter(([page]) => !page.startsWith('@'))
       .map(([page, c]) => ({
         page,
         ...c,
-        conv: c.pv > 0 ? (100 * c.form_submit) / c.pv : 0,
+        conv: c.pv > 0 ? (100 * c.form_success) / c.pv : 0,
       }))
       .sort((a, b) => b.pv - a.pv);
 
@@ -116,7 +121,7 @@ try {
   kvError = 'Could not read analytics store: ' + (e && e.message ? e.message : e);
 }
 
-const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
+const totalConv = totals.pv > 0 ? (100 * totals.form_success) / totals.pv : 0;
 ---
 
 <!doctype html>
@@ -159,15 +164,22 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
       <div class="card"><div class="n">{totals.pv.toLocaleString()}</div><div class="l">Pageviews</div></div>
       <div class="card"><div class="n">{totals.tel.toLocaleString()}</div><div class="l">Call-link taps</div></div>
       <div class="card"><div class="n">{totals.form_start.toLocaleString()}</div><div class="l">Quote-form starts</div></div>
-      <div class="card"><div class="n">{totals.form_submit.toLocaleString()}</div><div class="l">Quote-form submits</div></div>
-      <div class="card"><div class="n">{totalConv.toFixed(1)}%</div><div class="l">Overall conversion (submit / pv)</div></div>
+      <div class="card"><div class="n">{totals.form_success.toLocaleString()}</div><div class="l">Accepted quote leads</div></div>
+      <div class="card"><div class="n">{totalConv.toFixed(1)}%</div><div class="l">Accepted leads / pageviews</div></div>
       <div class="card"><div class="n">{leadsTotal.toLocaleString()}</div><div class="l">Quote leads stored</div></div>
     </div>
 
+    <p class="sub">Phone-link taps are clicks, not completed calls. Organic attribution is a search-referrer signal, not verified ranking data. Accepted counts begin with this tracking version; older submit attempts are excluded.</p>
+    <h2>Traffic sources</h2>
+    <table><thead><tr><th>Source</th><th>Pageviews</th><th>Accepted leads</th></tr></thead><tbody>
+      {channels.map(c => <tr><td>{c.channel}</td><td>{c.pv}</td><td>{c.form_success}</td></tr>)}
+      {channels.length === 0 && <tr><td colspan="3">No attributed traffic yet.</td></tr>}
+    </tbody></table>
+    <h2>Pages</h2>
     <table>
       <thead>
         <tr>
-          <th>Page</th><th>Pageviews</th><th>Call taps</th><th>Form starts</th><th>Form submits</th><th>Conv. rate</th>
+          <th>Page</th><th>Pageviews</th><th>Phone-link taps</th><th>Form starts</th><th>Accepted leads</th><th>Conv. rate</th>
         </tr>
       </thead>
       <tbody>
@@ -180,7 +192,7 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
             <td>{r.pv.toLocaleString()}</td>
             <td>{r.tel.toLocaleString()}</td>
             <td>{r.form_start.toLocaleString()}</td>
-            <td>{r.form_submit.toLocaleString()}</td>
+            <td>{r.form_success.toLocaleString()}</td>
             <td class="conv">{r.conv.toFixed(1)}%</td>
           </tr>
         ))}
@@ -192,12 +204,12 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
     <table class="leads">
       <thead>
         <tr>
-          <th>Submitted (UTC)</th><th>Name</th><th>Phone</th><th>Service</th><th>City</th><th>Message</th><th>Page</th>
+          <th>Submitted (UTC)</th><th>Name</th><th>Phone</th><th>Service</th><th>City</th><th>Message</th><th>Page</th><th>Attribution</th>
         </tr>
       </thead>
       <tbody>
         {leads.length === 0 && (
-          <tr><td colspan="7" style="text-align:center; color:#94a3b8;">No leads stored yet — submissions appear here once the KV store is connected and the form is used.</td></tr>
+          <tr><td colspan="8" style="text-align:center; color:#94a3b8;">No leads stored yet — submissions appear here once the KV store is connected and the form is used.</td></tr>
         )}
         {leads.map((l) => (
           <tr>
@@ -208,6 +220,7 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
             <td>{l.city}</td>
             <td>{l.message || ''}</td>
             <td class="mono">{l.source || ''}</td>
+            <td>{l.attribution?.channel || 'unknown'}{l.attribution?.referrer ? ' / ' + l.attribution.referrer : ''}<br /><span class="mono">{l.attribution?.landingPage || ''}</span></td>
           </tr>
         ))}
       </tbody>
@@ -215,3 +228,4 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_submit) / totals.pv : 0;
   </div>
 </body>
 </html>
+

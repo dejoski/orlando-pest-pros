@@ -34,7 +34,7 @@ const og = ogImage ?? `${SITE_URL}/og-image.png`;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {noindex && <meta name="robots" content="noindex, follow" />}
     {GOOGLE_SITE_VERIFICATION && (
       <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
     )}
@@ -46,11 +46,11 @@ const og = ogImage ?? `${SITE_URL}/og-image.png`;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={og} />
-    <meta name="twitter:card" content="summary_large_image" />
+    {og && <meta property="og:image" content={og} />}
+    <meta name="twitter:card" content={og ? "summary_large_image" : "summary"} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={og} />
+    {og && <meta name="twitter:image" content={og} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="theme-color" content="#071f15" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -96,3 +96,4 @@ const og = ogImage ?? `${SITE_URL}/og-image.png`;
     </script>
   </body>
 </html>
+

@@ -1,5 +1,5 @@
 ---
-import { PHONE_DISPLAY, telLink } from "../config";
+import { PHONE_DISPLAY, telLink, HAS_PHONE } from "../config";
 import services from "../data/services.json";
 import cities from "../data/cities.json";
 
@@ -11,7 +11,7 @@ interface Props {
 }
 const {
   heading = "Get Your Free Quote",
-  sub = "Tell us what's bugging you — we'll respond the same business day.",
+  sub = "Tell us what you are seeing and request contact from a local pest-control provider.",
   preselectService = "",
   preselectCity = "",
 } = Astro.props;
@@ -20,15 +20,15 @@ const {
   <div aria-hidden="true" class="pointer-events-none absolute inset-x-6 top-0 h-1 rounded-full bg-gold-400/70 sm:inset-x-10"></div>
   <div class="relative grid gap-10 lg:grid-cols-2 lg:gap-12">
     <div>
-      <p class="eyebrow text-gold-400">Free inspection · Same-day response</p>
+      <p class="eyebrow text-gold-400">Local pest-control quote request</p>
       <h2 id="quote-heading" class="mt-3 font-display text-3xl font-bold text-balance sm:text-4xl">{heading}</h2>
       <p class="mt-3 leading-relaxed text-pine-100">{sub}</p>
       <ul class="mt-7 space-y-0 border-t border-white/15 text-[15px] font-medium">
-        <li class="border-b border-white/15 py-3">Free inspection with every quote</li>
-        <li class="border-b border-white/15 py-3">Up-front pricing — no surprises</li>
-        <li class="border-b border-white/15 py-3">The same tech from inspection to re-treat</li>
+        <li class="border-b border-white/15 py-3">Share your pest problem and location</li>
+        <li class="border-b border-white/15 py-3">Discuss pricing and availability with a provider</li>
+        <li class="border-b border-white/15 py-3">Choose whether to proceed after discussing your needs</li>
       </ul>
-      <p class="mt-8 text-pine-100">Prefer to talk? <a href={telLink} class="font-bold text-white underline decoration-gold-400 decoration-2 underline-offset-4 hover:text-gold-300">Call {PHONE_DISPLAY}</a></p>
+      {HAS_PHONE && <p class="mt-8 text-pine-100">Prefer to talk? <a href={telLink} class="font-bold text-white underline decoration-gold-400 decoration-2 underline-offset-4 hover:text-gold-300">Call {PHONE_DISPLAY}</a></p>}
     </div>
     <form id="quote-form" data-quote-form class="rounded-3xl bg-white p-6 text-slate-800 shadow-xl sm:p-7" novalidate>
       <div class="grid gap-4 sm:grid-cols-2">
@@ -76,7 +76,7 @@ const {
         class="btn btn-gold mt-5 w-full">
         Get My Free Quote
       </button>
-      <p class="mt-3 text-center text-xs text-slate-500">No spam, no pressure. We respond the same business day.</p>
+      <p class="mt-3 text-center text-xs text-slate-500">By submitting, you request contact about pest-control service. Availability and pricing vary by provider.</p>
     </form>
   </div>
   <script>
@@ -120,16 +120,17 @@ const {
             message: String(data.get("message") || ""),
             website: String(data.get("website") || ""),
             source: window.location.pathname,
+            attribution: (window as Window & { oppAttribution?: () => unknown }).oppAttribution?.(),
           }),
         });
         const json = await res.json().catch(() => ({}));
         if (res.ok && json.ok) {
           window.location.href = "/thank-you/";
         } else {
-          fail(json.error || "Something went wrong. Please call us instead.");
+          fail(json.error || "Your request was not accepted. Please try again.");
         }
       } catch {
-        fail("Couldn't reach our server. Please call us instead — we're happy to help.");
+        fail("Couldn't reach our server. Please try again in a moment.");
       } finally {
         submit.disabled = false;
         submit.textContent = "Get My Free Quote";
@@ -137,3 +138,4 @@ const {
     });
   </script>
 </section>
+

@@ -16,7 +16,7 @@ export const prerender = false;
 //   key:   opp:day:YYYY-MM-DD        (TTL 35 days, UTC)
 //   field: {page}|{event}  -> count  (HINCRBY, atomic)
 
-const ALLOWED_TYPES = new Set(['pv', 'tel', 'form_start', 'form_submit']);
+const ALLOWED_TYPES = new Set(['pv', 'tel', 'form_start']);
 
 // Obvious bots/crawlers/scrapers — never count them.
 const BOT_RE =
@@ -50,12 +50,14 @@ async function pipeline(commands) {
     body: JSON.stringify(commands)
   });
   if (!res.ok) throw new Error('kv pipeline failed: ' + res.status);
-  return res.json();
+  const results = await res.json();
+  if (!Array.isArray(results) || results.length !== commands.length || results.some(r => !r || r.error)) throw new Error('kv command failed');
+  return results;
 }
 
 // Allowlist-style cleanup of the reported page path.
 function cleanPage(p) {
-  var s = String(p || '/').slice(0, 120).toLowerCase();
+  var s = String(p || '/').split(/[?#]/)[0].slice(0, 120).toLowerCase();
   s = s.replace(/[^a-z0-9/_-]/g, '').replace(/\/+$/, '');
   return s || '/';
 }
@@ -74,7 +76,10 @@ export async function POST({ request }) {
 
     let body;
     try {
-      body = await request.json();
+      const raw = await request.text();
+      if (raw.length > 2048) return new Response(null, { status: 413 });
+      body = JSON.parse(raw);
+      if (!body || typeof body !== 'object' || Array.isArray(body)) return new Response(null, { status: 400 });
     } catch {
       return new Response(null, { status: 400 });
     }
@@ -82,6 +87,8 @@ export async function POST({ request }) {
     const type = String(body.t || '');
     if (!ALLOWED_TYPES.has(type)) return new Response(null, { status: 400 });
     const page = cleanPage(body.p);
+    if (/^\/(?:dash-|api\/)/.test(page)) return new Response(null, { status: 204 });
+    const channel = ['organic', 'paid', 'referral', 'direct'].includes(body.channel) ? body.channel : 'unknown';
     const day = 'opp:day:' + new Date().toISOString().slice(0, 10); // UTC, server-side
 
     const cfg = kvConfig();
@@ -96,10 +103,10 @@ export async function POST({ request }) {
           ' (set KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN)'
       );
     } else {
-      // Server-side dedupe for conversion events: client sends a UUID per
+      // Server-side dedupe for phone-click events: client sends a UUID per
       // interaction; if we've seen it in the last 5 min, count nothing.
       // (pageviews skip this to save 1 command — client-side dedupe covers them.)
-      if ((type === 'tel' || type === 'form_submit') && validDid(body.did)) {
+      if (type === 'tel' && validDid(body.did)) {
         const r = await pipeline([
           ['SET', 'opp:dedup:' + body.did, '1', 'NX', 'EX', DEDUP_TTL_SECONDS]
         ]);
@@ -109,9 +116,10 @@ export async function POST({ request }) {
         }
       }
 
-      // 2 commands per event, 1 HTTP round-trip. HINCRBY is atomic.
+      // 3 commands per event, 1 HTTP round-trip. HINCRBY is atomic.
       await pipeline([
         ['HINCRBY', day, page + '|' + type, 1],
+        ['HINCRBY', day, '@' + channel + '|' + type, 1],
         ['EXPIRE', day, TTL_SECONDS]
       ]);
     }
@@ -121,5 +129,23 @@ export async function POST({ request }) {
     // Fails open: analytics must never break the site or show errors to visitors.
     console.error('[analytics/track]', err);
     return new Response(null, { status: 204 });
+  }
+}
+
+
+// Called only by the quote route after durable lead acceptance. Analytics
+// failure must never change the outcome of an already persisted lead.
+export async function trackAcceptedLead(lead) {
+  try {
+    if (!kvConfig()) return;
+    const day = 'opp:day:' + new Date().toISOString().slice(0, 10);
+    const channel = ['organic', 'paid', 'referral', 'direct'].includes(lead.attribution?.channel) ? lead.attribution.channel : 'unknown';
+    await pipeline([
+      ['HINCRBY', day, cleanPage(lead.source) + '|form_success', 1],
+      ['HINCRBY', day, '@' + channel + '|form_success', 1],
+      ['EXPIRE', day, TTL_SECONDS]
+    ]);
+  } catch (err) {
+    console.error('[analytics/accepted-lead] Counter unavailable');
   }
 }
