@@ -1,13 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { POST, trackAcceptedLead } from '../src/pages/api/track.js';
+import { trackAcceptedLead } from '../src/lib/analytics.js';
+import { readFileSync, existsSync } from 'node:fs';
+import vm from 'node:vm';
 
-const request = body => new Request('https://example.com/api/track', { method: 'POST', headers: { 'user-agent': 'Mozilla/5.0' }, body: JSON.stringify(body) });
-test('collector rejects client conversion claims and oversized input', async () => {
-  assert.equal((await POST({ request: request({ t: 'form_success' }) })).status, 400);
-  assert.equal((await POST({ request: request({ t: 'form_submit' }) })).status, 400);
-  assert.equal((await POST({ request: request({ t: 'pv', junk: 'x'.repeat(3000) }) })).status, 413);
-  assert.equal((await POST({ request: request(null) })).status, 400);
+test('public attribution sends no network requests and has no function route', () => {
+  const script = readFileSync(new URL('../public/track.js', import.meta.url), 'utf8');
+  const context = {location: {pathname: '/locations/kissimmee/', hostname: 'example.com', search: ''}, document: {referrer: 'https://www.google.com/search?q=private'}, window: {}, sessionStorage: {getItem: () => null, setItem: () => {}}, URL, URLSearchParams, fetch: () => {throw new Error('Network request forbidden');}, navigator: {sendBeacon: () => {throw new Error('Beacon forbidden');}}};
+  vm.runInNewContext(script, context);
+  assert.equal(context.window.oppAttribution().channel, 'organic');
+  assert.equal(context.window.oppAttribution().referrer, 'google');
+  assert.equal(existsSync(new URL('../src/pages/api/track.js', import.meta.url)), false);
 });
 test('accepted lead counts use bounded source attribution and strip query data', async () => {
   process.env.KV_REST_API_URL = 'https://example.com';

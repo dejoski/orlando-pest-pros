@@ -37,6 +37,7 @@ async function pipeline(commands) {
     method: 'POST',
     headers: { Authorization: 'Bearer ' + cfg.token, 'Content-Type': 'application/json' },
     body: JSON.stringify(commands),
+    signal: AbortSignal.timeout(5000),
   });
   if (!res.ok) throw new Error('kv pipeline failed: ' + res.status);
   const results = await res.json();
@@ -170,7 +171,8 @@ const totalConv = totals.pv > 0 ? (100 * totals.form_success) / totals.pv : 0;
     </div>
 
     <p class="sub">Phone-link taps are clicks, not completed calls. Organic attribution is a search-referrer signal, not verified ranking data. Accepted counts begin with this tracking version; older submit attempts are excluded.</p>
-    <h2>Traffic sources</h2>
+    <p class="sub">Low-CPU mode: pageviews, form starts and call taps stopped collecting with this version. Their totals are historical; conversion rates are not current. Accepted lead and source counters remain active.</p>
+    <h2>Lead sources (historical pageviews)</h2>
     <table><thead><tr><th>Source</th><th>Pageviews</th><th>Accepted leads</th></tr></thead><tbody>
       {channels.map(c => <tr><td>{c.channel}</td><td>{c.pv}</td><td>{c.form_success}</td></tr>)}
       {channels.length === 0 && <tr><td colspan="3">No attributed traffic yet.</td></tr>}
