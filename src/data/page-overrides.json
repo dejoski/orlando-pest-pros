@@ -1162,5 +1162,61 @@
       }
     ],
     "processIntro": "In a managed-property city, documentation is half the job — here's how we run it."
+  },
+  "kissimmee/bed-bug-treatment": {
+    "heroLocal": "Kissimmee is not where bed bugs spill over to — it is where they start. The US-192 corridor packs motels, vacation homes, and resorts tighter than anywhere else in Central Florida, and a single themed bunk room in a rental off Poinciana Boulevard can sleep six kids a night, seven nights a week, with a new family's luggage on the floor every turnover. Bugs do not need to find Kissimmee homes. They check in first, then ride home in suitcases, laundry bags, and housekeeping carts.",
+    "heroService": "Bed bug work in Kissimmee means counting every sleeping surface, not just the bed somebody complained about: primary suites, bunk rooms with built-in frames, sofa beds in the game-room loft, the futon in the converted garage. We inspect all of them, confirm live bugs before anyone pays for treatment, and build the plan around what the property actually is — a family home that needs its bedrooms back, or a rental that needs discreet work between check-out and the next check-in, with written findings the manager can keep on file.",
+    "whyHeading": "Why Kissimmee gets hit first, and hardest",
+    "whyLead": "Volume is the reason. Millions of overnight stays a year happen within a few miles of US-192 and World Drive, and every one of them moves luggage, bedding, and people through rooms that turn over constantly. Add the local workforce — a large share of Kissimmee works in the hotels, resorts, and rentals themselves — and the route home is short: a work bag set down in an infested room at noon can be on a bedroom floor in Buenaventura Lakes by dinner.",
+    "whyLocal": "Once inside a Kissimmee property, the layout does the spreading. Bunk rooms share headboard walls with the next bedroom. Rental laundry moves on carts from room to room, and a cleaner working a four-hour turnover window has no reason to check a mattress seam unless somebody taught her what to look for. In family homes the pattern is quieter — visiting relatives, a kid home from a travel-ball tournament, a secondhand dresser from a Vine Street shop — but the result is the same: by the time bites show up, the bugs have usually had weeks and more than one room.",
+    "localSection": {
+      "heading": "US-192 vacation rentals, bunk rooms, and family homes in Buenaventura Lakes",
+      "body": [
+        "In Storey Lake, Windsor Hills, Emerald Island, and the big rental communities toward Reunion and ChampionsGate, the houses themselves are the challenge: eight, ten, fourteen bedrooms, themed bunk rooms with built-in frames that cannot be pulled apart, sofa beds that fold the harborage into a mechanism, and game-room lofts where teenagers sleep wherever they land. We inspect every one of those surfaces, treat the built-ins in place, and sequence the work inside the turnover gap — out before the cleaners finish, documented before the next guest's car is in the driveway. Owners and managers get dates, rooms, and findings in writing, because a platform dispute is settled with records, not recollections.",
+        "Along the older US-192 and Vine Street motel and long-stay stretch, one-room treatment is how infestations earn a reputation for never ending. Bugs move through adjoining-door frames, shared laundry rooms, and the wall void behind a headboard into the unit next door, feed there for a month, and walk back. We inspect the adjoining units we can access, place monitors where access is refused, and tell owners plainly when the building — not the room — is the treatment unit. That conversation is uncomfortable and it is the only one that ends the cycle.",
+        "In Buenaventura Lakes, downtown, and Kissimmee Bay, the calls are family homes and the introductions are ordinary life: relatives flying in for the holidays and sleeping in the spare room, a hospitality worker's bag, used furniture that looked fine in daylight. These homes often have three generations under one roof and more beds than bedrooms, so we map who sleeps where before we treat anywhere, give the prep list room by room in plain language, and protect the rooms that are still clean instead of scattering bugs into them with a rushed whole-house fog."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Bed Bugs in Bunk Rooms",
+        "blurb": "Built-in bunk frames are the signature Kissimmee harborage: screw holes, slat joints, and the seam where the frame meets the wall, multiplied by four or six beds in one room. A guest complaint about one bunk usually means the frame, not the mattress — we open the joints and check every level, because treating the complained-about bed alone leaves the colony in the carpentry."
+      },
+      {
+        "name": "The Signs Guests Report First",
+        "blurb": "In rentals the first evidence is a review, not a resident: clustered bites after the first night, tiny dark dots along a seam, a rusty smear on white hotel-style bedding. In homes it is slower — shed skins behind the headboard, spotting on the box-spring label, a sweet, stale smell in a room that sits closed. Either way we confirm with live bugs or fresh harborage sign before treatment is sold."
+      },
+      {
+        "name": "German Roach Nymphs (Look-Alike)",
+        "blurb": "Young German roaches are the misidentification we clear most often in Kissimmee rentals — small, brown, and fast around kitchen and bathroom plumbing, and guests report them as bed bugs weekly. They want water and food residue, not sleepers. The fix is a kitchen-and-bath roach program, not bed bug treatment, and we will say so on the inspection report."
+      },
+      {
+        "name": "Carpet Beetle Larvae",
+        "blurb": "Fuzzy, slow larvae that feed on lint, hair, and feathers packed along baseboards and under beds that rarely move — a real specialty of spare rooms and rental closets. Their shed hairs irritate skin and get blamed for bites. No bed bugs means no bed bug bill: source removal, deep extraction vacuuming, and storage changes are the treatment."
+      },
+      {
+        "name": "Fleas in Carpeted Bedrooms",
+        "blurb": "The other night-bite call. Fleas concentrate where pets sleep and where stray cats den under Kissimmee's raised older homes, bite low on ankles and legs, and explode in a room that sat empty while the family traveled. The pattern, the height of the bites, and a white-sock walk across the carpet separate them from bed bugs in minutes — and the treatment targets the animal source and the carpet base, not the bed frame."
+      }
+    ],
+    "process": [
+      {
+        "step": "Inspect every sleeping surface",
+        "detail": "Bunks, sofa beds, futons, primary and spare beds, plus headboard walls, luggage racks, and the laundry route between them. You see the evidence with us, room by room, and if it is a look-alike we name it and stop there — no treatment built on a guest's photo or a hunch."
+      },
+      {
+        "step": "Prep list and turnover plan, in writing",
+        "detail": "Homes get a room-by-room list: what to launder hot and bag sealed, what to leave exactly where it sits. Rentals get the same list fitted to the turnover calendar — which rooms close, which stay sellable, and what the cleaning crew checks between guests from now on."
+      },
+      {
+        "step": "Treat the harborage, matched to the room",
+        "detail": "Steam and targeted treatment go into seams, frame joints, and baseboard gaps where the bugs actually live. Where whole-room heat fits — and where sprinklers, vinyl themed decor, and built-in bunk carpentry say it does not — we say which and why before the day is booked, not during it."
+      },
+      {
+        "step": "Recheck on the hatch interval, with monitors",
+        "detail": "Eggs outlive the first treatment, so interceptors go under bed and bunk legs and we return on the hatch interval to read them. Rentals get a dated clearance note per room as counts hold at zero; homes get the travel habits that keep the next suitcase from restarting it — luggage off the bed, garage unpacking, a hard look at secondhand furniture before it crosses the threshold."
+      }
+    ],
+    "processIntro": "In a city of turnovers, the inspection and the paperwork matter as much as the treatment — here is the sequence."
   }
 }
