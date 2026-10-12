@@ -1,5 +1,5 @@
 ---
-import { PHONE_DISPLAY, telLink } from "../config";
+import { CONTACT_LABEL, HAS_PHONE, telLink } from "../config";
 interface Props { heading: string; text: string }
 const { heading, text } = Astro.props;
 ---
@@ -7,17 +7,18 @@ const { heading, text } = Astro.props;
   <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-[radial-gradient(620px_circle_at_50%_-10%,rgba(238,194,92,0.28),transparent_65%)]"></div>
   <div aria-hidden="true" class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gold-400/40"></div>
   <div class="relative">
-    <p class="eyebrow text-gold-400">Free quote · Same-day service</p>
+    <p class="eyebrow text-gold-400">Request a free quote</p>
     <h2 class="mx-auto mt-4 max-w-2xl font-display text-3xl font-bold text-balance sm:text-4xl">{heading}</h2>
     <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-pine-100">{text}</p>
     <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-      <a href={telLink} class="btn btn-white w-full sm:w-auto sm:min-w-[220px]">
+      {HAS_PHONE && <a href={telLink} class="btn btn-white w-full sm:w-auto sm:min-w-[220px]">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Call {PHONE_DISPLAY}
-      </a>
+        {CONTACT_LABEL}
+      </a>}
       <a href="#quote" class="btn btn-gold w-full sm:w-auto sm:min-w-[220px]">
         Get a Free Quote
       </a>
     </div>
   </div>
 </section>
+

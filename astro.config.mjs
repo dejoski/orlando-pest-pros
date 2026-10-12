@@ -3,10 +3,10 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 
-// DEJAN: after Vercel deploy, set `site` to the real vercel.app URL
-// (or the custom domain once purchased). Used for sitemap + canonicals.
+// Production origin must match src/config.ts and public/robots.txt.
 export default defineConfig({
   site: 'https://orlandopestcontrol.top',
+  trailingSlash: 'always',
   // NOTE: Astro 5.18+ removed output:"hybrid" — "static" (default) now
   // behaves the same: pages prerender, routes with `prerender = false`
   // (/api/*, dashboard) run as Vercel serverless functions via the adapter.
@@ -43,3 +43,4 @@ export default defineConfig({
     }),
   ],
 });
+
