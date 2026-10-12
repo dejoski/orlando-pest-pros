@@ -15,7 +15,7 @@ for (const dataset of ['cities', 'services']) {
 }
 await writeFile(join(temp, 'leads.mjs'), stripTypeScriptTypes(source));
 let route = await readFile(new URL('../src/pages/api/quote.ts', import.meta.url), 'utf8');
-route = route.replace('import { trackAcceptedLead } from "./track.js";', 'const trackAcceptedLead = async () => {};');
+route = route.replace('import { trackAcceptedLead } from "../../lib/analytics.js";', 'const trackAcceptedLead = async () => {};');
 route = route.replace('"../../lib/leads"', '"./leads.mjs"');
 await writeFile(join(temp, 'quote.mjs'), stripTypeScriptTypes(route));
 const { validateLead, storeLead } = await import(pathToFileURL(join(temp, 'leads.mjs')));

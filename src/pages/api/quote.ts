@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 import { validateLead, storeLead } from "../../lib/leads";
-import { trackAcceptedLead } from "./track.js";
+import { trackAcceptedLead } from "../../lib/analytics.js";
 export const prerender = false;
 const MAX_BYTES = 8192;
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), {
