@@ -1218,5 +1218,65 @@
       }
     ],
     "processIntro": "In a city of turnovers, the inspection and the paperwork matter as much as the treatment — here is the sequence."
+  },
+  "orlando/general-pest-control": {
+    "heroLocal": "We work Orlando street by street, from 1920s bungalows on the brick streets of Thornton Park and Lake Eola Heights to stucco slab builds going up in Lake Nona. The historic core sits on pier foundations with open crawlspaces, the lake neighborhoods sit on the Conway chain, and afternoon storms push palmetto bugs out of downtown storm drains and sewers after every downpour. We treat crawlspaces, attic vents, and the yard edge so everyday pests stay out of Orlando homes.",
+    "heroService": "We provide general pest control for palmetto bugs, German roaches, ghost ants, fire ants, spiders, and silverfish in Orlando homes. In College Park and Delaney Park we focus on crawlspace vents, detached garages, and additions that never quite sealed. Along International Drive and near UCF, apartment and short-term rental turnover keeps German roaches moving through shared walls and kitchen hinge voids. We bait, seal gaps, and treat harborages inside and out.",
+    "whyHeading": "Why Orlando Homes Stay Under Pressure",
+    "whyLead": "Orlando stacks three pest engines on top of each other. The lakes come first: Lake Eola, Lake Ivanhoe, Lake Underhill, and the Conway chain keep shorelines, storm drains, and retention ponds wet year-round, and palmetto bugs breed in the drains and fly to porch lights after storms. Second, the old housing stock: bungalows in Thornton Park, College Park, and Colonialtown sit on piers with crawlspaces, original vent screens, and decades of additions, so roaches, silverfish, and spiders always have a gap. Third, turnover: rentals and apartments along International Drive, in MetroWest, and around UCF churn constantly, and German roaches ride in with every move. We walk the crawlspace, the attic vents, and the drain lines on every visit.",
+    "whyLocal": "We adjust our work by neighborhood in Orlando. In College Park and Lake Eola Heights, pier-and-crawlspace bungalows need vent screening, crawlspace dusting, and baseboard work more than a perimeter spray. Around Lake Eola and the downtown towers, sewer and drain roaches are the fight, so we treat drain harborage and ground-floor entry points. In Lake Nona and Laureate Park, the houses are new but the lots are scraped flat next to retention ponds, so fire ants erupt in fresh sod and ghost ants trail new kitchens. In Belle Isle and Conway, oak canopy and lakefront lanais mean spiders in pool cages and palmetto bugs in palm thatch and mulch. One plan does not fit all four, so we do not sell one.",
+    "localSection": {
+      "heading": "General Pest Control by Orlando Neighborhood",
+      "body": [
+        "In Thornton Park, Lake Eola Heights, Delaney Park, and College Park we mostly work 1920s to 1950s bungalows and block ranches on pier foundations. Open crawlspaces, aging vent screens, and detached garages give palmetto bugs and silverfish a permanent route in, and additions around Edgewater Dr and in Colonialtown rarely sealed tight against the original frame. We screen and dust crawlspace vents, treat garage wall voids, and work baseboards and attic access points. Where mulch sits high against the stucco near Lake Ivanhoe, we call it out, because that damp line is what keeps the crawlspace wet and the roaches fed.",
+        "Downtown and along International Drive, the problem is turnover. Apartments, condos, and short-term rentals near Lake Eola, in MetroWest, and out toward UCF change tenants constantly, and German roaches move through shared plumbing walls from unit to unit. We crack-and-crevice bait hinge voids, appliance motors, and pipe chases instead of fogging, because foggers just push them next door. Restaurant rows on Sand Lake Rd and along I-Drive keep exterior pressure high with dumpster pads and grease areas, so we tie interior baiting to door sweeps and drain treatment on the same visit.",
+        "In Lake Nona, Laureate Park, and the new subdivisions across south Orlando, the houses are stucco slab builds on freshly graded sand next to retention ponds. Fire ants mound up in new sod within weeks of closing, and ghost ants trail slab edges into kitchens that still smell of paint. We granular-bait yards, treat irrigation valve boxes, and bait interior trails at sinks and windows. Over in Belle Isle and Conway, lakefront homes on the chain of lakes fight a different mix: spiders webbing pool cages and lanais, palmetto bugs in palm thatch and boat houses, and mosquitoes lifting off the shoreline at dusk, so exterior harborage work carries the visit."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Palmetto Bugs",
+        "blurb": "Downtown Orlando's storm drains and sewers breed them by the thousand, and after an afternoon storm they fly to porch lights in Thornton Park and slip garage seals in College Park. We treat drain harborage, dust crawlspace vents, and tighten the ground-floor gaps they walk through."
+      },
+      {
+        "name": "German Cockroaches",
+        "blurb": "Rental and apartment turnover along International Drive, in MetroWest, and around UCF keeps them moving through shared walls. We bait hinge voids, appliance motors, and pipe chases, then set follow-ups on the turnover cycle instead of fogging them into the next unit."
+      },
+      {
+        "name": "Ghost Ants",
+        "blurb": "In Lake Nona and Laureate Park they trail fresh slab edges into brand-new kitchens, following irrigation moisture around retention ponds. We track trails back to the entry point, bait what they are actually feeding on, and seal at pipes and window frames."
+      },
+      {
+        "name": "Fire Ants",
+        "blurb": "New sod in Lake Nona and the south Orlando subdivisions mounds up two weeks after it is laid, and Conway yards near the lakes stay active all year. We granular-bait the turf, spot-treat mounds, and treat along retention easements where re-invasion starts."
+      },
+      {
+        "name": "Spiders",
+        "blurb": "Lakefront lanais and pool cages in Belle Isle and Conway web up fast under the oak canopy, and bungalow eaves in Delaney Park hold them year-round. We brush webs down, treat screen frames and eaves, and detail the door tracks where they rebuild first."
+      },
+      {
+        "name": "Silverfish",
+        "blurb": "Historic bungalows in Lake Eola Heights and Colonialtown trap humidity in crawlspaces, closets, and attic storage, and silverfish work the paper and glue lines. We dust voids, treat baseboards, and flag the ventilation and leak problems feeding them."
+      }
+    ],
+    "process": [
+      {
+        "step": "Inspect",
+        "detail": "We walk the crawlspace vents and attic access on College Park and Thornton Park bungalows, check drain lines and ground-floor entries downtown, and map fire ant and ghost ant pressure around Lake Nona retention ponds before we treat anything."
+      },
+      {
+        "step": "Treat",
+        "detail": "We crack-and-crevice bait German roaches in I-Drive and UCF-area rentals, dust palmetto bug harborage in crawlspaces and drains, granular-bait fire ant turf in Laureate Park, and bait ghost ant trails in new kitchens at the slab edge."
+      },
+      {
+        "step": "Seal",
+        "detail": "We screen torn crawlspace vents on pier-foundation homes, seal pipe chases in shared-wall apartments, fit door sweeps on detached garages in Delaney Park, and clear pool cage tracks in Belle Isle so sealed points stay sealed."
+      },
+      {
+        "step": "Recheck",
+        "detail": "We recheck rental kitchens on the turnover cycle near International Drive, re-walk lakefront lanais in Conway after storm weeks, and re-bait new-build yards in Lake Nona as sod settles and irrigation schedules change."
+      }
+    ],
+    "processIntro": "We service Orlando homes from the brick streets downtown to the Lake Nona ponds with straight checks and clear fixes."
   }
 }
