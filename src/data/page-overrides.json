@@ -1111,6 +1111,62 @@
     ],
     "processIntro": "Wildlife work runs identify, remove, seal — in that order, every time."
   },
+  "winter-park/mosquito-control": {
+    "heroLocal": "Winter Park is built around water — Lake Virginia, Lake Osceola, Lake Maitland, and Lake Killarney linked by canals — and over it all sits a century-old oak canopy that keeps the brick streets shaded and damp long after the rain stops. Mosquitoes here do not need a swamp. They hatch in the bromeliads riding the oak limbs, in gutters packed with oak leaves, in the inch of water folded into a boat cover at a Lake Virginia dock, and in the low corner of a brick street that ponds after every afternoon storm.",
+    "heroService": "Mosquito control in Winter Park starts with the water walk, not the sprayer. We tip and drain what can be emptied, clean or larvicide the gutters and French drains that cannot, flush and treat bromeliads and ornamental water, and larvicide the canal edges and low lawn spots on your lot that hold water all season. Then we treat the shaded foliage, pool-cage seams, and under-eave areas where adult mosquitoes rest through the heat of the day — so the yard off Park Avenue or the dock on Lake Osceola is usable at dusk, when Winter Park people actually go outside.",
+    "whyHeading": "Why Winter Park mosquitoes never really leave",
+    "whyLead": "Three things stack here. The chain of lakes and its canals put breeding water within a short flight of nearly every address in town, and Culex mosquitoes work that shoreline every evening from spring through the first cool snap. The canopy comes second: live oaks drop leaves in every month, gutters clog quietly, and a clogged gutter over a shaded Winter Park roofline breeds Asian tiger mosquitoes by the hundreds, a few feet from the bedroom window. Third, the brick streets and low historic lots pond after storms, and in this heat a fresh batch of biters is flying in under a week. Spraying the air alone misses all three — the water is the source.",
+    "whyLocal": "What sets your baseline is which Winter Park you live in. Lakefront homes on the chain get steady dusk drift off the water no matter how clean one lot is. Under the canopy in the historic core, the fight is man-made and fixable — gutters, bromeliads, saucers, and birdbaths in deep shade. Out toward Howell Creek and Mead Botanical Garden, low ground and creek overflow hatch floodwater mosquitoes in waves after big rain. We read the lot — its water, its shade, its gutters — before we talk about a schedule, because each of those three problems takes a different first move.",
+    "localSection": {
+      "heading": "Chain-of-lakes shore, canopy brick streets, and the Howell Creek low ground",
+      "body": [
+        "Along Lake Virginia, Lake Osceola, and the canals — the Palmer Avenue and Via Lugano shore, Genius Drive, the Rollins College waterfront — the honest picture is drift plus dock water. Boat covers, dock boxes, kayaks, and low lawn edges hold water all season, and Culex move in off the lake on still evenings. We larvicide the standing water on your side of the seawall, concentrate barrier coverage on the water-facing plantings and boathouse shade, and say plainly that a lanai fan outperforms any treatment on the worst nights — then make sure the nights around it are the ones you get back. Lakefront lots also get blind mosquitoes, the non-biting midges that swarm porch lights by the thousand in spring; we will tell you honestly that those are a light-and-screen problem, not a spray problem.",
+        "In the historic core — Park Avenue, College Quarter, Hannibal Square, Orwin Manor — the number one breeding site is over your head. Century oaks shed leaves year-round, gutters and downspout elbows pack solid, and that trapped water hatches Asian tiger mosquitoes that bite all day in the shaded gardens below. Bromeliads and air plants on the oak limbs hold their own cups of water, and the brick streets pond at low corners after storms. We start with a gutter-and-drain audit, flush and treat the bromeliads, treat the leaf undersides in the foundation plantings where tigers rest, and flag the spots — saucers, watering cans, the tarp over the woodpile — that reset the problem between visits.",
+        "North and east, around Mead Botanical Garden, Howell Creek, and Windsong, low ground does the damage. The creek bottom and garden wetlands stay wet for weeks, retention areas in the newer subdivisions breed along their grassy edges, and floodwater eggs laid in dry swales hatch in waves three to five days after a major storm. We larvicide the low spots and water features on your lot, treat the foliage line between the wet ground and your patio, and time the follow-up visit to the post-storm hatch instead of the calendar — because that is when the new wave actually flies."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Asian Tiger Mosquitoes",
+        "blurb": "The daytime biters under the Winter Park canopy. Aedes albopictus breeds in clogged gutters, bromeliad cups, plant saucers, and birdbaths — a bottle cap of water is enough — then rests under camellia, azalea, and foundation plantings until you step out. We coat the leaf undersides where they sit and empty, clean, or treat the water they came from, gutter to garden."
+      },
+      {
+        "name": "Culex Mosquitoes",
+        "blurb": "The dusk shift off the chain of lakes. Culex quinquefasciatus breeds in canal edges, dock-side still water, and the ponded corners of brick streets, and bites from sundown on. We larvicide the standing water on your lot that cannot be drained and put barrier coverage on the lake-facing foliage between the water and your lanai."
+      },
+      {
+        "name": "Floodwater Mosquitoes",
+        "blurb": "After a big storm rolls off Howell Creek, floodwater species hatch in waves from eggs laid in low lawns, swales, and creek-bottom ground that was dry the week before. One downpour can restart a whole street near Mead Garden. We time the follow-up visit to the post-storm hatch instead of the calendar, and walk the low spots that fill first."
+      },
+      {
+        "name": "Biting Midges and No-See-Ums",
+        "blurb": "Around the lake shores and canal banks, midges breed in wet muck and slip straight through standard pool screen on still evenings, and the ankle welts dwarf the bug. We treat the damp, shaded shoreline where they hold, and tell you honestly when finer lanai screen or a fan beats another treatment."
+      },
+      {
+        "name": "Blind Mosquitoes (Lake Midges)",
+        "blurb": "The spring swarms on lakefront porch lights along Lake Virginia and Lake Maitland. These chironomid midges do not bite — they hatch from the lake bottom in enormous numbers and coat screens, cars, and dock furniture for a few weeks. No treatment fixes them; we will say so, and point you at yellow bulbs, fans, and tight screens instead of selling you a spray."
+      }
+    ],
+    "process": [
+      {
+        "step": "Walk the water and the shade",
+        "detail": "Roofline to dock: gutters and downspout elbows, bromeliads, saucers, birdbaths, French drains, boat covers, then the canal edge, low lawn, and the shaded shrubs where adults rest all day. You hear exactly where your pressure hatches from — and what drifts in off the chain of lakes that no single lot controls."
+      },
+      {
+        "step": "Tip, drain, and larvicide what stays",
+        "detail": "We dump what can be emptied, flush bromeliads, clear the gutter pockets and deck drains we can reach, and larvicide the water that cannot go anywhere — canal margins on your lot, ornamental features, low swales. The gutter cleanout schedule we recommend is the cheapest mosquito work you will ever buy."
+      },
+      {
+        "step": "Barrier where they rest",
+        "detail": "We treat leaf undersides, ground cover, fence lines, pool-cage seams, and patio perimeters — the shade mosquitoes sit in all day under the canopy. Blooms, vegetable beds, and pool coping get eased off, pets and family stay in until it is dry, and gates are closed behind us."
+      },
+      {
+        "step": "Reset on the hatch cycle",
+        "detail": "Rainy season refills everything, so we return on a three-to-four-week rhythm, refresh the barrier, and hunt new water. After a major storm we expect the floodwater hatch off the creek bottom and say so. Between visits, dump what fills after rain and tell us when bites spike — we will say honestly if you need us sooner."
+      }
+    ],
+    "processIntro": "Mosquito work in Winter Park is a water hunt first and a treatment second — gutters, bromeliads, docks, and drains, in that order. This is the route we walk."
+  },
   "lake-buena-vista/rodent-control": {
     "heroLocal": "Lake Buena Vista is a resort city, and its rodents live like it. Roof rats run the palms and dense landscaping around the hotels and vacation condos, mice work the wall voids of condo buildings and restaurant blocks along SR-535, and everything feeds well behind dumpsters and grease areas that never fully cool down. With guests arriving daily and most buildings managed rather than owner-occupied, a rodent problem here can run for months before the right person hears about it.",
     "heroService": "Rodent control in Lake Buena Vista is built for managed properties — condo associations, vacation-rental managers, and the homeowners in the residential pockets around Lake Bryan. We inspect the building envelope and the grounds together: roofline, soffits, loading and dumpster areas, pool equipment, utility chases. Then we seal the entries we find, trap out the animals inside, and document everything with photos and a service report a manager can forward to an owner or a board.",
