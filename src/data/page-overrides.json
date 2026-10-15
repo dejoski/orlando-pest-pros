@@ -1334,5 +1334,61 @@
       }
     ],
     "processIntro": "We service Orlando homes from the brick streets downtown to the Lake Nona ponds with straight checks and clear fixes."
+  },
+  "winter-park/rodent-control": {
+    "heroLocal": "Winter Park's rodents do not come up from a swamp — they come down out of the trees. A century of live oaks leans over tile roofs and 1920s bungalows from Hannibal Square to the chain of lakes, backyard citrus drops fruit all winter, and every addition, converted garage, and crawlspace seam on those old houses is a seam a roof rat already knows. At ground level the lakes and canals do the same work for Norway rats, working seawalls, docks, and boathouses lot by lot.",
+    "heroService": "Rodent control in Winter Park is exclusion carpentry with trapping attached, done on houses that were never built like new stucco boxes. We ladder the roofline and read the canopy first, trap what is already inside the attic, then close tile ends, soffit gaps, and pipe chases with chew-proof metal that respects original trim and plaster — and we tell you exactly which oak limb is the bridge, because sealing a house and leaving the bridge up just moves the entry point.",
+    "whyHeading": "Why Winter Park roof rats live overhead, not underground",
+    "whyLead": "Listen after 10 p.m. in the historic core and you will hear the pattern: scratching and light running above the ceiling, heaviest where an oak limb touches tile. Roof rats travel the canopy, power drops, and fence tops as an elevated road system between citrus trees and rooflines, and one established scent trail pulls newcomers for months after the first rat is gone. That is why a Winter Park attic with pellets in the insulation is almost never a stray — it is a route with a stop on it.",
+    "whyLocal": "The construction decides the entry. Pre-war bungalows around Park Avenue, College Quarter, and Hannibal Square have been added onto for a hundred years: crawlspaces under the original house, slab under the addition, a converted garage with its own seams, and clay tile ends that were never screened. Mid-century homes in Virginia Heights and Winter Park Pines trade the crawlspace for low rooflines under oak and pine, where soffit vents and A/C line penetrations do the same job. We map your house's version of the seam before we set a single trap.",
+    "pests": [
+      {
+        "name": "Roof Rats",
+        "blurb": "Winter Park's number one attic call, and it is almost always a canopy story: oak limbs or palms brushing tile, gnawed citrus left on the lawn, blunt pellets along the attic runs over the kitchen. They chew soffit vents and tile ends wider week by week. We trap in the attic — never poison in insulation — seal the openings with metal, and name the limb to lift so the bridge comes down with the entry."
+      },
+      {
+        "name": "Norway Rats",
+        "blurb": "The ground-level rat of the chain of lakes. Bigger, heavier, and burrowing — look for burrow mouths along seawalls, under dock boxes and boathouses on Lake Virginia and Lake Osceola, and greasy rub marks at garage corners. They work the shoreline and the Howell Creek low ground, then push into ground floors and crawlspaces. We trap the runs and close the ground-level gaps, not just the roofline."
+      },
+      {
+        "name": "House Mice",
+        "blurb": "In a 1920s Winter Park bungalow a mouse does not need much: a pencil-width gap around a sink pipe, a plaster wall void, the seam where an addition meets the original house. You find rice-sized droppings in drawers and chewed corners on stored food, and the calls spike when mice push into garages and kitchens for warmth in January. We seal the pipe chases and interior voids and set traps where they actually travel — behind the stove, along the wall lines."
+      },
+      {
+        "name": "Squirrels in the Attic — the Honest Distinction",
+        "blurb": "Daytime thumping over the ceiling in Winter Park is usually not rats at all — it is gray squirrels coming and going from the oaks at dawn and dusk. We will tell you plainly when the attic noise is squirrels, because the fix is different: one-way exclusion after the young are mobile, then sealing the tile end or soffit they used. Selling you a rat program for a squirrel problem is how attics stay noisy."
+      },
+      {
+        "name": "Rats Around Citrus and Lakefront Food",
+        "blurb": "Fallen oranges and grapefruit under a backyard tree, a dog bowl on a lakefront patio, birdseed stored in a dock box — Winter Park yards feed rodents within a short run of a roofline. One night of dropped citrus can hold a rat family on a lot for a season. Part of the visit is the unglamorous list: pick fruit the day it falls, bring the bowl in at dark, and store seed in metal, not plastic."
+      }
+    ],
+    "processIntro": "Traps alone will not hold a Winter Park house the canopy leans on — here is the order that does.",
+    "process": [
+      {
+        "step": "Roof, canopy, and crawlspace inspection",
+        "detail": "We ladder the eaves, check tile ends and soffit vents, read the oak limbs and palms touching the roof, scope the attic for pellets, rub marks, and matted insulation runs, and walk the crawlspace seams and ground-level gaps where additions meet. Every opening gets a photo, so you are deciding from evidence on your own house, not a pitch."
+      },
+      {
+        "step": "Targeted trapping inside first",
+        "detail": "Snap traps and enclosed stations go in the attic and along the runs the rats actually use, out of reach of kids and pets — no poison in insulation, ever, in a house where a dead rat in a wall void becomes a week of smell. We return and shift sets until the night noise stops, then check a beat longer to be sure the route is really quiet."
+      },
+      {
+        "step": "Exclusion built for tile and historic trim",
+        "detail": "Tile ends, soffit gaps, pipe collars, and garage corners close with steel mesh, flashing, and sealant rated for Florida heat and gnawing — fitted around original wood trim and plaster instead of smeared over it. We finish with the arborist list: which limbs to lift off the roof and which vines to pull off the wall, because a sealed house under a standing bridge is a temporary fix."
+      },
+      {
+        "step": "Cleanup and the keeping-out plan",
+        "detail": "We bag droppings and nesting fluff, wipe stained wood, and flag insulation that is soaked through and holding odor — that scent is what pulls the next rat down the same trail. Then the Winter Park habits that matter: citrus picked the day it falls, trash locked before dark, dock boxes and birdseed in metal, and a recheck after the first big storm pushes new animals around."
+      }
+    ],
+    "localSection": {
+      "heading": "Historic-core attics, chain-of-lakes shorelines, and the mid-century canopy streets",
+      "body": [
+        "In the historic core — Park Avenue, College Quarter, Hannibal Square, Orwin Manor — the rodent work is overhead and architectural. Bungalows and cottages built in the 1920s sit on crawlspaces, wear clay tile, and carry a century of additions, each joint a potential entry a rat can widen. Roof rats run the oak canopy straight onto those roofs, nest over kitchens and primary bedrooms, and leave pellets and gnawed wiring in insulation nobody has looked at in years. We work these houses gently and thoroughly: ladder every eave, screen every tile end, and seal with materials that disappear against the original trim.",
+        "On the chain of lakes — the Lake Virginia and Lake Osceola shore, Palmer Avenue, Via Lugano, Genius Drive, the Rollins College waterfront — the pressure splits in two. Roof rats still work the waterfront oaks and backyard citrus above, but Norway rats own the ground: burrows along seawalls, runs under docks and boathouses, dock boxes raided for stored food and seed. Lakefront exclusion that only seals the roofline leaves half the problem standing, so we walk the water side of the lot with the same care as the attic and harden both levels in the same plan.",
+        "Out in Virginia Heights, Winter Park Pines, and the streets toward Howell Creek and Mead Botanical Garden, the houses are younger — mid-century ranch and block — but the canopy is not. Low rooflines sit under mature oak and pine, soffit vents and A/C penetrations open the attic, and the creek-side low ground keeps Norway rats and mice moving after heavy rain floods their cover. Winter is the garage season here: mice slip the door seal for warmth, and the first sign is droppings along the wall, not noise. We seal the low game as carefully as the high one, and tell you which of the two your house is actually playing."
+      ]
+    }
   }
 }
