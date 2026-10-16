@@ -1390,5 +1390,61 @@
         "Out in Virginia Heights, Winter Park Pines, and the streets toward Howell Creek and Mead Botanical Garden, the houses are younger — mid-century ranch and block — but the canopy is not. Low rooflines sit under mature oak and pine, soffit vents and A/C penetrations open the attic, and the creek-side low ground keeps Norway rats and mice moving after heavy rain floods their cover. Winter is the garage season here: mice slip the door seal for warmth, and the first sign is droppings along the wall, not noise. We seal the low game as carefully as the high one, and tell you which of the two your house is actually playing."
       ]
     }
+  },
+  "winter-park/bed-bug-treatment": {
+    "heroLocal": "Winter Park bed bugs do not arrive through a resort corridor — they arrive in good luggage, in a student's duffel coming home from a semester away, and in a beautiful estate-sale chair nobody inspected before it went into the guest room. This is a town that travels, hosts, and buys old furniture with a past: Rollins families flying in for parents' weekend, guest houses over garages that sit closed for months and then fill for the Sidewalk Art Festival, and 1920s homes full of upholstered antiques. The bugs ride those ordinary, respectable routes and settle into the quietest bedroom in the house.",
+    "heroService": "Bed bug treatment in Winter Park starts with confirming live bugs before anyone pays, then treating the room the way this town's houses demand: antique frames and plaster walls handled gently, heat used only where old wood, sprinkler heads, and stored instruments say it is safe, and every sleeping surface counted — the primary bed, the guest-house bed over the garage, the daybed in the study, the student's room that stood empty all semester. You get findings in writing, room by room, and a recheck on the hatch interval, not a fog and a hopeful goodbye.",
+    "whyHeading": "Why Winter Park bed bugs hide in guest rooms, not master bedrooms",
+    "whyLead": "The pattern here is delay. A guest room, a carriage-house suite, or a college student's bedroom sits closed and undisturbed for weeks, so an introduction from one suitcase or one visiting relative gets a full breeding cycle — sometimes two — before the first sleeper reports bites. By the time anyone calls, the bugs are not new arrivals on one mattress seam; they are established in the frame, the baseboard, and the upholstered chair beside the bed, in the one room nobody enters between visitors.",
+    "whyLocal": "The houses help them stay hidden. Historic Winter Park construction is full of harborage a new stucco box does not have: plaster-and-lath wall voids, original wood bed frames with a century of joints, built-in cabinetry, and guest suites over garages and in converted quarters that share a wall with the main house but get checked half as often. Add the semester rhythm around Rollins College — move-outs in May, move-ins in August, study-abroad returns in January, shared off-campus houses in College Quarter where furniture passes from one lease to the next — and Winter Park gets fresh introductions on a school calendar, every year.",
+    "pests": [
+      {
+        "name": "Bed Bugs in Guest Rooms and Guest Houses",
+        "blurb": "The signature Winter Park call: nobody sleeps in the room, so nobody notices. Look for dark spotting along the guest-bed frame joints, shed skins behind the headboard, and bugs tucked into the guest-house sofa bed that folds the harborage into its mechanism. We inspect the suite over the garage and the study daybed with the same care as the primary bedroom — in this town the spare bed is usually patient zero."
+      },
+      {
+        "name": "The Rollins Semester Introduction",
+        "blurb": "Dorm rooms, shared off-campus houses, and a semester abroad all end the same way: a duffel and a mattress topper carried into a family home in College Quarter or Hannibal Square and set down in a bedroom. Move-in and move-out weeks are when we confirm the most student-linked cases. The fix is a real inspection of what came home, luggage unpacked in the garage — never on the bed — and treatment of the one room before the bugs find a second sleeper."
+      },
+      {
+        "name": "Estate-Sale and Antique Furniture Bugs",
+        "blurb": "Winter Park estate sales move gorgeous upholstered pieces out of old homes every weekend, and bed bugs travel in frame joints, tufting buttons, and the underside webbing of a chair that sat in a closed bedroom for years. A vintage find is not a reason to panic — it is a reason to inspect before it crosses the threshold. We check joints and seams with a light and tell you plainly whether a piece is clean, treatable in place, or not worth the risk."
+      },
+      {
+        "name": "Carpet Beetle Larvae — the Usual Suspect That Isn't",
+        "blurb": "Fuzzy, slow larvae feeding on lint, hair, and wool in closets and under rarely moved beds are Winter Park's commonest bed bug false alarm, especially in older homes with wool rugs and stored blankets. Their shed hairs irritate skin and get reported as bites. No bed bugs means no bed bug bill: deep extraction cleaning, source removal, and storage changes are the treatment, and we put that in writing too."
+      },
+      {
+        "name": "Fleas From the Yard and the Visiting Dog",
+        "blurb": "The other night-bite call, and the pattern gives it away: bites low on ankles, worst in the room where a visiting family dog slept, in houses where oak-shade yards and lake-walk routes keep fleas moving year-round. A white-sock walk across the carpet separates fleas from bed bugs in minutes. The treatment then targets the animal source and the carpet base — not the bed frame — and we will not sell you the wrong program to avoid the conversation."
+      }
+    ],
+    "processIntro": "In houses with antiques, plaster, and a guest suite out back, the careful sequence matters more than the strong chemical — here is the order.",
+    "process": [
+      {
+        "step": "Inspect every sleeping surface, guest spaces first",
+        "detail": "Primary and guest beds, the suite over the garage, sofa beds and daybeds, plus headboard walls, luggage stands, and the upholstered chair beside each bed. You see the evidence with us, room by room. If it is a look-alike — carpet beetle, flea, roach nymph — we name it and stop there; no treatment is built on a photo of a bite."
+      },
+      {
+        "step": "A prep list written for this house",
+        "detail": "Room by room, in plain language: what to launder hot and bag sealed, what to leave exactly where it sits, and how we handle the pieces that cannot take heat or a laundromat run — antique frames, instruments, artwork, and the contents of a guest house that hosts twice a year. Students get the move-home version: what gets inspected in the garage before it ever reaches a bedroom."
+      },
+      {
+        "step": "Treat the harborage, matched to old construction",
+        "detail": "Steam and targeted treatment go into seams, frame joints, and baseboard gaps where the bugs actually live. Whole-room heat is used only where the house allows it — we say up front where original woodwork, sprinkler heads, plaster, and stored valuables rule it out, and what we do instead. No foggers: in a multi-room historic house they scatter bugs into wall voids and make the next visit harder."
+      },
+      {
+        "step": "Recheck on the hatch interval, with monitors",
+        "detail": "Eggs outlive the first treatment, so interceptors go under bed and guest-house legs and we return on the hatch interval to read them. When counts hold at zero you get the dated clearance in writing, plus the Winter Park habits that keep it that way: luggage off the bed and unpacked in the garage, estate-sale pieces inspected before they come inside, and a seam check on the guest room before festival and holiday visitors arrive — not after they leave."
+      }
+    ],
+    "localSection": {
+      "heading": "Historic-core guest rooms, the Rollins semester cycle, and mid-century family streets",
+      "body": [
+        "In the historic core — Park Avenue, College Quarter, Hannibal Square, Orwin Manor — the bed bug work is a guest-room story. Houses built in the 1920s carry carriage-house suites, converted quarters, and spare bedrooms that host a handful of nights a year: parents' weekend, the art festival, the holidays. An introduction in October can breed undisturbed until Thanksgiving. We work these houses gently and completely — every sleeping surface including the one over the garage, antique frames treated in place where they can be, and a written room-by-room result the homeowner can actually file.",
+        "Around Rollins College and the Lake Virginia shore — Palmer Avenue, Via Lugano, Genius Drive, the streets within a walk of campus — the calendar drives the risk. Students come home from dorms, shared houses, and semesters abroad with luggage and soft furniture that goes straight into family bedrooms, and in May and August the same furniture moves between leases in the shared houses near campus. We inspect what came home before it settles in, treat the single affected room hard, and give families the move-in checklist that breaks the cycle next semester instead of repeating it.",
+        "Out in Virginia Heights, Winter Park Pines, and the mid-century streets toward Howell Creek, the calls are family-ordinary: a grandparent who travels, a teenager back from a tournament trip, a beautiful secondhand reading chair from a weekend estate sale. These homes catch introductions early more often — somebody sleeps in the room every night — so the work is usually one bedroom done thoroughly, monitors to prove it stayed done, and honest guidance on the chair: inspected, cleared, or not coming inside. Either way you hear it from the inspection, not from a sales script."
+      ]
+    }
   }
 }
