@@ -1446,5 +1446,61 @@
         "Out in Virginia Heights, Winter Park Pines, and the mid-century streets toward Howell Creek, the calls are family-ordinary: a grandparent who travels, a teenager back from a tournament trip, a beautiful secondhand reading chair from a weekend estate sale. These homes catch introductions early more often — somebody sleeps in the room every night — so the work is usually one bedroom done thoroughly, monitors to prove it stayed done, and honest guidance on the chair: inspected, cleared, or not coming inside. Either way you hear it from the inspection, not from a sales script."
       ]
     }
+  },
+  "orlando/termite-control": {
+    "heroLocal": "Orlando is not one termite market, it's three stacked on the same sandy soil. In College Park, Thornton Park, and Lake Eola Heights you've got 1920s bungalows on pier foundations with heart-pine framing and crawlspaces that stay damp off the lakes. Out in Lake Nona and Horizon West it's slab-on-grade subdivisions barely old enough for their builder pretreats to fade. Between them sit the Conway chain, Belle Isle, and Delaney Park — lakefront streets where the water table sits high enough that a colony never has to travel far for moisture.",
+    "heroService": "Termite control in Orlando starts with the construction, not the chemical. We crawl the bungalow crawlspaces, probe bungalow sills and bungalow-era trim by hand, sound baseboards and moisture-meter bath and laundry walls in the block-and-stucco homes, and walk slab edges and expansion joints in the new builds. Then we match the fix to what we actually found — bait monitoring, a liquid barrier trenched to the footing, or direct treatment into drywood galleries — and we show you the evidence photos before we quote anything.",
+    "whyHeading": "Why Orlando's mix of old bungalows and new slabs keeps termites fed",
+    "whyLead": "Eastern subterraneans need moisture, wood, and undisturbed time, and Orlando hands them all three in every era of housing. The lake chains keep soil damp and crawlspaces humid through the dry season. Daily summer irrigation holds the foundation line wet even when it hasn't rained. Historic homes have had a century to develop the slow leaks, settled grades, and wood-to-soil contacts colonies love — a planter poured against the stucco, a fence run touching the wall, an addition joint that was never flashed. And the new subdivisions start with their own handicap: form boards and wood scraps buried in backfill, grade pushed high against fresh stucco, and pretreat barriers that thin out right as the neighborhood's landscaping matures.",
+    "whyLocal": "The pattern changes by neighborhood, so the inspection does too. In the historic districts the risk hides under the house — mud tubes on piers, sills softened from below, drywood pellets in original window trim that owners blame on old paint. Around the Conway lakes and Belle Isle, high water tables mean subterranean pressure is constant and Formosan colonies — which can nest in a damp wall void without touching the ground — are a genuine possibility, not a scare word. In Lake Nona and the other growth corridors, the calls come at the five-to-ten-year mark: swarmers in a garage, tubes up a slab edge behind the mulch, right where the builder's pretreat has worn thinnest. We inspect for the pattern your street actually has.",
+    "localSection": {
+      "heading": "Bungalow crawlspaces, lake-chain lots, and growth-corridor slabs",
+      "body": [
+        "The historic bungalow belt — College Park, Colonialtown, Thornton Park, Lake Eola Heights, Delaney Park — is where Orlando termite work gets found early or gets expensive. Pier foundations give us crawlspace access, and we use it: sills, joists, and plumbing lines read directly, tubes mapped before they reach the floor system. These houses also carry drywoods in fascia, porch columns, and original trim, so the inspection goes up as well as down. Owners here care about the wood for its own sake, and findings come documented with photos you can hand to a carpenter or a preservation contractor.",
+        "Lakefront and lake-chain homes — Conway, Belle Isle, Edgewood, the streets off Lake Davis and Lake Cherokee — combine a high water table with heavy irrigation and, often, older dock and boathouse timber at the water's edge. Subterranean colonies work year-round in soil that never really dries, and the damp-wall conditions Formosans need show up in flat-roof tie-ins, laundry walls, and A/C line chases. We moisture-meter those walls on every lakefront inspection, because an aerial Formosan nest is its own job and a soil-only treatment will walk right past it.",
+        "The growth corridors — Lake Nona, Horizon West, Laureate Park, Storey Park, and the new sections out toward Avalon Park — are slab country. There's no crawlspace to read, so the evidence lives at the edges: tubes climbing expansion joints and slab perimeters behind mulch, swarmers appearing in garages and front entries after spring rains, bath-trap and plumbing penetrations where the slab was cut. This is where bait monitoring earns its keep — stations read on schedule catch pressure while it's still outside the house, in the years when the original pretreat is fading and nobody is watching."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Eastern Subterranean Termites",
+        "blurb": "Orlando's default colony, and it works all year in soil this warm and wet. You'll meet it as pencil-thin mud tubes on bungalow piers and block stem walls, frass-free hollow baseboards in College Park and Conway homes, and swarmers pouring out of a mulch bed on the first warm evening after a spring rain. We split tubes to confirm live workers, trace the moisture feeding the run — a shower valve weeping into a wall, grade tipped toward the house, irrigation heads soaking the stem wall — and treat the colony, not just the tube."
+      },
+      {
+        "name": "Formosan Termites",
+        "blurb": "Formosans run colonies in the millions and, given a damp wall or roof void, can nest above ground without ever touching the soil — which is why a barrier-only treatment can report success while the house is still being eaten. Around the lake chains we hunt the signs on purpose: blistered paint that feels spongy, carton material in wall voids, moisture readings that make no sense for the weather. Find an aerial nest and it gets treated directly, on its own line item, not folded into a soil quote."
+      },
+      {
+        "name": "Drywood Termites",
+        "blurb": "Drywoods live inside the wood itself and Orlando's older housing stock is full of their favorite lumber: bungalow fascia and porch trim, attic framing in the historic districts, original window and door casings, even hardwood furniture in Lake Eola Heights homes. The giveaway is a neat pile of hard, ridged pellets under a pinhole in painted wood. We probe the piece, clean out the frass, and wait for fresh pellets to confirm the gallery is live before treating it directly — no tenting quote for a problem the size of a door frame."
+      },
+      {
+        "name": "Dampwood Termites",
+        "blurb": "A dampwood colony is a moisture problem announcing itself. They settle where wood stays wet — a rotted eave under a College Park oak canopy, a sill under a dripping hose bib, fence boards and landscape timbers touching stucco near the lakes. Colonies stay small and slow, and we'll treat what's live, but the honest fix is the repair: dry the wood out or replace it and the colony loses its home. We'll tell you which pieces are that simple and which aren't."
+      },
+      {
+        "name": "Carpenter Ants (the Swarm-Season Look-Alike)",
+        "blurb": "Every spring, Orlando homeowners bag what they're sure are termite swarmers that turn out to be Florida carpenter ants — pinched waist, elbowed antennae, out after dark instead of at dusk. They don't eat wood; they excavate damp sills, lanai framing, and foam insulation and push out fine sawdust. The wing check takes thirty seconds — uneven wings and a bent waist mean ant — and it matters, because baiting an ant colony and treating for termites are different jobs at different prices. We identify first, in writing, before anyone sells you anything."
+      }
+    ],
+    "process": [
+      {
+        "step": "Inspection matched to the construction",
+        "detail": "Crawlspace first where the house has one — sills, joists, piers, plumbing lines — then attic framing, then room-by-room sounding of baseboards and probing of casings. Slab homes get the edge walk instead: expansion joints, bath traps, garage perimeters, and the mulch line. Lakefront walls and flat-roof tie-ins get moisture-metered either way. Every tube, pellet pile, and clean run gets photographed."
+      },
+      {
+        "step": "Written findings, active separated from old",
+        "detail": "You get the photos and a plain-English write-up that separates live activity from old damage and both from mere risk factors — the three get priced very differently. Buying, selling, or refinancing in Orlando? The same inspection serves as your WDO documentation for the file, which is how a lot of our historic-district calls start."
+      },
+      {
+        "step": "Treatment fitted to the colony and the house",
+        "detail": "Bait stations placed and mapped for monitoring where pressure is building, liquid treatment trenched to the footing where an active subterranean colony calls for it, and direct wood treatment into confirmed drywood galleries — combined per house, and worked carefully around brick streets' root zones, mature oaks, pavers, and original bungalow trim that can't be replaced."
+      },
+      {
+        "step": "Monitoring through swarm season and beyond",
+        "detail": "We come back to read stations, re-walk the soil line, and check the spots swarmers favor after the spring and early-summer flights, when fresh wings show what's still active. Sell the house, add a room, regrade a bed, or re-sod against the foundation and we remap the layout on the spot, so coverage never lapses quietly the way a forgotten pretreat does."
+      }
+    ],
+    "processIntro": "Termite work in Orlando is inspection-led and house-specific — here's how it runs."
   }
 }
