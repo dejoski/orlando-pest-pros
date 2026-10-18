@@ -1502,5 +1502,61 @@
       }
     ],
     "processIntro": "Termite work in Orlando is inspection-led and house-specific — here's how it runs."
+  },
+  "lake-buena-vista/general-pest-control": {
+    "heroLocal": "Lake Buena Vista runs on turnover, and general pest control here has to run on it too. Along Hotel Plaza Boulevard and SR-535 the work is hotels, condo resorts, and restaurant blocks where a kitchen never fully cools down. Off Palm Parkway and Apopka-Vineland it is vacation condos and timeshares that sit empty between stays, then fill overnight. And tucked around Lake Bryan and Little Lake Bryan are ordinary residential streets — single-family homes with lanais, pool cages, and lake-edge oaks — that get the classic Florida pattern and want a classic quarterly barrier, not a hotel logbook.",
+    "heroService": "General pest control in Lake Buena Vista starts by sorting which of those three you are, because the treatment is different in each. Managed properties get bait-first interior work, numbered monitors, and a written record a manager can forward. Vacation units get inspected and treated in the empty window between bookings, before a guest becomes the inspection program. Lake Bryan homes get an exterior-first barrier walked around the pool cage, the mulch line, and the soffits. In all three, we show you what we found — droppings, egg cases, a trail behind a coffee maker — before we quote anything.",
+    "whyHeading": "Why turnover, shared walls, and wet resort grounds keep Lake Buena Vista buggy year-round",
+    "whyLead": "Nothing here ever fully resets. Guest and tenant turnover is daily, so German roaches arrive in grocery deliveries, cardboard, and small appliances, and pharaoh ants are already travelling the pipe chases behind the walls. Kitchens in the dining blocks along SR-535 and Disney Springs stay warm and wet through double shifts, floor drains grow the biofilm drain flies breed in, and a unit left vacant for two weeks in Florida humidity is a quiet, undisturbed home for silverfish and pantry pests in the dry goods somebody left behind. Spraying the room you saw a bug in does not touch any of that — the colony, the chase, and the drain are the job.",
+    "whyLocal": "Outside, the grounds are managed to stay lush, and lush is habitat. Irrigation runs whether it rained or not, pool splash and dumpster-pad runoff keep the mulch and the expansion joints damp, and palms and hedges are planted right against the buildings. That is where American cockroaches — palmetto bugs — stage all day before pushing under a service door after a storm, and where ghost ants nest before trailing into a ground-floor bathroom. For the Lake Bryan streets the same pressure comes from the lake edge instead of the loading dock: retention water, oak shade that never dries, and fruit and feeder trees that keep everything fed. We treat the staging ground, not just the sighting.",
+    "localSection": {
+      "heading": "Hotel corridors, vacation condos, and the Lake Bryan residential pockets",
+      "body": [
+        "For hotels and condo resorts on Hotel Plaza Boulevard and along SR-535, general service is a back-of-house program as much as a guest-room one. We work the kitchens, laundry rooms, trash-chute rooms, and housekeeping closets where German roaches and pharaoh ants actually live, place and read numbered monitors so a trend shows up in the log before it shows up in a review, and keep guest-room work bait-and-void based — no broadcast spraying in an occupied room, and a service record written for the brand inspection file, not the technician's notebook.",
+        "Vacation condos and timeshares off Palm Parkway, Apopka-Vineland, and Vineland Avenue turn over too fast for problems to announce themselves slowly. A German roach egg case in a condo kitchen can hatch out between two bookings; ants can move from a neighbouring unit through a shared chase while the unit sits empty. We schedule inspections and treatment inside the turnover window, check the under-sink voids, appliance motors, and water-heater closets guests never open, and leave the manager a per-unit note — what was found, what was treated, what to watch — so the same unit flaring twice reads as a pattern, not two surprises.",
+        "The residential pockets around Lake Bryan and Little Lake Bryan get a different visit entirely. These are year-round homes, many with pool cages and lanais backing onto the water, and the call is usually palmetto bugs in the garage after rain, ghost ants on the kitchen window sill, and spiders webbing the cage corners. We build the barrier outside first — foundation, weep holes, hose bibs, cage seams, and the mulch edge — treat inside only where sign shows, and hand the homeowner the short fixes that matter here: irrigation heads soaking the stem wall, mulch piled over the weep holes, and a palm touching the roofline."
+      ]
+    },
+    "pests": [
+      {
+        "name": "German Cockroaches",
+        "blurb": "The defining general-pest problem of the resort corridor. Germans live inside the building — behind condo refrigerators, inside coffee-maker and microwave motors, under hotel dish machines — and they arrive constantly in deliveries and luggage-adjacent clutter. You'll see pepper-like specks and tan egg cases in cabinet hinges before you see a live roach in daylight. Store spray makes them scatter deeper into the chase. We gel-bait the harborage, work the neighbouring units or stations on the same run, and put the sanitation misses feeding them in writing."
+      },
+      {
+        "name": "Pharaoh Ants and Ghost Ants",
+        "blurb": "The bathroom-sink and coffee-station ants of Lake Buena Vista. Pharaoh colonies nest inside wall voids across whole condo buildings and bud into new colonies when sprayed, which is why a room can be 'treated' three times and get worse. Ghost ants trail in from the irrigated mulch to ground-floor baths and kitchens. Both get traced to the entry and the moisture, then baited with what they carry home to the colony — and we tell housekeeping and homeowners plainly: no surface spray on the trail, it splits the colony and doubles the map."
+      },
+      {
+        "name": "American Cockroaches (Palmetto Bugs)",
+        "blurb": "The big outdoor roach of the pool deck, the dumpster pad, and the Lake Bryan garage. Palmetto bugs breed in damp mulch, palm boots, and sewer and drain lines, then push indoors under door sweeps and through pool-cage seams when storms flood their harborage. Killing the one in the laundry room changes nothing. We dust voids and meter boxes, treat the foundation and mulch edge where they stage, and flag the torn sweep or flooded bed that let it in."
+      },
+      {
+        "name": "Drain Flies",
+        "blurb": "Tiny moth-like flies around a hotel bathroom sink or a restaurant floor drain are not a spraying problem — they are a plumbing-hygiene signal. Drain flies breed in the gelatinous biofilm inside drains, overflow slots, and broken grout lines, so a fly today means a drain that needs scrubbing, not fogging. We identify which drains are producing, treat the biofilm, and write the drain-care fix into the service record, because in a food or lodging inspection that note is worth more than the treatment."
+      },
+      {
+        "name": "Silverfish and Pantry Pests in Vacant Units",
+        "blurb": "Units that sit empty between owners, seasons, or long bookings grow their own quiet fauna. Silverfish graze book bindings, stored linens, and cardboard in humid closets and water-heater rooms, and Indian meal moths and weevils work through the rice, cereal, and pet food left in a pantry. Nobody sees it until the next arrival opens the cupboard. Vacant-unit checks are part of our turnover inspections: dry goods gone or sealed, closets and voids checked, and light treatment only where sign actually shows."
+      }
+    ],
+    "process": [
+      {
+        "step": "Inspection split by property type",
+        "detail": "We walk the setting you actually have: guest rooms and back-of-house for hotels, the full unit — sinks, appliances, water-heater closet, lanai — for vacation condos, and the exterior envelope first for Lake Bryan homes. Grounds are part of every version: dumpster pads, dock and service doors, palm lines, pool equipment, and the mulch against the wall. Findings are photographed as we go."
+      },
+      {
+        "step": "Bait-first interior, barrier outside",
+        "detail": "Inside, German roaches and pharaoh ants get gel bait and void work, not broadcast spray — safer around guests and kids, and the only approach that reaches the colony. Outside and in residential work we build the wet-season barrier along the foundation, weep holes, cage seams, and thresholds, and treat drains producing flies at the biofilm, not the air."
+      },
+      {
+        "step": "Entries sealed, fixes written down",
+        "detail": "Door sweeps, pipe and conduit penetrations, chase gaps, and weep holes get sealed or screened with materials that hold. What belongs to the property — a drain that needs a scrub schedule, a dumpster lid that will not close, irrigation soaking a stem wall, dry goods stored through a vacancy — goes in the written record that day, named plainly, so a manager, cleaner, or homeowner can act on it."
+      },
+      {
+        "step": "Rechecks on your calendar, not ours",
+        "detail": "Hotels and dining get scheduled monitor reads, vacation units get rechecked on the booking calendar — ideally each turnover for flagged units, monthly for the rest — and Lake Bryan homes settle onto a quarterly barrier with free re-treatment if palmetto bugs or ants break through between visits. Same-unit repeats get flagged in the record instead of billed as new surprises."
+      }
+    ],
+    "processIntro": "General service in a turnover city is a calendar and a paper trail as much as a treatment — here's how it runs."
   }
 }
