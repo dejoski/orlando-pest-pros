@@ -1558,5 +1558,61 @@
       }
     ],
     "processIntro": "General service in a turnover city is a calendar and a paper trail as much as a treatment — here's how it runs."
+  },
+  "lake-buena-vista/bed-bug-treatment": {
+    "heroLocal": "In Lake Buena Vista a bed bug call is rarely about a house — it is about a room that was sold last night and is supposed to be sold again tonight. Along Hotel Plaza Boulevard and SR-535 that room sits in a stack: one above, one below, and a neighbour on each side, with a housekeeping cart rolling past all of them. Off Palm Parkway and Apopka-Vineland it is a vacation condo or timeshare unit a cleaner has just walked into on a turnover. Around Lake Bryan it is a guest bedroom that sat made-up and empty for weeks. Three different buildings, one rule that governs all of them: that room stays out of service until it clears — nobody sleeps in it on a hope and a spray.",
+    "heroService": "Bed bug treatment in Lake Buena Vista starts with the room, then immediately widens to the rooms around it. We inspect the bed, the headboard, the luggage rack, and the sofa bed everyone forgets to open, then check the adjoining units and the ones above and below before we quote anything. Hotels get a discreet, unmarked visit and a written record for the brand file. Condo managers get a per-unit note they can forward to an owner who lives three states away. Homeowners get an honest identification first — because in Lake Bryan homes the thing in the guest room is, a good share of the time, not a bed bug at all.",
+    "whyHeading": "Why nightly turnover makes Lake Buena Vista a bed bug relay, not a bed bug source",
+    "whyLead": "Bed bugs here do not need to breed up a local population — the luggage supply renews them. Every check-in on Hotel Plaza Boulevard brings suitcases that have been in other hotels, other rentals, and airport baggage systems, and every checkout risks carrying the problem to the next property in a cleaner's cart, a laundry bag, or a guest's own bag moved to a fresh room. Moving a complaining guest across the hall without inspecting either room is how one introduction becomes a floor. The work is interception: catch it in the room it arrived in, prove the neighbours are clean, and document both.",
+    "whyLocal": "The buildings help them. Hotel headboards are bolted through shared walls, pipe and conduit chases connect stacked bathrooms, and housekeeping closets and linen rooms give bugs warm, undisturbed harbourage between stays. Timeshare and condo buildings on Palm Parkway add a harder problem: nobody owns the pattern. Each unit has a different owner, cleaner, and booking calendar, so the unit above can flare twice while the unit below is never checked. That is why our inspection map is the stack and the row, not the single address on the work order — and why the written record matters as much as the treatment.",
+    "localSection": {
+      "heading": "Hotels on Hotel Plaza Boulevard, condos on Palm Parkway, and guest rooms on Lake Bryan",
+      "body": [
+        "For hotels along Hotel Plaza Boulevard and SR-535, the visit is built around discretion and proof. We arrive unmarked, take the flagged room out of service, and inspect it with the adjoining rooms and the units directly above and below, plus the luggage rack, headboard, and housekeeping station serving that section. Treatment is targeted to the harbourage we actually found — bed frame joints, skirting, upholstered furniture — not a whole-floor fogging that scatters bugs into the wall voids. The manager leaves with a dated record: what was found, where, what was treated, and when the room can return to service, written so it can be handed to a brand inspector or attached to a guest claim without editing.",
+        "Vacation condos and timeshares off Palm Parkway, Apopka-Vineland, and Vineland Avenue live or die on the turnover window. The person who finds bed bugs here is usually the cleaner, stripping a bed between a morning checkout and an afternoon arrival, and the worst outcome is rushing the unit back for that arrival. We work inside that window when we can and say plainly when we cannot: the unit is held, bedding is bagged at the bed and laundered hot, interceptors go under the bed legs, and the neighbouring units on the shared-wall side get checked on the same visit. Remote owners get the finding in writing with photos, because 'the cleaner saw something' is not a basis anyone can approve a bill on.",
+        "The residential streets around Lake Bryan and Little Lake Bryan get the quieter version of the same pest. Here it is a guest room used six weekends a year, a second home that sat closed between visits, or a teenager's room after a season of travel-team tournaments and sleepovers. Bugs can feed once, then sit for weeks with no host and no one looking. We inspect every sleeping surface in the house — including the pull-out in the lanai room — identify what we find before treating, place monitors where the room sits empty, and give the homeowner a simple check to run before the next guests arrive, instead of a standing panic every time someone visits."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Bed Bugs in Hotel Guest Rooms",
+        "blurb": "The classic Lake Buena Vista find: bugs harbouring in the bed frame joints, the bolted headboard, the seams of the luggage rack webbing, and the nightstand drawer runners — within a metre of where the guest sleeps, and nowhere else in the room. Housekeeping usually sees the evidence first: rust-coloured spots on the sheet corners, shed skins along the headboard ledge, a live bug when a mattress is stripped. We confirm it live before any treatment is sold, photograph the harbourage, and treat that tight zone plus the furniture that touches it."
+      },
+      {
+        "name": "The Rooms Next Door, Above, and Below",
+        "blurb": "A single-room treatment in a stacked hotel or condo building is a half-treatment. Bed bugs travel the wall void on pipe and conduit runs, follow housekeeping carts and laundry bags, and turn up next in the room that shares the headboard wall. Every flagged room gets its cluster checked — both sides, above, and below — and the linen room and cart serving that section get inspected too. If the cluster is clean, that goes in the record; a documented negative next door is what lets a manager defend returning the floor to service."
+      },
+      {
+        "name": "Sofa Beds — the Harbourage Nobody Opens",
+        "blurb": "In condo resorts, timeshares, and extended-stay suites the pull-out sofa is the bed nobody inspects: folded shut for months, warm, dark, and fed for one night at a time by the extra guest. We have cleared a room's main bed twice and found the living population in the sofa mechanism on the third visit — which is why we open it first now. Sofa beds, upholstered headboards, and recliners within feeding range of a sleeping spot are treated as beds, because the bugs already do."
+      },
+      {
+        "name": "Turnover Finds in Vacation Condos",
+        "blurb": "In a Palm Parkway condo the discovery moment is specific: a cleaner strips the bed, sees spotting or a live bug, and a new family is due at four. Panic produces the two classic mistakes — spraying the mattress with store product, which drives bugs into the frame and the wall, and remaking the bed and saying nothing. Our cleaners' rule is simpler: stop, photograph, bag nothing, close the door, call. We hold the unit, inspect, and treat inside the changeover if the finding is light — and we tell the manager the same day if it is not a one-visit fix."
+      },
+      {
+        "name": "Carpet Beetle Larvae — the Guest-Room Look-Alike",
+        "blurb": "The honest entry on this page. Small, bristly larvae and shed skins in a Lake Bryan guest room or a seldom-used hotel room are very often carpet beetles, not bed bugs: they graze wool, feathers, lint, and dead insects in undisturbed corners, they do not bite sleepers, and they do not need a bed bug treatment. Telling them apart takes two minutes with a lens — segmented and hairy versus smooth and apple-seed shaped. If it is beetles, we say so, point at the source material to remove, and do not sell you the treatment on this page."
+      }
+    ],
+    "process": [
+      {
+        "step": "Out of service, then inspect the cluster",
+        "detail": "The flagged room or unit comes off the market first. We then inspect every sleeping surface in it — beds, sofa beds, upholstered headboards — with a light and a lens, and extend the check to the adjoining rooms and the units above and below, plus carts and linen storage serving that section. You get the map of what was found and what was cleared before treatment is discussed."
+      },
+      {
+        "step": "Prep written for a turnover, not a textbook",
+        "detail": "Bedding comes off into bags at the bedside, never carried loose down a corridor, and goes to a hot wash and hot dry. Luggage stays off beds and gets inspected on the rack or in the bath. For condos, the prep sheet goes to the cleaner and the manager in writing with the hold time stated; for hotels, housekeeping gets the five-minute strip-and-check that catches the next introduction at the sheet, not at the review."
+      },
+      {
+        "step": "Treat the harbourage that was found",
+        "detail": "Treatment is matched to the evidence: targeted application into frame joints, headboard voids, skirting, and furniture seams where bugs were confirmed, interceptors under bed legs, and mattress encasements where the property wants them. No broadcast fogging of an occupied floor, no treating clean neighbouring rooms 'just in case' — the cluster record says which rooms needed it and why."
+      },
+      {
+        "step": "Clearance recheck before the room is sold again",
+        "detail": "Eggs hatch on their own schedule, so a room is not cleared on treatment day. We recheck on the hatch interval — monitors read, harbourages re-inspected — and only then issue the clearance note: hotels get it for the brand and claim file, condo managers get it per unit for the owner, and Lake Bryan homeowners get monitors left in the quiet guest room with a date to check them. If the recheck finds activity, the room stays held and retreatment is on the original job."
+      }
+    ],
+    "processIntro": "Bed bug work in a city that resells the room nightly is a hold, an inspection map, and a clearance note — here's how it runs."
   }
 }
