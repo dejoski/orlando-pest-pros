@@ -1614,5 +1614,61 @@
       }
     ],
     "processIntro": "Bed bug work in a city that resells the room nightly is a hold, an inspection map, and a clearance note — here's how it runs."
+  },
+  "orlando/rodent-control": {
+    "heroLocal": "In Orlando a rat call is usually a canopy call. Over College Park, Thornton Park, and Conway the live oaks never really break — limb touches limb touches roofline, with a power line or a cable run filling any gap — so a roof rat can cross a whole street without once touching the ground. Under that canopy sit 1920s bungalows with open eaves, louvered attic vents, and detached garages that were never sealed to modern standards. Across town the problem flips: downtown, International Drive, and the UCF corridors feed Norway rats and house mice at ground level around dumpsters and shared walls, and out in Lake Nona and Horizon West the newest slabs in the city are still getting their first rats pushed in off the pond banks and the next construction phase.",
+    "heroService": "Rodent control in Orlando starts above your head, not in your kitchen. We walk the canopy and the roofline first — which limbs touch, which lines land on the roof, where the eaves and vents have been gnawed — then read the attic for runs, rub marks, and pellets, and only then work the ground: garage seals, AC line penetrations, dumpster and dock areas. Trapping removes what is inside, exclusion in steel and flashing is what keeps the next rat out, and you get the entry map in photos before we quote the seal work. We do not scatter poison through an attic and call the smell that follows a solution.",
+    "whyHeading": "Why Orlando's canopy, lakes, and growth keep rats fed all year",
+    "whyLead": "Roof rats need three things — food above the ground, water nearby, and a covered route between them — and Orlando's older neighborhoods hand over all three on the same lot. Mature oaks drop mast through the fall, old backyard citrus and loquats fruit on trees nobody harvests anymore, and the lake chains and retention ponds mean no rat is ever far from water. There is no winter kill to reset the population: breeding slows, it never stops, so a gap gnawed in October is a litter by the new year. Add a housing stock full of pier foundations, additions, and century-old vent screens, and the surprise is not that an Orlando attic has rats — it is that one stayed empty this long.",
+    "whyLocal": "The route in changes completely by neighborhood, so the inspection does too. Under the historic canopy the rat travels high — fence, line, limb, roof — and enters at the top of the house, which is why ground baiting alone never fixes a College Park attic. Around the restaurant rows, apartment complexes, and hotel back-of-house areas downtown and on International Drive, the pressure is at ground level and shared: one dumpster pad feeds every unit on the wall, and mice move through pipe chases from kitchen to kitchen. In the growth corridors the rat is a displaced field animal — construction clears the lot next door, the pond bank gets regraded, and Norway and cotton rats arrive at brand-new garage doors whose seals were never fitted tight. Same city, three different animals' worth of behavior, three different jobs.",
+    "localSection": {
+      "heading": "Canopy bungalows, shared-wall corridors, and brand-new slabs",
+      "body": [
+        "The historic canopy belt — College Park, Thornton Park, Colonialtown, Delaney Park, and the Conway streets — is roof rat country, and the work there is measured in limbs and eaves. We start in the street looking up: which oak limbs overhang or touch the roof, which utility drops land on it, where the fronds of a palm lean against a tile edge. Inside, the attic tells the story in rub marks along the top plates, pellets clustered under the AC handler, and trails worn through blown insulation between the entry point and the water lines rats gnaw for moisture. These bungalows also carry detached garages, carriage houses, and additions tied into the original frame with gaps nobody has looked at since the addition was young. We trap on the mapped runs, then seal the top of the house — eave returns, vent screens in hardware cloth, gnawed corners rebuilt in flashing — and give you the honest limb list: which cuts actually break the route and which are just tree work.",
+        "Downtown, along International Drive, in MetroWest, and around UCF, rodent work is a shared-wall problem and it lives at ground level. Norway rats work the dumpster pads, grease areas, and loading edges behind restaurants and apartment buildings, burrowing under pads and slab edges, then running the wall lines into ground-floor units. House mice ride the same buildings from the inside, traveling pipe chases and the voids behind stoves, which is why one unit's kitchen problem keeps reappearing two doors down. Treating a single unit in that pattern is a subscription to the same call. We inspect the wall, not just the address: the pad, the burrows, the door sweeps on the whole run, and the pipe penetrations in each kitchen, and we put the findings in writing a property manager can act on — because half the fix in these buildings is the pad and the doors, not the traps.",
+        "Lake Nona, Laureate Park, Horizon West, and the lake-chain edges south through Belle Isle and Edgewood show the third pattern: new houses, new rats. The slabs are tight but the garage doors often are not — a corner gap where the seal meets an uneven apron is a front door to a mouse and a young rat — and AC penetrations and hose bibs get sealed with foam that rodents treat as a snack. Around the houses, retention ponds, regraded banks, and the construction phase still clearing lots next door push Norway and cotton rats toward the first finished streets, while pool equipment pads, screen-enclosure doors, and boathouse and dock timber along the Conway lakes give roof rats harborage that never gets checked. We fit and replace garage seals properly, collar the utility penetrations in materials that hold up to gnawing, screen the equipment and enclosure gaps, and walk the pond-facing side of the lot with you so you can see exactly where the pressure is coming from and what trimming and cleanup actually changes it."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Roof Rats in the Oak Canopy",
+        "blurb": "Orlando's signature rodent, and an aerial one. Roof rats run the oak limbs, fence tops, and utility lines over College Park and Conway after dark, drop onto roofs, and enter through gnawed eave corners, lifted tile edges, and louvered vents whose screens gave up years ago. You hear them between ten and two — light running, a thump, scratching that moves — and find blunt-ended pellets and dark rub marks in the attic where the run crosses a joist. Fallen citrus and unpicked loquats in the yard are the fuel. We trap on the runs the attic map shows, seal the top of the house in steel and flashing, and mark the limbs that have to come off the roofline to break the route."
+      },
+      {
+        "name": "Norway Rats at Ground Level",
+        "blurb": "The big, ground-dwelling rat of the dumpster pad, the lake bank, and the pond edge. Norways burrow — look for fresh dirt and a clean hole under a dumpster pad, a slab edge, a boathouse floor, or along a retention bank in Lake Nona — and they travel low, leaving greasy rub along walls and garage edges where the run touches the building. Around International Drive and the apartment corridors they are a building-level problem fed by one pad; in new subdivisions they are the animal pushed in when the lot next door gets cleared. We map the burrow system, trap the runs, and fix the pad, door, and seal failures feeding them — a burrow system next to an open food source refills as fast as it is emptied."
+      },
+      {
+        "name": "House Mice in Shared Walls",
+        "blurb": "A mouse needs a gap the width of a pencil, and Orlando's apartments, condos, and rental rows are full of them — around sink pipes, behind stoves, at the tub access panel, where the AC line enters. Rice-sized droppings in a drawer or along the back of a counter, a chewed corner on a dry-goods box, a faint scratching inside a wall at night: that is the whole first chapter. Because they travel the chases between units, mice are the rodent most often mistreated as a single-apartment problem. We find and seal the penetrations in your unit, trap behind the appliances where they actually run, and tell you plainly when the pattern says the wall itself needs the building treated."
+      },
+      {
+        "name": "Rats Around Pools, Docks, and Equipment Pads",
+        "blurb": "Lake-chain and pond-side homes give rats a second address outside the house: the pool equipment pad, the screen-enclosure frame, the boathouse and dock timber, the outdoor kitchen. Roof rats harbor in pump housings and hollow dock framing, run the enclosure top rail to the roofline, and raid the fruit and pet food that live out by the lanai. Owners hear nothing indoors and assume the droppings by the pump are a lizard until the gnawing reaches the equipment wiring. We inspect the outdoor structures as part of the house, screen and seal the housings and enclosure gaps, and treat the lanai-to-roof connection most services walk straight past."
+      },
+      {
+        "name": "When It Is Not Rats at All",
+        "blurb": "An honest Orlando rodent call starts with admitting how often the noise is something else. Grey squirrels run bungalow attics by day — heavy, diurnal, and loud at first light, where rats are creatures of the night. Flying squirrels slip through gaps too small for rats and work quietly after dark in the older canopy streets. A raccoon in a chimney or a torn soffit is a bigger, slower sound entirely, and bats in a vent show as staining and guano, not gnaw marks. Each one is a different job with different rules, and trapping for rats you do not have fixes none of them. We identify what is actually up there from the sign — pellets, rub, entry size, timing — and say so before anything is sold."
+      }
+    ],
+    "process": [
+      {
+        "step": "Canopy-to-ground inspection",
+        "detail": "We start in the street looking up — limbs on the roof, lines landing on it, palm fronds bridging to tile — then walk the roofline and eaves, read the attic for runs, pellets, and rub marks, and finish at ground level: garage seals, AC and pipe penetrations, dumpster and dock areas, pond-facing lot lines. Every entry and every sign gets photographed, and you see the map before we talk about price."
+      },
+      {
+        "step": "Trapping on the mapped runs",
+        "detail": "Snap traps and enclosed stations go where the sign says the animals travel — along attic top plates, on enclosure rails, at burrow mouths and pad edges — out of reach of kids and pets, checked and reset until the attic goes quiet and stays quiet. No loose poison in insulation: a rat that dies in a wall void in Florida humidity is a smell and a fly problem, not a solution."
+      },
+      {
+        "step": "Exclusion fitted to the house",
+        "detail": "Sealing is matched to the building's era. Bungalows get eave returns and vent openings rebuilt in hardware cloth and flashing, gnawed corners closed in metal, and garage and carriage-house gaps fitted properly. Slab homes get garage door seals that actually meet the apron, utility penetrations collared in gnaw-resistant material instead of foam, and enclosure and equipment gaps screened. You also get the short tree list — the specific limbs breaking the route."
+      },
+      {
+        "step": "Sanitation and a dated recheck",
+        "detail": "Soiled insulation and nest material hold scent that advertises the attic to the next rat, so contaminated spots get pulled and the area treated once the animals are out. Fallen fruit, outdoor pet food, and pad-side trash get a plain written fix list. Then a recheck on a date, not a promise: we re-walk the roofline and attic, confirm the seals held and the runs are cold, and put it in writing."
+      }
+    ],
+    "processIntro": "Rodent work in Orlando is a route map, a seal job, and a recheck — here's how it runs."
   }
 }
