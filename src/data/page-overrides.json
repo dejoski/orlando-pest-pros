@@ -1894,5 +1894,62 @@
       }
     ],
     "processIntro": "In a city where the next introduction is already on a suitcase or a moving truck, the sequence matters more than the chemical: prove it, prepare it, treat the harborage, and recheck on the hatch."
+  },
+  "lake-buena-vista/wildlife-removal": {
+    "heroLocal": "In Lake Buena Vista a wildlife call is almost never a house call. This is a 3.14-square-mile tourism municipality in Orange County, ZIP 32830, with 24 year-round residents counted in 2020 and almost the whole city given over to hotels, timeshares, shops, and entertainment along Hotel Plaza Boulevard and SR-535, plus Disney Springs and Typhoon Lagoon. The animals work the same ground the guests do: raccoons on the dock-and-dumpster circuit after dark, armadillos plowing the golf and landscape beds overnight, opossums under the resort decks, squirrels in the rooflines over the walkways. There is no backyard here in the usual sense. There is resort ground, and the wildlife treats it as habitat because, for them, it is.",
+    "heroService": "Wildlife work in Lake Buena Vista starts with a grounds walk, not a trap. We walk the dock corridor and the compactor pad, the pond bank and the creek margin, the roofline and the soffit run, and we photograph tracks, droppings, rub marks, and chew holes before anyone talks about trapping. You hear plainly what species it is, whether young are inside, and what the fix is — a live trap, a one-way door, or a seal — because sealing a mother in with her kits is how a small job becomes a dead-animal smell in a guest corridor. Then we put the fix in writing, so a facilities manager can hand it to an inspector or a brand QA rep without translating it.",
+    "whyHeading": "Why Lake Buena Vista wildlife keeps working the same resort ground",
+    "whyLead": "Resort ground concentrates everything an animal wants into a few square miles. Food never stops: dumpsters, compactor rooms, outdoor dining trash, and grease bins run all year because the guests never stop. Water never stops either: retention ponds, irrigated turf, pool splash, and the creek margins along Bonnet Creek and Reedy Creek hold water through the dry months, and every summer storm refills the low ground by dark. Shelter is built into the buildings themselves: miles of soffit on long low hotel and timeshare rooflines, dock overhangs, deck voids, storage sheds, and service corridors. There is no off-season to break the cycle, no winter that sends the animals away, and no quiet month when the kitchens close. A raccoon that learns the dock circuit at one hotel will run it nightly, and an armadillo that finds grubs in irrigated turf will return to the same beds until the ground is changed or the animal is moved and the entry is closed.",
+    "whyLocal": "What makes Lake Buena Vista different from a suburb is that the habitat cannot be removed. You cannot drain a retention pond that the resort needs, fill in a creek margin that belongs to a conservation edge, or stop watering a golf course that is the property's front yard. The honest fix is therefore exclusion and attractant control on your own parcel, not a promise that the animals will leave the area. The buildings fight you in their own way: a hotel roofline can run hundreds of feet of soffit with a dozen soft seams, a timeshare block can share one dumpster pad between four buildings, and a dock door that stands open for deliveries all afternoon is an open invitation that no trap can cancel. And everything has to happen discreetly, in low-traffic windows, with quiet carts and low-profile equipment, because the guests are twenty feet away and the reviews are the business. We schedule around housekeeping and deliveries, document every entry and every seal, and leave a log a manager can actually use.",
+    "localSection": {
+      "heading": "Hotel Plaza Boulevard, the Bonnet Creek grounds, and the homes behind E Buena Vista Drive",
+      "body": [
+        "Along Hotel Plaza Boulevard and the SR-535 hotel and timeshare corridor, wildlife work is dock work. Raccoons and opossums run the night circuit: compactor doors, grease bins, loading docks, and the outdoor dining trash that never quite gets locked down between services. The signs are unglamorous and unmistakable — tipped cans, torn bags, droppings by the compactor door, greasy rubs on the dock wall, and a latrine in the mulch behind the service corridor. The fix here is mostly discipline plus steel: traps set in the shade and checked daily, dock-door sweeps replaced, compactor gaps closed with metal, and a trash-timing change written down so the night crew holds it. We schedule the loud parts for low-traffic windows and leave a dated log, because a property manager needs paper for the next QA walk, not just a quiet night.",
+        "On the resort grounds around Bonnet Creek and Reedy Creek, the animals come from the water's edge. Armadillos dig the golf fairways, the landscaped beds, and the retention pond banks, leaving cone-shaped holes and soil fanned across the turf overnight, and they wedge under shed slabs and deck footings where the ground stays soft. Raccoons work the pond banks for the same reason the guests like them: food and water in one place. Snakes show up along pond edges and creek margins, and the rule for staff is simple — keep distance, do not move it, call us to identify it before anyone handles anything. Some of this ground is nobody's lot to fix: the creek margin and the conservation edge belong to the district's water system, not to the parcel, so animals will keep drifting in off that edge. We say that plainly, in writing, and we put the work where it holds — the burrows backfilled, a buried footer around the beds and sheds, and the entries on your buildings sealed — instead of billing a parcel for a creek it does not own.",
+        "Behind E Buena Vista Drive and in the vacation rental condos tucked behind Palm Parkway and Apopka-Vineland, Lake Buena Vista has a residential side, and it behaves like a suburb. Here the calls are attics, soffits, sheds, and lanai screens: gray squirrels running the oak canopy onto the roof in daylight and chewing fascia and stucco returns, bats slipping through a 3/8-inch gap at the gable or ridge and streaking the stucco with guano, raccoons peeling a storm-softened soffit to den over a bedroom. The staff-housing pockets near the corridor get the same pattern, plus the dumpster-pad circuit from the corridor side. In these buildings we work the way we would in any neighborhood — ladder the eaves, pop the attic hatch, photograph the entry — but we still schedule around the guests next door, because in Lake Buena Vista the neighbors are always a hotel.",
+        "There is one more Lake Buena Vista pressure no suburb has, and it is the review. A guest who films a raccoon on the pool deck at midnight, or finds armadillo holes across the fairway at sunrise, does not call the front desk first — the video is online before breakfast, attached to the property's name. That is why the paperwork matters as much as the trap. Every visit leaves a dated log: what species, what entry, what was sealed, what the staff should watch for, and when the recheck happens. Housekeeping and grounds crews get a short flag list — droppings by the compactor door, fresh digs on the fairway, a soffit gap after a storm — so the next animal gets reported while it is still one animal, not a story. A property that can show a log, a seal, and a recheck answers a review with facts. A property that cannot is still arguing about a video."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Raccoons on the dock-and-dumpster circuit",
+        "blurb": "The Hotel Plaza Boulevard pattern: a raccoon learns the compactor door, the grease bin, and the dock schedule, then runs the same circuit nightly and dens in the soffit over the service corridor. You get night thumping, tipped cans, and a latrine in the mulch. We trap in the shade, check daily, pull the family intact, and close the entry with metal — then fix the trash timing that taught the route."
+      },
+      {
+        "name": "Armadillos on the golf and landscape ground",
+        "blurb": "The resort-grounds pattern: cone-shaped holes in the fairway and the landscaped beds, soil fanned across the turf overnight, and burrows under shed slabs and deck footings. They hunt grubs and earthworms in irrigated turf after rain. We live-trap the digger, backfill the burrows, and set a buried L-footer of hardware cloth around beds and sheds so it cannot bulldoze back in."
+      },
+      {
+        "name": "Opossums under decks and sheds",
+        "blurb": "The quiet one: opossums love the gap under a resort deck or a storage shed where it is dark and close to the dumpster pad. They do not chew much, but they leave greasy rubs, droppings, and that sour trash odor, plus tipped cans. We cage-trap gently, release on site per state rules, and screen the skirting so the next one cannot move in."
+      },
+      {
+        "name": "Gray squirrels in the roofline",
+        "blurb": "The daytime pattern: gray squirrels run the canopy onto the roof, chew through fascia and stucco returns, and shred insulation into nests. You hear rolling and gnawing by morning and find tooth marks on the eave. We trap out, patch chewed wood with metal-backed repairs, and tell you which limb to cut back from the roof."
+      },
+      {
+        "name": "Bats in the roofline seams",
+        "blurb": "The dusk pattern: bats squeeze through a 3/8-inch gap at the gable or ridge, streak the stucco with guano, and leave pellet droppings in the insulation. Florida protects them, so there is no trapping like raccoons, and we observe no exclusion from April 15 to August 15 during maternity season. In the allowed season we mount one-way exits, let the colony leave to feed, then seal the roofline."
+      }
+    ],
+    "process": [
+      {
+        "step": "Grounds, roofline, and dock inspection — with photos",
+        "detail": "We ladder the eaves, walk the dock corridor and the compactor pad, check the pond bank and the deck voids, and pop the attic hatch where there is one. You get photos of tracks, droppings, rubs, and chew holes, plus a call on species and whether young are inside. That decides trap versus door, and we never seal young in."
+      },
+      {
+        "step": "A humane get-out plan, timed right",
+        "detail": "We set cabled live traps in the shade or bolt a one-way door right on the hole, scheduled in low-traffic windows so guests see nothing. Traps get checked daily, animals stay calm and covered, and mothers with kits get extra care. No poisons, ever — and no bat exclusion from April 15 to August 15, when maternity colonies are protected."
+      },
+      {
+        "step": "Seal and harden the entry",
+        "detail": "Once it is quiet, we close it for real: galvanized flashing, quarter-inch hardware cloth, vent guards, dock-door sweeps, and polyurethane sealant on stucco gaps, not foam alone. Armadillo runs get a buried footer. We mark the limbs, the trash habits, and the dock gaps that brought them in, so the fix is not just a trap."
+      },
+      {
+        "step": "Clean up, log it, and keep them off",
+        "detail": "We bag accessible droppings and nest debris, treat odor with enzyme deodorizer, and flag stained insulation and chewed materials with photos. The facilities team leaves with a short list — lock the cans, fix the compactor gap, pull mulch off the slab — plus a dated log for QA and a recheck on the calendar, because on resort ground the next animal is already scouting the same dock."
+      }
+    ],
+    "processIntro": "On resort ground the sequence is the job: find the entry, get the animal out humanely, seal it for real, and leave a paper trail a manager can hand an inspector."
   }
 }
