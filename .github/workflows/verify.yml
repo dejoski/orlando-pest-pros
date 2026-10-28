@@ -3,6 +3,10 @@ on:
   pull_request:
   push:
     branches: [main]
+# Minute-budget: a newer push cancels the superseded run on the same ref.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
