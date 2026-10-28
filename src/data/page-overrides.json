@@ -2069,5 +2069,62 @@
       }
     ],
     "processIntro": "In a city watered by irrigation and ringed by lakes, the sequence is the job: walk the working water, kill the hatch at the source, barrier the shade they rest in, and reset on the rain's rhythm and the irrigation timer together."
+  },
+  "apopka/termite-control": {
+    "heroLocal": "In Apopka a termite call is almost never about one board. It is about a city built on sand that never fully dries: nursery country along Rock Springs Road and out toward Zellwood, where soil piles, mulch, and irrigation keep the ground damp most mornings; the Wekiva basin underneath it all, holding the water table high from Zellwood down through the low ground; and the acreage lots off Ponkan Road and Kelly Park Road, where a house comes with a well house, a shed, and fence lines that termites reach long before they reach the front door. Between those poles sit the older ranch blocks, the subdivisions like Rock Springs Ridge and Errol Estate, and the new grades past Clarcona, each putting wood against soil in its own way. Apopka does not have one termite problem. It has a sand problem, a damp problem, and an outbuilding problem, stacked on the same map.",
+    "heroService": "Termite control in Apopka starts at the soil line, not at the damage. We walk the slab edge and the stucco weep, the mulch beds and the irrigation heads, the lanai footers and the garage stem walls, then the ground most visits skip: the well house, the shed posts, the barn skirting, and the fence boards touching stucco. We tap baseboards and probe door frames, break a mud tube to check for live workers, and read the moisture around AC lines and bath traps. You hear plainly what is active, what is old damage, and what is just wood sitting too close to damp soil, before anyone talks about bait, liquid, or a spot treatment.",
+    "whyHeading": "Why Apopka termites live in the sand, the mulch, and the outbuildings",
+    "whyLead": "Eastern subterranean termites are built for this ground. They nest in sandy soil, run mud tubes up block and stucco to reach framing, and need only two things Apopka supplies year-round: soil contact and damp wood. The nursery belt keeps mulch and potting soil wet, the Wekiva basin keeps the water table high so soil under a slab stays damp through dry spells, and irrigation refills the beds most mornings. Formosans make it worse in a different way: a big colony can nest in a wall void or soffit where AC condensation keeps the wood damp, never touching soil at all, so a clean soil line does not clear a house. A treatment picked without reading the sand, the moisture, and the outbuildings will miss one of those three, and the colony that survives is the one that comes back.",
+    "whyLocal": "What sets your risk is which Apopka you live in. Along Rock Springs Road and toward Zellwood, the pressure is nursery pressure: mulch lines, soil piles, woodpiles, and potted stock stacked against sheds and fences, all holding moisture against wood. On the acreage off Ponkan and Kelly Park Road, it is outbuilding pressure: well houses, shed posts, and barn boards sitting in sandy soil, with termite tubes running where nobody looks until a post goes soft. In the established ranch blocks, it is old-house pressure: slabs with wood-to-ground contact, lanai additions tied into the original wall, flat-roof tie-ins, and door frames that have been damp for years. And on the new grades past Clarcona and in the new subdivisions, it is fresh-grade pressure: disturbed sand, sod laid over recent fill, and leftover wood in the grade giving a new colony a start before the house has its first swarm season. One template cannot cover a shade-house mulch pile, a well house, a 1970s ranch slab, and a new-build grade. The inspection has to read the ground it is on.",
+    "localSection": {
+      "heading": "The nursery belt, the acreage outbuildings, the ranch blocks, and the new grades",
+      "body": [
+        "The nursery belt is where Apopka's termite pressure starts earliest and stays most constant. Along Rock Springs Road and out toward Zellwood, soil piles and mulch beds stay damp under irrigation, shade cloth holds humidity, and woodpiles and potted stock sit against fences and shed walls. Subterranean termites follow the moisture line straight from a mulch bed to a slab edge, and a tube up the stucco behind a mulch pile is the classic first sign. The fix here is ground work before chemistry: pull mulch back from the foundation, get potted stock and woodpiles off siding and shed walls, fix the irrigation head soaking the bed, and then choose a treatment that survives a bed that will be watered again tomorrow. A house treated while its mulch still touches the stucco is a house inviting the next tube.",
+        "On the acreage lots, the house is often the second structure termites reach. Off Ponkan Road and Kelly Park Road, well houses, sheds, and barns sit on posts and skirts in sandy soil, with fence lines and woodpiles tying the whole lot together. Tubes run up shed posts and well-house boards where nobody walks daily, and a soft post gets blamed on rot until someone probes it and finds galleries. Here the inspection covers the full lot, not just the front slab: every outbuilding, every post, every board touching soil, and the path between them. Treating the house while the well house next to it stays active leaves a colony within a short run of the back wall, and on a big lot that is a gap, not a plan.",
+        "In the established ranch blocks, the story is age plus additions. The older streets off Clarcona-Ocoee and Ocoee-Apopka hold block ranches with wood additions, lanai tie-ins, and flat-roof sections where a slow leak has kept a wall void damp for years. Subterraneans work the slab edge and the bath traps; Formosans settle where condensation collects, in soffits and laundry wall voids, building carton nests that never touch soil. The inspection here is slow and inside as much as out: tap the baseboards, probe the door casings and window trim, check the attic trusses and fascia for drywood pellets, and read the moisture meter around AC lines before deciding whether the answer is bait, liquid, or a spot wood treatment. Old damage and active damage look alike to an eye; they do not look alike to a probe.",
+        "On the new grades, the risk is newness itself. Fresh fill past Clarcona and in the new subdivisions on the suburban edge has disturbed sand that settles, sod laid over recent grading, and wood left in the grade from construction. A new slab is not a sealed slab: plumbing penetrations, bath traps, and lanai footers give subterraneans a route in, and the first swarm season after a warm rain is often how a new owner learns it. Here the work is a baseline inspection with photos, a bait or liquid plan chosen for sand that will not hold a trench well and a water table that sits high, and a recheck after the first spring swarms. A new house with no termite history is not a house with no termite risk; it is a house whose history has not been written yet."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Eastern Subterranean Termites in the sandy soil",
+        "blurb": "The main Apopka pattern: colonies nest in sandy soil and run pencil-wide mud tubes up block, stucco, and shed posts to reach framing. They need soil contact and damp mulch, and Apopka gives them both. We break a tube to check for live workers, tap baseboards, mark leaky hose bibs and grade problems, and choose bait or liquid for sand that drains fast and a water table that sits high."
+      },
+      {
+        "name": "Formosan Termites in damp wall voids",
+        "blurb": "The colony that skips the soil line: Formosans build huge colonies and can nest in a wall void, soffit, or flat-roof tie-in where AC condensation keeps wood damp. We check rooflines, laundry wall voids, and lanai tie-ins with a moisture meter, because carton nests in a ranch addition or a soffit never show a mud tube at the slab."
+      },
+      {
+        "name": "Drywood Termites in fascia and attic trusses",
+        "blurb": "The no-soil pattern: West Indian drywood termites live inside fascia, trim, cabinets, and attic trusses, and show themselves as tiny ridged pellets under kick-out holes. We probe the wood, vacuum old frass to confirm the colony is active rather than historic, and inject the gallery, instead of trenching soil for a termite that never touches it."
+      },
+      {
+        "name": "Dampwood Termites where wood stays wet",
+        "blurb": "The Wekiva-damp pattern: dampwoods show up where wood has stayed wet, rotted eave ends, fence boards touching stucco, a shower that leaked for months, or a well-house board in the basin's damp air. Colonies stay small, but they mean there is rot and a moisture source to fix. We call out the repair and treat what is active."
+      },
+      {
+        "name": "Carpenter Ants, often mistaken for termite swarmers",
+        "blurb": "The spring confusion: every swarm season brings calls about termite swarmers that turn out to be Florida carpenter ants. Ants have pinched waists and elbowed antennae, termites do not, and ants leave sawdust piles and smooth galleries instead of mud tubes and shed wings. We check both before naming the pest, because the treatment for ants and the treatment for termites are not the same job."
+      }
+    ],
+    "process": [
+      {
+        "step": "Walk the soil line, the slab, and the outbuildings",
+        "detail": "We start outside where Apopka actually meets the soil: the slab edge, the stucco weep, the mulch beds and irrigation heads, the lanai footers and garage stem walls, then the well house, the shed posts, the barn skirting, and the fence boards touching stucco. You get a plain list of what is active, what is old damage, and what is wood sitting too close to damp soil."
+      },
+      {
+        "step": "Tap, probe, photograph, and lay out plain options",
+        "detail": "Inside we tap baseboards, probe door frames and bath traps, and read moisture around AC lines and plumbing penetrations. You get phone photos of tubes, wings, pellets, or chew, plus what we did not find. Then bait, liquid, or spot wood treatment is laid out side by side for your slab, your soil, and your outbuildings, with cost and upkeep, not a single take-it-or-leave-it price."
+      },
+      {
+        "step": "Install clean around the yard you actually use",
+        "detail": "Stations go flush with the turf so a mower does not clip them, or we trench tight to the footing where the grade allows and seal drill holes in lanai slabs. We flag irrigation heads, pet bowls, and the nursery beds first, rake the mulch back from the foundation, and keep potted stock off the siding, so the treatment is not undone by the next morning's watering."
+      },
+      {
+        "step": "Recheck after swarms and storms, and adjust when the lot changes",
+        "detail": "Florida pressure does not quit, so we return to check stations, re-sight the soil line and the outbuilding posts, and look for fresh wings after spring swarms. If you add a garden bed, regrade for drainage, build a shed, or stack firewood against the house, we adjust the plan on the spot, because in Apopka the lot changes the risk faster than the calendar does."
+      }
+    ],
+    "processIntro": "In a city on sand with a high water table and a shed on every other lot, the sequence is the job: walk the soil line and the outbuildings, prove what is active with a probe and a photo, install for sand and moisture rather than for a flat lawn, and recheck after the swarms."
   }
 }
