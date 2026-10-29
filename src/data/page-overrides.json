@@ -2126,5 +2126,62 @@
       }
     ],
     "processIntro": "In a city on sand with a high water table and a shed on every other lot, the sequence is the job: walk the soil line and the outbuildings, prove what is active with a probe and a photo, install for sand and moisture rather than for a flat lawn, and recheck after the swarms."
+  },
+  "apopka/rodent-control": {
+    "heroLocal": "In Apopka a rodent call is almost never about one rat. It is about a city where the food never runs out and the rooflines never quite close: nursery country along Rock Springs Road and out toward Zellwood, where mulch beds, woodpiles, potted stock, and irrigation keep the ground damp and covered; the acreage lots off Ponkan Road and Kelly Park Road, where a house comes with a well house, a shed, a chicken coop, and a compost pile; and the older ranch blocks and the preserve-edge streets off Wekiva Springs Road, where oaks and fruit trees run fence line to roofline. Rats travel Apopka above the ground, along branches and wires, and they den in the outbuildings most visits skip. One trap in the attic does not fix a lot that feeds them.",
+    "heroService": "Rodent control in Apopka is sealing work with trapping attached, not the other way around. Roof rats breed year-round in this climate, so a trapped-out attic refills in weeks if the soffit gap stays open and the fruit still drops on the roof. We walk the roofline on a ladder, scope the attic, then walk the lot most visits skip: the well house, the shed, the coop, the compost, and the woodpile. We trap what is inside on its actual runs, close the house with steel and hardware cloth that teeth cannot chew through, and cut the food that brought them. You hear plainly what is active, what is old sign, and what is just a gap that needs closing, before anyone talks about bait.",
+    "localSection": {
+      "body": [
+        "The nursery belt is where Apopka's rodent pressure starts earliest and stays most constant. Along Rock Springs Road and out toward Zellwood, mulch beds and soil piles stay damp under irrigation, shade cloth holds cover all day, and woodpiles and potted stock sit against fences and shed walls. Roof rats run the fence tops and the stacked pots at night, and a mulch bed against the house is a highway to the soffit. The fix here is ground work before trapping: pull mulch back from the foundation, get woodpiles and potted stock off siding and shed walls, pick fallen fruit before it ferments on the ground, and then trap the attic on its actual runs. A house sealed while its mulch still touches the siding and its fruit still drops on the roof is a house inviting the next litter.",
+        "On the acreage lots, the house is often the second structure rats reach. Off Ponkan Road and Kelly Park Road, well houses, sheds, and barns sit under trees with feed storage, chicken coops, and compost bins nearby, and fence lines tie the whole lot together. Roof rats nest in the well-house roof and the shed rafters; Norway rats burrow under the coop and the compost. Here the inspection covers the full lot, not just the front soffit: every outbuilding, every roof, every feed bin, every board touching soil, and the tree route between them. Trapping the house while the well house next to it stays active leaves a colony within a short run of the back wall, and on a big lot that is a gap, not a plan.",
+        "In the established ranch blocks, the story is age plus canopy. The older streets off Clarcona-Ocoee and Ocoee-Apopka hold block ranches under oaks and fruit trees, with wood additions, lanai tie-ins, and flat-roof sections where a soffit gap has been open for years. Roof rats work the attic at night: pellets by the water heater, matted trails in blown insulation, gnawed wire sheathing. The inspection here is slow and overhead as much as out: scope the attic, map every roofline opening from a ladder, check the AC lines and bath vents, and read the droppings to tell fresh sign from old. Old pellets and active pellets look alike to an eye; they do not look alike on a trap line over a week.",
+        "On the preserve edge and the new grades, the risk is the boundary itself. Off Wekiva Springs Road, rats move between the preserve and the subdivision along tree lines and ditch banks, and a garage door left cracked or a soffit vent with a torn screen is an open invitation. Past Clarcona and in the new subdivisions on the suburban edge, fresh sod and young trees still give cover, and garages full of moving boxes give mice a pantry before the house is a year old. Here the work is a full roofline and garage seal, traps set on the runs the rats actually use, and a recheck after the first fruit drop and the first storm debris. A new house with no rat history is not a house with no rat risk; it is a house whose tree route has not been walked yet."
+      ],
+      "heading": "The nursery belt, the acreage outbuildings, the ranch blocks, and the preserve edge"
+    },
+    "pests": [
+      {
+        "blurb": "The main Apopka pattern: roof rats nest in attics, soffits, and shed roofs, and travel branches, fence tops, and wires to get there. They leave capsule-shaped pellets by the water heater, trails in insulation, and gnaw marks on wire sheathing. We scope the attic, trap on their actual runs, and close the roofline gaps they used, instead of setting a trap in the garage and calling it done.",
+        "name": "Roof Rats in the attic and the canopy"
+      },
+      {
+        "blurb": "The ground-level pattern: Norway rats burrow under sheds, chicken coops, compost bins, and woodpiles, especially where the Wekiva basin keeps the ground damp. They leave larger blunt pellets, burrow holes at the shed skirt, and greasy rub marks along fence boards. We find the burrows, secure the feed, and trap and seal at the burrow level, because an attic-only plan never touches them.",
+        "name": "Norway Rats under sheds, coops, and compost"
+      },
+      {
+        "blurb": "The small-gap pattern: house mice slip through a gap the width of a pencil, through garage door seals, pipe penetrations, and torn vent screens, into pantries, storage sheds, and moving boxes. They leave rice-sized pellets and shredded nesting in drawers and boxes. We seal the small gaps with steel wool and caulk backed by steel, and trap the pantry and garage runs until the sign stops.",
+        "name": "House Mice in garages, pantries, and storage sheds"
+      },
+      {
+        "blurb": "The acreage-edge pattern: cotton rats live in tall grass, pasture edges, and ditch banks off Ponkan and Kelly Park Road, and move into outbuildings when the grass is cut or the lot is cleared. They leave runways through grass and burrows at the shed skirt. We cut the grass edge back, seal the outbuilding skirts, and trap the shed runs, so a cleared lot does not become an invitation.",
+        "name": "Cotton Rats on the field and pasture edge"
+      },
+      {
+        "blurb": "The daytime confusion: every fall brings calls about rats that turn out to be squirrels, and the clock gives them away. Squirrels are loud in the attic in the morning and late afternoon and quiet at night; rats are the reverse, scratching and gnawing after dark. We check the timing, the entry size, and the droppings before naming the pest, because the seal and the removal plan for squirrels are not the same job as for rats.",
+        "name": "Squirrels, the daytime attic noise that is not rats"
+      }
+    ],
+    "process": [
+      {
+        "detail": "We start overhead where Apopka rats actually travel: the soffits, roof vents, lanai tie-ins, and flat-roof voids, from a ladder, then the attic with a scope. Then we walk the lot most visits skip: the well house, the shed, the coop, the compost, the woodpile, and the fruit trees over the roof. You get a plain map of every entry, every run, and every food source, before any trap is set.",
+        "step": "Walk the roofline, the attic, and the whole lot"
+      },
+      {
+        "detail": "Traps go where the sign is, not where they look tidy: on attic runs, along fence tops and shed skirts, at burrow mouths, and in the garage and pantry gaps mice use. We check on a schedule, show you the catch and the fresh sign, and keep trapping until the sign stops, because a single night of catches is not a cleared attic.",
+        "step": "Trap what is inside on its actual runs"
+      },
+      {
+        "detail": "Entries close with steel flashing, hardware cloth, and concrete patch, not foam or plastic that teeth chew through in a night. Then the lot work: mulch pulled back from the foundation, woodpiles off the siding, fallen fruit picked up, feed in sealed bins, and the coop skirt buried. Sealing without cutting the food leaves rats testing the new steel every night.",
+        "step": "Seal with steel, and cut the food that brought them"
+      },
+      {
+        "detail": "Florida pressure does not quit, so we return to re-sight the roofline, check the attic sign, and walk the outbuildings after the first fruit drop and the first storm debris. If you add a coop, stack firewood against the house, or let a tree grow onto the roof, we adjust the plan on the spot, because in Apopka the lot changes the risk faster than the calendar does.",
+        "step": "Recheck after fruit drop and storms, and adjust when the lot changes"
+      }
+    ],
+    "processIntro": "In a city with nursery cover, acreage outbuildings, and oaks over every ranch roof, the sequence is the job: walk the roofline and the whole lot, trap on the actual runs, seal with steel and cut the food, and recheck after fruit drop and storms.",
+    "whyHeading": "Why Apopka rats live in the canopy, the mulch, and the outbuildings",
+    "whyLead": "Roof rats are built for this city. They climb, they nest above ground, and they run branches, fence tops, and power lines straight to a soffit gap or a roof vent. Apopka gives them the whole route: oaks and fruit trees over the ranch blocks, shade cloth and stacked pots in the nursery belt, and outbuildings on every other acreage lot. Norway rats work the other level, burrowing under sheds, compost bins, and woodpiles where the ground stays damp near the Wekiva basin. And house mice work the smallest level, slipping through a garage door gap or a pipe penetration into a pantry or a storage shed. A plan that only sets snap traps in the attic misses two of those three levels, and the level it misses is the one that refills the attic.",
+    "whyLocal": "What sets your risk is which Apopka you live in. Along Rock Springs Road and toward Zellwood, the pressure is nursery pressure: mulch lines, soil piles, woodpiles, and potted stock stacked against sheds and fences, all giving rats cover and a short run to the house. On the acreage off Ponkan and Kelly Park Road, it is outbuilding pressure: well houses, shed roofs, chicken coops, and feed storage, where rats nest in the roof and eat at night without ever entering the house. In the established ranch blocks, it is old-house pressure: soffit gaps, lanai tie-ins, flat-roof voids, and AC line penetrations that have been open for years under oak canopy. And on the preserve edge off Wekiva Springs Road and the new grades past Clarcona, it is edge pressure: rats moving between the preserve and the subdivision along tree lines, then into garages full of stored boxes. One template cannot cover a shade-house mulch pile, a chicken coop, a 1970s ranch attic, and a new-build garage. The inspection has to read the lot it is on."
   }
 }
