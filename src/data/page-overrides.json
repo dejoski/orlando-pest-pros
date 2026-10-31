@@ -2240,5 +2240,58 @@
       }
     ],
     "processIntro": "In a city where the nursery waters itself, the basin never dries, and every other lot has outbuildings, the sequence is the job: walk the whole lot, barrier outside and bait inside, fix the conditions that brought them, and return on a rhythm the rain and the irrigation set together."
+  },
+  "apopka/bed-bug-treatment":   {
+    "heroLocal": "In Apopka a bed bug call rarely starts with a hotel. It starts with a bedroom that got something new: a suitcase home from a trip, a used headboard or couch picked up on Marketplace and stored in the shed first, a guest room on an acreage lot off Ponkan Road that sat made-up for months, a kid back from a travel weekend sleeping in the ranch-block house off Clarcona-Ocoee. Bed bugs do not care that the house is clean or that the lot is five acres \u2014 they ride in with people and furniture, settle within a few feet of where someone sleeps, and wait. The embarrassment is the only thing that makes them worse, because it buys them weeks.",
+    "heroService": "Bed bug treatment in Apopka starts with identification, not a spray. We flashlight every sleeping surface \u2014 mattress seams, box-spring tack strips, headboard screw holes, sofa piping, the pull-out in the lanai room, and the mattress that spent a month in the shed \u2014 and show you what we actually found before we quote anything. Then the plan fits the rooms: whole-room heat where it fits, targeted conventional work with a follow-up where it fits better, often a blend, plus the prep that decides it \u2014 hot wash, high-heat dry, bagged bedding, beds pulled off the wall, and the rooms around the flagged one checked on the same visit.",
+    "whyHeading": "Why Apopka bed bugs hide in furniture and guest rooms, not just beds",
+    "whyLead": "Bed bugs are flat, reddish-brown, apple-seed sized, and patient. They feed at night and hide by day in seams, tack strips, screw holes, and couch piping, and one mated female in a suitcase or a used headboard can seed a whole bedroom in weeks. Indoors there is no winter to slow them down, and a guest room that sits empty between visits hides them longer than a room slept in every night \u2014 no bites, no complaints, just a population quietly building behind the headboard.",
+    "whyLocal": "What sets your risk is which Apopka you live in. Along Rock Springs Road and toward Zellwood, it is movement pressure: nursery-country households where people, kids, and secondhand furniture move between properties, and a used bed stored in a shed or garage gets carried inside without ever being checked. On the acreage off Ponkan and Kelly Park Road, it is guest-room pressure: extra bedrooms, converted outbuilding sleeping rooms, and mattresses stored in well houses and sheds, where a bug population can sit for months with no host and no one looking. In the established ranch blocks, it is furniture pressure: inherited headboards, Marketplace couches, and kids returning home with suitcases from trips and tournaments. And in the new subdivisions past Clarcona, it is turnover pressure: moving boxes, new furniture deliveries, and rentals turning over, where a bug introduced on move-in week gets blamed on the builder for months. One room sprayed in isolation misses all four, because the bug is in the furniture route, not just the bed.",
+    "localSection": {
+      "heading": "The nursery belt, the acreage guest rooms, the ranch blocks, and the new subdivisions",
+      "body": [
+        "Along Rock Springs Road and out toward Zellwood, the check starts before the furniture crosses the threshold. Used headboards, mattresses, and couches move through this belt constantly \u2014 bought on Marketplace, stored in a shed or garage while a room is painted, then carried inside on a Saturday. We inspect those pieces in daylight before they enter the house: seams, tack strips, screw holes, and the underside webbing of the luggage rack and the sofa bed. A mattress that sat in a shed for a month gets the same seam-by-seam check as the bed it is replacing, because the shed did not quarantine it, it just hid it. Bedding from the move gets a hot wash and a high-heat dry, then goes back sealed in bags, not in the laundry basket it arrived in.",
+        "On the acreage lots off Ponkan Road and Kelly Park Road, the house is often not the whole sleeping map. There is a guest bedroom that relatives use twice a year, a converted outbuilding room, a mattress stored in the well house or the shed for the next visit. Those rooms are where Apopka bed bugs get their longest head start: no host, no bites, no one looking, for months at a time. The visit here covers every sleeping surface in the house and in the outbuilding rooms on the same trip, including the pull-out nobody remembers to open, and leaves monitors where a room sits empty, so the next introduction is caught by a trap instead of by a guest waking up bitten.",
+        "In the established ranch blocks, the story is bedrooms that have accumulated furniture. The older streets off Clarcona-Ocoee and Ocoee-Apopka hold block ranches with a primary bedroom, kids' rooms, and a guest room, each furnished at a different time from a different source \u2014 an inherited headboard here, a Marketplace couch there, a kid home from a trip with a suitcase that went straight onto the bed. The visit here is slow and overhead as much as under: beds pulled a few inches off the wall, headboard screw holes and nightstand joints checked with a flashlight, sofa beds opened and checked, baseboards read for the black fecal dots and rusty smears that say how long this has been going on. Treating the flagged bed while the inherited headboard in the next room goes unchecked is how a ranch house gets bed bugs again in a month.",
+        "On the preserve edge off Wekiva Springs Road and in the new subdivisions past Clarcona, the risk arrives with the move itself. Moving boxes, furniture deliveries, and rental turnovers bring suitcases and used pieces into houses with no pest history, and a second home or guest room that sits closed between visits gives an introduction weeks of quiet to build. Here the work is timed to the turnover: the unit or the room is held, bedding is bagged at the bed and laundered hot, every sleeping surface is opened and checked on the same visit, and the homeowner or manager leaves with a simple check to run before the next guests arrive. A new house with no bed bug history is not a house with no bed bug risk; it is a house whose stored furniture and guest rooms have not been checked yet."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Bed Bugs in the bed itself",
+        "blurb": "The classic find: flat, reddish-brown, apple-seed sized bugs harbouring in mattress seams, box-spring tack strips, headboard screw holes, and nightstand drawer runners, within a few feet of where someone sleeps. We confirm them live before any treatment is sold, photograph the harborage, and treat that tight zone plus the furniture that touches it \u2014 not a whole-house fogging that scatters bugs into the wall voids."
+      },
+      {
+        "name": "The furniture and rooms around the bed",
+        "blurb": "A single-bed treatment in an Apopka house is a half-treatment. Bed bugs ride in used headboards and couches, hide in sofa beds and stored mattresses, and settle in the guest room and the outbuilding sleeping room that nobody flagged. Every flagged bed gets its cluster checked \u2014 the adjoining bedrooms, the sofa bed, the stored mattress in the shed \u2014 on the same visit, before anything is quoted."
+      },
+      {
+        "name": "Signs that confirm it",
+        "blurb": "Most Apopka bedrooms show the same early tells: clustered welts after sleep, black fecal dots and rusty smears on the sheets, papery skins stuck in seam folds, a sweet musty odor near a heavy harborage. Check behind the headboard, inside nightstand joints, and where the baseboard meets the wall \u2014 daylight glances miss almost all of it, and a guess without a sign is how the wrong room gets treated."
+      },
+      {
+        "name": "Look-alikes that are not bed bugs",
+        "blurb": "A good share of Apopka calls turn out to be something else: carpet beetle larvae, spider beetles, booklice from a damp bath the Wekiva basin keeps humid, and baby German cockroaches from the kitchen. Beetle fuzz leaves skins and chews fibers but does not bite; young roaches run fast and hang in kitchens. Slip what you found in a zip bag without squashing it and we will ID it under light first \u2014 it saves a heat bill for a beetle."
+      }
+    ],
+    "process": [
+      {
+        "step": "Discreet inspection and ID first",
+        "detail": "We flashlight mattress seams, tack strips, headboard voids, nightstand joints, couch seams, baseboards, and luggage spots, and you see what we see \u2014 bed bugs or look-alike \u2014 before we talk price. No treatment is sold on a bite alone, and no room is treated on a guess."
+      },
+      {
+        "step": "Map every sleeping space, not just the flagged bed",
+        "detail": "We map the hit rooms and the rooms around them: adjoining bedrooms, the sofa bed, the guest room, the stored mattress in the shed, and the outbuilding sleeping room. The plan covers the cluster, because the bug that rode in on furniture does not respect the bedroom door."
+      },
+      {
+        "step": "Heat, conventional, or a blend \u2014 matched to the room",
+        "detail": "Whole-room heat brings beds, furniture, and wall voids up to lethal temperatures and holds them there while probes in seams and clutter are monitored; it kills eggs and active bugs together and suits rooms that need a fast reset. Conventional work uses targeted liquids, void dusts, and growth regulators with tight prep and a follow-up visit; it costs less, leaves residual control, and suits early catches or rooms full of heat-sensitive gear. A lot of Apopka homes land on a blend, and we will tell you straight which fits your layout and your guest calendar."
+      },
+      {
+        "step": "Prep, recheck, and a check before the next guests",
+        "detail": "Wash bedding and clothes on hot, dry on high heat, then bag clean loads sealed; pull beds a few inches off walls and cut clutter around sleeping spots. Skip the store foggers \u2014 they push bed bugs deeper into baseboards and into the next room. Then comes the recheck visit, monitors where rooms sit empty, and a simple check to run before the next guests arrive, instead of a standing panic every time someone visits."
+      }
+    ],
+    "processIntro": "In a city where furniture moves between sheds, guest rooms, and ranch bedrooms, the sequence is the job: identify before treating, map every sleeping space, match heat or conventional work to the room, and recheck \u2014 because prep and follow-through break the cycle, not a single spray."
   }
 }
