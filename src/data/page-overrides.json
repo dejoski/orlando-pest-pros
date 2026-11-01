@@ -2293,5 +2293,66 @@
       }
     ],
     "processIntro": "In a city where furniture moves between sheds, guest rooms, and ranch bedrooms, the sequence is the job: identify before treating, map every sleeping space, match heat or conventional work to the room, and recheck \u2014 because prep and follow-through break the cycle, not a single spray."
+  },
+  "apopka/wildlife-removal": {
+    "heroLocal": "In Apopka a wildlife call rarely starts inside the house. It starts where the town meets the ground the animals already use: a raccoon family thumping over a ranch bedroom off Clarcona-Ocoee after a storm softened the soffit, armadillos plowing a lawn on Rock Springs Road overnight, an opossum living under a shed on an acreage lot off Ponkan Road, a snake coiled in a well house nobody opens twice a year. Apopka is still nursery country on one side and Wekiva preserve on the other, with acreage lots, sheds, and outbuildings in between. The animals are not lost. They are at home, and the houses grew up across their routes.",
+    "heroService": "Wildlife removal in Apopka starts with sign, not a trap. We ladder the eaves and walk the soffit run, check the attic hatch and the chimney chase, walk the sheds, well houses, and fence lines, and photograph tracks, droppings, dig patterns, rub marks, and chew holes before anyone talks about trapping. You hear plainly what species it is, whether young are inside, and what the fix is \u2014 a live trap, a one-way door, or a seal \u2014 because sealing a mother in with her kits is how a small job becomes a dead-animal smell inside a wall. Then the entry gets closed with real material, and the food and water that brought the animal gets fixed, so you do not pay for the same job twice.",
+    "whyHeading": "Why Apopka's nursery belt and preserve edge push wildlife into houses",
+    "whyLead": "Wildlife needs three things, and an Apopka lot usually offers all three: cover, water, and food. Nursery ground stays damp and full of grubs and insects, the Wekiva basin holds water in its ditches and low ground, and sheds, well houses, barns, and chicken coops offer ready-made dens. Add fallen citrus, chicken feed, pet food left on the porch, and trash cans raccoons can pop nightly, and a lot that looks tidy to a person reads as a territory to an animal. The den is almost never random. It is the driest, darkest, closest shelter to the food.",
+    "whyLocal": "What sets your risk is which Apopka you live in. Along Rock Springs Road and toward Zellwood, it is nursery-belt pressure: shade houses, soil piles, mulch beds, and irrigation running most mornings, where armadillos hunt grubs in soft ground and opossums and raccoons work the fence lines between properties. On the preserve edge off Wekiva Springs Road, it is preserve pressure: raccoons, opossums, armadillos, and snakes denning in the preserve and crossing into yards when the ditches hold water or a dry spell pushes them toward irrigation. On the acreage lots off Ponkan and Kelly Park Road, it is outbuilding pressure: sheds, well houses, barns, and chicken coops on one lot, giving a raccoon a den, a food source, and cover without ever entering the house. In the established ranch blocks and the new subdivisions past Clarcona, it is roofline pressure: older soffits and gables a raccoon can peel after a storm, and fresh grades where displaced animals move straight into the nearest new roof. One trap with no seal misses all four, because the animal is using the lot, not just passing through it.",
+    "localSection": {
+      "heading": "The nursery belt, the preserve edge, the acreage lots, and the ranch blocks",
+      "body": [
+        "Along Rock Springs Road and out toward Zellwood, the walk starts at the fence line, not the attic. Nursery-country lots hold shade cloth, soil piles, mulch beds, and irrigation that runs most mornings, and that soft, damp ground is armadillo country: cone-shaped holes and rooted mulch overnight, burrows wedged under shed slabs and decks. The visit here reads the dig pattern before anything is set, because a lawn plowed in lines is grubs and an animal working them, not a mower problem. We live-trap the digger, backfill the burrows, and set a buried L-footer of hardware cloth along shed skirts and fence bottoms, then talk grub reduction, because repellent granules alone will not hold a belt where the ground never dries.",
+        "On the preserve edge off Wekiva Springs Road, the animals come from the preserve and the ditches, and the house is the closest dry shelter. Raccoons den over bedrooms, opossums settle under lanai enclosures and sheds, snakes follow frogs and rats to sheds and well houses, and armadillos work the damp low ground. The visit here covers the roofline and the ground together: soffit runs and gable gaps ladder-checked, shed skirting and deck edges walked, ditch-side fence lines read for trails. A trap on the ground while the soffit gap stays open just swaps one raccoon for the next one out of the preserve, so the seal is scheduled on the same job, not left as advice.",
+        "On the acreage lots off Ponkan Road and Kelly Park Road, the house is often not the whole map. There is a shed, a well house, a barn, a chicken coop, a compost pile, and a woodpile, and a raccoon or opossum can den, eat, and hide on one lot without ever entering the house. The visit here walks every outbuilding on the same trip: shed corners dug out, well-house gaps, coop wire a raccoon can pull, feed bins left open, fallen fruit under the citrus. Chicken feed gets locked down, pet food comes off the porch, and the den entry gets screened with buried wire. Spraying the yard or trapping one animal while the coop still feeds the next one is how an acreage lot stays a wildlife lot.",
+        "In the established ranch blocks off Clarcona-Ocoee and Ocoee-Apopka and the new subdivisions past Clarcona, the risk is the roofline. Older block ranches have soffits and gables a storm-softened raccoon can peel, and a mama raccoon over a bedroom means night thumping, torn trash, and a latrine in the attic insulation. New grades displace animals that were already using the ground, and the nearest new roof becomes the den. Here the work is roof-first: eaves, fascia, stucco returns, and chimney chases checked and photographed, the family pulled intact where young are inside, and the entry closed with metal and sealant claws cannot shred, plus the oak limb cut back that served as the on-ramp. A new house with no wildlife history is not a house with no wildlife route; it is a house whose soffits and sheds have not been tested yet."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Raccoons in the attic and soffit",
+        "blurb": "A mama raccoon will peel back a loose soffit or lift a storm-softened shingle to den right over your bedroom. Then comes night thumping, torn trash, missing citrus, and a latrine in the attic insulation. We set shaded live traps, pull the family intact where young are inside, and close the entry with metal and sealant that claws cannot shred. State rules do not allow moving raccoons off your property, so the fix is removal plus a real seal, not a relocation promise."
+      },
+      {
+        "name": "Armadillos plowing lawns and mulch",
+        "blurb": "If your mulch looks plowed and you have golf-ball divots across the lawn, that is armadillos hunting grubs. Nursery-belt ground stays soft and damp, so they work it after rain and wedge under shed slabs and decks. We read the dig pattern, live-trap the digger, backfill burrows, and set a buried L-footer of hardware cloth so it cannot bulldoze back in, then talk grub reduction for the lawn itself."
+      },
+      {
+        "name": "Opossums under sheds and outbuildings",
+        "blurb": "Opossums love the gap under a shed, a lanai enclosure, or a well house where it is dark and close to cat food, chicken feed, or fallen fruit. They do not chew much, but they leave greasy rubs, droppings, and a sour trash odor, plus tipped cans. We cage-trap gently, handle quietly for on-site release where allowed, and screen the skirting with buried wire so the next one cannot move in."
+      },
+      {
+        "name": "Gray squirrels on the roofline",
+        "blurb": "Gray squirrels hit in daylight. They run oaks and power lines onto the roof, chew through fascia and stucco returns, and shred insulation into nests. You will hear rolling and gnawing by morning and find tooth marks on the eave. We trap out, then patch chewed wood with metal-backed repairs and tell you which limb to cut back, because a patched eave under an uncut oak limb is a temporary patch."
+      },
+      {
+        "name": "Snakes near ditches, sheds, and well houses",
+        "blurb": "On the preserve edge and the acreage lots, snakes follow frogs and rats to damp ground: ditch banks, shed corners, well houses, and woodpiles. Most are not a threat, but a snake in a well house or a coop is a sign of the food underneath it, not just a snake problem. We identify first, remove safely where needed, and fix the rat and frog harborage and the gaps that let the snake in, so the next one has no reason to stop."
+      },
+      {
+        "name": "Bats in gables and ridge gaps",
+        "blurb": "Bats squeeze through a gap as narrow as a fingertip at the gable or ridge and streak stucco with guano. Florida protects them, so there is no trapping like raccoons. During the allowed season we fit one-way doors over their seam gaps, let the colony file out, then seal every gap, because a sealed gable with one seam left open just moves the colony to the next gap."
+      }
+    ],
+    "process": [
+      {
+        "step": "Roof-to-fence inspection and ID first",
+        "detail": "We ladder the eaves, walk the soffit run, check the attic hatch and chimney chase, then walk the sheds, well houses, coops, and fence lines, photographing tracks, droppings, dig patterns, and chew holes. You hear the species, whether young are inside, and where the entry is, before any trap is set or any price is quoted."
+      },
+      {
+        "step": "Humane removal matched to the animal",
+        "detail": "Raccoons and opossums get shaded live traps, pulled intact where young are inside. Squirrel and bat colonies get one-way doors where they fit, so the animals file out and cannot return. No poisons, and no sealing a mother in with her kits. The method fits the animal and the season, and it is put in writing before the work starts."
+      },
+      {
+        "step": "Seal and harden the entry",
+        "detail": "The entry gets closed with real material: metal and sealant at soffits and gables, metal-backed patches on chewed fascia, hardware cloth and buried L-footers along shed skirts and fence bottoms, coop wire a raccoon cannot pull. The oak limb that served as the on-ramp gets cut back. A trap without this step is a repeat visit, not a fix."
+      },
+      {
+        "step": "Clean up and keep them out",
+        "detail": "Droppings and latrine insulation get flagged for cleanup, feed bins get locked, pet food comes off the porch, fallen fruit gets picked up, and grub pressure gets a plan where armadillos are the problem. Then comes the recheck, so a new dig, a new trail, or a new gap is caught while it is still small, instead of after the next litter is born in the attic."
+      }
+    ],
+    "processIntro": "In a city where the nursery belt, the preserve, and the acreage lots all feed the same animals, the sequence is the job: identify the species and the entry, remove it humanely, seal with real material, and fix the food and water that brought it \u2014 because a trap with no seal is just an invitation to the next animal."
   }
 }
