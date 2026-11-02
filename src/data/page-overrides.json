@@ -2354,5 +2354,62 @@
       }
     ],
     "processIntro": "In a city where the nursery belt, the preserve, and the acreage lots all feed the same animals, the sequence is the job: identify the species and the entry, remove it humanely, seal with real material, and fix the food and water that brought it \u2014 because a trap with no seal is just an invitation to the next animal."
+  },
+  "ocoee/general-pest-control": {
+    "heroLocal": "In Ocoee a general pest call is almost never about one bug. It is about a city split between water and fresh dirt: the lake edge around Starke Lake and Lake Olympia, where oaks hang over roofs and bromeliads and palmettos never dry out; the established tree-lined streets off Clarcona-Ocoee and Ocoee-Apopka, where limbs run fences straight to the soffit; and the new subdivisions off SR 429 and the Turnpike, where the sod still shows seams and the graders left buried wood scrap in the soil. Palmetto bugs push out of the sewers on Bluford Avenue after rain, ghost ants pour from a new irrigation box in Harbor Oaks, and fire ants mound in fresh sod within a week of grading. One quarterly spray, applied the same way to all three, does not hold here.",
+    "heroService": "General pest control in Ocoee starts with a walk of the whole lot, because the lot is where the pressure comes from. We check the mulch line where it meets stucco, the irrigation boxes and valve boxes, the garage and lanai seals, the attic screens and vent boots on the older block homes, and the slab edges and weep holes on the new builds, before anything gets treated. Outside gets the barrier: harborage along the foundation, the mulch edge, the planter beds, and the door frames. Inside gets bait and targeted work, not a broadcast spray \u2014 ghost ants get bait they carry back to the colony, roaches get the harborages they actually use. Then you get the plain version of what we found, what we treated for, and what on the lot needs moving or fixing so the next visit starts further ahead.",
+    "whyHeading": "Why Ocoee never has just one pest, or one season",
+    "whyLead": "Most of Florida has a pest season. Ocoee has a pest calendar that never closes, because three clocks run at once. Daily irrigation in Madison Place, Harbor Oaks, and the Towns at Forest Lake keeps mulch damp whether it rained or not, so ghost ants and roaches feed straight through the months other cities call winter. Underneath that, Starke Lake and the retention ponds behind Forest Lake and Harbor Oaks hold water in bromeliad cups, saucers, canoe hulls, and shaded ligustrum, so mosquitoes and midges breed between storms. Then the storms do come, and the soaked mulch sends palmetto bugs up out of the sewers and storm drains on Bluford and Maguire, while the sunny new grades off SR 429 grow fire ant mounds within days and tawny crazy ants pack into valve boxes and AC contactors. A plan that only reacts to the bug you saw this week misses the other two clocks entirely.",
+    "whyLocal": "What sets your pressure is which Ocoee you live in. Around Starke Lake and Lake Olympia, it is lake pressure: mosquitoes in bromeliads and palmettos, midges stuck on lanai screens, and big American roaches coming up from storm drains after rain, with shaded yards that never fully dry. In the established tree-lined communities off Clarcona-Ocoee and Ocoee-Apopka and around Ocoee Oaks, it is old-house pressure: oak limbs letting roof rats run fences to the soffit, citrus and loquats feeding them through winter, slab edges hiding subterranean termite tubes, and attic screens and weatherstripping that have been failing for years. Out by the Turnpike and SR 429, it is new-grade pressure: fire ants mounding in fresh sod within a week, tawny crazy ants packing into valve boxes and AC contactors, and ghost ant trails running from a Forest Lake planter bed straight to a kitchen sink. And in the townhome and rental communities near parks and retention ponds, it is shared-wall pressure: one damp bed or one overflowing saucer feeds the whole row until the exterior barrier is set. One template cannot cover a lake lot, a 1970s block ranch, a fresh slab, and a townhome row. The service has to read the lot it is on.",
+    "localSection": {
+      "heading": "The lake edge, the old tree streets, the new 429 grades, and the pond-side rows",
+      "body": [
+        "Around Starke Lake and Lake Olympia, the walk starts at the water, not the front door. Lake-edge lots hold bromeliads, palmettos, shaded ligustrum and arecas where mosquitoes rest, plus saucers, planters, canoe hulls, and toy buckets that breed hundreds between visits. After a big rain the palmetto bugs come up out of the sewers and slip under garage doors on Bluford and Maguire, and midges coat the lanai screens. The visit here treats the shaded rest spots, dumps the breeders, clears the gutter corners, and tells you which dusk hours to run the lanai fan \u2014 because fogging the patio while the saucers still hold water is a weekend ritual, not a fix.",
+        "In the established tree-lined communities off Clarcona-Ocoee and Ocoee-Apopka and around Ocoee Oaks, the story is age plus canopy. The older block ranches near Maguire Road get a ladder check first: attic screens, door sweeps, cracked vent boots, and the slab edges where subterranean termites run mud tubes in Ocoee's sandy soil from Silver Star to Colonial. Oak limbs over the roof are the highway \u2014 roof rats run fences to the soffit, and citrus and loquats in Ocoee Oaks feed them through winter. Here the work is exclusion as much as treatment: soffit gaps closed, chewed vent screens replaced, fruit picked up, feed bins locked, and the mulch line pulled back from the stucco where it touches.",
+        "Out by the Turnpike and SR 429, the risk is the ground itself. In Featherock, Madison Place, and the Towns at Forest Lake, the barrier goes on while the sod knits: fire ants mound in fresh sod within a week of grading, tawny crazy ants pack into irrigation valve boxes and AC contactors, and ghost ants nest in the damp mulch the daily irrigation never lets dry. We bait the trails, treat the nesting zones outside, and watch for the buried wood scrap the graders left, because a new slab with scrap in the soil is a termite invitation with a roof on it. A new build with ants in the first month is not a defective house; it is disturbed soil settling, and hit early it rarely gets into the walls.",
+        "In the townhome and rental communities near parks and retention ponds, the pressure is shared. One damp planter bed, one overflowing saucer, one retention pond behind the row keeps the whole block buggy until the exterior barrier is set \u2014 ghost ants trailing from a planter to a kitchen sink, mosquitoes off the pond edge, palmetto bugs staging in the shared mulch. The visit here works the whole row's edge, not just one threshold: planter beds baited, mulch lines treated, door frames and weep holes sealed, and the pond-side harborage cut back where air cannot move. Folks here tell us that plus a fan beats fogging every weekend, and they are right: the barrier has to cover the ground the pests actually share."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Ghost Ants from the irrigation boxes",
+        "blurb": "Daily irrigation in Madison Place and Harbor Oaks keeps mulch damp and perfect for them. They nest outside and pile into bath vanities and kitchens \u2014 we have traced trails from a Forest Lake planter bed straight to a kitchen sink. Store sprays just split the colony, so we bait the trails and work the exterior planters until the colony itself is gone."
+      },
+      {
+        "name": "Palmetto Bugs up from the sewers after rain",
+        "blurb": "After heavy rain around Starke Lake they come up through sewers and storm drains and slip under garage doors on Bluford and Maguire. We treat mulch lines, drain lips, and thresholds, and we call out torn door sweeps instead of pretending spray alone fixes it \u2014 the sweep is the door, and the drain is the highway."
+      },
+      {
+        "name": "Mosquitoes off the lake and the ponds",
+        "blurb": "Starke Lake frontage plus retention ponds behind Forest Lake and Harbor Oaks never fully dry. We treat the shaded ligustrum and arecas where they rest, dump breeders like canoe hulls and saucers, and time visits for peak season. Lake lots get more dusk pressure, so we tell you which hours to run the lanai fan rather than selling a fogging habit."
+      },
+      {
+        "name": "Fire Ants and Tawny Crazy Ants on the new grades",
+        "blurb": "Out by the Turnpike and SR 429, fire ants mound in fresh sod within a week of grading, and tawny crazy ants pack into valve boxes and AC contactors until the contactor fails. We bait the mounds, clear the boxes, and treat the nesting zones outside \u2014 because an ant in the AC unit is an electrical problem wearing a pest costume."
+      },
+      {
+        "name": "Roof Rats running the fence lines",
+        "blurb": "Citrus and loquats in Ocoee Oaks plus palm boots along fence lines feed them through winter, and the oak limbs let them run fences straight to the soffit. We trap attics, close soffit gaps and chewed vent screens, and get blunt about fruit pickup and locked feed bins \u2014 a trapped attic under an uncut limb and an unpicked tree is a repeat visit, not a fix."
+      }
+    ],
+    "process": [
+      {
+        "step": "Walk the whole lot, not just the house",
+        "detail": "We check the mulch line and the planter beds, the irrigation and valve boxes, the garage and lanai seals, the attic screens and vent boots on older homes, and the slab edges and weep holes on new builds. You hear what is actually pressuring your lot \u2014 lake, old-house, new-grade, or shared-row \u2014 before anything is treated or priced."
+      },
+      {
+        "step": "Barrier outside, bait and targeted work inside",
+        "detail": "Outside gets the barrier: foundation harborage, the mulch edge, planter beds, and door frames. Inside gets bait and targeted work, not a broadcast spray \u2014 ghost ants get bait they carry back to the colony, roaches get the harborages they actually use, and the AC contactor gets cleared, not sprayed."
+      },
+      {
+        "step": "Fix the conditions that brought them",
+        "detail": "Saucers dumped, gutter corners cleared, mulch pulled back from stucco, door sweeps replaced, fruit picked up, feed bins locked, and the oak limb cut back that served as the roof-rat highway. Spray without this step is a subscription to the same visit; the fix is the part that makes the next visit shorter."
+      },
+      {
+        "step": "Quarterly rhythm set by rain and irrigation",
+        "detail": "Ocoee's irrigation never stops and the lake never dries, so the return visits follow the rain and the watering schedule, not a generic calendar. Lake lots get peak-season mosquito timing, new grades get early ant watches while the sod knits, and older homes get the annual termite check of slab edges, garages, and soil lines."
+      }
+    ],
+    "processIntro": "In a city where the lake never dries, the irrigation never stops, and every other lot is either an old block ranch under oaks or a fresh slab off 429, the sequence is the job: walk the whole lot, barrier outside and bait inside, fix the conditions that brought them, and return on a rhythm the rain and the irrigation set together."
   }
 }
