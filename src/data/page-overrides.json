@@ -2411,5 +2411,62 @@
       }
     ],
     "processIntro": "In a city where the lake never dries, the irrigation never stops, and every other lot is either an old block ranch under oaks or a fresh slab off 429, the sequence is the job: walk the whole lot, barrier outside and bait inside, fix the conditions that brought them, and return on a rhythm the rain and the irrigation set together."
+  },
+  "ocoee/mosquito-control": {
+    "heroLocal": "In Ocoee a mosquito call is almost never about one backyard. It is about a city that never fully dries out: the Starke Lake and Lake Olympia shoreline, where shaded lots hold bromeliads, palmettos, and arecas that stay wet between storms; the retention ponds behind Forest Lake, Harbor Oaks, and the townhome rows, which hold a permanent margin of still water; and the daily irrigation in Madison Place and the Towns at Forest Lake, which refills saucers, planters, and toy buckets whether it rained or not. Add the older tree-lined streets off Clarcona-Ocoee and Ocoee-Apopka, where gutters clog under oaks and birdbaths sit in permanent shade, and the new grades off SR 429, where fresh sod and grading left low spots that pond after every storm. One fogging pass over the patio does not touch any of that.",
+    "heroService": "Mosquito control in Ocoee starts with a walk of the water, not a spray of the yard. We check the bromeliad cups and palmetto boots, the saucers and planters, the gutter corners and birdbaths, the canoe hulls and buckets by the lake lots, and the pond margin behind the row, before anything gets treated. What can be tipped gets tipped; what has to stay wet — the pond edge, the birdbath you actually use — gets larvicide. Then the barrier goes where adults actually rest: the shaded ligustrum and arecas, the lanai seams, the hedge line between you and the pond. Then you get the plain version: which water on your lot was breeding, what we treated, and which dusk hours to run the lanai fan instead of fogging every weekend.",
+    "whyHeading": "Why Ocoee mosquitoes never take a season off",
+    "whyLead": "Most of Florida has a mosquito season. Ocoee has a mosquito calendar that never closes, because three water sources run at once. Daily irrigation in Madison Place, Harbor Oaks, and the Towns at Forest Lake keeps saucers, bromeliads, and mulch damp whether it rained or not, so Asian tigers breed straight through the months other cities call winter. Underneath that, Starke Lake, Lake Olympia, and the retention ponds behind Forest Lake and Harbor Oaks hold still margins where Culex breeds at dusk and midges pile onto lanai screens after a calm evening. Then the storms do come, and the soaked low spots on the new 429 grades and the clogged gutters on the old tree streets hatch a floodwater wave a week later. A plan that only fogs the patio on the night you got bitten misses the other two clocks entirely.",
+    "whyLocal": "What sets your baseline is which Ocoee you live in. Around Starke Lake and Lake Olympia, it is lake pressure: Culex off the shoreline at dusk, blind midges coating the lanai screens after still evenings, and no-see-ums in the damp shade where the lot never fully dries. In the established tree-lined communities off Clarcona-Ocoee and Ocoee-Apopka and around Ocoee Oaks, it is old-lot pressure: clogged gutters under oaks, birdbaths in permanent shade, bromeliads by the patio, and plant saucers that nobody tips because nobody sees them. Out by the Turnpike and SR 429, it is new-grade pressure: low spots in fresh sod that pond after every storm, valve boxes and grading ruts that hold water for days, and daily irrigation refilling everything the storm left behind. And in the townhome and rental rows near parks and retention ponds, it is shared-water pressure: one pond margin and a row of saucers and planters feeding every patio on the block until the hedge line and the pond edge are both treated. One template cannot cover a lake shore, an oak-shaded gutter, a fresh grade, and a pond-side row. The work has to read the water it is on.",
+    "localSection": {
+      "heading": "The lake shore, the old oak streets, the new 429 grades, and the pond-side rows",
+      "body": [
+        "Around Starke Lake and Lake Olympia, the walk starts at the shoreline, not the front door. Lake lots hold bromeliads, palmettos, shaded ligustrum and arecas where adults rest, plus saucers, planters, canoe hulls, and toy buckets that breed hundreds between visits. After a still evening the blind midges coat the lanai screens and pool cages like dust, and at dusk the Culex come off the shoreline margin in a short flight to the nearest patio. The visit here treats the shaded rest spots, tips the breeders, larvicides the margin you cannot drain, clears the gutter corners, and tells you which dusk hours to run the lanai fan — because fogging the patio while the saucers still hold water is a weekend ritual, not a fix.",
+        "In the established tree-lined communities off Clarcona-Ocoee and Ocoee-Apopka and around Ocoee Oaks, the pressure is close and ordinary, which is why it gets missed. The older block ranches near Maguire Road hold the classic set: gutters clogged under oaks, birdbaths in permanent shade, bromeliads and palmettos by the patio, plant saucers nobody tips, and shaded side yards where no-see-ums work at dawn and dusk. Here the work is a walk of the lot, not a tour of the landscape: tip the saucers, flush the birdbath, clean the gutter, larvicide the saucer you mean to keep, and barrier-treat the hedge and lanai seams where adults rest. A shaded lot kept this way stays comfortable between visits, because its mosquitoes were born on the lot, not flown in from a mile away — and the ones that were flown in have a treated hedge to land on.",
+        "Out by the Turnpike and SR 429, the risk is the ground itself. In Featherock, Madison Place, and the Towns at Forest Lake, the barrier goes on while the sod knits: low spots in fresh sod pond after every storm, grading ruts and valve boxes hold water for days, and daily irrigation refills the saucers and planters the storm left behind. We tip what can be tipped, larvicide the ruts and boxes that cannot be drained, and barrier the ligustrum and arecas where the new hatch rests before it finds the patio. A new build with mosquitoes in the first month is not a defective house; it is disturbed soil settling, and hit early it rarely gets into the lanai habit.",
+        "In the townhome and rental communities near parks and retention ponds, the pressure is shared. One pond margin, one row of saucers and planters, one shaded hedge line keeps the whole block biting until the exterior line is set — Culex off the pond edge at dusk, tigers out of the saucers at ankle height, midges on every screen after a calm night. The visit here works the whole row's edge, not just one threshold: pond margin larvicided, saucers tipped, planters treated, hedge and lanai seams barriered, and the shaded harborage cut back where air cannot move. Folks here tell us that plus a fan beats fogging every weekend, and they are right: the barrier has to cover the water the patios actually share."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Asian Tiger Mosquitoes in the bromeliads and saucers",
+        "blurb": "Daily irrigation in Madison Place and Harbor Oaks keeps bromeliad cups, saucers, and planters wet whether it rained or not. They bite low, in the shade, in the daytime — the ankle-biters on the patio. Store foggers just clear the air for an evening, so we tip the breeders, larvicide what stays wet, and barrier the hedge and lanai seams where they rest."
+      },
+      {
+        "name": "Southern House Mosquitoes (Culex) off the lake and the ponds",
+        "blurb": "Starke Lake frontage plus the retention ponds behind Forest Lake and Harbor Oaks never fully dry. They come off the still margins at dusk and fly a short way to the nearest patio. We larvicide the margins we cannot drain and barrier the shaded ligustrum and arecas between the water and your lanai, and we tell you which dusk hours to run the fan rather than selling a fogging habit."
+      },
+      {
+        "name": "Floodwater Mosquitoes after the storm soaks the low grades",
+        "blurb": "Out by the Turnpike and SR 429, fresh sod and grading left low spots that pond after every storm, and the clogged gutters on the old tree streets do the same. The hatch arrives about a week after the rain, all at once. We walk the low spots after storms, larvicide the ruts and boxes that hold water, and time the barrier for the hatch instead of spraying a dry yard on a schedule."
+      },
+      {
+        "name": "Biting Midges and No-See-Ums in the damp lake shade",
+        "blurb": "Around Starke Lake and Lake Olympia, the shaded lots that never fully dry breed midges that bite at dawn and dusk and slip through ordinary screens. They are worst where ligustrum and arecas hold damp shade over a wet saucer or a low corner. We treat the shaded rest spots, tip the breeders underneath them, and get blunt about the fan and the screen mesh — spray alone does not stop a midge that was born in your shade."
+      },
+      {
+        "name": "Blind Mosquitoes (Lake Midges) on the lanai screens",
+        "blurb": "They do not bite, but after a still evening on the lake lots they pile onto lanai screens and pool cages like dust, so thick a white porch bulb can draw them by the thousand. We larvicide the shoreline margin where they breed, barrier the lanai seams, and tell you to swap the porch bulb and run the fan on calm nights — because fogging a midge swarm that does not bite is paying to clear air that refills by morning."
+      }
+    ],
+    "process": [
+      {
+        "step": "Walk the standing water first",
+        "detail": "We check the bromeliad cups and palmetto boots, the saucers and planters, the gutter corners and birdbaths, the canoe hulls and buckets by the lake lots, and the pond margin behind the row. You hear which water on your lot is actually breeding — lake, old-lot, new-grade, or shared-pond — before anything is treated or priced."
+      },
+      {
+        "step": "Tip, drain, and larvicide what stays wet",
+        "detail": "What can be tipped gets tipped: saucers, buckets, canoe hulls, toy buckets. What has to stay wet — the pond margin, the birdbath you actually use, the grading rut that cannot be drained — gets larvicide, so the next hatch never leaves the water. This step is the fix; everything after it is support."
+      },
+      {
+        "step": "Barrier where they actually rest",
+        "detail": "The barrier goes on the shaded ligustrum and arecas, the hedge line between you and the pond, and the lanai seams — the places adults rest before they bite, not a broadcast fog over the lawn. Lake lots get the shoreline hedge; pond rows get the shared hedge; old lots get the shaded side yard and the patio bromeliads."
+      },
+      {
+        "step": "Return on the rain and irrigation rhythm",
+        "detail": "Ocoee's irrigation never stops and the lake never dries, so the return visits follow the rain and the watering schedule, not a generic calendar. Lake lots get peak-season dusk timing, new grades get a post-storm check while the sod knits, and old lots get the gutter and saucer walk every visit, because the breeders there refill between visits on their own."
+      }
+    ],
+    "processIntro": "In a city where the lake never dries, the irrigation never stops, and every lot holds water in its own way, the sequence is the job: walk the water first, tip and larvicide what stays, barrier the rest spots, and come back on a rhythm the rain and the watering set together."
   }
 }
