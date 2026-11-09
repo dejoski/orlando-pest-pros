@@ -2757,5 +2757,62 @@
       }
     ],
     "processIntro": "A Windermere visit is not a spray route. It is a walk of the water, the cover, and the doors — then the barrier and the bait where each pest actually lives, the closures that keep them out, and a return timed to the rain and the irrigation, not a calendar."
+  },
+  "windermere/mosquito-control": {
+    "heroLocal": "The mosquitoes biting on a Windermere lanai almost never come off the Butler Chain itself — that water is too big and too open to breed them. They come from the small water the Chain's damp air keeps topped up: bromeliad cups by the pool, the fountain basin in the garden, saucers under potted ornamentals, a drain behind the hedge, a gutter corner full of oak leaves. On the Isleworth and Keene's Pointe lots the irrigation refills all of it every night, rain or not, and the shaded hedges and dock-house eaves hold the adults a few steps from where you eat dinner. Treat the patio and leave the small water alone, and the next hatch is already on its way.",
+    "heroService": "Mosquito control in Windermere starts at the small water, not the big water. We check the bromeliads, the fountain basins, the saucers and drains, the gutter corners, and the koi pond edge before anything is treated, and we look up at the dock house and the seawall cover where adults rest at dusk. Anything that holds water and can be emptied gets emptied. The water that has to stay — the fountain you run every evening, the koi pond, the birdbath — gets a larvicide that leaves the fish alone. Then the barrier goes on the shaded hedges and lanai seams where adults actually rest, timed for late afternoon so the morning pollinator beds are never touched. You get pictures and plain notes on which water was breeding and which evenings to run the lanai fan, and the visit stays quiet around the household staff and the pool crew.",
+    "localSection": {
+      "body": [
+        "Lake Down, Isleworth, and Keene's Pointe sit on the Chain, and the Chain sets the evening. The big water stays open and moving, so the breeding is all in the small water the shoreline lots collect: bromeliad cups by the pool, the fountain basin, saucers under the ornamentals, a drain behind the hedge. On a still evening the blind midges rise off the coves and dust the lanai screens and the dock lights, and at dusk the Culex ride the same short flight to the patio. Here the visit empties what can be emptied, treats the fountain and the pond edge with fish-safe larvicide, barriers the shaded hedge between the water and the lanai, and leaves you the honest version of the evening: fan on, porch bulb swapped, and no fogger needed once the small water is dry.",
+        "In the tile-roof streets off Conroy-Windermere Road, the mosquitoes are overhead. Live oaks shed into the gutters all year, and a clogged corner holds enough water to breed a hatch nobody sees until the bites start. Yard drains behind the hedges do the same, and the shaded side yards stay damp till noon, giving the adults a place to wait out the day. The visit here is a ladder and a flashlight as much as a sprayer: gutters cleared and flushed, drains checked, the shaded side yard barriered, and the hedge line between you and the neighbor's wet corner treated so the hatch next door does not become your hatch.",
+        "Around the pool and the outdoor kitchen, dinner is the mosquito hour. The sliders stay open while the grill runs, the kids trail in wet from the pool, and by late summer the saucers under the potted herbs, the grill island's drip tray, and the toy buckets by the steps are all holding water. The adults rest in the jasmine and areca against the house and come out as the grill lights up. Here the visit works the evening threshold: breeders emptied, lanai seams and the hedge by the grill barriered, the outdoor bar looked over for the standing water hiding under its cover. Out here, a tight screen and a dry saucer beat a fogger every time.",
+        "On the big garden lots, the work is mapped by zone, not sprayed wall to wall. Spraying the whole garden to reach the mosquitoes would wreck the reason the garden exists. The screens, the play lawn, and the grill get the first pass, the shoreline gets source work and nothing else, and the pollinator beds are left alone through the morning foraging hours. The koi pond, the herb beds, and the specialty plantings get written onto your plan by name, the irrigation timing gets a nudge with your landscaper, and the product stays behind thresholds and out of the beds. The shaded beds still get attention — damp mulch and deep shade are where the no-see-ums wait out the day — but it comes as a careful late-afternoon barrier, after the pollinators have finished."
+      ],
+      "heading": "The Chain shoreline, the tile-roof streets, the outdoor kitchens, and the garden grounds"
+    },
+    "pests": [
+      {
+        "blurb": "They are the daytime biters, low and in the shade — ankles on the pool deck, calves by the grill. Around Isleworth and Keene's Pointe the nightly irrigation keeps their nurseries full: bromeliad cups, saucers, the fountain basin. We empty every cup and saucer we can reach, treat the water that has to stay, and barrier the shaded hedge they rest in, so the daytime bites stop at the source instead of getting fogged every weekend.",
+        "name": "Asian Tigers breeding in the bromeliads"
+      },
+      {
+        "blurb": "They rise off the Chain's still coves and seawall corners at dusk and ride a short flight to the nearest lit lanai. The fountain basin holds them too, and so does the koi pond edge. We treat the still margins with fish-safe larvicide, barrier the hedge between the water and the patio, and tell you which evenings to run the fan — the hour they fly is the hour dinner is served, so the fan matters more than the fogger.",
+        "name": "Southern House Mosquitoes (Culex) off the Chain at dusk"
+      },
+      {
+        "blurb": "A big storm fills the low pockets in the lawn, the drainage swales, and the gutter corners under the oaks, and about a week later the whole hatch arrives at once. We come back after storms to check those spots, treat the water that cannot drain, and put the barrier on ahead of the hatch — a yard sprayed on a dry-week schedule never meets the mosquitoes where they actually start.",
+        "name": "Floodwater Mosquitoes after the storm soaks the lawns"
+      },
+      {
+        "blurb": "They bite at dawn and dusk in the deep shade the garden lots hold all day, and they are small enough to slip an ordinary screen. The worst corners are where jasmine and areca sit over a wet saucer or a low damp patch. We empty the saucers, barrier the shaded beds in the late afternoon, and talk straight about the fan and a finer mesh — a midge born in your own shade is not a spray problem, it is a water problem.",
+        "name": "Biting Midges and No-See-Ums in the damp garden shade"
+      },
+      {
+        "blurb": "They never bite, but on a still evening they rise off the Chain in clouds and dust the lanai screens and the dock lights, thick enough that a white porch bulb pulls them in by the thousand. We treat the coves they breed in, barrier the seams around the lanai, and leave you the cheap fixes — a warm bulb instead of a white one, the fan on calm nights. Fogging them is paying to clear air that fills again by morning.",
+        "name": "Blind Midges (Lake Midges) dusting the screens and dock lights"
+      }
+    ],
+    "process": [
+      {
+        "detail": "We check the bromeliad cups, the fountain basins, the saucers and drains, the gutter corners, and the koi pond edge before anything is treated, and we look up at the dock-house eaves and the seawall cover where the adults rest. You hear which water on your lot is doing the breeding before we quote or treat anything.",
+        "step": "Start at the small water, not the patio"
+      },
+      {
+        "detail": "Saucers, toy buckets, the drip tray under the grill — anything that holds water and can be emptied gets emptied. The water that has to stay, the fountain you run every evening and the koi pond, gets a larvicide that leaves the fish alone, so the next hatch never leaves the water. Get this step right and the rest of the visit is maintenance; skip it and the barrier is just a weekly habit.",
+        "step": "Empty what can be emptied, treat what has to stay"
+      },
+      {
+        "detail": "We put the barrier where the adults spend the day: the shaded hedge between the water and the lanai, the jasmine and areca against the house, the seams around the screens, the eaves over the dock house. It goes on in the late afternoon, after the pollinators have left the beds, and it never goes on as a fog over the open lawn — the lawn is not where they rest.",
+        "step": "Barrier the rest spots, not the lawn"
+      },
+      {
+        "detail": "The Chain never dries and the irrigation never stops, so the visits come back on the weather's rhythm instead of a printed calendar. Peak season gets the dusk slot, the weeks after a storm get a low-spot check, and the gutter walk repeats while the oaks are shedding — because the breeders on a Windermere lot refill themselves between visits.",
+        "step": "Return on the rain and the irrigation"
+      }
+    ],
+    "processIntro": "Mosquito control on the Chain is a sequence, not a spray: find the small water first, empty it or treat it, barrier the places the adults rest, and come back when the weather and the watering say so. Done in that order, the lanai stays usable; done out of order, it is a weekly fogging habit.",
+    "whyHeading": "Why the Butler Chain breeds mosquitoes all year",
+    "whyLead": "Windermere never gets the cold snap that resets other towns. The damp air off the Chain keeps the patios wet past noon, the sprinklers on the Isleworth and Keene's Pointe lots run every night, and the thick planting never opens up — so Asian tigers keep breeding in bromeliad cups and saucers straight through the months other cities call winter, Culex keeps coming off the Chain's still margins at dusk, then a storm fills the low lawn pockets and clogged gutters, and a floodwater wave hatches a week later. The midges do not even need the rain: a still evening on Lake Down coats the lanai screens by the thousand. Fogging the patio after the fact clears the air for one evening and leaves every breeder standing.",
+    "whyLocal": "The lot decides the visit. On a Chain-front estate, the work is at the shoreline — bromeliads emptied, fountain basins treated, shaded hedges barriered, dock-house eaves checked — because the breeding water is right beside the lanai, not out on the open lake. In a tile-roofed home off Conroy-Windermere Road, the work is overhead — oak leaves clogging the gutters, yard drains holding water behind the hedge — because the breeders there sit out of sight until the hatch. In a pool and outdoor-kitchen home, the work is the evening threshold — saucers and potted ornamentals emptied, lanai seams barriered, grill island checked — because dinner on the lanai is the hour the mosquitoes keep. On a large landscaped property, the work is zoned — lanai and play lawn first, shoreline source work only, pollinator beds left alone through the morning — the garden stays a garden. Same town, four different jobs, and the barrier goes where each lot's water actually sits."
   }
 }
