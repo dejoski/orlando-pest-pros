@@ -2871,5 +2871,176 @@
       }
     ],
     "processIntro": "On a lot where the soil never dries and the roofline is full of wood, the order is what protects the house: read the ground first, prove what is alive, treat where the colony actually runs, and return when the swarmers say to."
-  }
+  },
+    "windermere/rodent-control": {
+      "heroLocal": "A Windermere rodent call rarely starts in the kitchen. It starts in the dock house, where droppings show up along the wall under the life jackets, or in the garage attic over a Keene's Pointe home, or as a chewed pool-heater wire found by the pool crew before anyone hears a sound overhead. The Butler Chain gives roof rats everything they need in one lot: seawall cover and shoreline brush to travel in, palm fronds and oak limbs touching tile roofs to climb, fallen citrus and bird seed to eat, and a guest house or dock house nobody opens for weeks at a time. By the time scratching carries through the ceiling at night, the rats have usually been running the roofline since the last storm pushed them out of the shoreline cover.",
+      "heroService": "Rodent control in Windermere starts where the rats actually enter, not where they are heard. We walk the seawall and the shoreline brush, read the palm fronds and oak limbs against the tile, and check the open tile ends, the bird stops, and the ridge gaps the city roofs are known for, then move through the dock house, the guest house, and the garage before we ever open the attic hatch. Inside, we read droppings, rub marks, and chewed runs to tell an active roof rat route from an old one, set traps on the runs the sign shows, and seal the entries in chew-proof material fitted to tile. The visit stays low-profile: a text on the way, entry through the side gate, and a photo summary of every gap found, every trap set, and everything sealed.",
+      "whyHeading": "Why roof rats own the tile roofs, the seawalls, and the dock houses",
+      "whyLead": "Roof rats are climbers, and Windermere is built for climbing. A palm frond resting on a tile roof is a bridge, an oak limb overhanging the ridge is a second one, and the open ends and complex ridges of a tile roof give a rat a covered hallway straight into the attic once it arrives. Below the roofline the lot keeps feeding them: citrus dropping in the side yard, seed under the feeders, pet food in the dock house, and shoreline brush along the seawall that lets them travel the whole lot without crossing open ground. Norway rats work the other half of the lot, burrowing along the seawall, under dock-house slabs, and beside air-conditioning pads where the soil stays soft and wet. Neither animal needs the house to be dirty or the yard neglected — on a Chain-front lot, food, cover, and roof access come with the landscaping.",
+      "whyLocal": "The entry follows the lot, not the street. On a Chain-front estate around Isleworth or Lake Down, the pressure comes off the water: rats travel the seawall cover, den in the dock house first, and reach the main roof from the palms planted against it. In the tile-roofed streets off Conroy-Windermere Road and through Windermere Downs, the pressure is overhead: bird stops never fitted, ridge gaps at the tile ends, and attic vents screened for birds but not for teeth. Around the pool and outdoor kitchen, the pressure is stored food and warmth: seed and pet food in the pool house, a grill island with grease underneath, and pool-heater wiring chewed where it runs warm through the equipment pad. And in the guest house, the pressure is silence: weeks without a door opening, droppings building along the wall runs, and a small entry at the roofline that nobody hears because nobody sleeps there.",
+      "localSection": {
+        "heading": "The dock house first, the tile ends second, the guest house last",
+        "body": [
+          "Around Isleworth, Keene's Pointe, and Lake Down, we start at the water and work up. The dock house gets checked before the main house because that is where the sign usually is: droppings by the stored cushions and life jackets, a nest tucked behind the refrigerator or the tackle shelves, rub marks along the door frame. From there we walk the seawall, looking for the burrow mouths Norway rats dig where the wall meets soft soil, and the worn runs through the shoreline brush that roof rats use as a road. If the dock house is clean and the seawall is quiet, the lot is early. If the dock house is active, the main-house attic almost always has sign too, because the same animals commute.",
+          "In the tile-roofed neighborhoods off Conroy-Windermere Road and through Windermere Downs, the inspection goes up a ladder. Tile roofs hide their entries: open barrel ends, ridge gaps, and bird stops that were decorative instead of sealed. We check the tile ends and the ridge line up close, look for the dark rub marks rats leave on the fascia where they swing onto the roof, and read the palm fronds and oak limbs touching the roof as part of the entry, not decoration. In the attic we follow droppings and chewed runs along the trusses to confirm which entries are live, because sealing a roof this size on a guess just moves the rats to the one gap that was missed.",
+          "Around the pool, the outdoor kitchen, and the equipment pad, the draw is food and heat. Bird seed and pet food stored in the pool house, grease under the grill island, and citrus dropping beside the lanai keep rats feeding within a few feet of the house every night, and the pool heater and pump wiring gives them something warm to chew — more than one Windermere call has started with a dead pool heater and teeth marks on the insulation. We flag the food storage and the fruit pickup as plainly as we set the traps, because trapping a lot that keeps feeding rats is a subscription, not a fix.",
+          "The guest house and the garage finish the walk. Both sit quiet for long stretches, and quiet is what rats want: a guest house roofline gap can run a whole season before a visiting family member hears anything, and a garage attic over stored boxes gives them nesting material a few feet from the kitchen wall. We check the guest house roofline and attic, the garage door corners and the attic hatch seal, and the wall where the garage meets the house. Everything found gets photographed and listed in the summary, with the trim and sealing notes written so a landscaper or roofer can act on the parts that are theirs."
+        ]
+      },
+      "pests": [
+        {
+          "name": "Roof Rats in the tile roofs and dock houses",
+          "blurb": "The main Windermere rodent. Roof rats travel the seawall cover and the shoreline brush, climb the palms and oak limbs touching the roof, and enter through open tile ends, ridge gaps, and unfitted bird stops. The dock house usually shows them first — droppings along the walls, nests behind stored gear — and the attic follows. We trap on the runs the sign shows, then seal the entries in material fitted to tile so the roof keeps its look and loses its tenants."
+        },
+        {
+          "name": "Norway Rats along the seawall and under the slabs",
+          "blurb": "The ground half of the problem. Norway rats burrow where the seawall meets soft, wet soil, under dock-house and pool-equipment slabs, and beside air-conditioning pads, and their burrows can start to undermine a seawall cap or a dock path. They are bigger, warier, and less interested in the attic than roof rats. We read the burrow mouths and grease marks, trap the ground runs, and call out the soil and grade work that keeps the wall line from hollowing out."
+        },
+        {
+          "name": "House Mice in the garage and the pantry wall",
+          "blurb": "The quiet small job inside the big one. House mice slip through gaps a finger wide — a garage door corner, a pipe chase behind the outdoor kitchen, the weep at the guest house slab — and nest in stored boxes and wall voids near food. The sign is small droppings in the pantry or under the sink, not noise overhead. We seal the small gaps while we are sealing the big ones and trap the interior runs, because a roof sealed for rats can still be wide open to mice."
+        },
+        {
+          "name": "Chewed wires and what attic rats leave behind",
+          "blurb": "The damage is the reason to move quickly. Rats in a Windermere attic chew pool-heater and air-conditioning wiring, shred insulation along their runs, and stain the ceiling drywall under a long-used latrine corner. We photograph the chewing and the runs, point out any wire that needs an electrician before it needs a trapper, and lay out what cleanup the attic does and does not need — no scare sell, just what the sign supports."
+        },
+        {
+          "name": "When the night noise is not rats at all",
+          "blurb": "Not every sound over a Windermere ceiling is a rat. Gray squirrels work the same tile roofs by day, raccoons take the soffits, and bats settle into ridge gaps in season. The timing and the sign separate them: rats run at night and leave droppings and rub marks, squirrels are daytime, and a raccoon sounds like it weighs what it weighs. We name the animal from the evidence before any plan is priced, because the fix for each one is different work."
+        }
+      ],
+      "process": [
+        {
+          "step": "Walk the water, the roofline, and the quiet buildings",
+          "detail": "Outside and inside in one pass: the seawall and shoreline brush, the dock house, the palm and oak contact points, the tile ends and ridge gaps from a ladder, then the guest house, the garage, and the attic. Droppings, rub marks, burrows, and chewed runs get photographed as we go, and you hear which entries are live and which sign is old before anything is set or sealed."
+        },
+        {
+          "step": "Trap on the runs the sign shows",
+          "detail": "Traps go where the animals already travel — along attic trusses and wall tops, inside the dock house runs, at the ground burrows by the seawall — not scattered on a grid. Placement is mapped in the summary, pets and household routines are part of the placement call, and the traps are checked and adjusted on the follow-up rhythm the activity level sets."
+        },
+        {
+          "step": "Seal in steel, fitted to tile",
+          "detail": "Entries get closed with chew-proof material that fits the roof: tile ends and bird stops fitted and screened, ridge gaps closed, soffit and vent openings meshed, dock-house and guest-house gaps sealed at the slab and the roofline. Nothing gets foamed and forgotten — foam is a marker for where metal belongs, not a repair. If a palm or oak limb is part of the entry, the trim note goes to you and your landscaper in writing."
+        },
+        {
+          "step": "Recheck after the fruit drops and the storms pass",
+          "detail": "Windermere pressure changes with the lot: citrus dropping, a storm rearranging the shoreline cover, a guest house opening up for the season. We recheck the attic and the sealed entries, confirm the traps have gone quiet, and flag any new gap the weather has opened. If the lot changes — new dock work, a roof repair, a tree taken down — the plan changes with it on the same visit."
+        }
+      ],
+      "processIntro": "On a lot where the water, the trees, and the roof all connect, rodent work is a sequence: read the whole lot first, trap the runs that are actually live, seal the entries in material that lasts, and come back when the lot changes."
+    },
+    "windermere/wildlife-removal": {
+      "heroLocal": "Windermere wildlife usually announces itself at the edge of the lot, not the middle. An armadillo works a Lake Down lawn overnight and leaves it looking tilled by breakfast. A raccoon finds the one soffit corner a tile roof left soft and raises a litter over the guest suite. Gray squirrels run the oak limbs onto the roofline all winter, and on a still evening the dock house smells like something has been living in it for a while. The Butler Chain lots are big, wet, and heavily planted, which makes them excellent wildlife habitat that happens to have a house in it — the animals were commuting through long before they found a way inside.",
+      "heroService": "Wildlife removal in Windermere starts with naming the animal from the sign, because the lawful, humane fix for a raccoon in a soffit is not the fix for armadillos undermining a seawall path. We walk the roofline and the soffits, the dock house and guest house, the seawall and the lawn, reading tracks, dig patterns, droppings, and entry damage before anything is set. Removal is humane — live traps or one-way doors matched to the animal — and the job is not finished at the catch: the entry gets sealed and hardened so the next animal finds a closed house, and maternity rules are followed for bats and raccoons with young. You get the photo summary and a plain account of what was there, how it got in, and what was closed behind it.",
+      "whyHeading": "Why the Chain's big wet lots keep sending wildlife to the house",
+      "whyLead": "A Windermere lot offers wildlife the three things it is always looking for: water, cover, and food that renews itself. The lake edge and the seawall give raccoons and opossums a nightly travel route with grubs, snails, and fallen fruit along it. Armadillos follow the irrigation, because a lawn watered every night stays soft enough to dig and full of the grubs they dig for, and a waterfront lawn after a storm is the easiest hunting in the neighborhood. Overhead, the oaks and palms bridge straight onto tile roofs, and a tile roofline is full of sheltered corners — soffits, ridge gaps, and dock-house eaves — where squirrels den, raccoons pry, and bats settle into the warm gaps. The house is not being targeted. It is simply the driest, safest structure inside a habitat that already works.",
+      "whyLocal": "The animal follows the feature. On a Chain-front estate around Isleworth or Lake Down, the pressure is at the shoreline: armadillos digging the waterfront lawn and the seawall path, raccoons working the dock house and the dock storage, opossums under the dock-house deck. In the oak-heavy streets off Conroy-Windermere Road and through Windermere Downs, the pressure is overhead: gray squirrels in the soffits and attic, raccoons testing tile corners, bats in the ridge gaps by late spring. Around the pool and outdoor kitchen, the pressure is food: raccoons into the grill island and the trash enclosure, opossums denning under the lanai deck, the occasional snake along the pool equipment where the frogs gather. And in the guest house, the pressure is vacancy: a soffit opened in spring can hold a raccoon litter for weeks before a guest visit finds it by smell.",
+      "localSection": {
+        "heading": "Shoreline diggers, roofline tenants, and the guest-house surprise",
+        "body": [
+          "Along the waterfront at Isleworth, Keene's Pointe, and Lake Down, the work starts in the lawn. Armadillo damage has a signature: conical holes across the turf, mulch beds rooted up, and digging that follows the irrigation because the watered ground is soft and full of grubs. Where the digging runs along the seawall, it is more than cosmetic — burrows under the wall cap and the dock path can start to hollow the soil that holds them. We read the dig pattern to confirm armadillo and not a dog or a hog passing through, trap where the feeding runs are active, and talk honestly about the irrigation and grub pressure that will keep drawing them to a wet lawn.",
+          "In the oak-canopied streets off Conroy-Windermere Road and through Windermere Downs, the work is on the roof. Gray squirrels reach tile roofs from the limbs and den in soffits and attic corners, chewing as they go; raccoons are stronger and smarter, prying at soffit returns and tile corners until a corner lifts. We inspect from a ladder, read the chew and pry marks, and check the attic for nesting and young before any door or trap is set — a one-way door on a soffit with a litter inside is a problem we refuse to create. Exclusion is timed and sequenced so the animals leave and the entry is hardened behind them.",
+          "Around the pool, the outdoor kitchen, and the dock, the calls are usually about nerve rather than damage: a raccoon washing up at the pool edge at night, an opossum living under the lanai deck and coming out at the grill island, a snake settled by the pool equipment where the frogs are. We identify what is actually there — most opossums move on once the den under the deck is closed and the food is gone, and most snakes near the water are non-venomous hunters doing frog control — remove or exclude what cannot stay, and close the hiding and feeding setup that invited it, without turning the backyard into a trap line.",
+          "The guest house, the dock house, and the garage are where Windermere wildlife hides longest. These buildings sit closed for weeks, so a raccoon litter in a guest-house soffit or a family of opossums in the dock house is usually found by smell or by a guest, not by the owner. We open these buildings up as part of every inspection, check the soffits, eaves, and stored-gear corners, and treat anything found there with the same remove-and-seal sequence as the main house — because clearing the main attic and leaving the dock house occupied just moves the problem fifty feet."
+        ]
+      },
+      "pests": [
+        {
+          "name": "Raccoons in the soffits and the dock house",
+          "blurb": "Strong, clever, and hard on tile roofs. Raccoons pry soffit corners and lift at weak tile edges, den in attics and dock-house ceilings, and raid grill islands and trash enclosures along the way. We confirm the den, check for young before anything is closed, remove humanely with traps or one-way doors, and harden the corner they used — a raccoon remembers an entry that worked and will test a weak repair the same week."
+        },
+        {
+          "name": "Armadillos plowing the waterfront lawns",
+          "blurb": "The overnight landscaper. Armadillos root through irrigated Windermere lawns and garden beds for grubs, leaving conical holes and torn mulch by morning, and they burrow along seawalls and under dock paths where the soil is soft. We trap on the active feeding runs, and we tell you straight that a lawn kept wet and grub-rich will keep attracting them — the lasting fix pairs the trapping with the irrigation and grub conversation."
+        },
+        {
+          "name": "Gray squirrels on the tile rooflines",
+          "blurb": "Daytime noise, constant chewing. Gray squirrels bridge from the oaks onto tile roofs, den in soffits and attic corners, and gnaw trim, wiring insulation, and stored boxes once inside. Because they are active by day, they are the animal most often blamed for rat sign and the one most often missed by a night-only inspection. We exclude them with one-way doors once the young are mobile, then screen and seal the soffit entries they used."
+        },
+        {
+          "name": "Opossums under the lanai and the dock house",
+          "blurb": "Slow, shy, and usually temporary. Opossums den under lanai decks, dock houses, and pool-equipment slabs, come out at night for fallen fruit and pet food, and get blamed for damage that rats and raccoons actually did. Most move on when the den is closed and the food is picked up; where one has settled in, we trap and relocate humanely and screen the under-deck and under-dock access so the next one keeps walking."
+        },
+        {
+          "name": "Bats in the ridge gaps and gable ends",
+          "blurb": "Small tenants in warm roofline gaps. Bats settle into tile ridge gaps, gable ends, and dock-house eaves around the Chain, and they eat mosquitoes over the lake edge every evening — but guano in an attic or a roost over a doorway is still a job to close. Florida protects bat colonies during maternity season, so we do no exclusions from April 15 to August 15. Outside that window we fit one-way exits, let the colony leave on its own nights, then seal the gaps for good."
+        },
+        {
+          "name": "Snakes along the lake banks and pool equipment",
+          "blurb": "Mostly hunters, occasionally houseguests. The frogs and lizards around Windermere pool equipment, seawall rocks, and dock pilings draw snakes, and most of them are non-venomous species doing free pest control. We identify before we act, remove and relocate any snake that has settled where people and pets move, and reduce the frog cover and stored-gear harborage around the equipment pad so the hunting stays out at the shoreline."
+        }
+      ],
+      "process": [
+        {
+          "step": "Roof-to-shoreline inspection and ID first",
+          "detail": "One walk, top to bottom of the lot: tile roofline and soffits from a ladder, attic sign, the guest house and dock house opened and checked, then the lawn dig patterns, the seawall, and the under-deck spaces. Tracks, droppings, chew, and pry marks get photographed, and you hear which animal it is, where it is living, and whether young are in the picture before any removal is planned."
+        },
+        {
+          "step": "Humane removal matched to the animal",
+          "detail": "The method follows the species: live traps on the runs armadillos and raccoons are actually using, one-way doors on soffit and attic entries for squirrels and raccoons once young are confirmed mobile, bat exits only outside the April 15 to August 15 maternity window. Nothing is sealed with an animal knowingly inside, and dependent young change the sequence, not the price of doing it right."
+        },
+        {
+          "step": "Seal and harden the entry behind them",
+          "detail": "Removal without sealing is a revolving door on a lot this rich. Soffit corners get rebuilt and screened, ridge and gable gaps closed, under-deck and under-dock access meshed, dock-house eaves and slab gaps shut. Materials are chew-proof and fitted to the tile and trim so the repair reads as part of the house, and every closed entry is photographed for the summary."
+        },
+        {
+          "step": "Clean up and keep the lot from re-inviting them",
+          "detail": "Nesting and droppings in an attic or dock house get assessed honestly — what needs removal, what can be sanitized in place, what can be left alone — and the attractants get named: fallen citrus, open pet food, the grub-rich watering schedule, the limb bridge to the roof. A recheck after the next storm confirms the seals held and the shoreline has not opened a new route in."
+        }
+      ],
+      "processIntro": "On a lakefront lot the order is everything: identify the animal from its sign, remove it humanely and lawfully, harden the entry it used, and take away the reasons the lot keeps offering the house to the next one."
+    },
+    "windermere/bed-bug-treatment": {
+      "heroLocal": "Bed bugs in Windermere do not arrive the way they do in a hotel corridor. They arrive in the luggage after the lake house weekend away, in a college kid's duffel set down in the guest suite, or inside a beautiful upholstered headboard bought secondhand for the guest house — and then they get time. A Windermere guest house or guest wing can sit closed for weeks between visits, which is exactly what a small bed bug introduction needs to become a settled one, and the main house often shows nothing until a visiting grandchild wakes up with bites in a room that was fine at the holidays. The first call usually starts with embarrassment. It should not: these bugs are travelers, not a verdict on the housekeeping, and a staffed, spotless estate is just as exposed as any house on the travel map.",
+      "heroService": "Bed bug treatment in Windermere is built around discretion and proof. The visit is low-profile — a text on the way, in through the side gate, no marked-up fuss at the curb — and it starts with identification, not treatment: mattress and box-spring seams, upholstered headboards, nightstands, and couch frames checked with a light and a crevice tool, because carpet beetle larvae and bat bugs get mistaken for bed bugs in lake houses and the treatments are not the same. Every sleeping space gets mapped, not just the bed that was reported, including the guest house and the staff-used rooms if any are in play. You get a straight answer on what was found and where, a plan matched to each room — heat, conventional, or a blend — and a recheck before the next guests arrive, so the house is cleared on evidence, not on hope.",
+      "whyHeading": "Why guest houses and travel give Windermere bed bugs their head start",
+      "whyLead": "A bed bug needs two things: a ride in, and undisturbed time next to a sleeping person. Windermere supplies both in a particular way. The ride in is travel — the household's own luggage, visiting family, a guest's overnight bag — because this is a residential town, not a hotel strip, so nearly every introduction traces to someone sleeping over after a trip. The undisturbed time is the guest house and the guest wing: rooms made up beautifully, then closed for weeks, where a handful of bugs in a headboard seam can feed on the occasional guest, breed between visits, and never trigger the nightly complaints that expose them fast in a main bedroom. Upholstered furniture does the rest. Deep-buttoned headboards, skirted bases, and couch frames in a sitting room give harborages a flat-pack rental bed never would, and bugs spread room to room along baseboards and through shared laundry runs once numbers build.",
+      "whyLocal": "The pattern follows how the house is used. In the main house, the risk room is the one returning travelers actually sleep in: luggage opened on the bed or the bench at its foot, bugs settling into the nearest seam before the suitcase is even unpacked. In the guest house and guest suites, the risk is time: infrequent use, made-up beds, and a check that only happens when a guest reports bites — which is why we map and inspect these rooms first, not last. Around the pool house and summer kitchen, the risk is the daybed and the couch where people nap after the lake: upholstered sleeping furniture outside the bedroom count, easy to forget in a treatment plan drawn around beds alone. And in any room, the risk hides in the furniture itself — upholstered headboards, nightstand joints, and luggage racks — far more than in the open mattress top a quick look covers.",
+      "localSection": {
+        "heading": "The guest house, the guest suites, the daybeds, and the luggage",
+        "body": [
+          "The guest house gets inspected like a main house, because for bed bugs it is one. Beds made and waiting are the perfect quiet harbor: we strip and check the mattress and box-spring seams, the headboard — especially upholstered and buttoned pieces — the nightstands, and any couch or daybed in the room, then read the baseboards and the luggage rack for the rust-colored spotting that confirms activity. If the guest house is where the bites happened, it is usually where the population lives, and treating the main house alone would leave the source standing fifty feet across the lawn.",
+          "In the guest suites and bedrooms of the main house around Isleworth, Keene's Pointe, and the streets off Conroy-Windermere Road, the work is room-by-room mapping. Every bed gets checked, not just the flagged one, because bugs move with bedding, laundry, and overnight bags, and a single positive room next to two unchecked ones is a plan built to fail. We mark which rooms are confirmed, which are suspect, and which are clear, note the furniture construction in each — upholstered headboards and skirted bases get a different treatment call than plain frames — and the plan is priced and sequenced from that map, in plain words, before anything is scheduled.",
+          "The pool house daybed and the summer-kitchen couch are the rooms that are not rooms, and they are where Windermere plans drawn by the bedroom count go wrong. People nap on them after the lake, guests overflow onto them on holiday weekends, and luggage lands on them while the guest house is being opened up. We check their seams, frames, and cushions as sleeping spaces in their own right, and any piece confirmed active is treated or, where a frame is more harborage than furniture, the honest recommendation to remove it is made with the evidence shown.",
+          "Luggage and laundry close the loop. Bugs ride in on suitcases and ride between rooms on bedding, so we walk the household through the unglamorous parts that make treatment stick: luggage kept out of bedrooms and checked after trips, bedding from an active room bagged before it travels to the laundry, and the guest house held out of use until the recheck clears it. None of it is busywork — in a house where the next introduction is one family visit away, the luggage habit is the difference between a solved job and a recurring one."
+        ]
+      },
+      "pests": [
+        {
+          "name": "Bed bugs in the bed itself",
+          "blurb": "The core harborage: mattress seams and tufts, box-spring corners and dust covers, and the joints of the frame, within a few feet of where someone sleeps. In Windermere the confirming check is usually in the guest house or a guest suite, where weeks of quiet let a small start settle in. We check with a light and a crevice tool, photograph live bugs, cast skins, or spotting where we find them, and never ask you to take a bite report as proof either way."
+        },
+        {
+          "name": "The upholstered furniture around the bed",
+          "blurb": "Where estate furniture changes the job. Deep-buttoned upholstered headboards, skirted bases, nightstand joints, and the couch or daybed in the sitting room and pool house give bed bugs harborages that a plain frame never offers, and a treatment that covers the mattress and misses the headboard seams will fail slowly and expensively. We inspect the furniture as part of the bed, and the plan names which pieces get treated, which get encased, and which are honestly better removed."
+        },
+        {
+          "name": "Signs that confirm it — and what does not",
+          "blurb": "Bites alone confirm nothing; they are how the call starts, not how the diagnosis ends. Confirmation is physical: live bugs, cast skins in a seam, rust-colored spotting along a headboard joint or baseboard, or bugs in a trap placed at the bed. We show you the sign we are relying on, in a photograph, before a plan is priced — and if the sign says it is not bed bugs, the visit ends with that answer and what the evidence points to instead."
+        },
+        {
+          "name": "Look-alikes that turn up in lake houses",
+          "blurb": "Carpet beetle larvae in a guest-room rug, bat bugs associated with a roofline bat roost, and the occasional cockroach nymph all get reported as bed bugs in Windermere homes, and each one wants a different response — bat bugs in particular keep returning until the bat entry in the roof is dealt with. Identification comes first because treating a look-alike as bed bugs wastes the treatment and leaves the real problem exactly where it was."
+        }
+      ],
+      "process": [
+        {
+          "step": "Discreet inspection and ID first",
+          "detail": "A low-profile arrival, then a room-by-room check of every sleeping space: main bedrooms, guest suites, the guest house, and the daybeds in the pool house. Mattress and box-spring seams, upholstered headboards, nightstands, and couch frames get the light and the crevice tool, and any bugs found are identified on the spot. You see the evidence and hear which rooms are confirmed, suspect, or clear before a plan exists."
+        },
+        {
+          "step": "Map every sleeping space, not just the flagged bed",
+          "detail": "The plan is drawn from the map: confirmed rooms, the rooms that share walls, laundry runs, and luggage traffic with them, and the furniture in each. Heat, conventional treatment, or a blend is matched room by room — a guest house that can be closed and heated is a different call than an occupied main bedroom with an upholstered headboard — with the sequence, the prep, and the price laid out in plain words first."
+        },
+        {
+          "step": "Treatment day, sequenced around the household",
+          "detail": "Work is scheduled around guests, staff, and the household's own calendar, kept quiet, and done in the order the map sets: source rooms first, connected rooms same visit, encasements on the beds that stay. Prep is kept to what actually matters — bedding bagged from active rooms, clutter off the floor at the harborage walls — and no one is asked to throw away furniture that treatment can clear."
+        },
+        {
+          "step": "Recheck before the next guests arrive",
+          "detail": "The job closes on evidence: a recheck of every confirmed and suspect room, traps read at the beds, and the guest house released back into use only when the check is clean. If activity persists in a room, it is retreated under the plan rather than re-diagnosed from zero. You also get the travel habits that protect a house like this one — luggage out of bedrooms, a two-minute suitcase check after trips — because the next ride in is a matter of when, not if."
+        }
+      ],
+      "processIntro": "In a house with a guest house, the discipline is the treatment: prove what it is, map every place anyone sleeps, match the method to each room, and clear the house on a recheck — not on the calendar."
+    }
 }
