@@ -3042,5 +3042,60 @@
         }
       ],
       "processIntro": "In a house with a guest house, the discipline is the treatment: prove what it is, map every place anyone sleeps, match the method to each room, and clear the house on a recheck — not on the calendar."
-    }
+    },
+  "maitland/general-pest-control": {
+    "heroLocal": "A Maitland pest call rarely starts with a single bug. It starts with a 1960s ranch in Dommerich Hills where the Florida-room addition meets the original slab, or with a laurel oak limb resting on the roof over Keller Road, or with a bromeliad by the lanai on Lake Sybelia still holding water a week after the rain stopped. The house looks quiet from the curb — big oaks, deep shade, a tidy lawn — but the moisture never really leaves here. Irrigation keeps the soil damp against the stem wall, the lake air keeps the meter box humid, and the mulch piled against the stucco stays wet enough for palmetto bugs to live in year-round. By the time someone calls, the pressure has usually been building since the last slab cut or the last storm.",
+    "heroService": "General pest control in Maitland starts at the slab, not the sprayer. We probe the seam where a Florida room or garage conversion meets the 1960s concrete, check the bath trap and the water-heater stand where AC sweat softens wood, and read the laurel oaks and Areca palms against the fascia for the rat run before we ever open the attic hatch. Outside we walk the mulch line and pull it back from the stucco, open the meter box where palmetto bugs harbor, tip the bromeliads, and trace the ghost-ant trail back along the irrigation line to the bed it came from. Treatment stays exterior-first — a foundation band, bait where the ants actually feed, targeted dust in the harborages — with light spot work inside only where you have seen activity. You get photos of every gap, every tube, and every trap, and a written list of the seals and trims that keep the next visit from starting over.",
+    "whyHeading": "Why Maitland's old slabs and lake oaks keep the bugs coming",
+    "whyLead": "There is no freeze to reset anything in Maitland, and the lake air makes sure of it. Ghost ants feed through January in the wall voids, palmetto bugs breed in the meter box and the mulch all winter, and roof rats nest early in attics that never get cold. Add irrigation that never lets the soil dry against a sixty-year-old slab, bromeliads that hold water for weeks, and laurel oaks that bridge straight onto the fascia, and the house is never really between seasons — it is just between visits. One spray cannot hold that. Steady exterior work after each storm cycle, with the seams and the roofline checked every time, is what keeps a Maitland house quiet.",
+    "whyLocal": "The pressure follows the lot, not the street. On a lakefront lot around Lake Sybelia or Lake Faith, it comes off the water: mosquitoes resting in ficus undersides by day, palmetto bugs living in the damp meter box and the leaf litter, and ghost ants riding the irrigation line into the kitchen after a hard rain. In the 1960s blocks of Dommerich Hills and Maitland Oaks, it comes out of the slab: addition seams where new concrete meets old, bath traps softened by AC sweat, and termite tubes on the garage stem wall that owners walk past for months. Along Keller Road and around Minnehaha Shores it comes from overhead: laurel oaks and Areca palms laying limbs on the fascia, tile ends never screened, and gable vents a rat can chew through in a night. And in the townhome and condo rows near Maitland Center it comes through the shared wall — ants walk the whole row, so a single-unit treatment never holds without a shared-wall check. The plan has to read the lot first, because the same four pests arrive by four different routes on the same street.",
+    "localSection": {
+      "heading": "What a first visit finds on a 1960s Maitland ranch",
+      "body": [
+        "The first walk around a Dommerich Hills ranch finds the same weak points in a different order every time. A dryer vent flap torn by weather. A garage door seal chewed thin where roof rats worked it through the winter. A thumb-sized gap behind the water heater where the pipe chase was never sealed. Mulch heaped against the stucco so the palmetto bugs have a damp hallway to the door. We close each one with mesh and sealant, pull the mulch back to a hand's width from the wall, and set the exterior ant barrier — and where the house shares a wall, in the townhome rows near Maitland Center, we check the neighbor side too, because ghost ants walk the whole row and a one-unit treatment never holds.",
+        "A lake lot gets a different mosquito routine. On Lake Minnehaha or Lake Faith, fogging the air does nothing that lasts — the mosquitoes are resting in the ficus undersides and breeding in the bromeliads by the lanai. We tip every bromeliad, flush the lanai gutter, and treat the shaded undersides where they sit all day, then dust the detached garage and shed door frames and sweep the webs where palmetto bugs hide. Kept monthly, the routine makes the backyard usable at dusk again instead of surrendered to the lake air."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Palmetto Bugs",
+        "blurb": "On a lakefront street the big cockroaches rarely start inside. They breed in the damp meter box and the leaf litter, live in the mulch heaped against the stucco, and push under a worn garage sweep on humid nights. We dust the meter box and the harborages along the foundation, close the sweep gap, and hold an exterior band so the laundry room stops being their nightly route. Pulling the mulch back from the wall drops the pressure more than any single spray."
+      },
+      {
+        "name": "Ghost Ants",
+        "blurb": "A hard rain floods the mulch nests and the ants come in along the irrigation lines and pipe chases, showing up as a thin amber trail on the bathroom counter or the pantry shelf. Spraying the trail only splits them into new colonies. We set a sweet bait they carry back to the nest, treat the outside colonies in the beds, and seal the gaps around the pipes so the next storm does not drive them in again."
+      },
+      {
+        "name": "Roof Rats",
+        "blurb": "The sound is the giveaway — scurrying above the ceiling after dark, loudest over the kitchen, in the blocks where laurel oaks touch the roof. They run the limbs onto the fascia, slip through unscreened tile ends and chewed gable vents, and den in the attic above the garage. We trap on the runs the droppings mark, screen the tile ends and vents in chew-proof mesh, and flag the limbs that need cutting back so the bridge is gone, not just the rats."
+      },
+      {
+        "name": "Fire Ants",
+        "blurb": "A week of storms and the mounds erupt across the lawn — along the lakefront turf, in the Dommerich Hills yards, anywhere irrigation keeps the soil soft. Children and dogs find them before anyone notices. We dust each mound and bait the foragers working the yard so the colony dies instead of shifting ten feet over. The mounds get checked on every return visit, because a Maitland lawn rebuilds them fast."
+      },
+      {
+        "name": "Mosquitoes",
+        "blurb": "At dusk the pressure comes off the lake and out of the bromeliads — every leaf cup holds water for days after rain, and the shaded gutters never quite dry. We tip the bromeliads, flush the lanai gutter, and treat the ficus and hedge undersides where the mosquitoes rest through the day. The lake breeze will never be bug-free, but a monthly routine turns the backyard from surrendered to usable."
+      }
+    ],
+    "process": [
+      {
+        "step": "Slab and seam inspection",
+        "detail": "We start where Maitland's termites start: the seam where a Florida room or garage conversion meets the 1960s slab, the bath trap, the water-heater stand, and the garage stem wall. Tubes get photographed, active ones get marked, and the soil line gets read before anything is treated."
+      },
+      {
+        "step": "Roofline and yard read",
+        "detail": "Then the laurel oaks and Areca palms against the fascia, the tile ends and gable vents, the meter box, the mulch line, and the bromeliads by the lanai. Droppings on the fence top, rub marks on the soffit, ant trails on the irrigation line — the yard tells us which pests are active and which are only possible."
+      },
+      {
+        "step": "Exterior-first treatment",
+        "detail": "The foundation band goes down, bait goes where the ghost ants actually feed, dust goes into the meter box and the harborages, and the bromeliads get tipped and the ficus undersides treated. Inside work is light and only where you have seen activity — the kitchen, the baths, the garage."
+      },
+      {
+        "step": "Seal, note, and return",
+        "detail": "We close the dryer vent, the garage seal, and the gap behind the water heater with mesh and sealant, write down the limbs to trim and the mulch to pull back, and leave a photo summary of every gap found. The next visit is timed to the rain and the irrigation, and anything that flares between visits gets a recheck."
+      }
+    ],
+    "processIntro": "A Maitland visit is a detective walk before it is a treatment: the slab seams first, then the roofline, then the water. The barrier and the bait go where this lot actually breeds and enters, the gaps get sealed on the spot, and the return is timed to the rain, not the calendar."
+  }
 }
