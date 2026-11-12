@@ -3097,5 +3097,60 @@
       }
     ],
     "processIntro": "A Maitland visit is a detective walk before it is a treatment: the slab seams first, then the roofline, then the water. The barrier and the bait go where this lot actually breeds and enters, the gaps get sealed on the spot, and the return is timed to the rain, not the calendar."
+  },
+  "maitland/mosquito-control": {
+    "heroLocal": "A Maitland mosquito evening starts long before dusk, and it starts small. The Lake Maitland chain keeps the air damp all day, so a bromeliad cup by the lanai, a saucer under a potted palm, a gutter corner full of laurel oak leaves, or a toy left out by the pool holds enough water to hatch the biters that find you at dinner. Asian tigers do the daytime work — they breed in a thimble of water and hunt ankles around the grill while the sun is still up. By evening the lake breeze carries the rest in off Sybelia and Minnehaha, and they settle on the screen frames and the shaded side of the house until someone steps outside.",
+    "heroService": "Mosquito control in Maitland starts with a water hunt, not a fogger. We walk the lot with you and empty every cup, saucer, toy, and tarp pocket we find, scoop the gutter corners where oak leaves dam the flow, and check the low lip of stucco where the irrigation pools after every cycle. Water that has to stay — the birdbath you refill for the cardinals, the small fountain by the front walk — gets a larvicide, not a shrug. Then the barrier goes on the leaf undersides, the jasmine and areca along the fence, and the shady side of the screen enclosure where the adults wait out the heat, timed for late afternoon so the morning pollinators are never in it. You get a plain list of what held water and what to dump after the next storm, and the return is set by the rain, not the calendar.",
+    "whyHeading": "Why Maitland's lake air keeps the mosquitoes coming back",
+    "whyLead": "There is no cold snap to break the cycle in Maitland, and the lake chain makes sure of it. The water in a bromeliad cup never really dries between storms, the gutters stay damp under the laurel oaks, and the irrigation tops up every saucer and low spot nightly. A single afternoon storm refills the whole lot, and the eggs hatch in days. One barrier treatment fades with the next downpour, so the work is a rhythm — empty the water, refresh the barrier, check the gutters — held through June to September and stretched only when the dry months actually arrive.",
+    "whyLocal": "The pressure follows the water, not the street. On a lakefront lot around Lake Maitland or Lake Sybelia, it comes off the shoreline shallows and the damp strip behind the seawall, plus the bromeliads and the shaded gutters that never dry. In the 1960s blocks of Dommerich Hills and Maitland Oaks, it comes out of the yard itself: saucers under the potted palms, toys and grill covers left out by the pool, a gutter corner dammed with oak leaves, the low stucco lip where irrigation pools. Around Greenwood Gardens and Oranole Road it comes from the shade — dense areca and jasmine along the fence, the cool side of the screen enclosure, the still air behind the detached garage where the adults wait out the afternoon. And in the townhome rows by Maitland Center it comes over the fence: a neighbor's wet corner breeds the hatch that bites your patio, so the visit has to read the whole row, not just your lot.",
+    "localSection": {
+      "heading": "What a first mosquito walk finds around a Maitland backyard",
+      "body": [
+        "The first walk is a water inventory, and it is almost always longer than the homeowner expects. On a Dommerich Hills lot the list runs from the bromeliad cups by the lanai to the saucers under the potted palms, the drip tray under the grill island, the toy buckets by the pool steps, and the gutter corner where laurel oak leaves have dammed the flow since spring. We empty what can be emptied, scoop the gutter and flush it, and mark the saucers that need drilling or moving under cover. The birdbath and the small fountain stay, with a larvicide dropped in, and the note you get lists every spot by name so the next storm does not quietly refill them all.",
+        "The barrier half of the visit works the shade, not the air. We mist the undersides of the jasmine and areca along the fence, the cool side of the screen enclosure, the lanai posts, and the still corner behind the detached garage — the places the adults sit out the heat — and we ease off the pool coping, the veggie bed, and the butterfly lantana by the walk. On a lake lot the evening routine adds the fan on the lanai and a swap of the porch bulb, because the midges rise off the coves at dusk and no spray holds them once they are in the air. Kept every three to four weeks through the summer, the routine turns the backyard from a place you hurry through into a place you eat dinner in."
+      ]
+    },
+    "pests": [
+      {
+        "name": "Mosquitoes",
+        "blurb": "The daytime biter in Maitland is the Asian tiger — small, striped, and hunting ankles around the grill while the sun is up. It breeds in a thimble of water: a bromeliad cup, a saucer, a bottle cap under the deck. We empty the cups and saucers, larvicide the water that has to stay, and barrier the leaf undersides where they rest between bites, because a tiger that hatches in your yard bites in your yard."
+      },
+      {
+        "name": "Biting Midges",
+        "blurb": "The blind midges rise off the lake coves at dusk and dust the lanai screens and the porch lights, slipping through mesh that stops a mosquito. They breed in the damp muck along the shoreline and the retention edge, worst on still evenings after rain. We treat the damp line and the still corners behind the fence, and we are blunt when a lanai fan and a bulb swap will do more than another pass of spray."
+      },
+      {
+        "name": "No-See-Ums",
+        "blurb": "No-see-ums hit hardest at dawn and dusk and leave ankle welts far bigger than the bug. They stack up where the air goes still behind fences and enclosures, and on a lake lot they ride the evening breeze straight onto the patio. We treat the low shrubs and patio edges, open up the airflow where the hedge has closed in, and tell you which evenings to run the fan instead of waiting for a spray to hold."
+      },
+      {
+        "name": "Stable Flies and Other Yard Biters",
+        "blurb": "If the yard has dogs, a compost pile, or a stack of fresh grass clippings, the stable flies find you. They chew ankles near the kennel run and the compost bin and breed in the wet clippings. We treat the fence shade and the kennel edges and flag the cleanup that stops the next batch — a raked pile and a dry kennel floor beat a second treatment."
+      },
+      {
+        "name": "Ticks in Shady Yards",
+        "blurb": "Lone star ticks wait on the palmetto fronds and the mulch beds along the fence where dogs and raccoons run, and the leaf litter under the laurel oaks makes it worse. On a mosquito stop we check those edges, note what to rake back from the fence line, and treat the harborage so the hitchhikers thin out with the biters."
+      }
+    ],
+    "process": [
+      {
+        "step": "Walk the water and the shade",
+        "detail": "We start at the gate and work the lot the way a mosquito does: cups, saucers, toys, tarps, gutter corners, and the low stucco lip where irrigation pools, then the shady shrubs, the mulch beds, and the cool side of the screen enclosure. You hear exactly where the pressure is coming from before anything is treated."
+      },
+      {
+        "step": "Empty, scoop, and mark the trims",
+        "detail": "We dump what can be dumped, brush the saucers, scoop the gutter corners dammed with oak leaves, and clear the tarp pockets. Dense areca or jasmine that needs lifting gets flagged, and the small drainage fixes near the downspouts get written down so they do not get forgotten after the next storm."
+      },
+      {
+        "step": "Barrier the resting places",
+        "detail": "We mist the leaf undersides, the ground cover, the fence lines, and the patio perimeter, easing off the blooms, the veggie bed, and the pool coping. The dogs stay inside until it dries, the gates get latched behind us, and the birdbath and fountain get larvicide instead of spray."
+      },
+      {
+        "step": "Reset after the storms",
+        "detail": "We come back through the season to refresh the barrier and hunt the new water each storm leaves behind. Between stops, dump the toys after rain, refresh the bowls, and call if the bites spike — we will say whether you need us sooner or the next visit covers it."
+      }
+    ],
+    "processIntro": "A Maitland mosquito visit is a water hunt first and a barrier second: empty the cups and saucers, scoop the gutters, larvicide the water that has to stay, and mist the shade where the adults wait out the day — then come back on the rain's schedule, not the calendar's."
   }
 }
