@@ -3380,6 +3380,61 @@
       }
     ],
     "processIntro": "Wildlife work in a lake town runs on identification and patience: prove which animal it is, let it leave by a door that only swings one way, close the house behind it in metal, and change the yard that invited it \u2014 in that order."
+  },
+  "poinciana/general-pest-control": {
+    "heroLocal": "A Poinciana call usually starts after the rain, not before it. The kitchen was clean at bedtime and crawling by morning, or the patio that was fine at noon is unusable at dusk, or a palmetto bug is waiting by the garage door again. The lot decides which one: a townhome row off Cypress Parkway where ghost ants run the shared walls, a villa backing onto a retention pond off Marigold Ave where the mosquitoes own the evening, a single-family block where the wooded lot next door keeps feeding roaches through the fence. The lawns look sharp \u2014 the HOA sees to that \u2014 but the water never really leaves here. Retention ponds, drainage corridors, irrigation three mornings a week, and mulch that stays shaded and damp mean the yard is always breeding something, and the shared walls mean whatever breeds in one unit walks into the next.",
+    "heroService": "General pest control in Poinciana starts with a walk of the water, not a spray of the walls. We walk the pond setback and tip everything holding water \u2014 the plant saucers, the grill cover, the kayak bottom, the dog bowl \u2014 then check the street drain and the utility boxes where palmetto bugs harbor, read the mulch line back from the stucco, and follow the ghost-ant trail along the irrigation line back to the mulch bed it started in. We probe the slab where the irrigation keeps the ground soft, open the bath trap, look at the heater stand, and check the weep holes and slider tracks where ants slip in. Treatment stays exterior-first and HOA-quiet \u2014 a foundation band tucked low in the beds, bait where the ants actually feed, dust in the voids and the meter box \u2014 with light spot work inside only where you have seen activity. You leave with photos of each gap, mound, and trail, plus a short list of the seals and the water fixes to make before we come back.",
+    "whyHeading": "Why Poinciana's ponds, irrigation, and shared walls keep the bugs coming",
+    "whyLead": "Nothing in Poinciana ever gets a winter reset. The retention ponds off Poinciana Blvd and Marigold Ave hold mosquitoes and midges through the driest week, irrigation runs three mornings a week and keeps the ground soft against every slab, and the shaded mulch beds never quite dry out. Through January the ghost ants are still feeding inside the wall voids, and palmetto bugs keep multiplying in the street drains and the wet mulch all winter long. Add shared townhome walls that let ants and roaches walk unit to unit through the plumbing chases, and one spray cannot hold any of it. What holds it is steady exterior work between storms \u2014 water tipped, gaps sealed, bait refreshed \u2014 visit after visit.",
+    "whyLocal": "Which pests you get depends on the lot, not the street. On a pond-backing lot off Marigold Ave or Poinciana Blvd, it comes off the water: mosquitoes resting in the areca and ligustrum through the day, palmetto bugs camped in the damp meter box and the street drain, fire ants mounding on the pond slope where the mower scalps the St. Augustine thin. In the townhome rows and villa communities, it comes through the walls: ghost ants riding the irrigation line into the kitchen, German roaches moving unit to unit through the plumbing chases, and a neighbor's untreated mulch bed reinfesting the whole row. Along the wooded lots and conservation edges, it comes out of the leaf litter: roaches and mosquitoes breeding in the vines on the fence and the damp ground cover, spilling over every time it rains. We treat to the lot your house actually sits on, not a generic route.",
+    "localSection": {
+      "body": [
+        "Walk a Poinciana townhome row with us the first time and the weak points show themselves in a different order on every house. A weep hole open at the base of the brick. A slider track with a gap the ghost ants use as a highway. A hose bib dripping into the mulch bed. A grill cover holding a cup of rainwater. A street drain by the curb that breeds palmetto bugs after every storm. Each gap gets closed with mesh and sealant, the mulch gets pulled back a full handspan from the wall, the exterior ant bait goes low in the beds where the HOA never sees it, and we dust the voids and the meter box \u2014 and where the house shares a wall, we ask to look at the neighbor side too \u2014 the colony lives in the row, not in your kitchen, and one unit alone never holds.",
+        "A pond-side lot needs a different mosquito routine. Off the retention ponds, fogging the air buys you an evening at most \u2014 the mosquitoes spend the day in the areca and ligustrum and breed in the saucers, toys, and tarps by the lanai. We tip every container, flush the lanai gutter, and treat the shaded shrub undersides and the fence lines they sit on all day, and knock down the fire ant mounds on the pond slope before they spread. Run monthly, the routine gives you the patio back at dusk instead of handing it to the pond air \u2014 and the frogs from the wetland stay, which is the point."
+      ],
+      "heading": "What the first walk finds on a Poinciana townhome row"
+    },
+    "pests": [
+      {
+        "blurb": "Dusk is the worst hour on a pond-backing lot. The mosquitoes lift off the retention pond, settle into the areca and the ligustrum, and find the patio the moment you step out \u2014 and half of them bred in your own yard, in a saucer, a tarp fold, or a kayak left out after the rain. We tip or treat every container we can reach, treat the shaded resting spots along the fence lines, and keep the routine monthly. The pond is protected water and stays untouched; the yard around it is where the bite count actually falls.",
+        "name": "Mosquitoes"
+      },
+      {
+        "blurb": "After a storm the mounds pop up where you least want them \u2014 the pond slope behind the lanai, the thin turf by the sidewalk, the bare patch where the mower scalped the St. Augustine. A bare foot or a curious dog finds them first. We treat every mound and bait the foraging ring around it so the whole colony goes, not just the mound you can see, and we mark the overwatered corners that keep drawing them back. Every return visit starts with a mound check, because a wet Poinciana lawn grows new ones in days.",
+        "name": "Fire Ants"
+      },
+      {
+        "blurb": "They are the smallest ants on the lot and the hardest to keep out \u2014 a pale, fast trail across the kitchen counter that appears overnight after a storm and vanishes by morning. The colony usually sits outside, in a damp mulch bed or behind a weeping hose bib, and the workers run the irrigation line and the weep holes straight into the pantry. A spray on the counter only breaks the trail into two colonies. We bait along the run so the workers carry it home, treat the bed the colony lives in, and close the weep holes and pipe gaps so the next rain has nowhere to push them.",
+        "name": "Ghost Ants"
+      },
+      {
+        "blurb": "The big roaches everyone calls palmetto bugs live outside first \u2014 in the storm drains along the street, in the utility boxes, in the mulch that never dries against the stucco. On a humid night they walk in under the garage door and show up by the laundry room in the morning. We treat the drains and the harborages, dust the voids and the meter box, and fix the sweeps and gaps they use. The fastest win is usually the mulch line: draw it back from the wall and the nightly visitors thin out on their own.",
+        "name": "Palmetto Bugs"
+      },
+      {
+        "blurb": "The ground against a Poinciana slab almost never dries \u2014 irrigation three mornings a week, pond water a few yards away, shaded beds holding moisture against the stem wall. That is foraging weather for subterranean termites all year. We walk the foundation line with a probe, open the bath traps, read the garage expansion joints, and look for mud tubes on the stem wall and bubbled paint beside the sliders. Monitors or barrier protection stay in place between visits. Caught early it is a fix, not a rebuild \u2014 and in a town where the ground never dries out, early is the whole game.",
+        "name": "Subterranean Termites"
+      }
+    ],
+    "process": [
+      {
+        "detail": "We start where Poinciana's mosquitoes start: the pond setback, the plant saucers and grill covers and kayak bottoms, the street drains and utility boxes, then the weep holes, slider tracks, and the mulch line against the stucco. Ant runs along the irrigation line, palmetto-bug harborages in the meter box, the shared wall in a townhome row \u2014 the yard and the walls tell us what is active here and what is only possible.",
+        "step": "Water and wall walk"
+      },
+      {
+        "detail": "Then the slab: the foundation line, soft from three mornings of irrigation a week, the bath trap, the heater stand, then the garage expansion joints. Any tubes get photographed and marked on the spot, and the weep holes and pipe gaps get measured before anything is treated.",
+        "step": "Slab and entry read"
+      },
+      {
+        "detail": "The foundation band goes in low in the beds, out of the HOA's sight; bait goes to the trails where the ghost ants are actually feeding; dust goes into the voids and the meter box; and the areca and ligustrum undersides get treated where the mosquitoes rest. Inside, we spot-treat only the rooms where you have seen activity \u2014 kitchen, baths, garage \u2014 and nothing more.",
+        "step": "Exterior-first application"
+      },
+      {
+        "detail": "We close the weep holes, the slider gaps, and the pipe chases with mesh and sealant, write down which water to tip and how far to pull the mulch back, and hand you photos of every gap we found. The next visit follows the rain and the irrigation schedule, and anything that flares up between visits gets a free recheck.",
+        "step": "Seal, record, and return"
+      }
+    ],
+    "processIntro": "A Poinciana visit starts as a water walk, not a spray: tip what holds water, read the pond setback and the shared wall, close the gaps the ants actually use \u2014 then bait and barrier go where this lot breeds and enters, and the next visit follows the rain and the irrigation, not the calendar."
   }
 
 }
