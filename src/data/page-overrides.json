@@ -3435,6 +3435,61 @@
       }
     ],
     "processIntro": "A Poinciana visit starts as a water walk, not a spray: tip what holds water, read the pond setback and the shared wall, close the gaps the ants actually use \u2014 then bait and barrier go where this lot breeds and enters, and the next visit follows the rain and the irrigation, not the calendar."
+  },
+  "poinciana/mosquito-control": {
+    "heroLocal": "A Poinciana mosquito evening starts at the pond edge, not at your back door. Just before sunset the air over the pond water past Marigold Ave goes still, and the mosquitoes rise off the surface in a thin cloud and ride the breeze toward the townhome rows. By the time you carry dinner out to the lanai, they are already waiting in the shade of the areca hedge and along the back fence, and the first bite lands before the plates are down. Nobody sprays the pond itself, it is protected water, and the drainage corridor behind Village 3 keeps feeding new adults into the neighborhood every night. What you can change is the ring of yard around your own house: the water sitting in it, the shade holding them through the day, and the gaps in the screen they slip through.",
+    "heroService": "Mosquito control in Poinciana works the ring around the water, not the water itself. We start at the pond setback and the drainage corridor behind your lot, then walk inward through the yard: the dog bowl by the back step, the saucers under the pots by the lanai, the tarp folded over the grill, the low rut where the irrigation pools against the stucco. Everything holding water gets emptied or treated on the spot, and the resting shade gets a barrier coat laid down in the late afternoon, so it is fresh when the evening lift-off starts. Where the house shares a wall, we ask to see the neighbor side too, because one unit's forgotten saucer re-seeds the whole row overnight. You get a short written list of what we emptied, what we treated, and what to tip out after the next storm.",
+    "whyHeading": "Why Poinciana's ponds and corridors keep the mosquitoes coming",
+    "whyLead": "The water here never sits still long enough to go stale, and that is the problem. A 4 p.m. downpour refills every saucer, toy, and tarp fold in the neighborhood, the sprinklers top them up again on their morning rounds, and the drainage corridors behind Village 3 and Village 5 move that water lot to lot, so a mosquito that hatches two doors down is biting on your patio the same week. The big ponds past Poinciana Blvd and Marigold Ave are protected water, which means the nursery itself is never treated, only the yards around it. One barrier coat fades with the next storm, so the work runs in rounds: empty the water, coat the shade, come back after the rain and do it again.",
+    "whyLocal": "Where the bites come from depends on which side of the water you sit. On a lot with its back fence on a retention pond, it comes off the pond at dusk and out of the drainage corridor behind the fence, with the adults spending the hot hours in the areca and ligustrum. In the townhome rows off Cypress Parkway and the villa blocks, it comes from the shared walls and the shared yards: a neighbor's dog bowl, a saucer left under a pot on the next patio, a tarp over a grill two units down, all of it breeding for the whole row. Along the wooded lots and the conservation edge, it rises out of the leaf litter and the soggy ground cover, worst after rain when the vines on the fence hold water in every fold. The plan follows your lot, not a route sheet.",
+    "localSection": {
+      "heading": "What the dusk round finds around a Poinciana lot",
+      "body": [
+        "The round starts at the back fence, not the front door. Behind a lot on the Village 3 drainage corridor, the first thing we check is the low strip where the corridor water seeps under the fence after rain, then the dog bowl by the step, the saucers under the lanai pots, the grill cover sagging with a cup of rain, and the kids' toys left by the patio. Each one gets emptied, scrubbed, or treated where it sits, and the ones that have to hold water get a larvicide tab instead of a lecture. The screen gets checked next, because a loose panel or a torn corner undoes the whole barrier once the evening cloud lifts off the pond. Every spot goes on your written list by name, so the next downpour cannot refill them behind your back.",
+        "Then comes the shade work. We brush a barrier coat onto the leaf undersides of the areca and ligustrum down the back fence, the shaded faces of the lanai posts, and the windless pocket behind the villa, and we book the visit for late in the afternoon so the coat is at its freshest when the pond mosquitoes rise at sunset. Blooms, herb pots, and pool coping stay untouched, and pets stay indoors while the coat dries. In a townhome row we ask after the unit next door, because a treated patio counts for little while the saucers two doors down keep hatching for the whole row. Kept to a three-to-four-week rhythm through the summer, the round gives you back the lanai at dinner time."
+      ]
+    },
+    "pests": [
+      {
+        "blurb": "The Asian tiger owns the daylight hours in Poinciana, going for ankles by the grill and the patio table long before dusk, and the pond mosquitoes take over once the air cools. Both breed a few steps from the door: a saucer, a dog bowl, a tarp fold, a toy left out after the storm. We empty the containers, dose the water that must stay, and brush the resting shade, because the biters that hatch on your lot feed on your lot.",
+        "name": "Mosquitoes"
+      },
+      {
+        "blurb": "Midges are the dusk swarm you feel before you see: a gray haze over the lanai screens just as the pond breeze dies, each one small enough to slip through standard mesh. Their nursery is the soggy margin where corridor water meets your fence, and a calm evening after rain brings them out in force. We coat that margin and the dead-air pockets behind the villa, and we will say plainly when a running patio fan is worth more than another coat.",
+        "name": "Biting Midges"
+      },
+      {
+        "blurb": "The no-see-ums are the dawn-and-dusk biters, tiny enough to miss and leaving welts that itch for days. They gather where the breeze dies behind the back fence and inside the lanai, thickest on a pond lot when the evening air turns still. We coat the low shrubs and the patio edges, cut back the hedge choking the airflow, and mark the evenings when the fan is the better answer.",
+        "name": "No-See-Ums"
+      },
+      {
+        "blurb": "Dog runs and compost bins pull in the stable flies, and the wet grass clippings piled by the fence breed them. They go for ankles around the kennel and the compost corner, worst where the dogs pace the fence above the drainage corridor. We brush the shaded fence line and the kennel corners and mark the cleanup that ends the next batch: rake the pile, dry the kennel floor, and the flies thin out without another spray.",
+        "name": "Stable Flies and Other Yard Biters"
+      },
+      {
+        "blurb": "The lone star tick waits where the yard meets the woods: in the mulch beds and under the palmetto fronds, where the raccoons run after dark. Leaf litter under the oaks and a dog that noses the fence line every morning make it worse. We check those edges on every mosquito stop, flag what to rake back, and dose the harborage so the ticks thin out along with the biters.",
+        "name": "Ticks in Shady Yards"
+      }
+    ],
+    "process": [
+      {
+        "detail": "We start at the back fence, where the pond water and the drainage corridor meet your lot, and read the water line: the low strip where corridor water seeps under the fence, the rut where irrigation pools against the stucco, the saucers, bowls, toys, and tarp folds holding water in the yard. You get the read on the worst water before a drop is sprayed.",
+        "step": "Pond edge and corridor read"
+      },
+      {
+        "detail": "We tip out every container that can be tipped, scrub the saucers and bowls so the eggs do not survive the refill, and drop a larvicide tab in the water that must stay. The screen gets checked and the loose panels noted, and where the house shares a wall we ask after the neighbor side, because one unit's forgotten bowl breeds for the whole row.",
+        "step": "Empty, scrub, and treat the water"
+      },
+      {
+        "detail": "We lay the coat on the resting shade: leaf undersides of the areca and ligustrum, the shaded faces of the lanai posts, the windless pocket behind the villa, booked for late in the afternoon so it is fresh at sunset. We stay off the blooms, the herb pots, and the pool coping, and pets stay inside until the coat dries.",
+        "step": "Coat the shade ring"
+      },
+      {
+        "detail": "The round repeats on a three-to-four-week rhythm while the summer storms keep coming: fresh coat on the shade, fresh check of the saucers and bowls, fresh look at the corridor strip behind the fence. Between rounds, tip the toys after rain and swap the dog bowl daily. If the bites jump, call us and we will say straight whether to come early or hold to the next round.",
+        "step": "Round again after the rain"
+      }
+    ],
+    "processIntro": "A Poinciana mosquito round starts at the pond edge and works inward: read the corridor water, empty the saucers and bowls, coat the shade ring while the afternoon is still warm, and come back after the next storm before the new hatch finds your lanai."
   }
 
 }
