@@ -3661,5 +3661,66 @@
    }
   ],
   "processIntro": "A pest that rides in with the luggage and hides in the seams has to be worked in order: name it first, keep it penned where it sits, then treat the harborage the inspection pointed to, then come back when the eggs hatch and show it stayed gone."
+ },
+ "poinciana/wildlife-removal": {
+  "heroLocal": "The call usually comes after midnight, from a villa bedroom under the lanai roof. Something heavy crosses the ceiling twice, pauses, then crosses back, and by morning the trash cans are tipped by the driveway and the lid is in the neighbor's hedge. Or it comes from a renter who opened the shed and found the floor dug into a burrow, or from a homeowner who lifted the pool-cage door and met a black racer coiled by the skimmer. Poinciana backs onto conservation land and pond banks on so many lots that the wild side of the fence is never far away \u2014 and the animals treat a quiet attic, a dry shed, and an irrigated bed as rooms of the same house.",
+  "heroService": "Wildlife work here starts with figuring out who moved in, from what they left behind. We read the tracks in the irrigated bed, the droppings in the attic insulation, the rub marks on the soffit, the burrow mouth under the A/C pad, and the shed skin in the pool cage, then we match the way out to the animal: a shaded live trap for a raccoon family, a one-way door over a squirrel seam, a buried footer for the armadillo that keeps coming back to the same bed. We leave poison out of it entirely \u2014 a poisoned animal dies slowly, and the owl or hawk that eats it dies next. Florida law keeps a trapped raccoon on the property it came from, so the real fix is the sealing we do after the animal is out: metal, hardware cloth, and a roofline the next family cannot open.",
+  "whyHeading": "Why Poinciana's ponds, conservation edge, and rentals keep wildlife at the door",
+  "whyLead": "Poinciana sits between water and woods on both sides. The ponds off Poinciana Boulevard and Marigold Avenue hold frogs and fish all year, the ditch lines behind Village 5 carry snakes and raccoons lot to lot after a rain, and the conservation edge behind the back fence is full of palmetto, oak, and pine that never gets mowed. That edge feeds everything: raccoons den in the attics of the villas that back onto it, armadillos work the irrigated beds that run three mornings a week, opossums den under the sheds, and black racers hunt the pond banks and slip into the pool cages after a mow. The houses add the rest \u2014 trash cans by the driveway, pet food on the lanai, citrus on the ground, and villas that sit empty between tenants with the attic hatch never opened. An animal does not have to cross a neighborhood to find all of that. It has to cross one fence.",
+  "whyLocal": "The lot picks the animal. A villa backed onto a retention pond gets the raccoon that fishes the bank at dusk and the water snake that follows the frogs into the pool cage. A lot against the conservation edge gets the opossum under the shed and the armadillo that roots the irrigated bed after the sprinklers run. A row of townhomes off Cypress Parkway gets the squirrel that runs the shared roofline and the raccoon that peels the soffit over the middle unit and wakes three bedrooms at once. A rental between tenants gets whichever animal found the trash first. We read the lot before we set anything, because the same animal in a different yard needs a different door closed.",
+  "localSection": {
+   "heading": "The attic over the lanai, the shed slab, the pond bank, and the empty villa",
+   "body": [
+    "Start above the lanai, where the raccoon work happens. A villa attic over the master bedroom is warm, dry, and quiet, and a mother raccoon will peel a storm-softened soffit seam or lift a tile edge to get her kits in there by spring. The first sign is the sound \u2014 heavy steps at two in the morning, a pause, then a dragging noise as she moves insulation into a nest \u2014 and the second is the smell, a latrine corner in the insulation that soaks through the drywall below. We set a shaded live trap at the entry, pull the family together so no kit is left squealing in the wall, and close the seam in metal the same week the attic goes quiet, because a raccoon that got in once will test that seam again the next spring.",
+    "Down at ground level the diggers own the yard. The HOA watering schedule keeps the beds soft three mornings a week, and an armadillo reads that soft soil the way a raccoon reads a trash can \u2014 it roots the St. Augustine into cone-shaped holes overnight, fans the mulch across the driveway, and digs a burrow under the shed slab or the A/C pad that goes deeper than the slab is wide. An opossum takes the shed itself, moving into the gap beneath the shed floor where the cat food bowl sits by the back step, and leaves greasy rubs and droppings and a sour smell that hangs in the heat. We set a cage trap for the digger, fill the burrow back in, and trench a buried footer of hardware cloth around the shed and the bed, then move the bowl inside at night, because a fed animal under a shed is a settled animal.",
+    "The pond bank and the conservation edge send the snakes. A black racer comes out of the palmetto litter to hunt along the drainage corridor, crosses the yard in the morning sun, and ends up coiled by the pool skimmer or stretched across the lanai screen door. Water snakes follow the frogs up from the retention pond after a rain and show up in the pool cage or the garage. We do not chase a snake around the yard with a net \u2014 we find where it came in, close the gap under the lanai door and the tear in the screen, cut the cover back from the fence line, and take the animal out in a bucket when it is in the wrong place. Keep the grass short at the back fence and the woodpile off the ground, and the edge stops delivering snakes to the door.",
+    "Between guests, a villa goes quiet for a week, and a quiet house is an open invitation. The cleaning crew comes through on changeover day, the key lockbox clicks, the next family arrives with suitcases \u2014 and the raccoon that moved in during the empty week announces itself above the guest bedroom at midnight. We get the family out, close the soffit seam and the shed gap before the next booking, and hand the manager a different kind of checklist: latch the trash, shut the garage between cleans, screen the shed base, and check the attic hatch on every changeover, because a house that is checked every week never stays empty long enough to become a den."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Raccoons in the attic over the lanai",
+    "blurb": "The attic tenant. You hear her before you see her: heavy steps across the ceiling at two in the morning, a pause, then the drag of insulation being pulled into a nest. By daylight the signs are outside \u2014 the trash tipped by the driveway, the lid in the hedge, the low citrus picked clean. We set a shaded live trap at the entry, pull the mother and kits together so none is left behind, and close the seam in metal the same week the attic goes quiet."
+   },
+   {
+    "name": "Armadillos in the irrigated beds",
+    "blurb": "The midnight rototiller. Cone-shaped holes in the St. Augustine by morning, mulch scattered across the driveway, and a burrow mouth under the shed slab or the A/C pad \u2014 that is an armadillo working the bed the sprinklers keep soft. It returns to the same bed night after night because the grubs never leave. We set a cage trap on its run, fill the burrow, and trench a buried footer of hardware cloth around the shed and the bed so the next digger hits wire instead of soil."
+   },
+   {
+    "name": "Opossums under the shed",
+    "blurb": "The shed squatter. An opossum moves in beneath the shed floor or the lanai enclosure where it is dark and close to the cat food bowl, and it stays because nobody looks under a shed. It does not chew much, but it leaves greasy rubs on the skirting, droppings by the back step, and a sour smell that hangs in the heat. We set a quiet cage trap, release it on the property where the rules allow, and close the skirting with mesh so the next one finds the door shut."
+   },
+   {
+    "name": "Snakes from the conservation edge",
+    "blurb": "The edge hunter. A black racer slips out of the palmetto litter at the conservation edge, crosses the yard in the morning sun, and ends up coiled by the pool skimmer. A water snake follows the frogs up from the pond after a rain and shows up in the pool cage. Both are usually just passing through \u2014 but a snake in the lanai is a snake in the house, so we find the gap under the door and the tear in the screen, close both, and carry the animal out in a bucket when it is in the wrong place."
+   },
+   {
+    "name": "Bats in the gable and the ridge",
+    "blurb": "The gable tenant. Bats squeeze through a gap no wider than your thumb at the gable or the ridge and streak the stucco with guano, and a colony sounds like soft pattering and squeaks near eleven at night. The state protects bats, so there is no cage work the way there is for a raccoon \u2014 the calendar closes for bats from mid-April through mid-August while the pups cannot fly, and outside those months we fit exit doors over the gap, let the bats file out at dusk, and close the roofline behind them. If the calendar says wait, we will tell you to wait and seal everything else first."
+   },
+   {
+    "name": "Gray squirrels on the shared roofline",
+    "blurb": "The daylight runner. A gray squirrel runs the live-oak limbs and the power drop onto the roof, chews a hole through the fascia board or the stucco return, and nests above the garage insulation where the morning sun hits first. You hear rolling and gnawing just after sunrise and find gnaw marks along the eave and acorns tucked into the lanai cushions. We trap the squirrel out, close the hole with a metal plate and fresh flashing, and point at the one limb that has to go \u2014 because the squirrel that got in through the oak will use the same limb again next week."
+   }
+  ],
+  "process": [
+   {
+    "step": "Listen first, then look for the sign",
+    "detail": "The inspection starts with the sound and the hour \u2014 heavy steps at two in the morning mean raccoon, rolling at sunrise means squirrel, a shuffle under the shed at dusk means opossum \u2014 then we climb to the eaves, open the attic hatch, and walk the shed, the pond bank, and the pool cage. Every entry gets photographed: the peeled soffit seam, the burrow mouth under the A/C pad, the rub on the shed skirting, the shed skin in the cage. You see what is living there before anything is set, and we will not seal young inside a wall."
+   },
+   {
+    "step": "A way out that fits the animal",
+    "detail": "A raccoon family gets a shaded live trap at the entry, checked daily, with the mother and kits pulled together. Squirrels and bats get a one-way door over the seam so they file out and cannot get back in. Armadillos get a cage trap on the run they cut through the bed. We never set poison \u2014 a poisoned animal dies slowly and the owl that eats it dies next \u2014 and we never move a raccoon off the property, because Florida law keeps it where it came from and the animal that is carried away usually walks back or starves."
+   },
+   {
+    "step": "Close the house in metal the same week",
+    "detail": "Once the attic goes quiet we shut it properly: galvanized flashing on the soffit seams, quarter-inch hardware cloth on the vents, metal-backed patches on the chewed fascia, polyurethane sealant on the stucco gaps \u2014 not foam alone, which a raccoon chews through in a night. Sheds get screened skirting with a buried footer, the lanai door gap gets a new sweep, and we cut the oak limbs that reach the roof before we leave. And it stays quiet from the curb: nothing visible, no boxes by the sidewalk."
+   },
+   {
+    "step": "Clean the mess and change the habits",
+    "detail": "With the animal out, we bag the droppings and the nest fluff, pull the soiled insulation we can reach, and treat the latrine corner with an enzyme deodorizer, because the odor left in the insulation calls the next family in. Then the short list that keeps it quiet: lock the trash lids, bring the pet bowls in before dark, pick the fallen citrus, keep the mulch pulled off the slab, and check the attic hatch on every changeover if the villa rents. A quick recheck between visits is free and spots a new opening before anything moves back in."
+   }
+  ],
+  "processIntro": "A Poinciana wildlife job runs in one order: listen for who is in there, get it out the humane way, seal the house in metal, and clean the mess so the next family never gets the invitation."
  }
 }
