@@ -3722,5 +3722,64 @@
    }
   ],
   "processIntro": "A Poinciana wildlife job runs in one order: listen for who is in there, get it out the humane way, seal the house in metal, and clean the mess so the next family never gets the invitation."
+ },
+ "celebration/general-pest-control": {
+  "heroLocal": "Celebration looks finished from the curb \u2014 trimmed hedges, white fences, porches facing Market Street \u2014 and that finish is the whole problem. A palmetto bug on a spotless kitchen floor in an Artisan Park townhome feels like a scandal, and a CROA notice about a weed patch can arrive before the roach does. Our calls here start two ways: a rental manager off World Drive finds bed-bug signs on a mattress seam in the empty hours between guests, or a homeowner in North Village opens the garage to fire ants working the mulch by the door.",
+  "heroService": "General pest control in Celebration is built around two things the town never pauses: the rental calendar and the HOA's eye. We check the turnover gaps first \u2014 a bed-bug look between guests, a roach check behind the rental kitchen's stove \u2014 then walk the outside the way CROA walks it: shoe covers on, nothing scattered on the driveway, granules tucked under the mulch line where nobody sees them. The protective band sits low along the foundation, bait goes to the trails the ants are already using, dust goes into the wall voids and behind the meter box, and you get a short note saying what we did and where, so the next question from a neighbor or a manager has an answer.",
+  "whyHeading": "Why a town this tidy still calls us every week",
+  "whyLead": "Two calendars run Celebration and neither one ever stops. The first is the rental calendar: suitcases roll in off World Drive and US-192 every few days, and every arrival is a fresh chance for bed bugs to ride in on a seam or a backpack, and for German roaches to spread through a kitchen that never gets a quiet week. The second is the watering calendar: the irrigation runs at night, the mulch stays damp, the St. Augustine stays soft, and ghost ants, fire ants, and palmetto bugs feed straight through the year. Put the two together with shared walls in the condo and townhome clusters, and a single visit can't hold any of it \u2014 what keeps it down is showing up again between guests and between waterings, visit after visit.",
+  "whyLocal": "The pressure changes with the property. In the rentals off World Drive and US-192, it's the turnover: bed bugs in the seams, German roaches behind the stove, and a cleaner who has to spot both before the next check-in. In the condo and townhome clusters of South Village and East Village, it's the shared wall: ghost ants and German roaches travel the plumbing chases and the firewall voids, so one untreated unit re-seeds the row. Around Lake Evalyn and the golf course, it's the water and the lawn: nightly irrigation, pond edges, and soft turf that keep fire ants mounding and chinch bugs yellowing the St. Augustine in July. And in the live-work units by Market Street, it's the mix \u2014 a shopfront below, a kitchen above, and every delivery a new chance for roaches to move in. We treat the property you actually have, not the route.",
+  "localSection": {
+   "heading": "A Celebration visit leaves no trace but a note",
+   "body": [
+    "We start at the curb the way CROA does. Covers on our shoes before we cross the threshold, nothing left sitting on the drive, granules tucked under the mulch line where the street can't see them, and a short note on the counter naming what we did and where. In a townhome cluster we ask to look at the adjoining unit too, because the ants belong to the whole row, not one kitchen. In a rental we work the empty hours between guests, checking the bed and the sofa folds while the cleaner is already there. Nothing about the visit should ever earn a letter.",
+    "The estate side of town gets a different walk. Around Lake Evalyn and the golf course edge, the call is usually fire ants along the sidewalk, chinch bugs yellowing the lawn in July, and palmetto bugs in the meter box and the downspouts. We walk the foundation and the mulch line, treat the mound rings and the shrub undersides, and flag the irrigation heads soaking the slab \u2014 then the note goes on the counter, same as everywhere else in town, because the next visit starts from what the last one wrote down."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Bed Bugs",
+    "blurb": "A rental off World Drive turns over every few days, and bed bugs only need one suitcase. We check the bed in the gap between guests \u2014 seams, headboard, nightstand, sofa folds \u2014 treat the room tight, and return to confirm before the next arrival, so one bug never becomes a refund and a blocked calendar."
+   },
+   {
+    "name": "Ghost Ants",
+    "blurb": "The first sign is usually a faint amber line across a kitchen counter in an East Village townhome, marching toward the sugar bowl. The colony lives outside in the damp mulch and the paver joints, and the trail is only the commute. We follow it back, bait where the colony feeds, and close the cracks they came through \u2014 spraying the line just splits it into two."
+   },
+   {
+    "name": "Fire Ants",
+    "blurb": "Mounds show up where the turf stays soft \u2014 along Celebration Boulevard, around the pocket parks of South Village, and behind homes that back onto the golf course. A bare foot or a dog finds them first. We bait the foraging ring and spot-treat the mound so the colony goes, not just the pile, and we time the visit around the watering days so the treatment stays put."
+   },
+   {
+    "name": "American Cockroaches",
+    "blurb": "They breed in the mulch beds and the storm drains, wait out the day in meter boxes and downspouts, and walk in under a worn sweep the night the garage door opens. We treat the harborage at the foundation and the thresholds, dust the voids they hide in, and point at the sweep or screen that let them through."
+   },
+   {
+    "name": "Mosquitoes",
+    "blurb": "Evenings by Lake Evalyn and the golf course belong to the mosquitoes once the sun drops. They rest in the shaded shrubs through the day and breed in anything holding water \u2014 a plant saucer, a toy left out, a tarp fold by the lanai. We empty or treat each container we can reach, work the shaded shrub undersides and the fence lines where they rest all day, and repeat the round monthly so the patio stays yours after dark."
+   },
+   {
+    "name": "Chinch Bugs",
+    "blurb": "The lawn gives them away in July: yellow patches that look like drought but aren't, blades notched overnight, tunnels along the pond edge. Chinch bugs, sod webworms, and mole crickets each leave a different mark, so we read the pattern before we treat \u2014 only the hot zones get product \u2014 and we say plainly whether the mower should go up and a watering day should be skipped."
+   }
+  ],
+  "process": [
+   {
+    "step": "Rental calendar and cleaner check",
+    "detail": "We start with the booking calendar and the cleaner's report, not the sprayer. Which units turned over, who saw what, and where the last guest slept \u2014 then the bed, the headboard, and the sofa folds in the empty hours before the next arrival, and the kitchen kick plates where German roaches hide."
+   },
+   {
+    "step": "Quiet exterior walk",
+    "detail": "Then the outside, the way CROA walks it: the foundation line, the mulch pulled back from the stucco, the weep holes and slider tracks, the meter box and the hose bibs, the irrigation heads soaking the slab. Anything holding water gets tipped, and every gap gets noted with a photo before we treat a thing."
+   },
+   {
+    "step": "Bait and barrier where they live",
+    "detail": "The protective band sits low along the foundation, out of the street's sight. Bait goes to the trails the ants are already using, dust goes into the wall voids and behind the meter box, and the shrub undersides get treated where the mosquitoes rest. Inside work stays small: only the rooms with sign get a spot treatment, and the rest of the house is left alone."
+   },
+   {
+    "step": "Note, fixes, and the next turn",
+    "detail": "We leave the short note \u2014 what we did, where, and what to fix: the sweep to replace, the mulch to pull back, the drain to clear, the watering day to skip. The next visit follows the rental calendar and the irrigation, and if something pops back up between visits, the recheck costs nothing."
+   }
+  ],
+  "processIntro": "A Celebration visit runs in one order: check the calendar, walk the outside the way CROA does, treat where the pests actually live, and leave a note that answers the next question before it's asked."
  }
 }
