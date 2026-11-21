@@ -3781,5 +3781,64 @@
    }
   ],
   "processIntro": "A Celebration visit runs in one order: check the calendar, walk the outside the way CROA does, treat where the pests actually live, and leave a note that answers the next question before it's asked."
+ },
+ "celebration/mosquito-control": {
+  "heroLocal": "The test of a Celebration evening is the patio after six. The light drops over Lake Evalyn, the grill is going, the kids are still in the pool \u2014 and the mosquitoes come off the lake edge and the golf-course ponds in a slow wave, settling into the hedge and the lanai screen before anyone sits down. By the time the food is out, the ankles are already bitten.",
+  "heroService": "Mosquito control in Celebration is timed to that evening, not to a printed route. We walk the patio water first \u2014 the saucers tucked under the pots, the drip tray under the outdoor kitchen, the fountain basin, the low corner where the downspout pools \u2014 then coat the shaded hedge and the screen seams where the adults wait out the day, late enough in the afternoon that the coat is fresh when the lake breeze turns. The lake itself and the course ponds are not ours to treat, and we say so plainly; what we can give you is a patio that holds through dinner.",
+  "whyHeading": "Why the patio goes quiet at dusk in Celebration",
+  "whyLead": "Three waters feed a Celebration evening. The first is the lake and the course ponds \u2014 Lake Evalyn and the water hazards along the fairways hold Culex mosquitoes that lift off at dusk and ride the evening breeze to the nearest lit patio. The second is the sprinkler cycle: the town waters while it sleeps, so every saucer, planter, and toy bucket refills overnight whether it rained or not, and Asian tiger mosquitoes hatch in that water and bite through the daylight hours under the hedge. The third is the afternoon storm, which tops up the gutters, the tarp folds, and the low spots by the downspouts in an hour. One spray cannot cover three waters \u2014 the visit has to empty the small ones, coat the shade, and come back when the sprinklers and the storms refill them.",
+  "whyLocal": "The pressure follows the property, not the street. Along World Drive and the US-192 edge, the short-stay homes live on their patios: guests eat outside at dusk, the pool deck stays busy till dark, and one bad evening lands in a review, so the visit is timed to the turnover gap and the coat goes on before the next arrival. In the townhome rows of South and East Village, the water is shared: one courtyard's planters and saucers breed for the whole row, and the mosquitoes rest in the hedge between the units, so we walk the courtyard, not just your patio. On the Lake Evalyn side and along the fairways, the lots are bigger and the shade is deeper \u2014 live oaks over the whole back yard, a fountain or a koi pond that has to stay, an outdoor kitchen that holds water in its drip tray \u2014 and the evening wave comes off the water itself, so the barrier goes on the lake-facing hedge and the screen seams, and the note tells you which water we emptied and which we treated.",
+  "localSection": {
+   "heading": "The evening belongs to whoever treats it first",
+   "body": [
+    "The rental patio is where the evening is won or lost. A family steps out for dinner at dusk, the grill is lit, and the mosquitoes are already in the hedge \u2014 so the visit comes while the house stands empty between one guest and the next, while the turnover clean is under way. We empty the saucers and the drip tray, coat the hedge line and the seams of the screen, and leave a line on the counter listing the spots we emptied and the ones we treated, so the manager can answer the next guest before the question is asked. Nothing is left on the drive, nothing is left on the lawn \u2014 the next guest should never know we were there.",
+    "The estate side works on a different clock. Around the lake and the fairways, the call is usually the dusk wave off the water: the fountain basin and the koi pond hold their own hatch, the outdoor kitchen collects water in its trays, and the live-oak shade keeps the whole back yard damp past noon. We walk the lake-facing side first, dose the standing water that cannot be emptied, coat the hedge the evening breeze blows through, and flag the sprinkler head soaking the patio wall \u2014 then the same line goes on the counter, so the next evening starts from a list, not a guess."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Asian Tiger Mosquitoes",
+    "blurb": "The daylight ankle-biter of the Celebration courtyard. It hatches in a saucer under a pot or a cup of water in a tarp fold, then hunts low around the grill and the outdoor table while the sun is still up. We empty the cups it came from and coat the hedge it waits in, so the afternoon stays yours."
+   },
+   {
+    "name": "Dusk Mosquitoes off the Lake",
+    "blurb": "The evening shift, and the reason the patio empties at seven. They lift off Lake Evalyn and the course ponds as the light drops and ride the breeze to the nearest lit lanai, biting from dusk till the air cools. The lake is not ours to treat, so the barrier goes on the hedge and the screen seams between the water and your chairs."
+   },
+   {
+    "name": "Floodwater Mosquitoes",
+    "blurb": "The wave that follows a big storm by a week. Their eggs wait in the dry low spots \u2014 the swale along Celebration Boulevard, the dip by the cart path, the lawn pocket that ponds after every downpour \u2014 and one hard rain hatches them together. We come back after the storm to check those spots and refresh the coat before the wave lands."
+   },
+   {
+    "name": "Biting Midges",
+    "blurb": "The dusk haze over the screens that you notice by the itch before the sight. They breed in the damp margin where the lake water meets the grass and slip straight through ordinary mesh on a still evening, leaving welts far bigger than the bite should earn. We coat the damp shaded line where they hold and point out where a fan on the lanai beats another round of spray."
+   },
+   {
+    "name": "No-See-Ums",
+    "blurb": "The itch that finds you at first light and again at dusk, in the still air behind the privacy fence. They crowd the calm pockets \u2014 inside the lanai, behind the hedge, along the lake-facing wall \u2014 and the welts itch for days. We coat the low plantings and the patio edges and show you where opening the airflow thins them out."
+   },
+   {
+    "name": "Blind Midges on the Screens",
+    "blurb": "No bite at all \u2014 and still the worst sight on a lake evening. On a still night they rise off the water in clouds and coat the lanai screens and the porch lights, thick enough that the glass looks dirty by morning. We dose the lake-facing margin where they hatch and tell you plainly when a rinse beats another treatment."
+   }
+  ],
+  "process": [
+   {
+    "step": "Patio, planters, and the lake edge first",
+    "detail": "We start where the evening starts: the saucers tucked under the pots beside the lanai, the drip tray under the outdoor kitchen, the fountain basin, the low corner by the downspout \u2014 then the hedge and the screen seams where the adults wait for dusk. You hear which water on your lot breeds the biters and which wave comes in off the lake no matter what we do."
+   },
+   {
+    "step": "Empty the small water, dose what has to stay",
+    "detail": "Anything that tips, tips \u2014 the saucers, the toys, the grill cover, the plant saucers the last guest left behind. The standing water that cannot go \u2014 the fountain, the koi pond, the birdbath \u2014 gets a dose that stops the hatch without touching the fish. The gutter corners get scooped and the low spots get marked, so the next storm has fewer places to hide."
+   },
+   {
+    "step": "Coat the evening shade before dusk",
+    "detail": "The barrier goes on the hedge the evening breeze blows through, the shaded sides of the lanai posts, the seams around the screens, and the underside of the eaves over the patio \u2014 timed so the coat is new when the lake breeze turns. We leave the flowers, the potted herbs, and the pool edge alone, and the dogs stay inside until it dries."
+   },
+   {
+    "step": "Back on the sprinklers' schedule, not the calendar",
+    "detail": "The visits follow the two things that refill this town: the sprinkler nights and the storm cells. After a hard rain we check the low spots and the saucers first, then refresh the coat; in the dry stretch we stretch the gap and lean on the emptying. Between visits, tip the saucers after the sprinklers run, and ring us if the evening bites jump \u2014 we will tell you straight whether the next visit should move up."
+   }
+  ],
+  "processIntro": "Here the visit is timed to the evening, not the calendar: find the small water, coat the shade before dusk, and come back when the sprinklers and the storms refill it."
  }
 }
