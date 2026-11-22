@@ -3840,5 +3840,64 @@
    }
   ],
   "processIntro": "Here the visit is timed to the evening, not the calendar: find the small water, coat the shade before dusk, and come back when the sprinklers and the storms refill it."
+ },
+ "celebration/termite-control": {
+  "heroLocal": "The first sign in Celebration is usually small enough to sweep away: a thin mud ridge running up the foundation where the shrubs meet the stucco on a North Village townhome, a drift of shed wings on the guest-room sill once the first warm spring rain has passed, a hollow knock on a baseboard in a South Village condo. Termites here do not announce themselves. The house has to be read.",
+  "heroService": "Termite work in Celebration turns on three things that never pause here: the slab that never dries, the wall that two homes share, and the resale file. Nightly watering and the lake and fairway moisture keep the soil band along every foundation damp all year, so the colony is already close. In the attached rows the insects travel the pipe runs and the fire-rated gaps between units, so one untreated home feeds the row. And with rentals and resales turning over fast, the inspection usually ends in a WDO report that decides whether a closing happens on time. We tap the baseboards, probe the door frames, walk the soil band, and look at the bath traps and the AC condensate line, then tell you plainly what we found and what will hold.",
+  "whyHeading": "Why Celebration's damp slabs and shared walls keep termites fed",
+  "whyLead": "Two forces keep termites fed here all year, and neither lets up. First comes the water: the town waters after dark, and the lake and the fairway ponds hold the ground damp through the dry months, so Eastern subterraneans never have to travel far to reach a slab. The second is the turnover: rentals change guests every few days off World Drive, resales move fast, and every inspection that finds old damage or live tubes becomes a report that decides whether a closing happens on time. Put those together with stucco slabs from the nineties and two-thousands and attached homes sharing walls down the row, and one treatment cannot keep it down. What holds it is a bait ring or a barrier, checked again after swarm season.",
+  "whyLocal": "What pushes termites changes from one home to the next. In the short-stay homes by World Drive, toward the US-192 side, it is the turnover: swarmers found in the gap between one checkout and the next check-in, drywood pellets under the fascia that the cleaner spots first, a WDO that has to be clean before the next booking. In the townhome and condo rows, it is the shared wall: subterraneans run the pipe chases and the fire-rated gaps, so one untreated unit feeds the whole row, and we ask the neighbor if we can check the unit next door as well. Along the Lake Evalyn shore and the fairway edge, it is the moisture: sprinkler heads soaking the slab, live-oak shade across the entire back yard, mulch piled up against the stucco, AC condensate dripping by the foundation. In the estate homes, it is the size: long rooflines, deep soffits, and attic trusses where Formosans can nest above the ceiling without ever touching soil. The treatment fits the home in front of us, not a route sheet.",
+  "localSection": {
+   "heading": "A termite visit that leaves the street seeing nothing",
+   "body": [
+    "The rental and resale side runs on the gap between guests. We arrive after checkout, before the cleaner finishes, and work the rooms that matter: baseboards tapped, door frames probed, bath trap and AC closet looked over, every ridge, wing pile, and pellet scatter photographed. The WDO is written in plain words the agent and the buyer can both read, stations go in flush with the turf where the street cannot see them, and drill holes get sealed inside the lanai the same visit. The drive stays empty, the lawn stays clean, and the next guest finds no sign of the visit at all.",
+    "The estate side runs to a slower rhythm. Along the lake shore and the fairway edge, the call is usually a dusk swarm coming off the water, or a hollow baseboard found during a remodel: soffits and attic trusses checked for carton material, the soil band dosed, the sprinkler head drenching the slab and the mulch piled against the stucco flagged for the owner. A written note stays on the counter, listing what we found and what we treated, so the next trip picks up from a written list instead of a guess."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Eastern Subterraneans in the damp soil band",
+    "blurb": "They nest in the damp soil band and run mud ridges up the foundation to reach the framing, and they do not need much beyond soil contact and wet mulch. We open a ridge to see whether workers are still inside, tap the baseboards, and mark the hose bibs and the grade problems that keep the slab wet."
+   },
+   {
+    "name": "Formosan Termites nesting above the ceiling",
+    "blurb": "A Formosan colony can grow enormous, and it will settle in a wall void or a soffit wherever AC condensation keeps the wood damp. We check the rooflines and the flat-roof tie-ins with a moisture meter, and the laundry wall voids too, because that is where we have found carton nests that never touched soil."
+   },
+   {
+    "name": "Drywood Termites in the fascia and the roof trusses",
+    "blurb": "Drywood termites skip the soil entirely and set up inside the wood itself, in fascia boards, trim, cabinets, and attic trusses. The giveaway is a scatter of tiny ridged pellets below a kick-out hole. We probe the wood, clear away old frass to confirm the colony is still active, then inject the gallery itself."
+   },
+   {
+    "name": "Dampwood Termites where the wood stays wet",
+    "blurb": "Dampwoods show up where wood has stayed wet: rotted eave ends, fence boards touching stucco, a shower that has leaked for months. The colonies stay small, yet they always mean rot to fix. We call out the repair and treat what is active."
+   },
+   {
+    "name": "Carpenter Ants in the May swarm confusion",
+    "blurb": "Come May, the calls about termite swarmers often turn out to be Florida carpenter ants. Ants show a pinched waist and bent antennae where termites show neither. We look for little sawdust piles and smooth-walled galleries in damp window sills and lanai framing, then bait the trail instead of selling you a termite job you do not need."
+   },
+   {
+    "name": "Powderpost Beetles in the hardwood floors",
+    "blurb": "Often mistaken for drywood termites, powderpost beetles leave fine powdery frass under floorboards and trim, with tiny round holes where the adults came out. We probe and confirm before treating, because the fix is different: the infested boards come out, and the remaining boards get protected instead of spraying blind."
+   }
+  ],
+  "process": [
+   {
+    "step": "Walk the slab edge first",
+    "detail": "We start outside: the soil band along the foundation, the weep screed, the mulch pressed against the stucco, the sprinkler heads soaking the slab, the AC condensate line dripping by the wall. Then inside to tap the baseboards, probe the door frames, and look at the bath trap, the laundry wall, moisture meter in hand."
+   },
+   {
+    "step": "Photos and the plain-English options",
+    "detail": "You get phone photos of every ridge, wing pile, and pellet scatter, plus what we did not find. We lay out a bait ring, a liquid barrier, or a wood-only spot treatment for your slab and roof type, priced side by side with the upkeep each one needs, and the WDO is written so the buyer, the seller, and the agent all read the same thing."
+   },
+   {
+    "step": "Treat the colony, keep the yard invisible",
+    "detail": "Stations sit flush with the turf, low enough that the mower rolls straight over them and the street sees nothing, or we cut a narrow trench along the footing where the grade allows and seal the drill holes in the lanai slab the same visit. We move the pet bowls and note the irrigation heads first, then pull the mulch back into place."
+   },
+   {
+    "step": "Recheck after the swarmers and the storms",
+    "detail": "Florida pressure does not quit, so we come back after the spring swarm has flown and the summer storms have passed. We pop the stations, re-sight the soil band, and watch for new wings after the next warm rain. If a garden bed went in or the grade changed, we reshape the plan around it."
+   }
+  ],
+  "processIntro": "Termite work in Celebration runs in one order: walk the damp slab edge, prove what is moving with photos, treat the colony at its source without leaving a mark on the street, and revisit once the spring swarm has flown."
  }
 }
