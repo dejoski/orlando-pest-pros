@@ -1,5 +1,5 @@
 ---
-import { PHONE_DISPLAY, telLink, HAS_PHONE } from "../config";
+import { PHONE_DISPLAY, telLink, HAS_PHONE, LEAD_ENDPOINT } from "../config";
 import services from "../data/services.json";
 import cities from "../data/cities.json";
 
@@ -30,7 +30,7 @@ const {
       </ul>
       {HAS_PHONE && <p class="mt-8 text-pine-100">Prefer to talk? <a href={telLink} class="font-bold text-white underline decoration-gold-400 decoration-2 underline-offset-4 hover:text-gold-300">Call {PHONE_DISPLAY}</a></p>}
     </div>
-    <form id="quote-form" data-quote-form class="rounded-3xl bg-white p-6 text-slate-800 shadow-xl sm:p-7" novalidate>
+    <form id="quote-form" data-quote-form action={LEAD_ENDPOINT} method="POST" class="rounded-3xl bg-white p-6 text-slate-800 shadow-xl sm:p-7" novalidate>
       <div class="grid gap-4 sm:grid-cols-2">
         <div>
           <label for="qf-name" class="mb-1.5 block text-sm font-semibold text-pine-950">Name *</label>
@@ -71,6 +71,8 @@ const {
           placeholder="e.g. Palmetto bugs in the kitchen at night…"></textarea>
       </div>
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+      <input type="hidden" name="form_started_at" value="" data-qf-started />
+      <input type="hidden" name="source_page" value="" data-qf-source />
       <p id="qf-error" class="mt-3 hidden rounded-xl border border-pine-200 bg-pine-50 px-4 py-2.5 text-sm font-medium text-pine-900" role="alert"></p>
       <button type="submit" id="qf-submit"
         class="btn btn-gold mt-5 w-full">
@@ -80,9 +82,23 @@ const {
     </form>
   </div>
   <script>
+    // Static site (GitHub Pages): the quote form posts cross-origin to the
+    // owner's lead endpoint (LEAD_ENDPOINT). It stores the lead and alerts
+    // the owner; without JS the plain POST redirects back to /thank-you/.
     const form = document.getElementById("quote-form") as HTMLFormElement | null;
     const err = document.getElementById("qf-error");
     const submit = document.getElementById("qf-submit") as HTMLButtonElement | null;
+    const stamp = form?.querySelector<HTMLInputElement>("[data-qf-started]");
+    const source = form?.querySelector<HTMLInputElement>("[data-qf-source]");
+    if (stamp) stamp.value = new Date().toISOString();
+    if (source) source.value = window.location.pathname.slice(0, 200);
+    if (err && new URLSearchParams(window.location.search).get("quote") === "error") {
+      err.textContent = "Your request couldn't be sent. Please check your name and phone and try again.";
+      err.classList.remove("hidden");
+    }
+    const eventId = () => {
+      try { return "opp-" + crypto.randomUUID(); } catch { return "opp-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
+    };
     form?.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (!form || !err || !submit) return;
@@ -109,25 +125,28 @@ const {
       if (!/^[+()\-.\s\d]{7,20}$/.test(phone)) return fail("Please enter a valid phone number.", phoneEl);
       if (!service) return fail("Please choose a service.", serviceEl);
       if (!city) return fail("Please choose your city.", cityEl);
+      const attr = (window as Window & { oppAttribution?: () => { channel?: string; referrer?: string } | undefined }).oppAttribution?.();
+      if (attr) {
+        data.set("attr_first_medium", String(attr.channel || ""));
+        data.set("attr_first_source", String(attr.referrer || ""));
+      }
+      if (!data.get("event_id")) data.set("event_id", eventId());
+      data.set("page_title", document.title.slice(0, 200));
       submit.disabled = true;
       submit.textContent = "Sending…";
       try {
-        const res = await fetch("/api/quote", {
+        const res = await fetch(form.action, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name, phone, service, city,
-            message: String(data.get("message") || ""),
-            website: String(data.get("website") || ""),
-            source: window.location.pathname,
-            attribution: (window as Window & { oppAttribution?: () => unknown }).oppAttribution?.(),
-          }),
+          headers: { Accept: "application/json" },
+          body: new URLSearchParams(data as unknown as Record<string, string>),
         });
         const json = await res.json().catch(() => ({}));
         if (res.ok && json.ok) {
           window.location.href = "/thank-you/";
+        } else if (res.status === 429) {
+          fail("Too many requests from this connection. Please try again in a few minutes.");
         } else {
-          fail(json.error || "Your request was not accepted. Please try again.");
+          fail("Your request was not accepted. Please check your details and try again.");
         }
       } catch {
         fail("Couldn't reach our server. Please try again in a moment.");

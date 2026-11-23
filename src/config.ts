@@ -22,7 +22,7 @@ export const PHONE_DISPLAY = HAS_PHONE
   : "";
 export const CONTACT_LABEL = HAS_PHONE ? `Call ${PHONE_DISPLAY}` : "Request a quote";
 
-// DEJAN: update after Vercel deploy (or once the real domain is bought).
+// Production origin (GitHub Pages custom domain, see public/CNAME).
 export const SITE_URL = "https://orlandopestcontrol.top";
 
 // --- Search Console / Bing verification ----------------------
@@ -41,6 +41,11 @@ export const SERVICE_AREA = "Osceola & Orange Counties";
 export const SERVICE_AREA_LONG = "Osceola and Orange Counties, Florida";
 export const COUNTIES = ["Osceola County", "Orange County"];
 
+
+// Quote form target. The site is static (GitHub Pages); leads post to the
+// owner's Cloudflare Worker, which allowlists this origin (CORS), stores the
+// lead tagged site=orlandopestcontrol.top and alerts the owner by SMS.
+export const LEAD_ENDPOINT = "https://osceolasodsolutions.top/api/contact";
 
 export const telLink = HAS_PHONE ? `tel:${PHONE_TEL}` : "/#quote";
 
