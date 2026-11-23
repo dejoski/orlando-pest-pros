@@ -3899,5 +3899,64 @@
    }
   ],
   "processIntro": "Termite work in Celebration runs in one order: walk the damp slab edge, prove what is moving with photos, treat the colony at its source without leaving a mark on the street, and revisit once the spring swarm has flown."
+ },
+ "celebration/rodent-control": {
+  "heroLocal": "In Celebration the first sign is usually a sound, not a sight: a scratching run above the bedroom ceiling a little after midnight in a South Village townhome, a thump in the wall void when the house goes quiet, or a cleaner opening a rental pantry between guests and finding droppings scattered through the shelves. Nobody here sees the rat. They hear it, or they find what it left behind.",
+  "heroService": "Rodent work in Celebration comes down to three facts that never let up: the live-oak canopy over the tile roofs, the wall two townhomes share, and the visit nobody is allowed to see. Roof rats run the limbs from the lake lots straight onto the eaves, mice run the pipe chases between adjoining kitchens, and every trap has to sit where a guest, a neighbor, and a CROA drive-by will never spot it. We listen to the noise first, trap where the rats already run, close the doors they came through, and leave the attic clean so the next family finds nowhere to move in.",
+  "whyHeading": "Why the tile roofs and the live oaks keep rats working at night",
+  "whyLead": "Two things keep rats fed in Celebration all year, and neither one takes a night off. The first is the canopy: live oaks and palms stand over nearly every roof in town, and roof rats run the limbs the way other animals run the ground, dropping onto tile and slipping in through a lifted edge or a gable vent. The second is the turnover: guests turn over every few days on the World Drive side, the attic goes unchecked for months between bookings, and a pantry dropping found by a cleaner is often the first anyone knows. Put those together with townhome rows where one unit's mice become the whole row's, and one round of traps cannot hold any of it. What holds is trapping the runs, closing the doors, and coming back to listen again.",
+  "whyLocal": "The pressure changes with the property. On the World Drive and US-192 rental streets, it is the turnover: a cleaner finds droppings in the pantry between guests, the attic has gone unchecked since the last booking, and the traps have to sit where the next arrival will never see them. In the South Village and East Village rows, it is the party wall: rats run the void between two kitchens and mice follow the dishwasher line into the unit next door, so one quiet unit keeps the whole row stocked, and the job includes the unit next door too, with the neighbor's say-so. By the lake and the golf course, it is the canopy and the water: live-oak limbs over the tile, Norway rats along the lake edge and the cart-path drains, cotton rats in the rough and the retention swales. In the big lakefront and fairway homes, it is the attic: long rooflines, deep eaves, and gable vents where a family of roof rats can live for months, packing the insulation into runways and chewing the AC duct where it crosses the trusses. The visit follows the house, not the street.",
+  "localSection": {
+   "heading": "Trapping a rat without the street or the guest ever seeing it",
+   "body": [
+    "The rental work happens in the empty hours between guests, while the cleaner is already in the house: the attic hatch comes open, the pantry shelves get checked for droppings, and the traps go into the attic runs and locked boxes along the back wall, never where a guest can see them. The droppings come out in a sealed bag, and the note on the counter names the entry points we found and the limbs to cut back, so the manager has the answer ready when the next guest asks.",
+    "On the lakefront and fairway lots, the call is usually the noise: a run above the bedroom ceiling after midnight, a thump in the wall void at 2 a.m., or a gnawed AC duct found during a remodel. We climb into the attic with a headlamp, photograph the droppings, the rub marks, and the packed-down insulation runs, and set the traps where the rats already run. Then the limbs over the roof get listed for cutback, the gable vents and tile edges get closed, and the same note stays on the counter, so the next check starts from the list, not from scratch."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Roof Rats over the tile",
+    "blurb": "They come down from the oaks and the palms, not up out of the ground: a limb over the eaves is a bridge, a lifted tile edge is a door, and by midnight they are running the attic above the bedroom. We find the droppings in the insulation and the dark rub lines along the truss tops, trap where the rats already run, and list the limbs that have to come back."
+   },
+   {
+    "name": "Norway Rats along the lake edge",
+    "blurb": "Low, heavy, and out after dark along the shore and the drains: they burrow where the seawall meets the lawn, run the cart-path drains, and push into garages through the sweep gap under the door. We trap the burrow mouths and the garage corners, then close the gaps at the ground line."
+   },
+   {
+    "name": "House Mice between the townhomes",
+    "blurb": "They need a gap no wider than a pencil and Celebration's townhomes give them plenty: the chase the dishwasher line shares with the unit next door, the sink pipe through the party wall, the gap under the front door. Droppings show up in the pantry and the cutlery drawer, and the traps go behind the stove and at the kick plates where they run their routes."
+   },
+   {
+    "name": "Cotton Rats out of the rough and the swales",
+    "blurb": "They live in the thick grass along the fairways and the retention swales, and a hard afternoon storm drowns their cover and drives them toward the lanais and the sheds. We clear the cover at the fence line, trap the paths they cut through the turf, and tighten the shed bases so the next storm finds them shut out."
+   },
+   {
+    "name": "Gray Squirrels, the Morning Noise",
+    "blurb": "If the scratching starts at first light and stops by mid-morning, it is usually a squirrel, not a rat: they cross on the same oak limbs and drop onto the roof, stash acorns in the soffit, and gnaw the fascia to widen a hole. We tell you straight when the noise is a squirrel, close the hole after they are out, and leave the trapping to the rats."
+   },
+   {
+    "name": "Bats behind the Gable Vent",
+    "blurb": "They slip into the gable vents of the big estate homes at dusk and leave a rustle and a smell in the attic that gets blamed on rats. Bats are not a rat job and we do not trap them like one: we find the vent they use, watch the dusk exit, and seal the vent once they are out for the night, with the right timing so none are sealed inside."
+   }
+  ],
+  "process": [
+   {
+    "step": "Listen first, then climb",
+    "detail": "The visit starts with the noise: what time it starts, which room it sits over, whether it runs or thumps. Then we climb into the attic with a headlamp and read the signs \u2014 droppings in the insulation, rub lines along the truss tops, gnawed duct where it crosses the beams \u2014 and photograph every run before a trap goes in."
+   },
+   {
+    "step": "Trap the runs, not the room",
+    "detail": "Snap traps go where the rats already run \u2014 along the truss line, at the attic hatch, behind the water heater \u2014 and locked boxes sit along the back wall outside, where a guest, a dog, and a CROA drive-by will never see them. No poison goes into the insulation. We return and move the traps until the attic goes quiet, then count what came out."
+   },
+   {
+    "step": "Close the doors the rats found",
+    "detail": "Every gap we photographed gets closed: tile edges lifted and re-seated, gable vents covered with tight mesh, the AC chase sealed where the lines come through the stucco, the garage sweep replaced so the door meets the floor. We list the oak limbs and palm fronds to trim back from the eaves, because a sealed house with a bridge over it is still open."
+   },
+   {
+    "step": "Clear the attic, keep the next family out",
+    "detail": "Once the noise stops we pull the droppings and the nesting fluff with a HEPA vac, lift the insulation that is packed into runways, and wipe the stained wood where the smell would pull the next family in. You get photos of the clean attic and a short list of habits that hold here: fruit picked off the ground, trash locked before nightfall, the pet bowl brought in at dusk."
+   }
+  ],
+  "processIntro": "In Celebration the rat job follows one order: listen to the noise, trap where the rats already run, close the doors, and leave the attic clean so the next family has nowhere to settle."
  }
 }
