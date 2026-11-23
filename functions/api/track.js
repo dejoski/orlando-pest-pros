@@ -27,6 +27,22 @@ const BOT_RE =
 const TTL_SECONDS = 35 * 24 * 60 * 60;
 const DEDUP_TTL_SECONDS = 300;
 
+// CORS: kept identical to functions/api/quote.js — cross-origin callers
+// (the static apex build) need answered preflights and
+// Access-Control-Allow-Origin on every response.
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Max-Age': '86400',
+};
+
+const resp = (status) => new Response(null, { status, headers: CORS_HEADERS });
+
+export async function onRequestOptions() {
+  return resp(204);
+}
+
 // Allowlist-style cleanup of the reported page path.
 function cleanPage(p) {
   var s = String(p || '/').slice(0, 120).toLowerCase();
@@ -43,18 +59,18 @@ export async function onRequestPost({ request, env }) {
     // Server-side bot filter (authoritative; client also skips bots).
     const ua = request.headers.get('user-agent') || '';
     if (!ua || ua.length > 300 || BOT_RE.test(ua)) {
-      return new Response(null, { status: 204 });
+      return resp(204);
     }
 
     let body;
     try {
       body = await request.json();
     } catch {
-      return new Response(null, { status: 400 });
+      return resp(400);
     }
 
     const type = String(body.t || '');
-    if (!ALLOWED_TYPES.has(type)) return new Response(null, { status: 400 });
+    if (!ALLOWED_TYPES.has(type)) return resp(400);
     const page = cleanPage(body.p);
     const day = 'opp:day:' + new Date().toISOString().slice(0, 10); // UTC, server-side
 
@@ -75,7 +91,7 @@ export async function onRequestPost({ request, env }) {
       if ((type === 'tel' || type === 'form_submit') && validDid(body.did)) {
         const dedupKey = 'opp:dedup:' + body.did;
         if ((await kv.get(dedupKey)) !== null) {
-          return new Response(null, { status: 204 });
+          return resp(204);
         }
         await kv.put(dedupKey, '1', { expirationTtl: DEDUP_TTL_SECONDS });
       }
@@ -97,10 +113,10 @@ export async function onRequestPost({ request, env }) {
       await kv.put(day, JSON.stringify(counts), { expirationTtl: TTL_SECONDS });
     }
 
-    return new Response(null, { status: 204 });
+    return resp(204);
   } catch (err) {
     // Fails open: analytics must never break the site or show errors to visitors.
     console.error('[analytics/track]', err);
-    return new Response(null, { status: 204 });
+    return resp(204);
   }
 }
