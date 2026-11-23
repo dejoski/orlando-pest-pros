@@ -1,4 +1,4 @@
-# AI training / answer-engine crawlers: blocked (they drive serverless CPU)
+# AI training / answer-engine crawlers: blocked
 User-agent: GPTBot
 User-agent: ClaudeBot
 User-agent: CCBot
@@ -11,7 +11,5 @@ Disallow: /
 
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /dash-v9x4qm2k/
 
 Sitemap: https://orlandopestcontrol.top/sitemap-index.xml

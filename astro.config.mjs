@@ -1,23 +1,19 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel';
 
 // Production origin must match src/config.ts and public/robots.txt.
 export default defineConfig({
   site: 'https://orlandopestcontrol.top',
   trailingSlash: 'always',
-  // NOTE: Astro 5.18+ removed output:"hybrid" — "static" (default) now
-  // behaves the same: pages prerender, routes with `prerender = false`
-  // (/api/*, dashboard) run as Vercel serverless functions via the adapter.
-  adapter: vercel(),
+  // Fully static build for GitHub Pages (no adapter, no server routes).
+  output: 'static',
   vite: { plugins: [tailwindcss()] },
   integrations: [
-    // Private analytics dashboard must never appear in the sitemap.
     // Priority follows research/market-research.md §6 (10-page launch list):
     // quick-win city pages + high-value service pages rank first.
     sitemap({
-      filter: (page) => !page.includes("dash-v9x4qm2k") && !page.includes("thank-you"),
+      filter: (page) => !page.includes("thank-you"),
       serialize(item) {
         const url = new URL(item.url);
         const path = url.pathname;
