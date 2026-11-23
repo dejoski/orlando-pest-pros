@@ -42,10 +42,13 @@ export const SERVICE_AREA_LONG = "Osceola and Orange Counties, Florida";
 export const COUNTIES = ["Osceola County", "Orange County"];
 
 
-// Quote form target. The site is static (GitHub Pages); leads post to the
-// owner's Cloudflare Worker, which allowlists this origin (CORS), stores the
-// lead tagged site=orlandopestcontrol.top and alerts the owner by SMS.
-export const LEAD_ENDPOINT = "https://osceolasodsolutions.top/api/contact";
+// Quote form target. The site is static (GitHub Pages); leads post
+// cross-origin to Orlando Pest Pros' OWN lead intake — the Pages Function
+// on the Cloudflare Pages deployment, which stores leads in the OPP_KV
+// namespace (opp:leads). It answers CORS preflights and accepts both JSON
+// and URL-encoded form posts. (Previously this pointed at the sod site's
+// contact endpoint; pest leads must never land there.)
+export const LEAD_ENDPOINT = "https://orlando-pest-pros.pages.dev/api/quote";
 
 export const telLink = HAS_PHONE ? `tel:${PHONE_TEL}` : "/#quote";
 
