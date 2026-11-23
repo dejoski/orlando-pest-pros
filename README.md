@@ -9,7 +9,7 @@ Pages are data-driven from `src/data/*.json`. The old assembly script depends on
 
 ## Lead capture
 
-The quote form posts cross-origin to the owner's Cloudflare Worker at `https://osceolasodsolutions.top/api/contact` (`LEAD_ENDPOINT` in `src/config.ts`). The Worker allowlists this origin (CORS), stores the lead tagged `site: orlandopestcontrol.top`, assigns it to the owner only and sends the owner SMS alert. Without JavaScript the plain POST redirects back to `/thank-you/`. Test submissions must include `test=1` so they are stored as synthetic and never alert. No env vars or secrets are needed to build this site.
+The quote form posts cross-origin to Orlando Pest Pros' OWN lead intake at `https://orlando-pest-pros.pages.dev/api/quote` (`LEAD_ENDPOINT` in `src/config.ts`) — a Cloudflare Pages Function that stores leads in the OPP_KV namespace (`opp:leads`). It answers CORS preflights from this origin and accepts both JSON and URL-encoded form posts. (It previously posted to the sod site's contact endpoint; pest leads must never land there.) No env vars or secrets are needed to build this site.
 
 The old Vercel/Upstash path (`/api/quote`, `opp:leads`, private dashboard) is removed; rows already in Upstash are untouched.
 

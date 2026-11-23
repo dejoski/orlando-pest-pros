@@ -4,9 +4,10 @@ import { readFileSync, existsSync } from 'node:fs';
 
 const read = (p) => readFileSync(new URL('../' + p, import.meta.url), 'utf8');
 
-test('quote form posts to the allowlisted Worker lead endpoint (no local /api)', () => {
+test('quote form posts to the OPP lead intake on pages.dev (no local /api, never the sod endpoint)', () => {
   const config = read('src/config.ts');
-  assert.match(config, /LEAD_ENDPOINT = "https:\/\/osceolasodsolutions\.top\/api\/contact"/);
+  assert.match(config, /LEAD_ENDPOINT = "https:\/\/orlando-pest-pros\.pages\.dev\/api\/quote"/);
+  assert.doesNotMatch(config, /osceolasodsolutions\.top/);
   const form = read('src/components/QuoteForm.astro');
   assert.match(form, /action=\{LEAD_ENDPOINT\} method="POST"/);
   assert.doesNotMatch(form, /\/api\/quote/);
