@@ -92,16 +92,42 @@ function validateLead(input) {
 // Ported from src/pages/api/quote.ts (handler; logic identical).
 // ---------------------------------------------------------------
 
+// CORS: the apex domain (orlandopestcontrol.top, a static GitHub Pages
+// build) posts here cross-origin from the browser, so preflights must be
+// answered and every response must carry Access-Control-Allow-Origin —
+// otherwise the browser blocks the form from reading the result even
+// though the lead was stored.
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Max-Age': '86400',
+};
+
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), {
     status,
-    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...CORS_HEADERS },
   });
+
+export async function onRequestOptions() {
+  return new Response(null, { status: 204, headers: CORS_HEADERS });
+}
 
 export async function onRequestPost({ request, env }) {
   let input = {};
   try {
-    input = await request.json();
+    const ct = (request.headers.get('content-type') || '').toLowerCase();
+    if (ct.includes('application/json')) {
+      input = await request.json();
+    } else {
+      // The apex quote form submits URL-encoded data (its JS fetch uses
+      // URLSearchParams; the no-JS fallback is a plain form POST).
+      // Accept it alongside JSON; validation/storage are unchanged.
+      const fd = await request.formData();
+      input = Object.fromEntries(fd.entries());
+      if (!input.source && input.source_page) input.source = input.source_page;
+    }
   } catch {
     return json({ ok: false, error: 'Invalid request.' }, 400);
   }
