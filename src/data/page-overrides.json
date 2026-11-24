@@ -3958,5 +3958,64 @@
    }
   ],
   "processIntro": "In Celebration the rat job follows one order: listen to the noise, trap where the rats already run, close the doors, and leave the attic clean so the next family has nowhere to settle."
+ },
+ "celebration/bed-bug-treatment": {
+  "heroLocal": "In Celebration the first sign is almost never a bug in plain sight. It is a housekeeper pulling back the sheets between guests and finding black dots along the mattress seam, a guest waking with a row of welts after the first night in a South Village townhome, or a manager reading a review that mentions bites and knowing the next booking is three days out. Nobody here watches a bed bug crawl across a wall. They find the marks it left, or they hear about it from the person who slept in the bed.",
+  "heroService": "Bed bug work in Celebration is a different job from the one in the next town over: the guest list turns over every few days, the wall between two townhomes is a hallway for a hungry bug, and the whole treatment has to fit between one family's check-out and the next family's check-in, with nothing left behind for anyone to notice. We check every bed in the house, work the seams and joints where the bugs actually hide, and leave a written note the manager can hand to the next arrival.",
+  "whyHeading": "Why the turnover, the shared walls, and the spare bedrooms keep bed bugs moving",
+  "whyLead": "Bed bugs stay fed in Celebration for two reasons that never take a night off. First comes the guest list: on the vacation-rental streets near World Drive a new family arrives every few days, each one carrying luggage that has already slept in other beds, and the housekeeper who flips the unit between guests is often the first person to see the black dots on the sheets. The second is the shared wall: in the South Village rows and the East Village rows, one infested bedroom can seed the whole row through the party wall, so a single room can stock three townhomes before anyone complains. Add estate guest suites that sit empty for months and a spare bed nobody checks, and a single treatment cannot finish any of it. What finishes it is inspecting every bed, treating the harborage itself, and coming back when the eggs hatch.",
+  "whyLocal": "Each kind of home in town brings its own version of the problem. On the vacation-rental streets near World Drive, it is the turnover: a housekeeper finds the dots between guests, the next family checks in within hours, and the treatment has to fit the empty window with nothing left for the guest to see. In the South Village rows and the East Village rows, the party wall is the problem: bed bugs move through the void between two bedrooms and the sofa bed in the unit next door, so a single infested room can reach the whole row before anyone complains, and the inspection has to cover the adjoining unit as well, with the neighbor's permission. Around the lakefront lots and the fairways, it is the spare bedroom: big lakefront and fairway homes keep guest suites that sit empty for months, and a bug that arrived with a holiday guest can wait in the headboard until the next visit. In the family townhomes it is the bunk room: built-in bunks and pull-out sofas sleep eight, and every frame joint and slat is a harborage. The inspection follows the beds, not the address.",
+  "localSection": {
+   "heading": "Treating a rental between guests without the next family ever knowing",
+   "body": [
+    "The rental treatments run in the gap between one family's check-out and the next family's check-in, while the housekeeper is already in the house: the sheets come off, the mattress seams and the headboard joints get checked with a flashlight, the interceptors go under the bed legs, and the steam and the targeted treatment go into the seams where the bugs actually hide. The laundry goes hot and comes back bagged and sealed, the note left on the counter lists what we found and what the next housekeeper should watch for, and by the time the next family unlocks the door there is nothing to see, nothing to smell, and nothing to explain.",
+    "In the estate homes the call is usually the guest suite: a spare bedroom that sat empty for months, a headboard that has not moved since the holidays, or a review that mentions bites after a weekend stay. We pull the bed away from the wall, check the nightstand joints and the baseboard gap, and treat the harborage with steam and a residual that keeps working after we leave. Then the mattress gets an encasement, the luggage rack moves away from the bed, and the written note stays in the house file, so the next visit picks up where this one left off."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Bed Bugs in the Rental Bedrooms",
+    "blurb": "They ride in with the luggage, not up out of the yard: a suitcase that slept in another rental, a bag set on the bed, and by the second night they are feeding in the mattress seam. We find the black dots along the piping and the papery skins folded into the seam, steam the joints, and treat the harborage itself."
+   },
+   {
+    "name": "The Signs the Housekeeper Finds First",
+    "blurb": "The first clue in a rental is usually a housekeeping find, not a guest complaint: a row of welts after the first night's sleep, pinhead dots along a sheet edge, rusty smears where a bug was rolled on in sleep. The check runs behind the headboard, inside the nightstand joints, and where the baseboard meets the wall."
+   },
+   {
+    "name": "Bunk Beds and Sofa Beds in the Townhomes",
+    "blurb": "Family rentals sleep eight, and the bunks and the pull-outs are where the bugs settle: screw holes in the frame, slat joints, the gap where the frame sits against the wall, and the fold of the sofa mattress. We inspect every sleeping surface in the house, not just the one the guest mentioned."
+   },
+   {
+    "name": "Guest Suites That Sit Empty for Months",
+    "blurb": "The big lakefront and fairway homes keep spare bedrooms for holiday guests, and a bug that arrived with one visit can wait in the headboard for the next. We check the rooms nobody sleeps in, because the empty bed is the one nobody thinks to look at."
+   },
+   {
+    "name": "German Roach Nymphs, the Usual Suspect",
+    "blurb": "The bug we most often have to rule out in Celebration rentals is the young German roach: small, brown, and quick around the kitchen after dark. They scatter when the light comes on and they leave no dotted sheets behind, so a quick bug in the kitchen is usually not a bed bug at all."
+   },
+   {
+    "name": "Carpet Beetle Larvae in the Estate Homes",
+    "blurb": "Fuzzy, slow larvae that feed on wool, lint, and feathers tucked along baseboards and beneath beds that almost never move: a familiar problem in the big homes with wool rugs and heavy drapes. They chew fibers and leave shed skins, but they do not bite, and they never leave blood dots on a sheet."
+   }
+  ],
+  "process": [
+   {
+    "step": "Inspect every sleeping surface",
+    "detail": "Beds, bunks, sofa beds, and the spare room nobody mentions, plus headboard walls, luggage racks, nightstands, and the laundry pile. We check the seams with a flashlight, lift the mattress, and look inside the frame joints before anyone talks about treatment."
+   },
+   {
+    "step": "Discreet visit and prep list, in writing",
+    "detail": "The visit runs unmarked in the empty hours between guests: no sign on the door, no van the neighbors can read. The manager gets written instructions for each room \u2014 which laundry to run hot and seal in bags, what to leave exactly where it is, and what to tell the next guest \u2014 before a single treatment starts."
+   },
+   {
+    "step": "Work the harborage, room by room",
+    "detail": "We push steam and a targeted treatment into the mattress seams, the frame joints, and the gaps at the baseboard, wherever the bugs are actually living, with heat as the option when the booking gap allows a full-room treatment in one visit. Nothing goes on the bedding the next guest will sleep on."
+   },
+   {
+    "step": "Come back when the eggs hatch, with traps in place",
+    "detail": "The first visit never ends the job, because the eggs survive it. Small cups under each bed leg catch whatever hatches, and we come back on the hatching schedule to treat the new bugs before they can lay. The manager gets a short note after every visit, with the next date already booked, so no rental sits unguarded while guests keep arriving."
+   }
+  ],
+  "processIntro": "In Celebration the treatment is only half the job: finding every bed the bugs use, and keeping the whole thing invisible to the next guest, is the other half. Here is the order we work in."
  }
 }
