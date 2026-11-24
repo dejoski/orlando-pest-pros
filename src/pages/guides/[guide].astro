@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../components/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import FaqAccordion from "../../components/FaqAccordion.astro";
+import QuoteForm from "../../components/QuoteForm.astro";
+import { SITE_URL } from "../../config";
+import { faqSchema, breadcrumbSchema, jsonLd } from "../../lib/schema";
+import guidesData from "../../data/guides.json";
+import servicesData from "../../data/services.json";
+
+export async function getStaticPaths() {
+  return guidesData.guides.map((g) => ({ params: { guide: g.slug }, props: { g } }));
+}
+
+const { g } = Astro.props;
+const canonical = `${SITE_URL}/guides/${g.slug}/`;
+const svc = servicesData.services.find((s) => s.slug === g.service);
+const crumbs = [
+  { name: "Home", url: "/" },
+  { name: "Guides", url: "/sitemap/" },
+  { name: g.h1, url: `/guides/${g.slug}/` },
+];
+const schemaHtml = jsonLd(faqSchema(g.faqs), breadcrumbSchema(crumbs));
+---
+<BaseLayout title={g.title} description={g.metaDescription} canonical={canonical} schemaHtml={schemaHtml}>
+  <section class="bg-cream-50">
+    <div class="mx-auto max-w-4xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16 lg:pt-12">
+      <Breadcrumbs crumbs={crumbs} />
+      <p class="mt-8 text-sm font-bold uppercase tracking-[0.14em] text-pine-700">Homeowner guide</p>
+      <h1 class="mt-3 font-display text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl">{g.h1}</h1>
+      <div class="mt-6 space-y-4">
+        {g.intro.map((p) => <p class="text-lg leading-relaxed text-ink-600">{p}</p>)}
+      </div>
+      <a href="#quote" class="btn-gold mt-8 inline-flex min-h-[48px] items-center justify-center px-7 py-3.5">Request a quote</a>
+    </div>
+  </section>
+
+  {g.sections.map((sec, idx) => (
+    <section class={idx % 2 === 0 ? "bg-white py-14 lg:py-16" : "border-y border-slate-200 bg-cream-50 py-14 lg:py-16"} aria-labelledby={`guide-section-${idx}`}>
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <h2 id={`guide-section-${idx}`} class="font-display text-3xl tracking-tight text-ink-900">{sec.heading}</h2>
+        <div aria-hidden="true" class="mt-4 h-1 w-16 rounded-full bg-gold-400"></div>
+        <div class="mt-6 space-y-4">
+          {sec.body.map((p) => <p class="leading-relaxed text-ink-600">{p}</p>)}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  {svc && (
+    <section class="bg-white py-10">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <p class="leading-relaxed text-ink-600">Ready to compare options? See <a href={`/services/${svc.slug}/`} class="font-semibold text-pine-800 underline underline-offset-4">{svc.name.toLowerCase()} in Orlando and nearby cities</a>.</p>
+      </div>
+    </section>
+  )}
+
+  <section class="bg-cream-50 py-14 lg:py-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <FaqAccordion faqs={g.faqs} heading="Common questions" />
+    </div>
+  </section>
+
+  <section class="bg-white py-14 lg:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <QuoteForm preselectService={g.service} preselectCity="orlando" />
+    </div>
+  </section>
+</BaseLayout>
