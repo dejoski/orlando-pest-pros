@@ -4017,5 +4017,64 @@
    }
   ],
   "processIntro": "In Celebration the treatment is only half the job: finding every bed the bugs use, and keeping the whole thing invisible to the next guest, is the other half. Here is the order we work in."
+ },
+ "celebration/wildlife-removal": {
+  "heroLocal": "Most wildlife calls in Celebration start with the lawn in the morning. A front yard that was flat and green at dusk comes up plowed overnight, mulch scattered across the driveway in a fan, cone-shaped holes punched down the turf line like someone worked it with a trowel. By the time the homeowner is looking at it, the armadillo is already gone, back under the shed or out along the greenbelt, and the only question is whether the lawn can be put right before the next guest arrives or the next CROA letter lands.",
+  "heroService": "Wildlife work in Celebration is a job of timing and tidiness, not force: the animal has to be out before the next family unlocks the door, the trap cannot sit anywhere a guest or a neighbor can see it, and the lawn has to look like nothing ever happened. We read the sign first \u2014 the timing of the noise, the shape of the hole, the tracks in the mulch \u2014 then get the animal out the way that fits it, close the opening in metal, and put the yard back the way it was.",
+  "whyHeading": "Why the greenbelts, the lawns, and the quiet houses keep wildlife close",
+  "whyLead": "Celebration was built with the animals still in it. The greenbelts and the conservation edges run right up against the back fences, the golf course holds water in its ponds and low dips while the irrigation runs at night, and the lake and retention-pond edges stay damp and full of frogs and grubs all year. The lawns do the rest: nightly watering keeps the turf soft and the grubs near the surface, so an armadillo can work a whole front yard in one night, and the fruit on the citrus and the seed in the feeders keeps the raccoons and the squirrels coming back. Add houses that sit empty between guests, with an attic nobody checks and a lanai deck nobody lifts, and an animal that moves in has weeks to settle before anyone notices. What moves it out is finding the sign early, getting the animal out in one clean job, and closing the way it came in.",
+  "whyLocal": "On the rental streets off World Drive, the call usually comes from the housekeeper in the gap between guests: a thump over the guest room the night before, a trash can tipped in the side yard, droppings piled in the attic insulation where nobody has looked in months. The animal has to be gone before the next family arrives, the trap has to sit where no guest will ever see it, and the note left on the counter has to say what turned up and what to check next time. Along the townhome rows in South Village and East Village, the problem runs along the shared fence and the shared roofline: an opossum living under one lanai deck can work the whole row's trash, and a gray squirrel that gets into one attic can reach the next unit through the party-wall gap. We check the home next door too, once the neighbor says yes, because an animal never stops at the property line. Down by the lakefront homes and the fairways, the water's edge sets the job: a snake on the lanai after a storm, a sandhill crane family walking the lawn at dawn \u2014 protected, so the job is keeping them off the porch, not catching them \u2014 and the pond behind the house where an alligator has taken up residence and the dog can no longer go out alone. We do not trap the protected animals; we change what brings them in and put a barrier between them and the yard. Around the estate homes, the quiet is the problem: a guest house that sits empty for months, a ridge vent nobody has checked since the roof went on, a bat colony that has been there since spring. The work starts with a ladder and a flashlight, not a trap, because the first question is always how long the animal has been there and whether the babies are inside.",
+  "localSection": {
+   "heading": "Getting the animal out before the next guest, without leaving a mark",
+   "body": [
+    "The rental and townhome jobs run on the same rule: nothing visible, nothing left behind. The traps go where a guest will never look \u2014 behind the AC unit, under the deck skirt, in the attic above the garage \u2014 and they are checked every day, because an animal left in a trap in the Florida heat is a cruelty and a smell nobody can explain to the next family. When the animal is out, the opening gets closed in metal, the droppings and the nesting come out of the insulation, and the yard gets raked and reset so the next arrival sees a lawn, not a job site.",
+    "On the lakefront and fairway homes, the work is mostly keeping the animals from coming back. The armadillo runs get a buried footer along the fence line, the pond edge gets cleared of the brush a snake hides in, the feeders come in at night and the citrus gets picked instead of left to drop, and the crane family gets a low fence and a sprinkler routine that makes the lawn less inviting than the greenbelt. The animals do not leave Celebration. The job is making one yard less worth their time than the next."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Raccoons Denning Over the Bedroom",
+    "blurb": "They come in through a lifted tile edge or a soft spot in the soffit and settle right over the room where the guests sleep, thumping across the ceiling after midnight and leaving droppings piled in the insulation. We find the entry by the rub marks and the tracks, get the mother and the kits out together, and close the hole in metal before the next family arrives."
+   },
+   {
+    "name": "Armadillos Tearing Up the Front Lawn",
+    "blurb": "One night is all it takes: cone-shaped holes punched down the turf, mulch kicked across the driveway, and a lawn that looked perfect at dusk looking tilled by morning. They hunt grubs after the sprinklers run, wedge under the shed slab by day, and come back to the same yard until the footer goes in."
+   },
+   {
+    "name": "Opossums under the Shared Deck",
+    "blurb": "They move in under the lanai deck or the shed slab, drawn by the dark and the pet food left out overnight, and they stay quiet about it \u2014 no chewing, just a sour smell, greasy rubs along the skirting, and a trash can tipped once a week. We lift the skirt, find the den, and get them out with a one-way door so nothing gets sealed inside."
+   },
+   {
+    "name": "Gray Squirrels at the Bird Feeder",
+    "blurb": "They run the oak limbs onto the roof by day, raid the feeder on the lanai, and chew a hole in the fascia when the feeder runs empty. The giveaway is the sound in the morning \u2014 rolling, then gnawing \u2014 and by the time the hole is found the nest is already built in the insulation."
+   },
+   {
+    "name": "Flying Squirrels Pattering in the Wall at Night",
+    "blurb": "They are small, they only move after dark, and they never travel alone: what you hear is a light patter behind the drywall late at night, and what you find is a nest of shredded insulation with tiny pellet droppings and a musky smell. They get in through a gap no wider than a dime, so the work is finding that gap, moving the whole colony out at once, and closing it before the next litter settles in."
+   },
+   {
+    "name": "Bats in the Roof Peak",
+    "blurb": "They slip through a gap at the ridge no wider than a thumb and roost in the warm peak of the roof, streaking the stucco below with guano and waking the house with rustling at dusk. Bats are protected in Florida, so no one traps them: the work is a one-way door at the exit, timed outside the maternity season, and metal over the gap once the roost is empty."
+   }
+  ],
+  "process": [
+   {
+    "step": "Work out which animal it is, from the sign it leaves",
+    "detail": "Day noise or night noise, the shape of the hole, the tracks in the mulch, the droppings on the insulation \u2014 each animal signs its work, and the sign decides the plan. We photograph what we find and tell you the species before anyone talks about a trap."
+   },
+   {
+    "step": "A way out sized to the animal, babies checked first",
+    "detail": "A raccoon family gets a one-way door and a check for kits before anything is closed; a bat roost gets an exit timed outside the maternity season; an armadillo gets a trap set on the run it already uses. No poisons, ever, and nothing gets sealed inside a wall."
+   },
+   {
+    "step": "Seal the entry with metal, not foam",
+    "detail": "The openings get closed in metal: flashing over the soffit gaps, mesh with quarter-inch holes over the vents, guards on the ridge, and a buried footer where the armadillos run. Foam alone is a snack for a squirrel, and a raccoon will peel it back in one night."
+   },
+   {
+    "step": "Put the yard back the way it was",
+    "detail": "The droppings and the nesting come out of the attic, the torn turf gets tamped and reseeded, the mulch gets raked back into place, and you get a short list: lock the cans, pick the citrus, bring the feeders in at night, keep the mulch raked back from the foundation. The next guest sees a yard, not a job site."
+   }
+  ],
+  "processIntro": "Wildlife work here is mostly detective work with a ladder: the animal is rarely seen, the sign is everywhere, and the fix has to hold after the animal is gone. We work it in this order."
  }
 }
