@@ -4076,5 +4076,64 @@
    }
   ],
   "processIntro": "Wildlife work here is mostly detective work with a ladder: the animal is rarely seen, the sign is everywhere, and the fix has to hold after the animal is gone. We work it in this order."
+ },
+ "championsgate/general-pest-control": {
+  "heroLocal": "ChampionsGate never really empties. The villas along ChampionsGate Boulevard turn over every few days, the condos off Masters Boulevard fill and empty with the school calendar, and the golf courses water every night whether anyone is playing or not. That is the whole pest story here: new luggage every week, shared walls that never rest, and ground that stays wet and lit all year. A palmetto bug crossing a villa kitchen floor the morning of check-in is not a fluke, it is what happens when a pool home sits dark for one night with the slider cracked and the mulch soaked from the sprinklers.",
+  "heroService": "Pest control in ChampionsGate is built around the turn, not the season. We work the gap between checkout and check-in first \u2014 the beds, the sofa folds, the kitchen kick plates \u2014 then out to the parts a guest actually sees: the pool deck, the lanai screen, the mulch line along the foundation, the pump room door. The band goes down low where no guest looks, bait goes where the ants already run, dust goes into the voids behind the outlets, and the cleaner gets a short note that says what turned up and what to watch next time.",
+  "whyHeading": "Why a resort address means pests all year, not just in summer",
+  "whyLead": "Three things keep ChampionsGate busy for us and none of them takes a season off. The first is the turnover: villas and condos flip every few days, and each new arrival brings fresh luggage, fresh groceries, and fresh chances for bed bugs and German roaches to move in. The second is the golf course: the National and the International hold water in their ponds and low fairway dips, the irrigation runs nightly, and the pool decks and clubhouse grounds stay damp and lit, which feeds mosquitoes and palmetto bugs straight through January. The third is the building itself: shared walls, shared trash rooms, and back-to-back kitchens in the condo rows, so one untreated unit seeds the whole building. A single visit cannot hold all three \u2014 what holds it is coming back on the same rhythm, between one guest and the next, between one watering and the next.",
+  "whyLocal": "Every building here presses differently. In the big pool villas off ChampionsGate Boulevard and Old Lake Wilson Road, it is the turnover and the water: bed bugs in the mattress seams, German roaches in the outdoor kitchen, fire ants mounding along the pool deck where the kids run barefoot, and palmetto bugs coming out of the pump room after rain. The cleaner is the first line of defense there, so we leave the note where the cleaner will actually see it. In the resort condos and townhomes off Masters Boulevard and Ronald Reagan Parkway, it is the wall the units share: the ants and the roaches ride the pipe runs and the trash chutes between kitchens, so one kitchen left alone re-seeds the whole building and the fix has to include the unit next door. Around the golf course villas and the clubhouse, it is the ponds and the lights: mosquitoes off the fairway dips at dusk, palmetto bugs drawn to the lit pool deck at night, and millipedes curling along the thresholds after a storm soaks the mulch. And in the ground-floor condos, it is the slider: ants trailing in along the track, palmettos slipping under a worn sweep, and a lanai that never quite dries. The visit fits the building, not the other way round.",
+  "localSection": {
+   "heading": "A visit that leaves the villa ready for the next family",
+   "body": [
+    "The villa and condo jobs run on the same rule: nothing a guest can see, nothing a guest can smell. The band goes down low along the foundation where the pool deck hides it, bait goes where the ants already run, and inside we keep it tight \u2014 only the rooms showing sign get treated, the rest of the villa stays exactly as the cleaner left it. The cleaner gets the note, not the guest: what we found, what we did, and what to check ahead of the next check-in. A condo row gets the unit next door checked too \u2014 the ants never stop at one front door.",
+    "Around the golf course and the clubhouse, the call is usually mosquitoes at dusk off the fairway ponds, palmetto bugs at the lit pool deck after rain, and fire ants along the cart paths and the villa lawns. We start at the slab and the mulch line, work the undersides of the shaded shrubs where the mosquitoes spend the day, tip anything holding water, and point out the heads soaking the slab. The note goes to the cleaner, as it does everywhere in ChampionsGate, because each visit picks up where the last note left off."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Bed Bugs",
+    "blurb": "A villa flips every few days, and one bag set down on the bed is all a bed bug needs. We look while the villa sits empty between guests \u2014 mattress seams, the headboard screws, the nightstand joints, the sofa folds \u2014 treat it, and check it again ahead of the next check-in, so a single bug never costs a review and a weekend."
+   },
+   {
+    "name": "German Cockroaches",
+    "blurb": "They settle into the warm kitchens of the resort condos, behind the stove and under the fridge, where one unit's crumbs feed the whole building. The sign is pepper-like droppings in the kick plates and a sweet, stale smell when the cabinet opens. We bait the harborages and treat the shared pipe runs, because spraying one kitchen just pushes them next door."
+   },
+   {
+    "name": "American Cockroaches",
+    "blurb": "They live in the drains and the mulch and the pump room, and on a muggy night they fly straight for the porch light and slip under the garage door. Ground floors take the hit, especially after rain. We work the drains, the mulch line, and the thresholds, and we flag the sweep or the torn screen that let them in."
+   },
+   {
+    "name": "Ghost Ants",
+    "blurb": "You will spot them first on a slider track or along the bathroom vanity, tiny pale bodies trailing toward a crumb or a drop of water. The nest itself sits outside, in the mulch or the paver joints. The line you see on the counter is just the commute. We bait where they feed and seal the gaps they came through \u2014 a spray on the trail only splits the colony in two."
+   },
+   {
+    "name": "Mosquitoes",
+    "blurb": "At dusk over the fairways, the mosquitoes take over the pool deck. They spend the day in the shaded shrubs and lay their eggs wherever water stands \u2014 a saucer under a pot, a toy left by the pool, a gutter clogged over the lanai. We tip out or treat every container we can get to, then work the undersides of the shaded shrubs, and the fence lines too, where they spend the day, and come back monthly so the pool deck stays yours after dark."
+   },
+   {
+    "name": "Fire Ants",
+    "blurb": "After a wet week the mounds pop up along the villa lawns, the pool decks, and the cart-path edges \u2014 right where bare feet and dogs go first. We bait the ring the workers forage in and treat the mound itself, so the whole colony goes and the pile stays flat, and we book it between watering days so the product stays put."
+   }
+  ],
+  "process": [
+   {
+    "step": "Read the turn before touching a sprayer",
+    "detail": "The week's arrivals come first, and the cleaner's notes with them. Which villas flipped and which condos turned over, what the cleaner saw, and where the last family slept \u2014 then the mattress seams, the headboard screws, and the sofa folds, all while the villa sits empty, and the kick plates and the pipe chases where the roaches hide."
+   },
+   {
+    "step": "Walk the property the way a guest would",
+    "detail": "Then the outside, seen the way a guest sees it: the pool deck and the lanai screen, the mulch line along the foundation, the slider tracks and the weep holes, the pump-room door, the hose bibs, and the heads soaking the slab. We tip out anything holding water and photograph every gap before a drop of product goes down."
+   },
+   {
+    "step": "Bait and band where they live",
+    "detail": "The band goes down low, out of the guest's sight, along the foundation line. Bait goes where the ants already run, dust goes into the voids behind the outlets and the meter box; the shrub undersides get the treatment where the mosquitoes spend the day. Inside, we keep it tight: only rooms showing sign get treated \u2014 the rest of the villa stays exactly as the cleaner left it."
+   },
+   {
+    "step": "Leave the note, book the next turn",
+    "detail": "The note lands on the counter \u2014 what turned up, what we treated, and the fixes to make: swap the sweep, rake the mulch back from the stucco, clear the drain, skip a watering day. The next visit lines up with the bookings and the irrigation schedule, and if anything comes back between visits, the recheck is free."
+   }
+  ],
+  "processIntro": "A ChampionsGate visit follows one order: read the calendar, walk the property the way a guest would, treat where the pests live and breed, and leave a note the cleaner can use."
  }
 }
