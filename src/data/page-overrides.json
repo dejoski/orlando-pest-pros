@@ -4135,5 +4135,64 @@
    }
   ],
   "processIntro": "A ChampionsGate visit follows one order: read the calendar, walk the property the way a guest would, treat where the pests live and breed, and leave a note the cleaner can use."
+ },
+ "championsgate/mosquito-control": {
+  "heroLocal": "Six o'clock on a ChampionsGate pool deck tells you everything. The fairways are still lit, the grill is smoking, the kids are on their last swim, and the mosquitoes have already claimed the edge of the deck \u2014 lifting off the ponds behind the National and the low dips along the cart paths, gathering in the areca hedge and at the screen before the chairs fill. A family that checked in an hour ago spends its first evening indoors if nobody treated the deck that afternoon.",
+  "heroService": "Mosquito control in ChampionsGate runs on the pool deck's clock. The villa water comes first: the pump room, the spa, the floats left in the pool, the saucers beneath the lanai pots, the tray beneath the outdoor kitchen, the damp corner where the downspout drains by the slab. Then we coat the hedge that faces the fairway and the screen joins, where the adults spend the day, laid down late in the day, so it is new when the evening breeze comes off the courses. The ponds and the fairway dips are out of our hands, and we say that straight \u2014 what we can hand you is a deck that holds through dinner.",
+  "whyHeading": "Why the fairway ponds decide the evening in ChampionsGate",
+  "whyLead": "A ChampionsGate evening is fed by three waters. The first is the courses: the two hold Culex mosquitoes in the ponds and the low dips along the fairways, and at dusk the adults lift off and drift on the breeze toward the nearest lit pool deck. The second is the nightly watering: the courses and the villa lawns water while the resort sleeps, and every saucer, planter, toy, and spa cover fills again overnight, rain or no rain, and the tiger mosquitoes that hatch in that water hunt through the daylight hours beneath the hedge. Then comes the afternoon storm, which fills the gutters and the tarp folds, and leaves the cart-path dips standing within the hour. Three waters beat any single coat. The visit has to tip the small ones, treat the shade, and return on the rhythm that refills them.",
+  "whyLocal": "Where the bites land depends on the building, not the boulevard. The big pool villas down ChampionsGate Boulevard and around Old Lake Wilson Road have their evening decided at the private pool: the pump room holds standing water, the spa stays warm, the floats and toys sit in the water all week, and the visit has to land in the turnover gap, before the next family steps onto the deck. Condo rows and townhomes along Masters Boulevard and over on Ronald Reagan Parkway share their breeding: the courtyard planters and the saucers on one balcony hatch for every unit in the row, and the adults settle in the hedge that joins the buildings, so the walk covers the courtyard, not one patio. The villas and the clubhouse terrace that back onto the courses sit closer to the ponds and the shade runs deeper \u2014 the fairway dips hold water after every watering, the terrace lights pull the dusk wave in, and the barrier lands on the hedge that faces the fairway, and the screen seams, with a note that says which water we tipped and which we dosed.",
+  "localSection": {
+   "heading": "The deck is treated before the family ever steps out",
+   "body": [
+    "The villa visit lands in the checkout-to-check-in gap, while the cleaners are still in the house. We pull the floats and toys out of the pool, open the pump room and check the spa, tip the saucers beneath the lanai pots and the tray beneath the outdoor kitchen, and lay the coat along the hedge and across the screens so the barrier is fresh when the next family steps out at six. The note goes on the counter for the cleaner: which water we tipped, which we dosed, and which head is soaking the slab \u2014 so the next evening opens from notes, not guesses.",
+    "On the course side and the clubhouse terrace, the evening arrives as a wave off the ponds: the fairway dips hold a hatch of their own after every watering, the terrace lights pull the adults in as the light goes, and the outdoor kitchen trays collect water all week. We start on the fairway-facing side and dose the water that cannot be tipped, lay the barrier on the hedge the breeze moves through, and mark the irrigation head that keeps soaking the wall \u2014 then the note goes on the counter for tomorrow's crew, so it picks up where this one stopped."
+   ]
+  },
+  "pests": [
+   {
+    "name": "Asian Tiger Mosquitoes",
+    "blurb": "The daytime biter of the ChampionsGate pool deck. It breeds in the saucer under a lanai pot or the water caught in a folded spa cover, then hunts low by the loungers and the grill before the sun drops. We tip out the cups it hatched in and treat the hedge where it waits, so the afternoon stays open."
+   },
+   {
+    "name": "Dusk Mosquitoes off the Fairways",
+    "blurb": "The evening shift \u2014 the reason the deck clears at seven. They rise off the ponds behind the courses as the light goes and follow the breeze to the closest lit lanai, feeding from dusk until the air cools. The ponds are beyond what we can treat, so we lay the barrier along the hedge and across the screens, between the ponds and the chairs."
+   },
+   {
+    "name": "Floodwater Mosquitoes",
+    "blurb": "The surge that trails a hard storm by about a week. Their eggs sit in the dry hollows \u2014 the swale beside ChampionsGate Boulevard, the dip where the cart path sags, the lawn pocket that holds water after every downpour \u2014 and a single heavy rain hatches them all at once. We return after the storm to walk those hollows and lay a fresh coat before the surge reaches the decks."
+   },
+   {
+    "name": "Biting Midges",
+    "blurb": "The evening haze on the screens, felt as an itch before you see a thing. They hatch along the damp edge where the pond water meets the lawn and slip through ordinary mesh when the evening is calm, leaving welts far out of scale with the bite. We treat the damp shaded strip where they gather and show where a lanai fan does more than a new coat."
+   },
+   {
+    "name": "No-See-Ums",
+    "blurb": "The bite you feel at dawn and again at dusk, where the air sits still behind the privacy fence \u2014 the still pockets fill first: the lanai, the hedge line, the fairway-facing wall \u2014 and the marks itch for days. We treat the low beds and the deck edges and show where a breeze through the lanai thins them."
+   },
+   {
+    "name": "Blind Midges on the Pool Screens",
+    "blurb": "Not a bite \u2014 and still the ugliest sight on a fairway evening. On a calm night they lift off the ponds in clouds and film the screens and the lamps, so thick the glass looks smeared by morning. We treat the pond-facing edge where they hatch and say straight when a wash beats another visit."
+   }
+  ],
+  "process": [
+   {
+    "step": "The villa water comes first",
+    "detail": "We open where the evening is decided: the pump room and the spa, the floats and toys left in the pool, the saucers tucked beneath the lanai pots, the tray beneath the outdoor kitchen, the damp spot where the downspout drains \u2014 then the hedge line, the screen seams, the adults holding there through the afternoon. You learn what water on your lot hatches the biters, and what wave rolls in off the courses whatever we do."
+   },
+   {
+    "step": "Tip the small water, dose the water that stays",
+    "detail": "What tips gets tipped \u2014 the saucers, the floats, the grill cover, the toys, the plant saucers left behind by the last guests. The water that stays put \u2014 the spa, the fountain, the birdbath \u2014 each gets a dose that halts the hatch and leaves the fish alone. We scoop the gutter corners and mark the low spots, so the next storm finds fewer places to hide."
+   },
+   {
+    "step": "Coat the fairway-side shade before dusk",
+    "detail": "The coat lands across the hedge while the evening breeze drifts through, the shady faces of the lanai uprights, the screen joins, and the eave undersides above the pool deck \u2014 laid down so it is still new when the breeze turns off the courses. The flower beds, the potted basil, and the pool's edge stay untouched, and the dogs stay in until the coat has dried."
+   },
+   {
+    "step": "Back on the watering and turnover rhythm",
+    "detail": "The visits track what refills this resort: the nightly watering and the guest turnover. After a hard rain, the hollows and the saucers come first, then we lay a fresh coat; in a dry stretch we widen the gap and rest on tipping only. Between visits, empty the saucers once the sprinklers have run, and call us when the evening bites spike \u2014 we will say plainly whether to bring the next visit forward."
+   }
+  ],
+  "processIntro": "The visit here runs on the pool deck's clock: tip the small water, lay the coat before dusk, and return when the watering and the turnover refill it."
  }
 }
